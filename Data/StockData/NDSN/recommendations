@@ -1,0 +1,57 @@
+Date,Firm,To Grade,From Grade,Action
+2012-08-07,Oppenheimer,Outperform,,init
+2012-08-21,Barrington Research,Outperform,,main
+2012-08-21,Oppenheimer,Outperform,,main
+2013-02-25,BMO Capital,Outperform,Market Perform,up
+2013-05-24,Oppenheimer,Perform,Outperform,down
+2013-05-24,BMO Capital,Market Perform,Outperform,down
+2013-06-11,Oppenheimer,Perform,,main
+2014-02-25,Oppenheimer,Outperform,,up
+2014-02-27,BB&T Capital,Buy,Hold,up
+2014-06-18,Barrington Research,Outperform,Market Perform,up
+2014-07-14,Seaport Global,Accumulate,Neutral,up
+2014-08-06,Wells Fargo,Market Perform,,init
+2014-10-10,BB&T Capital,Buy,Hold,down
+2015-02-12,Oppenheimer,Outperform,,main
+2015-08-24,Oppenheimer,Outperform,,main
+2015-08-24,Wunderlich,Hold,,main
+2015-11-03,SunTrust Robinson Humphrey,Buy,,init
+2015-11-18,RBC Capital,Sector Perform,,init
+2015-12-14,RBC Capital,Sector Perform,,main
+2016-01-07,Wunderlich,Buy,Hold,up
+2016-02-24,SunTrust Robinson Humphrey,Buy,,main
+2016-05-10,KeyBanc,Sector Weight,,init
+2016-08-24,Oppenheimer,Perform,Outperform,down
+2016-08-24,Baird,Neutral,,main
+2016-08-24,SunTrust Robinson Humphrey,Buy,,main
+2016-08-24,Seaport Global,,,main
+2017-02-15,KeyBanc,Overweight,Sector Weight,up
+2017-08-23,Gabelli & Co.,Buy,Hold,up
+2017-12-15,Gabelli & Co.,Hold,Buy,down
+2018-02-22,DA Davidson,Buy,,init
+2018-02-26,Wells Fargo,Market Perform,Market Perform,main
+2018-05-23,B. Riley FBR,Buy,Buy,main
+2018-11-27,KeyBanc,Sector Weight,Overweight,down
+2018-11-29,DA Davidson,Neutral,Buy,down
+2019-01-08,Oppenheimer,Outperform,Perform,up
+2019-08-21,DA Davidson,Neutral,,main
+2019-10-18,Wells Fargo,Market Perform,,main
+2019-10-31,Wells Fargo,Market Perform,,main
+2019-12-13,Baird,Outperform,Neutral,up
+2019-12-13,Oppenheimer,Perform,Outperform,down
+2019-12-17,DA Davidson,Neutral,,main
+2020-01-27,DA Davidson,Buy,Neutral,up
+2020-02-21,Wells Fargo,Equal-Weight,,main
+2020-03-16,Wells Fargo,Overweight,Equal-Weight,up
+2020-04-06,KeyBanc,Overweight,Sector Weight,up
+2020-05-22,Wells Fargo,Overweight,,main
+2020-06-17,KeyBanc,Sector Weight,Overweight,down
+2021-02-24,Wells Fargo,Overweight,,main
+2021-03-31,Morgan Stanley,Equal-Weight,,init
+2021-05-26,Morgan Stanley,Equal-Weight,,main
+2021-05-26,Wells Fargo,Overweight,,main
+2021-07-06,DA Davidson,Buy,,main
+2021-09-01,Wells Fargo,Overweight,,main
+2021-10-19,Wells Fargo,Overweight,,main
+2021-12-17,Morgan Stanley,Equal-Weight,,main
+2022-01-10,Wells Fargo,Overweight,,main

@@ -1,0 +1,27 @@
+Date,Firm,To Grade,From Grade,Action
+2012-04-27,Jefferies,Hold,,main
+2012-11-05,Jefferies,Hold,,main
+2013-02-22,Jefferies,Hold,,main
+2013-10-08,Bank of America,Buy,,init
+2014-08-05,Jefferies,Hold,,main
+2014-11-03,Jefferies,Hold,,main
+2015-02-20,Jefferies,Hold,,main
+2016-01-08,Janney Capital,Buy,,init
+2016-03-22,Wells Fargo,Outperform,,init
+2016-07-29,Jefferies,Hold,,main
+2016-09-21,Wells Fargo,Market Perform,Outperform,down
+2016-10-28,Wells Fargo,Outperform,Market Perform,up
+2017-09-15,Jefferies,Buy,Hold,up
+2017-10-03,Stephens & Co.,Equal-Weight,,init
+2017-10-17,Bank of America,Neutral,Buy,down
+2017-10-27,Wells Fargo,Outperform,,main
+2018-01-24,Goldman Sachs,Neutral,,init
+2018-04-25,Bank of America,Underperform,Neutral,down
+2019-04-23,William Blair,Outperform,,init
+2019-05-01,Jefferies,Hold,Buy,down
+2019-07-26,Bank of America,Neutral,Underperform,up
+2019-12-12,Bank of America,Underperform,Neutral,down
+2020-04-24,B of A Securities,Neutral,Underperform,up
+2020-10-14,Stephens & Co.,Equal-Weight,,init
+2020-11-10,KeyBanc,Overweight,,init
+2021-07-30,Keybanc,Overweight,,main

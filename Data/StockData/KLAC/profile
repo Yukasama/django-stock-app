@@ -1,0 +1,37 @@
+,0
+symbol,KLAC
+price,331.47
+beta,1.259313
+volAvg,1568309
+mktCap,49957502976
+lastDiv,4.050000000000001
+range,285.89-457.12
+changes,-9.73999
+companyName,KLA Corporation
+currency,USD
+cik,0000319201
+isin,US4824801009
+cusip,482480100
+exchange,NASDAQ Global Select
+exchangeShortName,NASDAQ
+industry,Semiconductor Equipment & Materials
+website,https://www.kla.com
+description,"KLA Corporation designs, manufactures, and markets process control and yield management solutions for the semiconductor and related nanoelectronics industries worldwide. The company offers chip and wafer manufacturing products, including defect inspection and review systems, metrology solutions, in situ process monitoring products, computational lithography software, and data analytics systems for chip manufacturers to manage yield throughout the semiconductor fabrication process. It also provides reticle manufacturing products, such as reticle inspection, metrology, and data analytics systems for mask shops; and packaging manufacturing products comprising wafer inspection and metrology, die sorting and inspection, IC component inspection and metrology, data analytics, wafer processing systems, and IC substrate production processes. In addition, the company offers compound semiconductor, power device, light emitting diode, and microelectromechanical system manufacturing products; data storage media/head manufacturing products; general purpose/lab applications; and previous-generation KLA systems. Further, it provides wafer processing solutions; printed circuit boards, and display and inspection components; and other services. The company was formerly known as KLA-Tencor Corporation and changed its name to KLA Corporation in July 2019. KLA Corporation was incorporated in 1975 and is headquartered in Milpitas, California."
+ceo,Mr. Richard Wallace
+sector,Technology
+country,US
+fullTimeEmployees,11300
+phone,14088753000
+address,1 Technology Dr
+city,Milpitas
+state,CALIFORNIA
+zip,95035
+dcfDiff,9.22952
+dcf,340.7
+image,https://financialmodelingprep.com/image-stock/KLAC.png
+ipoDate,1980-10-08
+defaultImage,False
+isEtf,False
+isActivelyTrading,True
+isAdr,False
+isFund,False

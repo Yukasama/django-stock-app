@@ -1,0 +1,37 @@
+,0
+symbol,ETN
+price,145.18
+beta,1.198039
+volAvg,2091117
+mktCap,58009567232
+lastDiv,3.09
+range,137.56-175.72
+changes,-0.690002
+companyName,Eaton Corporation plc
+currency,USD
+cik,0001551182
+isin,IE00B8KQN827
+cusip,
+exchange,New York Stock Exchange
+exchangeShortName,NYSE
+industry,Specialty Industrial Machinery
+website,https://www.eaton.com
+description,"Eaton Corporation plc operates as a power management company worldwide. The company's Electrical Americas and Electrical Global segment provides electrical components, industrial components, power distribution and assemblies, residential products, single and three phase power quality and connectivity products, wiring devices, circuit protection products, utility power distribution products, power reliability equipment, and services, as well as hazardous duty electrical equipment, emergency lighting, fire detection, explosion-proof instrumentation, and structural support systems. Its Aerospace segment offers pumps, motors, hydraulic power units, hoses and fittings, and electro-hydraulic pumps; valves, cylinders, electronic controls, electromechanical actuators, sensors, aircraft flap and slat systems, and nose wheel steering systems; hose, thermoplastic tubing products, fittings, adapters, couplings, and sealing and ducting products; air-to-air refueling systems, fuel pumps, fuel inerting products, sensors, valves, and adapters and regulators; oxygen generation system, payload carriages, and thermal management products; and wiring connectors and cables, as well as hydraulic and bag filters, strainers and cartridges, and golf grips for manufacturers of commercial and military aircraft, and related after-market customers, as well as industrial applications. The company's Vehicle segment offers transmissions, clutches, hybrid power systems, superchargers, engine valves and valve actuation systems, locking and limited slip differentials, transmission controls, and fuel vapor components for the vehicle industry. Its eMobility segment provides voltage inverters, converters, fuses, onboard chargers, circuit protection units, vehicle controls, power distribution systems, fuel tank isolation valves, and commercial vehicle hybrid systems. Eaton Corporation plc was founded in 1911 and is based in Dublin, Ireland."
+ceo,Mr. Craig Arnold
+sector,Industrials
+country,IE
+fullTimeEmployees,85947
+phone,35316372900
+address,"Eaton Hse, 30 Pembroke Road"
+city,DUBLIN
+state,
+zip,D04 Y0C2
+dcfDiff,0.738625
+dcf,145.919
+image,https://financialmodelingprep.com/image-stock/ETN.png
+ipoDate,2012-12-03
+defaultImage,False
+isEtf,False
+isActivelyTrading,True
+isAdr,False
+isFund,False

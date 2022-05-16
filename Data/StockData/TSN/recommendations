@@ -1,0 +1,114 @@
+Date,Firm,To Grade,From Grade,Action
+2012-04-24,BMO Capital,Outperform,,up
+2012-05-16,Miller Tabak,Neutral,,init
+2012-07-09,BMO Capital,Market Perform,Outperform,down
+2012-07-10,JP Morgan,Neutral,Overweight,down
+2012-07-12,Morgan Stanley,Underweight,Equal-Weight,down
+2012-07-12,Bank of America,Underperform,Buy,down
+2012-08-06,DA Davidson,Neutral,Buy,down
+2012-11-19,DA Davidson,Buy,Neutral,up
+2012-11-20,BMO Capital,Market Perform,,main
+2013-01-18,BMO Capital,Outperform,Market Perform,up
+2013-01-29,Bank of America,Buy,Underperform,up
+2013-02-04,CLSA,Buy,Underperform,up
+2013-02-04,BMO Capital,Outperform,,main
+2013-02-26,Stephens & Co.,Equal-weight,Overweight,down
+2013-05-07,Miller Tabak,Buy,Neutral,up
+2013-06-07,Stephens & Co.,Overweight,Equal-Weight,up
+2013-07-10,DA Davidson,Buy,,main
+2013-08-26,Bank of America,Neutral,Buy,down
+2013-11-14,Cleveland Research,Neutral,Buy,down
+2014-04-29,BMO Capital,Market Perform,Outperform,down
+2014-05-06,JP Morgan,Neutral,,main
+2014-06-06,BB&T Capital,Hold,Buy,down
+2014-06-10,Credit Suisse,Underperform,Neutral,down
+2014-06-18,BMO Capital,Outperform,Market Perform,up
+2014-07-29,KeyBanc,Buy,,main
+2014-07-29,Credit Suisse,Underperform,,main
+2014-08-08,BB&T Capital,Buy,Hold,up
+2014-10-01,Credit Suisse,Neutral,Underperform,up
+2014-11-18,JP Morgan,Overweight,,main
+2014-12-09,Pivotal Research,Buy,,init
+2015-02-05,Cleveland Research,Buy,Neutral,up
+2015-08-04,BMO Capital,Outperform,,main
+2015-10-26,JP Morgan,Neutral,Overweight,down
+2015-11-24,Credit Suisse,Neutral,,main
+2015-12-07,Stephens & Co.,Equal-Weight,Overweight,down
+2015-12-15,Jefferies,Buy,,init
+2016-01-05,RBC Capital,Sector Perform,Outperform,down
+2016-02-17,Stephens & Co.,Overweight,Equal-Weight,up
+2016-03-04,BB&T Capital,Hold,Buy,down
+2016-04-12,CLSA,Outperform,Buy,down
+2016-04-21,Argus,Buy,,init
+2016-06-06,BMO Capital,Market Perform,Outperform,down
+2016-07-15,Jefferies,Buy,,main
+2016-07-27,Jefferies,Buy,,main
+2016-08-02,CLSA,Outperform,,main
+2016-10-07,Pivotal Research,Sell,Buy,down
+2016-10-10,CLSA,Buy,Outperform,up
+2016-10-11,BMO Capital,Outperform,Market Perform,up
+2016-11-22,Credit Suisse,Neutral,,main
+2016-11-22,Jefferies,Buy,,main
+2016-12-02,KeyBanc,Overweight,,init
+2017-03-16,Argus,Hold,Buy,down
+2017-06-06,Barclays,Overweight,,init
+2017-06-08,Mizuho,Buy,,init
+2017-08-08,Credit Suisse,Neutral,,main
+2017-10-02,Barclays,Overweight,,main
+2017-10-02,Credit Suisse,Neutral,,main
+2017-10-03,Jefferies,Buy,,main
+2017-10-30,Jefferies,Buy,,main
+2017-10-31,KeyBanc,Overweight,,init
+2017-11-03,Morgan Stanley,Equal-Weight,,init
+2017-11-13,Pivotal Research,Hold,Sell,up
+2017-11-15,Argus,Buy,Hold,up
+2018-01-05,PiperJaffray,Overweight,,init
+2018-02-21,Buckingham,Neutral,,init
+2018-03-29,Buckingham,Neutral,Neutral,main
+2018-04-20,Vertical Group,Hold,Buy,down
+2018-05-08,Credit Suisse,Neutral,Neutral,main
+2018-05-08,Buckingham,Neutral,Neutral,main
+2018-05-08,Morgan Stanley,Equal-Weight,Equal-Weight,main
+2018-07-31,Barclays,Overweight,Overweight,main
+2018-08-07,BMO Capital,Outperform,Outperform,main
+2018-09-05,Argus,Hold,Buy,down
+2018-10-23,Standpoint Research,Buy,,init
+2019-01-10,Vertical Group,Buy,Hold,up
+2019-03-05,Stephens & Co.,Overweight,,init
+2019-04-17,Credit Suisse,Neutral,Neutral,main
+2019-05-14,Argus,Buy,Hold,up
+2019-05-14,Argus Research,Buy,Hold,up
+2019-05-14,Credit Suisse,Outperform,Neutral,up
+2019-06-21,Barclays,Overweight,,main
+2019-08-06,Credit Suisse,Outperform,,main
+2019-10-25,Bank of America,Buy,,init
+2019-11-13,Bank of America,Buy,,main
+2019-11-13,BMO Capital,Outperform,,main
+2019-12-04,JP Morgan,Neutral,,main
+2020-01-16,Stephens & Co.,Equal-Weight,Overweight,down
+2020-02-07,Stephens & Co.,Equal-Weight,,main
+2020-02-20,Buckingham,Neutral,,main
+2020-03-20,JP Morgan,Overweight,Neutral,up
+2020-03-31,Barclays,Overweight,,main
+2020-04-02,JP Morgan,Overweight,,main
+2020-04-03,Credit Suisse,Outperform,,main
+2020-04-24,Bernstein,Market Perform,Outperform,down
+2020-04-29,Piper Sandler,Neutral,Overweight,down
+2020-05-05,BMO Capital,Outperform,,main
+2020-05-05,JP Morgan,Overweight,,main
+2020-05-05,B of A Securities,Neutral,Buy,down
+2020-06-04,Bernstein,Outperform,Market Perform,up
+2020-06-10,Credit Suisse,Outperform,,main
+2020-07-28,Seaport Global,Neutral,,init
+2020-08-05,Credit Suisse,Neutral,Outperform,down
+2020-12-03,Piper Sandler,Overweight,Neutral,up
+2020-12-16,JP Morgan,Neutral,Overweight,down
+2021-02-08,Stephens & Co.,Overweight,Equal-Weight,up
+2021-04-09,Stephens & Co.,Overweight,,main
+2021-05-11,Credit Suisse,Neutral,,main
+2021-05-11,BMO Capital,Outperform,,main
+2021-05-11,Piper Sandler,Neutral,Overweight,down
+2021-05-13,Barclays,Overweight,,main
+2021-05-19,Argus Research,Buy,Hold,up
+2021-08-10,BMO Capital,Outperform,,main
+2021-11-16,Credit Suisse,Neutral,,main

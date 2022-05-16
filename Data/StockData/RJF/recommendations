@@ -1,0 +1,115 @@
+Date,Firm,To Grade,From Grade,Action
+2012-07-09,S&P Capital IQ,Strong Buy,Buy,up
+2012-12-14,Keefe Bruyette & Woods,Outperform,Market Perform,up
+2012-12-18,Citigroup,Buy,,init
+2013-04-26,Citigroup,Neutral,,down
+2013-05-14,Evercore Partners,Overweight,,init
+2013-05-21,Wells Fargo,Market Perform,Outperform,down
+2013-08-01,Susquehanna,Neutral,Positive,down
+2013-12-05,Buckingham Research,Buy,,init
+2014-01-09,JMP Securities,Market Outperform,,main
+2014-01-09,Nomura,Buy,,init
+2014-01-15,Credit Suisse,Outperform,,init
+2014-01-24,Citigroup,Neutral,,main
+2014-04-09,Citigroup,Neutral,,main
+2014-04-10,Citigroup,Neutral,,main
+2014-04-24,Credit Suisse,Outperform,,main
+2014-05-21,Goldman Sachs,Neutral,Buy,down
+2014-07-25,Citigroup,Neutral,,main
+2014-07-31,Susquehanna,Positive,Neutral,up
+2014-10-31,Citigroup,Neutral,,main
+2014-11-20,Citigroup,Neutral,,main
+2014-11-25,Macquarie,Neutral,,init
+2015-01-09,Citigroup,Neutral,,main
+2015-01-12,JMP Securities,Market Outperform,,main
+2015-07-10,Citigroup,Neutral,,main
+2015-07-15,Susquehanna,Positive,,main
+2015-07-23,Macquarie,Neutral,,main
+2015-07-27,Keefe Bruyette & Woods,Outperform,,main
+2015-09-24,Citigroup,Neutral,,main
+2015-10-07,Keefe Bruyette & Woods,Outperform,,main
+2015-10-08,JMP Securities,Market Outperform,,main
+2015-12-04,Macquarie,Neutral,,main
+2016-01-12,Citigroup,Neutral,,down
+2016-01-22,Macquarie,Neutral,,main
+2016-01-25,Nomura,Neutral,Buy,down
+2016-02-01,JMP Securities,Market Outperform,,main
+2016-02-22,Credit Suisse,Outperform,,main
+2016-04-22,Goldman Sachs,Neutral,,main
+2016-07-11,Nomura,Neutral,,main
+2016-09-30,Nomura,Neutral,,main
+2016-10-28,JMP Securities,Market Perform,Market Outperform,down
+2016-12-05,Keefe Bruyette & Woods,Market Perform,Outperform,down
+2017-01-05,Nomura,Buy,Neutral,up
+2017-07-13,Nomura,Buy,,main
+2017-09-14,Wells Fargo,Outperform,Market Perform,up
+2017-10-27,Buckingham,Buy,,main
+2017-11-13,Citigroup,Neutral,,main
+2017-12-01,Credit Suisse,Underperform,,init
+2018-01-26,Buckingham,Buy,Buy,main
+2018-02-27,Keefe Bruyette & Woods,Outperform,Market Perform,up
+2018-04-10,Bernstein,Market Perform,,init
+2018-04-27,Credit Suisse,Neutral,Underperform,up
+2018-05-16,Goldman Sachs,Buy,Neutral,up
+2018-06-12,Wells Fargo,Outperform,Outperform,main
+2018-06-15,Citigroup,Neutral,Neutral,main
+2018-07-13,Citigroup,Buy,Neutral,up
+2018-07-27,JMP Securities,Market Outperform,Market Perform,up
+2018-10-26,Buckingham,Buy,Buy,main
+2018-10-26,Credit Suisse,Neutral,Neutral,main
+2018-10-26,Wells Fargo,Outperform,Outperform,main
+2018-12-10,Citigroup,Neutral,Neutral,main
+2019-01-04,Wells Fargo,Outperform,Outperform,main
+2019-03-06,Argus,Buy,,init
+2019-03-11,Compass Point,Buy,,init
+2019-04-05,Wells Fargo,Outperform,Outperform,main
+2019-04-15,Citigroup,Neutral,Neutral,main
+2019-07-09,Citigroup,Neutral,,main
+2019-09-19,Citigroup,Neutral,,main
+2019-10-01,Credit Suisse,Neutral,,main
+2019-10-25,Credit Suisse,Neutral,,main
+2019-11-20,Morgan Stanley,Equal-Weight,,init
+2019-11-25,Morgan Stanley,Equal-Weight,,init
+2020-01-09,Wells Fargo,Overweight,,main
+2020-01-14,Credit Suisse,Neutral,,main
+2020-01-24,Citigroup,Neutral,,main
+2020-01-24,Credit Suisse,Neutral,,main
+2020-03-06,Wells Fargo,Equal-Weight,Overweight,down
+2020-03-25,Citigroup,Neutral,Sell,up
+2020-04-06,Wells Fargo,Equal-Weight,,main
+2020-04-09,JMP Securities,Market Outperform,,main
+2020-04-14,Morgan Stanley,Equal-Weight,,main
+2020-05-01,Morgan Stanley,Equal-Weight,,main
+2020-05-01,Credit Suisse,Neutral,,main
+2020-05-01,Compass Point,Neutral,Buy,down
+2020-05-18,Wells Fargo,Underweight,Equal-Weight,down
+2020-06-09,Morgan Stanley,Overweight,Equal-Weight,up
+2020-07-08,Seaport Global,Neutral,,init
+2020-07-10,Wells Fargo,Underweight,,main
+2020-07-31,Morgan Stanley,Overweight,,main
+2020-07-31,Credit Suisse,Neutral,,main
+2020-10-09,JMP Securities,Market Outperform,,main
+2020-10-12,Morgan Stanley,Overweight,,main
+2020-11-02,Credit Suisse,Neutral,,main
+2020-11-17,Citigroup,Buy,Neutral,up
+2020-12-14,Morgan Stanley,Overweight,,main
+2021-01-05,Goldman Sachs,Buy,Sell,up
+2021-01-15,Wells Fargo,Overweight,Underweight,up
+2021-01-29,Credit Suisse,Neutral,,main
+2021-01-29,Morgan Stanley,Overweight,,main
+2021-04-09,JMP Securities,Market Outperform,,main
+2021-04-14,Morgan Stanley,Overweight,,main
+2021-04-30,Morgan Stanley,Overweight,,main
+2021-05-24,Credit Suisse,Neutral,,main
+2021-05-28,JMP Securities,Market Outperform,,main
+2021-07-12,Citigroup,Buy,,main
+2021-07-12,JMP Securities,Market Outperform,,main
+2021-07-21,Jefferies,Buy,,init
+2021-07-29,JMP Securities,Market Outperform,,main
+2021-08-03,Citigroup,Buy,,main
+2021-09-21,Morgan Stanley,Overweight,,main
+2021-09-22,Morgan Stanley,Overweight,,main
+2021-09-23,Morgan Stanley,Overweight,,main
+2021-10-11,Morgan Stanley,Overweight,,main
+2021-10-29,Morgan Stanley,Overweight,,main
+2021-12-08,Morgan Stanley,Overweight,,main

@@ -1,0 +1,92 @@
+Date,Firm,To Grade,From Grade,Action
+2012-08-29 14:43:00,Citigroup,Buy,,main
+2012-08-30 10:03:00,DA Davidson,Neutral,,main
+2012-08-30 10:31:00,UBS,Buy,,main
+2012-12-05 14:06:40,DA Davidson,Buy,Neutral,up
+2012-12-11 14:32:43,Goldman Sachs,Sell,,main
+2013-01-22 15:09:32,UBS,Buy,,main
+2013-01-24 10:54:11,Citigroup,Buy,,main
+2013-03-06 15:20:29,Goldman Sachs,Sell,,main
+2013-03-06 15:22:23,DA Davidson,Buy,,main
+2013-03-07 09:40:55,UBS,Buy,,main
+2013-03-22 07:59:34,Stifel Nicolaus,Buy,,init
+2013-06-06 07:47:39,Nomura,Neutral,,main
+2013-06-21 06:23:00,Morgan Stanley,Equal-Weight,Underweight,up
+2013-11-08 07:56:14,ISI Group,Buy,,init
+2013-11-25 17:12:26,RBC Capital,Outperform,,init
+2013-12-03 06:26:44,Bank of America,Buy,,init
+2013-12-05 06:37:52,DA Davidson,Buy,,main
+2014-01-30 08:00:00,Societe Generale,Hold,,init
+2014-01-31 08:00:00,Societe Generale,Hold,Buy,down
+2014-02-04 07:02:48,Deutsche Bank,Buy,,init
+2014-03-06 08:00:00,JP Morgan,Neutral,,main
+2014-06-05 06:15:43,ISI Group,Buy,Strong Buy,down
+2014-06-05 20:36:44,Barclays,Underweight,,main
+2014-06-05 20:36:46,Citigroup,Buy,,main
+2014-06-05 20:36:47,Deutsche Bank,Buy,,main
+2014-08-28 06:03:15,Deutsche Bank,Hold,Buy,down
+2014-09-16 06:48:39,Cowen & Co.,Outperform,,init
+2014-10-20 06:31:30,SunTrust Robinson Humphrey,Buy,Neutral,up
+2014-10-27 11:29:33,Gabelli & Co.,Hold,,init
+2014-12-04 08:19:15,Stifel Nicolaus,Buy,,main
+2015-03-05 09:00:00,Nomura,Neutral,,main
+2015-06-04 09:00:00,Stifel Nicolaus,Buy,,main
+2015-06-05 09:00:00,Deutsche Bank,Hold,,main
+2015-06-17 09:00:00,Morgan Stanley,Equal-Weight,,main
+2015-09-01 06:23:20,Barclays,Underweight,,main
+2015-10-22 06:24:54,Cowen & Co.,Market Perform,Outperform,down
+2016-01-04 11:55:52,RBC Capital,Sector Perform,Outperform,down
+2016-02-26 08:22:27,Sterne Agee CRT,Neutral,Buy,down
+2016-03-03 07:38:33,Cowen & Co.,Market Perform,,main
+2016-03-03 07:49:20,Deutsche Bank,Hold,,main
+2016-03-04 07:43:10,Bank of America,Neutral,Buy,down
+2016-04-01 06:29:00,Berenberg,Hold,,init
+2016-06-10 12:06:28,Citigroup,Buy,,main
+2016-09-15 17:06:23,Credit Suisse,Outperform,,init
+2016-12-22 13:07:42,SunTrust Robinson Humphrey,Hold,Buy,down
+2017-05-24 15:31:41,Citigroup,Neutral,Buy,down
+2017-06-08 12:01:44,Credit Suisse,Neutral,Outperform,down
+2017-06-08 19:05:32,Societe Generale,Sell,Hold,down
+2017-09-28 12:49:14,Goldman Sachs,Neutral,Sell,up
+2017-12-07 13:19:06,Pivotal Research,Hold,Buy,down
+2017-12-07 14:14:57,Societe Generale,Hold,Sell,up
+2018-01-10 18:32:01,Barclays,Equal-Weight,,init
+2018-02-06 12:35:00,BMO Capital,Market Perform,,init
+2018-06-25 12:12:29,Deutsche Bank,Hold,Hold,main
+2018-06-28 12:44:53,Morgan Stanley,Equal-Weight,Underweight,up
+2018-07-17 12:12:54,Cowen & Co.,Outperform,Market Perform,up
+2018-08-30 18:01:35,Deutsche Bank,Hold,Hold,main
+2019-05-30 13:05:30,Deutsche Bank,Hold,,main
+2019-06-10 12:37:23,Barclays,Equal-Weight,,main
+2019-06-10 15:42:08,Barclays,Equal-Weight,,main
+2019-08-29 11:39:44,BMO Capital,Market Perform,,main
+2019-08-29 11:47:17,JP Morgan,Neutral,,main
+2019-08-29 12:39:49,UBS,Neutral,,main
+2019-08-29 12:54:51,SunTrust Robinson Humphrey,Hold,,main
+2019-08-29 13:03:02,Morgan Stanley,Equal-Weight,,main
+2019-09-19 11:32:44,Evercore ISI Group,In-Line,Underperform,down
+2019-09-20 10:08:38,MKM Partners,Neutral,,init
+2019-09-20 12:16:29,Citigroup,Neutral,,main
+2019-10-11 11:59:44,Redburn,Neutral,Buy,down
+2019-12-06 15:32:11,UBS,Neutral,,main
+2019-12-06 16:02:40,SunTrust Robinson Humphrey,Hold,,main
+2019-12-09 12:31:04,Citigroup,Neutral,,main
+2019-12-09 12:53:45,Morgan Stanley,Equal-Weight,,main
+2020-03-06 13:46:58,MKM Partners,Neutral,,main
+2020-03-09 12:06:11,Morgan Stanley,Underweight,Equal-Weight,down
+2020-03-16 14:39:25,Morgan Stanley,Underweight,,main
+2020-05-22 12:54:47,Deutsche Bank,Hold,,main
+2020-05-27 13:56:44,UBS,Sell,Neutral,down
+2020-06-08 11:56:07,Morgan Stanley,Underweight,,main
+2020-06-10 11:16:04,Deutsche Bank,Hold,,main
+2020-06-10 12:05:57,Morgan Stanley,Underweight,,main
+2020-08-27 14:44:40,B of A Securities,Underperform,,main
+2020-09-03 15:38:01,Morgan Stanley,Underweight,,main
+2020-10-13 10:32:09,Redburn,Sell,Neutral,down
+2021-06-10 12:17:57,Morgan Stanley,Underweight,,main
+2021-08-26 14:11:32,UBS,Neutral,Sell,up
+2021-12-08 12:22:25,Barclays,Equal-Weight,,main
+2021-12-09 13:26:30,Morgan Stanley,Underweight,,main
+2021-12-10 12:26:50,Barclays,Equal-Weight,,main
+2022-01-19 10:45:52,Bernstein,Market Perform,,init
+2022-03-04 12:16:57,Deutsche Bank,Hold,,main

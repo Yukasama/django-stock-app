@@ -1,0 +1,68 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Spectral&display=swap');
+
+/* This file includes all settings, classes and styles of pre-edited elements */
+
+
+
+/* SETTINGS */
+:root {
+    --color-theme: white;
+    --color-reverse: black;
+    --color-light: rgb(224, 224, 224);
+    --color-reverse-light: rgb(31, 31, 31);
+    --color-blur: rgba(255,255,255,0.6);
+    --color-block-shadow: rgba(0,0,0,0.2);
+    --color-hover: rgb(236, 236, 236);
+
+    --color-first: rgb(19, 98, 218);
+    --color-second: rgb(2, 184, 93);
+    --color-third: rgb(156, 14, 221);
+    --color-first-light: rgba(19, 98, 218, 0.4);
+    --color-rainbow: linear-gradient(red, yellow, green, blue, purple, pink);
+
+    --height-navbar: 90px;
+    --height-navbar-scroll: 80px;
+
+    --font-size-navbar: 1em;
+    --font-size-text: 1em;
+    --font-size-header: 1.5em;
+    --font-weight: 500;
+
+    --border-radius: 15px;
+}
+.dark {
+    --color-theme: black;
+    --color-reverse: white;
+    --color-light: rgb(56, 56, 56);
+    --color-reverse-light: rgb(202, 202, 202);
+    --color-blur: rgba(0,0,0,0.6);
+    --color-block-shadow: rgba(255,255,255,0.2);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    list-style: none;
+    text-decoration: none;
+    font-size: var(--font-size-text);
+    font-weight: var(--font-weight);
+    font-family: "Poppins", sans-serif;
+    transition: 0.275s;
+    scroll-behavior: smooth;
+
+    color: var(--color-reverse);
+}
+body {
+    min-height: 0;
+    overflow-x: hidden;
+    background: var(--color-theme);
+}
+
+
+
+
+
+
+

@@ -1,0 +1,176 @@
+Date,Firm,To Grade,From Grade,Action
+2012-02-16,Evercore Partners,Equal-Weight,,main
+2012-02-16,Sterne Agee,Buy,,main
+2012-03-06,Jefferies,Hold,,main
+2012-03-26,Sterne Agee,Neutral,,down
+2012-04-30,Jefferies,Hold,,main
+2012-06-07,Citigroup,Neutral,,main
+2012-07-30,Jefferies,Hold,,main
+2012-09-24,Sterne Agee,Buy,Neutral,up
+2012-11-20,Citigroup,Buy,Neutral,up
+2013-01-25,DA Davidson,Neutral,,main
+2013-01-28,Citigroup,Neutral,Buy,down
+2013-01-29,FIG Partners,Market Perform,Outperform,down
+2013-01-30,Citigroup,Neutral,Buy,down
+2013-02-21,Sterne Agee,Neutral,Buy,down
+2013-04-29,Jefferies,Hold,,main
+2013-05-23,Maxim Group,Buy,,init
+2013-06-06,SunTrust Robinson Humphrey,Buy,Neutral,up
+2013-06-12,Barclays,Equal-Weight,,init
+2013-06-21,Keefe Bruyette & Woods,Outperform,Market Perform,up
+2013-06-24,Keefe Bruyette & Woods,Outperform,Market Perform,up
+2013-07-09,JP Morgan,Overweight,,main
+2013-07-26,DA Davidson,Neutral,,main
+2013-08-14,Keefe Bruyette & Woods,Outperform,,main
+2013-10-09,Bank of America,Buy,,init
+2013-10-25,DA Davidson,Neutral,,main
+2014-01-24,DA Davidson,Neutral,,main
+2014-01-24,Citigroup,Neutral,,main
+2014-01-24,Barclays,Equal-Weight,,main
+2014-02-18,Raymond James,Strong Buy,Outperform,up
+2014-03-13,Bank of America,Buy,,main
+2014-05-13,Raymond James,Strong Buy,,main
+2014-06-12,RBC Capital,Outperform,Sector Perform,up
+2014-07-09,Barclays,Equal-Weight,,main
+2014-07-10,Sandler O'Neill,Buy,Hold,up
+2014-07-25,JP Morgan,Overweight,,main
+2014-07-25,Jefferies,Hold,,main
+2014-09-23,Barclays,Overweight,Equal-Weight,up
+2014-12-02,Jefferies,Buy,Hold,up
+2015-04-27,SunTrust Robinson Humphrey,Buy,,main
+2015-06-16,Barclays,Overweight,,main
+2015-06-23,Keefe Bruyette & Woods,Outperform,,main
+2015-07-28,Barclays,Overweight,,main
+2015-08-28,DA Davidson,Buy,,up
+2015-10-09,Barclays,Overweight,,main
+2015-10-23,Barclays,Overweight,,main
+2015-11-11,Morgan Stanley,Overweight,Equal-Weight,up
+2016-01-22,PiperJaffray,Overweight,Neutral,up
+2016-03-24,Barclays,Overweight,,main
+2016-04-22,Stephens & Co.,Overweight,,main
+2016-04-22,Evercore ISI Group,Hold,Buy,down
+2016-05-27,Keefe Bruyette & Woods,Outperform,,main
+2016-07-07,JP Morgan,Overweight,,main
+2016-07-22,DA Davidson,Neutral,Buy,down
+2016-07-25,Barclays,Overweight,,main
+2016-08-01,Morgan Stanley,Overweight,,main
+2016-09-16,JMP Securities,Market Outperform,,init
+2016-10-11,Barclays,Overweight,,main
+2016-11-01,Barclays,Equal-Weight,Overweight,down
+2016-12-05,Barclays,Equal-Weight,,main
+2017-06-28,Wedbush,Neutral,,init
+2017-10-30,Barclays,Equal-Weight,,main
+2017-10-30,Maxim Group,Buy,,main
+2018-01-31,Morgan Stanley,Overweight,Overweight,main
+2018-03-22,UBS,Buy,,init
+2018-04-11,Barclays,Equal-Weight,Equal-Weight,main
+2018-04-27,Barclays,Equal-Weight,Equal-Weight,main
+2018-04-27,Wedbush,Neutral,Neutral,main
+2018-04-30,JMP Securities,Market Outperform,Market Outperform,main
+2018-04-30,Morgan Stanley,Overweight,Overweight,main
+2018-04-30,DA Davidson,Neutral,Neutral,main
+2018-04-30,Maxim Group,Buy,Buy,main
+2018-06-11,JP Morgan,Overweight,Overweight,main
+2018-06-26,Wells Fargo,Outperform,Outperform,main
+2018-07-27,Wells Fargo,Outperform,Outperform,main
+2018-07-27,Wedbush,Neutral,Neutral,main
+2018-07-27,JP Morgan,Overweight,Overweight,main
+2018-07-27,JMP Securities,Market Outperform,Market Outperform,main
+2018-07-31,Morgan Stanley,Overweight,Overweight,main
+2018-10-03,Barclays,Equal-Weight,Equal-Weight,main
+2018-10-26,Raymond James,Strong Buy,Strong Buy,main
+2018-10-26,Bank of America,Buy,Buy,main
+2018-10-26,Barclays,Equal-Weight,Equal-Weight,main
+2018-10-26,DA Davidson,Buy,Neutral,up
+2018-10-29,SunTrust Robinson Humphrey,Buy,Buy,main
+2018-11-28,Barclays,Overweight,Equal-Weight,up
+2018-12-06,Jefferies,Buy,Buy,main
+2018-12-06,Wells Fargo,Outperform,Outperform,main
+2019-01-08,Morgan Stanley,Overweight,Overweight,main
+2019-04-26,Raymond James,Strong Buy,Strong Buy,main
+2019-07-01,Morgan Stanley,Overweight,,main
+2019-07-01,Wells Fargo,Market Perform,Outperform,down
+2019-07-02,JP Morgan,Overweight,,main
+2019-07-08,Keefe Bruyette & Woods,Market Perform,Outperform,down
+2019-07-08,Raymond James,Market Perform,Strong Buy,down
+2019-07-26,Wedbush,Neutral,,main
+2019-09-12,Barclays,Overweight,,main
+2019-10-03,Morgan Stanley,Overweight,,main
+2019-10-25,Piper Jaffray,Overweight,,main
+2019-10-25,Wells Fargo,Market Perform,,main
+2019-10-25,Wedbush,Neutral,,main
+2019-10-28,Morgan Stanley,Overweight,,main
+2019-12-12,Morgan Stanley,Overweight,,main
+2020-01-02,SunTrust Robinson Humphrey,Buy,,main
+2020-01-24,DA Davidson,Buy,,main
+2020-01-24,Wells Fargo,Equal-Weight,,main
+2020-01-24,Stephens & Co.,Overweight,,main
+2020-01-27,Maxim Group,Buy,,main
+2020-01-27,SunTrust Robinson Humphrey,Buy,,main
+2020-01-28,Morgan Stanley,Overweight,,main
+2020-03-05,Morgan Stanley,Overweight,,main
+2020-03-09,Morgan Stanley,Overweight,,main
+2020-03-17,Morgan Stanley,Overweight,,main
+2020-03-30,Wells Fargo,Underweight,Equal-Weight,down
+2020-04-06,UBS,Neutral,,main
+2020-04-06,SunTrust Robinson Humphrey,Buy,,main
+2020-04-24,Wells Fargo,Underweight,,main
+2020-04-24,RBC Capital,Outperform,,main
+2020-04-24,B of A Securities,Buy,,main
+2020-05-05,SunTrust Robinson Humphrey,Buy,,main
+2020-05-05,JMP Securities,Market Outperform,,main
+2020-05-06,Morgan Stanley,Overweight,,main
+2020-05-15,UBS,Neutral,,main
+2020-06-08,Morgan Stanley,Overweight,,main
+2020-06-09,Oppenheimer,Outperform,,init
+2020-06-15,JP Morgan,Overweight,,main
+2020-07-07,Barclays,Overweight,,main
+2020-08-04,Morgan Stanley,Overweight,,main
+2020-09-03,Raymond James,Outperform,,main
+2020-10-23,Raymond James,Outperform,,main
+2020-11-03,Morgan Stanley,Overweight,,main
+2020-11-16,Oppenheimer,Perform,Outperform,down
+2020-12-07,Morgan Stanley,Equal-Weight,Overweight,down
+2021-01-04,Wells Fargo,Equal-Weight,Underweight,up
+2021-01-04,Barclays,Equal-Weight,Overweight,down
+2021-01-05,Raymond James,Outperform,,main
+2021-01-06,Morgan Stanley,Equal-Weight,,main
+2021-01-07,Morgan Stanley,Equal-Weight,,main
+2021-01-07,Raymond James,Outperform,,main
+2021-01-22,Raymond James,Outperform,,main
+2021-01-22,B of A Securities,Buy,,main
+2021-01-25,Maxim Group,Buy,,main
+2021-01-27,Morgan Stanley,Equal-Weight,,main
+2021-02-12,Morgan Stanley,Equal-Weight,,main
+2021-02-24,Morgan Stanley,Equal-Weight,,main
+2021-03-18,Morgan Stanley,Equal-Weight,,main
+2021-03-24,Raymond James,Outperform,,main
+2021-04-07,Barclays,Equal-Weight,,main
+2021-04-23,RBC Capital,Outperform,,main
+2021-04-23,Raymond James,Outperform,,reit
+2021-05-04,Morgan Stanley,Equal-Weight,,main
+2021-05-11,Piper Sandler,Overweight,,main
+2021-07-23,RBC Capital,Outperform,,main
+2021-07-23,Wells Fargo,Equal-Weight,,main
+2021-07-23,Barclays,Equal-Weight,,main
+2021-07-23,Raymond James,Outperform,,main
+2021-07-27,Stephens & Co.,Equal-Weight,,main
+2021-08-02,Morgan Stanley,Equal-Weight,,main
+2021-09-17,Wedbush,Outperform,Neutral,up
+2021-10-01,Goldman Sachs,Buy,,init
+2021-10-07,Raymond James,Outperform,,main
+2021-10-07,Wells Fargo,Equal-Weight,,main
+2021-10-22,Barclays,Equal-Weight,,main
+2021-10-22,RBC Capital,Outperform,,main
+2021-10-22,Raymond James,Outperform,,main
+2021-10-27,Morgan Stanley,Equal-Weight,,main
+2021-10-28,Stephens & Co.,Equal-Weight,,main
+2021-11-01,Maxim Group,Buy,,main
+2021-11-18,Raymond James,Outperform,,main
+2021-12-06,Morgan Stanley,Overweight,Equal-Weight,up
+2021-12-08,Wells Fargo,Overweight,Equal-Weight,up
+2022-01-03,Barclays,Equal-Weight,,main
+2022-01-10,Odeon Capital,Hold,Buy,down
+2022-01-21,Morgan Stanley,Overweight,,main
+2022-01-21,Janney Montgomery Scott,Neutral,Buy,down
+2022-01-21,Raymond James,Outperform,,main

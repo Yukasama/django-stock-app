@@ -1,0 +1,37 @@
+,0
+symbol,IRM
+price,55.53
+beta,0.883333
+volAvg,2231657
+mktCap,16130298880
+lastDiv,2.4735
+range,37.65-56.51
+changes,-0.40000153
+companyName,Iron Mountain Incorporated
+currency,USD
+cik,0001020569
+isin,US46284V1017
+cusip,46284V101
+exchange,New York Stock Exchange
+exchangeShortName,NYSE
+industry,REIT—Specialty
+website,https://www.ironmountain.com
+description,"Iron Mountain Incorporated (NYSE: IRM), founded in 1951, is the global leader for storage and information management services. Trusted by more than 225,000 organizations around the world, and with a real estate network of more than 90 million square feet across approximately 1,450 facilities in approximately 50 countries, Iron Mountain stores and protects billions of valued assets, including critical business information, highly sensitive data, and cultural and historical artifacts. Providing solutions that include secure records storage, information management, digital transformation, secure destruction, as well as data centers, cloud services and art storage and logistics, Iron Mountain helps customers lower cost and risk, comply with regulations, recover from disaster, and enable a more digital way of working."
+ceo,Mr. William Meaney
+sector,Real Estate
+country,US
+fullTimeEmployees,25000
+phone,16175354781
+address,1 Federal St
+city,Boston
+state,MASSACHUSETTS
+zip,02110
+dcfDiff,0.87921
+dcf,56.4092
+image,https://financialmodelingprep.com/image-stock/IRM.png
+ipoDate,2001-06-18
+defaultImage,False
+isEtf,False
+isActivelyTrading,True
+isAdr,False
+isFund,False

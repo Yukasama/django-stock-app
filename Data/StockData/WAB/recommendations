@@ -1,0 +1,79 @@
+Date,Firm,To Grade,From Grade,Action
+2012-04-25,KeyBanc,Hold,,down
+2012-04-27,JP Morgan,Overweight,,main
+2012-09-05,Credit Suisse,Outperform,,init
+2013-01-11,Stifel Nicolaus,Hold,,init
+2013-06-12,Raymond James,Market Perform,Outperform,down
+2013-06-26,Wolfe Research,Outperform,Peer Perform,up
+2013-07-01,Goldman Sachs,Buy,,init
+2013-12-20,Wellington Shields,Hold,Gradually Accumulate,down
+2014-10-09,Wunderlich,Buy,,init
+2015-11-16,Raymond James,Outperform,Market Perform,up
+2015-12-21,Stifel Nicolaus,Buy,Hold,up
+2016-09-07,Deutsche Bank,Buy,,init
+2016-09-30,CLSA,Buy,,init
+2016-10-26,Longbow Research,Neutral,Buy,down
+2016-10-26,Wolfe Research,Outperform,Outperform,main
+2016-12-21,William Blair,Outperform,Market Perform,up
+2017-04-26,KeyBanc,Overweight,Hold,up
+2017-07-13,Deutsche Bank,Hold,Buy,down
+2017-07-17,Stifel Nicolaus,Hold,Buy,down
+2017-07-26,Edward Jones,Hold,Buy,down
+2017-08-14,Deutsche Bank,Hold,,main
+2017-08-15,Deutsche Bank,Hold,,main
+2017-10-25,Stifel Nicolaus,Hold,,main
+2017-10-25,Buckingham,Buy,,main
+2017-12-13,Cowen & Co.,Outperform,,init
+2018-01-04,Seaport Global,Buy,,init
+2018-02-21,Wells Fargo,Market Perform,,main
+2018-04-23,Stifel Nicolaus,Buy,Hold,up
+2018-04-25,Stifel Nicolaus,Buy,Buy,main
+2018-04-25,Wells Fargo,Outperform,Outperform,main
+2018-05-08,KeyBanc,Overweight,Overweight,main
+2018-05-08,Stifel Nicolaus,Buy,Buy,main
+2018-05-14,Deutsche Bank,Buy,Hold,up
+2018-05-16,Wellington Shields,Hold,Gradually Accumulate,down
+2018-06-29,Mizuho,Neutral,,init
+2018-07-25,KeyBanc,Overweight,Overweight,main
+2018-07-25,Stifel Nicolaus,Buy,Buy,main
+2018-08-17,KeyBanc,Sector Weight,Overweight,down
+2018-10-31,Wells Fargo,Outperform,Outperform,main
+2019-02-22,Jefferies,Hold,,init
+2019-03-22,Buckingham,Buy,Buy,main
+2019-06-24,Buckingham Research,Neutral,Buy,down
+2019-07-10,Citi,Neutral,,init
+2019-07-31,Buckingham Research,Neutral,,main
+2019-08-08,Goldman Sachs,Buy,Neutral,up
+2019-09-10,Morgan Stanley,Equal-Weight,,init
+2019-09-16,KeyBanc,Overweight,Sector Weight,up
+2019-10-16,Bank of America,Underperform,,init
+2019-10-18,Buckingham,Neutral,,main
+2019-11-01,Citigroup,Neutral,,main
+2019-11-01,Morgan Stanley,Equal-Weight,,main
+2019-11-15,Atlantic Equities,Overweight,,init
+2020-01-02,Stephens & Co.,Overweight,,reit
+2020-02-19,Morgan Stanley,Equal-Weight,,main
+2020-03-11,Stephens & Co.,Overweight,,main
+2020-03-17,Morgan Stanley,Overweight,Equal-Weight,up
+2020-03-19,Goldman Sachs,Buy,,main
+2020-03-30,KeyBanc,Overweight,,main
+2020-04-03,Wells Fargo,Overweight,,main
+2020-04-15,Cowen & Co.,Outperform,,main
+2020-04-28,Citigroup,Neutral,,main
+2020-05-05,Morgan Stanley,Overweight,,main
+2020-10-12,Morgan Stanley,Overweight,,main
+2020-10-30,Morgan Stanley,Overweight,,main
+2020-11-13,KeyBanc,Overweight,,main
+2020-12-15,Morgan Stanley,Overweight,,main
+2021-01-14,KeyBanc,Overweight,,main
+2021-02-19,Morgan Stanley,Overweight,,main
+2021-02-22,Morgan Stanley,Overweight,,main
+2021-07-13,Morgan Stanley,Overweight,,main
+2021-07-30,Keybanc,Overweight,,main
+2021-08-02,Morgan Stanley,Overweight,,main
+2021-08-19,Keybanc,Overweight,,main
+2021-10-20,Wells Fargo,Overweight,,main
+2021-10-28,Citigroup,Neutral,,main
+2022-01-06,Wolfe Research,Underperform,Peer Perform,down
+2022-01-10,Wells Fargo,Overweight,,main
+2022-02-17,Stephens & Co.,Overweight,,main

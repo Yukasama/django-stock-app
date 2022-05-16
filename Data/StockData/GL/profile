@@ -1,0 +1,37 @@
+,0
+symbol,GL
+price,102.53
+beta,1.013235
+volAvg,620846
+mktCap,10168710144
+lastDiv,0.8
+range,85.25-108.61
+changes,1.03
+companyName,Globe Life Inc.
+currency,USD
+cik,0000320335
+isin,US37959E1029
+cusip,37959E102
+exchange,New York Stock Exchange
+exchangeShortName,NYSE
+industry,Insurance—Life
+website,https://www.globelifeinsurance.com
+description,"Globe Life Inc., through its subsidiaries, provides various life and supplemental health insurance products, and annuities to lower middle to middle income households in the United States. The company operates through four segments: Life Insurance, Supplemental Health Insurance, Annuities, and Investments. It offers whole life, term life, and other life insurance products; Medicare supplement and supplemental health insurance, such as critical illness and accident plans; and single-premium and flexible-premium deferred annuities. The company was formerly known as Torchmark Corporation and changed its name to Globe Life Inc. in August 2019. Globe Life Inc. was incorporated in 1979 and is headquartered in McKinney, Texas."
+ceo,Mr. Gary Coleman
+sector,Financial Services
+country,US
+fullTimeEmployees,3222
+phone,19725694000
+address,3700 S Stonebridge Dr
+city,McKinney
+state,TEXAS
+zip,75070
+dcfDiff,1.2207e-06
+dcf,102.53
+image,https://financialmodelingprep.com/image-stock/GL.png
+ipoDate,1980-12-31
+defaultImage,False
+isEtf,False
+isActivelyTrading,True
+isAdr,False
+isFund,False

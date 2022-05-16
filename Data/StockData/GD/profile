@@ -1,0 +1,37 @@
+,0
+symbol,GD
+price,242.04
+beta,0.992647
+volAvg,1585082
+mktCap,67320037376
+lastDiv,6.02
+range,182.01-254.99
+changes,-1.57001
+companyName,General Dynamics Corporation
+currency,USD
+cik,0000040533
+isin,US3695501086
+cusip,369550108
+exchange,New York Stock Exchange
+exchangeShortName,NYSE
+industry,Aerospace & Defense
+website,https://www.gd.com
+description,"General Dynamics Corporation operates as an aerospace and defense company worldwide. It operates through four segments: Aerospace, Marine Systems, Combat Systems, and Technologies. The Aerospace segment designs, manufactures, and sells business jets; and offers aircraft maintenance and repair, management, charter, aircraft-on-ground support and completion, staffing, and fixed-base operator services. The Marine Systems segment designs and builds nuclear-powered submarines, surface combatants, and auxiliary ships for the United States Navy and Jones Act ships for commercial customers, as well as builds crude oil and product tankers, and container and cargo ships. This segment also provides navy ships maintenance and modernization services; lifecycle support and repair services for navy surface ships; and program management, planning, engineering, and design support services for submarines and surface ships. The Combat Systems segment manufactures land combat solutions, such as wheeled and tracked combat vehicles, Stryker wheeled combat vehicles, piranha vehicles, weapons systems, munitions, mobile bridge systems with payloads, tactical vehicles, main battle tanks, armored vehicles, and armaments. This segment also offers modernization programs, engineering, support, and sustainment services. The Technologies segment provides information technology solutions and mission support services; mobile communication, computers, and command-and-control mission systems; and intelligence, surveillance, and reconnaissance solutions to military, intelligence, and federal civilian customers. This segment also offers cloud computing, artificial intelligence; machine learning; big data analytics; development, security, and operations; software-defined networks; everything-as-a-service; defense enterprise office system solutions; and unmanned undersea vehicle manufacturing and assembly services. General Dynamics Corporation was founded in 1899 and is headquartered in Reston, Virginia."
+ceo,Ms. Phebe Novakovic
+sector,Industrials
+country,US
+fullTimeEmployees,103100
+phone,17038763000
+address,11011 Sunset Hills Rd
+city,Reston
+state,VIRGINIA
+zip,20190
+dcfDiff,5.71276
+dcf,247.753
+image,https://financialmodelingprep.com/image-stock/GD.png
+ipoDate,1952-04-25
+defaultImage,False
+isEtf,False
+isActivelyTrading,True
+isAdr,False
+isFund,False

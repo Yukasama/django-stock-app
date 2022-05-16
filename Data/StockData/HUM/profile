@@ -1,0 +1,37 @@
+,0
+symbol,HUM
+price,451.33
+beta,0.938725
+volAvg,1160075
+mktCap,57202917376
+lastDiv,2.888
+range,351.2-475.44
+changes,-6.480011
+companyName,Humana Inc.
+currency,USD
+cik,0000049071
+isin,US4448591028
+cusip,444859102
+exchange,New York Stock Exchange
+exchangeShortName,NYSE
+industry,Healthcare Plans
+website,https://www.humana.com
+description,"Humana Inc., together with its subsidiaries, operates as a health and well-being company in the United States. It operates through three segments: Retail, Group and Specialty, and Healthcare Services. The company offers medical and supplemental benefit plans to individuals. It also has a contract with Centers for Medicare and Medicaid Services to administer the Limited Income Newly Eligible Transition prescription drug plan program; and contracts with various states to provide Medicaid, dual eligible, and long-term support services benefits. In addition, the company provides commercial fully insured medical and specialty health insurance benefits comprising dental, vision, and other supplemental health benefits; and administrative services only products to individuals and employer groups, as well as military services, such as TRICARE T2017 East Region contract. Further, it offers pharmacy solutions, provider services, and home solutions services, such as home health and other services to its health plan members, as well as to third parties. As of December 31, 2021, the company had approximately 17 million members in medical benefit plans, as well as approximately 5 million members in specialty products. Humana Inc. was founded in 1961 and is headquartered in Louisville, Kentucky."
+ceo,Mr. Bruce Broussard
+sector,Healthcare
+country,US
+fullTimeEmployees,95500
+phone,15025801000
+address,500 W Main St
+city,Louisville
+state,KENTUCKY
+zip,40202
+dcfDiff,26.2296
+dcf,477.56
+image,https://financialmodelingprep.com/image-stock/HUM.png
+ipoDate,1971-05-18
+defaultImage,False
+isEtf,False
+isActivelyTrading,True
+isAdr,False
+isFund,False

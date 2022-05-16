@@ -1,0 +1,37 @@
+,0
+symbol,IPG
+price,34.13
+beta,0.998039
+volAvg,4239885
+mktCap,13445855232
+lastDiv,1.1
+range,29.38-39.98
+changes,-0.00999832
+companyName,"The Interpublic Group of Companies, Inc."
+currency,USD
+cik,0000051644
+isin,US4606901001
+cusip,460690100
+exchange,New York Stock Exchange
+exchangeShortName,NYSE
+industry,Advertising Agencies
+website,https://www.interpublic.com
+description,"The Interpublic Group of Companies, Inc. provides advertising and marketing services worldwide. It operates in two segments, Integrated Agency Networks (IAN) and IPG DXTRA. The company offers consumer advertising, digital marketing, communications planning and media buying, public relations, and specialized communications disciplines, as well as data science services. It also provides various diversified services, including meeting and event production, sports and entertainment marketing, corporate and brand identity, and strategic marketing consulting. The company was formerly known as McCann-Erickson Incorporated and changed its name to The Interpublic Group of Companies, Inc. in January 1961. The Interpublic Group of Companies, Inc. was founded in 1902 and is headquartered in New York, New York."
+ceo,Mr. Michael Roth
+sector,Communication Services
+country,US
+fullTimeEmployees,55600
+phone,12127041200
+address,909 3rd Ave
+city,New York City
+state,NEW YORK
+zip,10022
+dcfDiff,8.17909
+dcf,42.3091
+image,https://financialmodelingprep.com/image-stock/IPG.png
+ipoDate,1971-08-23
+defaultImage,False
+isEtf,False
+isActivelyTrading,True
+isAdr,False
+isFund,False

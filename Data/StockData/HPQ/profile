@@ -1,0 +1,37 @@
+,0
+symbol,HPQ
+price,38.63
+beta,1.00098
+volAvg,15544844
+mktCap,40691683328
+lastDiv,0.8879999999999999
+range,26.11-41.47
+changes,-1.4300003
+companyName,HP Inc.
+currency,USD
+cik,0000047217
+isin,US40434L1052
+cusip,40434L105
+exchange,New York Stock Exchange
+exchangeShortName,NYSE
+industry,Computer Hardware
+website,https://www.hp.com
+description,"HP Inc. provides personal computing and other access devices, imaging and printing products, and related technologies, solutions, and services in the United States and internationally. The company operates through three segments: Personal Systems, Printing, and Corporate Investments. The Personal Systems segment offers commercial and consumer desktop and notebook personal computers, workstations, thin clients, commercial mobility devices, retail point-of-sale systems, displays and peripherals, software, support, and services. The Printing segment provides consumer and commercial printer hardware, supplies, solutions, and services. The Corporate Investments segment is involved in the HP Labs and business incubation, and investment projects. It serves individual consumers, small- and medium-sized businesses, and large enterprises, including customers in the government, health, and education sectors. The company was formerly known as Hewlett-Packard Company and changed its name to HP Inc. in October 2015. HP Inc. was founded in 1939 and is headquartered in Palo Alto, California."
+ceo,Mr. Enrique Lores
+sector,Technology
+country,US
+fullTimeEmployees,51000
+phone,16508571501
+address,1501 Page Mill Rd
+city,Palo Alto
+state,CALIFORNIA
+zip,94304
+dcfDiff,3.58549
+dcf,42.2155
+image,https://financialmodelingprep.com/image-stock/HPQ.png
+ipoDate,1961-03-17
+defaultImage,False
+isEtf,False
+isActivelyTrading,True
+isAdr,False
+isFund,False

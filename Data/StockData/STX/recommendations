@@ -1,0 +1,31 @@
+Date,Firm,To Grade,From Grade,Action
+2021-05-20,B of A Securities,Buy,,main
+2021-05-21,Northland Capital Markets,Market Perform,Outperform,down
+2021-06-09,Barclays,Underweight,,main
+2021-06-09,Rosenblatt,Buy,,main
+2021-06-09,Morgan Stanley,Overweight,,main
+2021-06-09,Citigroup,Neutral,,main
+2021-06-09,Deutsche Bank,Hold,,main
+2021-06-09,Benchmark,Buy,,main
+2021-06-09,Craig-Hallum,Buy,,main
+2021-06-11,Susquehanna,Neutral,Negative,up
+2021-06-14,Stifel,Buy,,main
+2021-06-24,Northland Capital Markets,Outperform,Market Perform,up
+2021-06-30,Barclays,Equal-Weight,Underweight,up
+2021-07-15,Mizuho,Buy,,main
+2021-07-16,Wedbush,Neutral,,main
+2021-07-22,Susquehanna,Neutral,,main
+2021-07-22,Benchmark,Buy,,main
+2021-07-22,Northland Capital Markets,Outperform,,main
+2021-07-22,Morgan Stanley,Overweight,,main
+2021-07-22,Deutsche Bank,Hold,,main
+2021-08-12,Goldman Sachs,Neutral,Sell,up
+2021-08-16,UBS,Buy,Neutral,up
+2021-10-06,Morgan Stanley,Equal-Weight,Overweight,down
+2021-12-06,Fox Advisors,Equal-Weight,Overweight,down
+2022-01-27,Wells Fargo,Equal-Weight,,main
+2022-01-27,Rosenblatt,Buy,,main
+2022-01-27,Morgan Stanley,Equal-Weight,,main
+2022-01-27,Deutsche Bank,Hold,,main
+2022-01-27,Stifel,Buy,,main
+2022-01-27,Benchmark,Buy,,main

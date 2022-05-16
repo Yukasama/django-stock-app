@@ -1,0 +1,80 @@
+Date,Firm,To Grade,From Grade,Action
+2012-04-10,Guggenheim,Neutral,,main
+2012-07-20,Keefe Bruyette & Woods,Market Perform,Outperform,down
+2012-07-20,Compass Point,Neutral,,main
+2012-10-08,JP Morgan,Neutral,,main
+2012-10-09,Barclays,Equal-Weight,,main
+2012-10-22,JP Morgan,Neutral,,main
+2012-12-20,Evercore Partners,Underweight,,init
+2013-03-22,Keefe Bruyette & Woods,Market Perform,Outperform,down
+2013-05-23,Sandler O'Neill,Sell,Hold,down
+2013-06-18,JP Morgan,Overweight,Neutral,up
+2013-06-28,Deutsche Bank,Hold,,main
+2013-07-09,JP Morgan,Overweight,,main
+2013-08-07,Boenning & Scattergood,Underperform,,init
+2014-01-17,JP Morgan,Neutral,Overweight,down
+2014-01-17,FBR Capital,Underperform,Market Perform,down
+2014-04-22,JP Morgan,Neutral,,main
+2014-05-15,SunTrust Robinson Humphrey,Neutral,,init
+2014-07-21,JP Morgan,Neutral,,main
+2014-09-16,Sandler O'Neill,Sell,Hold,down
+2014-10-03,Barclays,Underweight,Equal-Weight,down
+2014-10-20,Raymond James,Market Perform,Outperform,down
+2014-10-20,Barclays,Underweight,,main
+2014-10-20,Keefe Bruyette & Woods,Market Perform,,main
+2015-01-20,Keefe Bruyette & Woods,Market Perform,,main
+2015-04-17,Keefe Bruyette & Woods,Market Perform,,main
+2015-04-17,Sandler O'Neill,Hold,Sell,up
+2015-06-16,Barclays,Underweight,,main
+2015-06-29,SunTrust Robinson Humphrey,Neutral,,main
+2015-07-20,Keefe Bruyette & Woods,Market Perform,,main
+2015-10-09,Barclays,Underweight,,main
+2016-01-25,Deutsche Bank,Hold,,main
+2016-01-25,PiperJaffray,Overweight,Neutral,up
+2016-04-05,Morgan Stanley,Underweight,Equal-Weight,down
+2016-04-05,JP Morgan,Neutral,,main
+2016-04-22,PiperJaffray,Underweight,Neutral,down
+2016-06-29,PiperJaffray,Neutral,Underweight,up
+2016-10-11,Deutsche Bank,Hold,,main
+2016-11-16,PiperJaffray,Underweight,Neutral,down
+2016-12-02,Sandler O'Neill,Sell,Hold,down
+2016-12-05,Barclays,Underweight,,main
+2016-12-20,FBR Capital,Market Perform,Underperform,up
+2017-06-05,Morgan Stanley,Equal-Weight,Underweight,up
+2018-03-22,UBS,Neutral,,init
+2018-04-20,PiperJaffray,Neutral,Underweight,up
+2018-04-20,Morgan Stanley,Equal-Weight,Equal-Weight,main
+2018-06-20,Keefe Bruyette & Woods,Outperform,Market Perform,up
+2018-07-24,Morgan Stanley,Equal-Weight,Equal-Weight,main
+2018-09-18,Morgan Stanley,Equal-Weight,Equal-Weight,main
+2019-01-10,Barclays,Equal-Weight,Underweight,up
+2019-04-22,Fig Partners,Market Perform,Outperform,down
+2019-08-27,DA Davidson,Buy,,init
+2019-09-06,Keefe Bruyette & Woods,Market Perform,Outperform,down
+2019-10-03,Morgan Stanley,Equal-Weight,,main
+2019-11-26,Raymond James,Market Perform,,init
+2020-01-17,DA Davidson,Neutral,Buy,down
+2020-01-17,Stephens & Co.,Equal-Weight,,main
+2020-03-17,Morgan Stanley,Equal-Weight,,main
+2020-04-07,Morgan Stanley,Equal-Weight,,main
+2020-04-24,DA Davidson,Neutral,Buy,down
+2020-04-24,Piper Sandler,Overweight,,main
+2020-05-15,UBS,Neutral,,main
+2020-06-08,Morgan Stanley,Equal-Weight,,main
+2020-06-24,RBC Capital,Sector Perform,,init
+2020-08-04,Morgan Stanley,Equal-Weight,,main
+2020-09-28,Piper Sandler,Overweight,,main
+2020-12-07,Morgan Stanley,Equal-Weight,,main
+2020-12-17,Seaport Global,Buy,,init
+2021-01-07,Jefferies,Buy,Hold,up
+2021-01-07,Morgan Stanley,Equal-Weight,,main
+2021-01-25,Deutsche Bank,Hold,,main
+2021-01-27,Morgan Stanley,Equal-Weight,,main
+2021-02-24,Morgan Stanley,Equal-Weight,,main
+2021-03-18,Morgan Stanley,Equal-Weight,,main
+2021-04-06,Seaport Global,Neutral,Buy,down
+2021-05-03,Morgan Stanley,Equal-Weight,,main
+2021-08-02,Morgan Stanley,Equal-Weight,,main
+2021-10-07,Wells Fargo,Equal-Weight,,main
+2021-12-06,Morgan Stanley,Equal-Weight,,main
+2022-01-04,Wells Fargo,Equal-Weight,,main

@@ -1,0 +1,138 @@
+Date,Firm,To Grade,From Grade,Action
+2012-04-12,Stifel Nicolaus,Buy,,main
+2012-04-27,UBS,Neutral,,main
+2012-04-27,DA Davidson,Buy,,main
+2012-06-11,UBS,Neutral,,main
+2012-07-05,DA Davidson,Buy,,main
+2012-07-06,Pacific Crest,Sector Perform,,init
+2012-07-26,Goldman Sachs,Buy,,main
+2012-07-26,Bank of America,Neutral,,main
+2012-07-27,UBS,Neutral,,main
+2012-12-10,Needham,,,init
+2012-12-14,Pacific Crest,Outperform,Sector Perform,up
+2013-01-25,UBS,Neutral,,main
+2013-01-25,Craig-Hallum,Hold,Buy,down
+2013-01-28,Citigroup,Buy,,main
+2013-04-26,UBS,Buy,,up
+2013-07-26,Pacific Crest,Sector Perform,Outperform,down
+2014-01-15,Pacific Crest,Outperform,,up
+2014-01-17,Sidoti & Co.,Neutral,Buy,down
+2014-01-21,DA Davidson,Buy,,main
+2014-01-24,Credit Suisse,Outperform,,main
+2014-01-24,Deutsche Bank,Buy,,main
+2014-04-10,ISI Group,Buy,,init
+2014-04-25,Pacific Crest,Outperform,,main
+2014-06-04,Craig-Hallum,Buy,Hold,up
+2014-07-25,UBS,Buy,,main
+2014-07-25,Credit Suisse,Outperform,,main
+2014-09-02,Citigroup,Buy,,main
+2014-10-03,ISI Group,Neutral,Buy,down
+2014-12-18,Citigroup,Neutral,Buy,down
+2015-01-12,Credit Suisse,Neutral,Outperform,down
+2015-01-30,Susquehanna,Neutral,Positive,down
+2015-05-04,UBS,Buy,,main
+2015-05-05,Citigroup,Neutral,,main
+2015-05-14,Craig-Hallum,Hold,Buy,down
+2015-06-24,Goldman Sachs,Buy,,main
+2015-08-25,Craig-Hallum,Buy,Hold,up
+2015-09-15,Citigroup,Buy,Neutral,up
+2015-09-17,Pacific Crest,Overweight,,main
+2015-09-21,Susquehanna,Neutral,,main
+2015-09-23,Sidoti & Co.,Buy,,main
+2015-10-08,KeyBanc,Overweight,,main
+2015-10-29,Susquehanna,Neutral,,main
+2015-10-29,Pacific Crest,Sector Weight,Overweight,down
+2015-12-17,Evercore ISI Group,Buy,Hold,up
+2016-01-29,Credit Suisse,Neutral,,main
+2016-02-03,Goldman Sachs,Neutral,Buy,down
+2016-07-21,Stifel Nicolaus,Hold,Buy,down
+2016-07-29,Deutsche Bank,Buy,,main
+2016-07-29,UBS,Buy,,main
+2017-04-03,Baird,Outperform,,init
+2017-07-05,Stifel Nicolaus,Buy,Hold,up
+2017-07-28,KeyBanc,Overweight,Sector Weight,up
+2017-10-27,Evercore ISI Group,In-Line,Outperform,down
+2017-10-27,Credit Suisse,Neutral,,main
+2017-10-30,Citigroup,Buy,,main
+2017-10-31,Citigroup,Buy,,main
+2017-11-21,Deutsche Bank,Hold,Buy,down
+2017-12-12,Goldman Sachs,Buy,Neutral,up
+2018-01-02,Evercore ISI Group,Outperform,In-Line,up
+2018-01-24,Stifel Nicolaus,Buy,Buy,main
+2018-01-30,Citigroup,Buy,Buy,main
+2018-04-05,UBS,Neutral,,init
+2018-04-25,Baird,Neutral,Outperform,down
+2018-04-26,Credit Suisse,Neutral,Neutral,main
+2018-04-26,Stifel Nicolaus,Buy,Buy,main
+2018-04-26,DA Davidson,Neutral,Buy,down
+2018-05-15,Cowen & Co.,Market Perform,,init
+2018-09-25,Citigroup,Buy,Buy,main
+2018-10-10,Baird,Outperform,Outperform,main
+2018-10-18,Goldman Sachs,Neutral,Buy,down
+2018-10-25,Credit Suisse,Neutral,Neutral,main
+2018-10-25,Craig-Hallum,Buy,Hold,up
+2018-11-20,Bank of America,Neutral,Buy,down
+2018-12-17,Citigroup,Buy,Buy,main
+2018-12-21,Baird,Neutral,Outperform,down
+2019-01-14,Evercore ISI Group,In-Line,Outperform,down
+2019-02-22,Craig-Hallum,Hold,Buy,down
+2019-04-16,Stifel Nicolaus,Buy,Buy,main
+2019-04-25,Baird,Outperform,Neutral,up
+2019-07-25,Stifel,Hold,Buy,down
+2019-10-21,UBS,Neutral,,main
+2019-10-24,Stifel Nicolaus,Hold,,main
+2019-10-24,Baird,Outperform,,main
+2019-10-24,Deutsche Bank,Hold,,main
+2019-10-25,Citi,Buy,,main
+2020-01-13,Evercore ISI Group,Outperform,In-Line,up
+2020-01-24,Susquehanna,Negative,Neutral,down
+2020-01-24,KeyBanc,Overweight,,main
+2020-01-24,Credit Suisse,Neutral,,main
+2020-01-24,Deutsche Bank,Hold,,main
+2020-01-24,UBS,Neutral,,main
+2020-01-24,Citigroup,Buy,,main
+2020-01-24,DA Davidson,Neutral,,main
+2020-03-27,Deutsche Bank,Buy,Hold,up
+2020-04-15,Stifel,Hold,,main
+2020-04-22,CFRA,Hold,,main
+2020-04-23,Deutsche Bank,Buy,,main
+2020-04-23,UBS,Sell,Neutral,down
+2020-07-10,Northland Capital Markets,Market Perform,Outperform,down
+2020-07-13,Deutsche Bank,Buy,,main
+2020-07-14,Craig-Hallum,Hold,Buy,down
+2020-07-23,Credit Suisse,Neutral,,main
+2020-07-27,Citigroup,Buy,,main
+2020-10-09,Stifel,Buy,Hold,up
+2020-10-22,Susquehanna,Neutral,Negative,up
+2020-11-04,Goldman Sachs,Buy,Neutral,up
+2020-12-10,Morgan Stanley,Overweight,,init
+2021-01-06,KeyBanc,Overweight,,main
+2021-01-25,Deutsche Bank,Buy,,main
+2021-01-26,Rosenblatt,Buy,,init
+2021-01-29,DA Davidson,Neutral,,main
+2021-01-29,Credit Suisse,Neutral,,main
+2021-03-11,Rosenblatt,Buy,,main
+2021-04-29,Morgan Stanley,Overweight,,main
+2021-04-29,Credit Suisse,Neutral,,main
+2021-04-30,Rosenblatt,Buy,,main
+2021-06-21,Evercore ISI Group,Outperform,,main
+2021-07-29,Susquehanna,Positive,Neutral,up
+2021-10-07,DA Davidson,Buy,Neutral,up
+2021-10-15,Piper Sandler,Overweight,,init
+2021-10-28,Cowen & Co.,Outperform,Market Perform,up
+2021-10-28,Morgan Stanley,Overweight,,main
+2021-10-28,UBS,Buy,Sell,up
+2021-10-28,Craig-Hallum,Buy,Hold,up
+2021-11-15,Piper Sandler,Overweight,,main
+2021-12-15,Morgan Stanley,Overweight,,main
+2021-12-15,Piper Sandler,Overweight,,main
+2021-12-17,Goldman Sachs,Buy,,main
+2022-01-14,Loop Capital,Buy,,init
+2022-01-26,Keybanc,Overweight,,init
+2022-01-28,Morgan Stanley,Overweight,,main
+2022-01-28,Susquehanna,Positive,,main
+2022-01-28,Rosenblatt,Buy,,main
+2022-01-28,Deutsche Bank,Hold,Buy,down
+2022-01-28,Piper Sandler,Overweight,,main
+2022-01-28,Stifel,Hold,Buy,down
+2022-01-28,Keybanc,Overweight,,main

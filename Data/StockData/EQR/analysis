@@ -1,0 +1,7 @@
+Period,Max Age,End Date,Growth,Earnings Estimate Avg,Earnings Estimate Low,Earnings Estimate High,Earnings Estimate Year Ago Eps,Earnings Estimate Number Of Analysts,Earnings Estimate Growth,Revenue Estimate Avg,Revenue Estimate Low,Revenue Estimate High,Revenue Estimate Number Of Analysts,Revenue Estimate Year Ago Revenue,Revenue Estimate Growth,Eps Trend Current,Eps Trend 7Days Ago,Eps Trend 30Days Ago,Eps Trend 60Days Ago,Eps Trend 90Days Ago,Eps Revisions Up Last7Days,Eps Revisions Up Last30Days,Eps Revisions Down Last30Days,Eps Revisions Down Last90Days
+0Q,1,2022-03-31,0.667,0.25,0.16,0.38,0.15,7.0,0.667,657190000.0,646000000.0,665700000.0,11.0,597602000.0,0.1,0.25,0.25,0.25,0.22,0.23,0.0,0.0,1.0,
++1Q,1,2022-06-30,-0.643,0.3,0.23,0.47,0.84,7.0,-0.643,672220000.0,658360000.0,683400000.0,11.0,598059000.0,0.124,0.3,0.3,0.32,0.27,0.27,0.0,0.0,1.0,
+0Y,1,2022-12-31,-0.66400003,1.19,0.9,1.87,3.54,9.0,-0.66400003,2721590000.0,2651490000.0,2811400000.0,16.0,2464000000.0,0.105,1.19,1.19,1.21,1.45,1.45,1.0,1.0,1.0,
++1Y,1,2023-12-31,0.176,1.4,1.08,2.04,1.19,8.0,0.176,2878750000.0,2738820000.0,3074900000.0,15.0,2721590000.0,0.058000002,1.4,1.4,1.41,2.06,2.21,2.0,3.0,0.0,
++5Y,1,,0.065,,,,,,,,,,,,,,,,,,,,,
+-5Y,1,,-0.074889995,,,,,,,,,,,,,,,,,,,,,

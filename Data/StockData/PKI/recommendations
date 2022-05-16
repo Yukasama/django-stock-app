@@ -1,0 +1,105 @@
+Date,Firm,To Grade,From Grade,Action
+2012-03-06,Morgan Stanley,Equal-Weight,,init
+2012-04-27,UBS,Buy,,main
+2012-04-27,Jefferies,Hold,,main
+2012-07-10,ISI Group,Overweight,,init
+2012-07-23,Barclays,Equal-Weight,,main
+2012-10-02,Cowen & Co.,Neutral,,init
+2012-10-03,JP Morgan,Overweight,,init
+2012-10-26,UBS,Buy,,main
+2012-10-26,Jefferies,Hold,,main
+2013-01-03,Morgan Stanley,Overweight,,up
+2013-01-04,Morgan Stanley,Overweight,Equal-Weight,up
+2013-01-17,CLSA,Buy,Outperform,up
+2013-02-01,UBS,Buy,,main
+2013-02-01,Jefferies,Hold,,main
+2013-04-18,Citigroup,Neutral,,init
+2013-04-26,ISI Group,Buy,,down
+2013-08-15,Janney Capital,Neutral,,init
+2013-09-16,PiperJaffray,Overweight,,init
+2013-09-17,PiperJaffray,Overweight,,init
+2013-10-31,Jefferies,Hold,,main
+2013-12-10,Macquarie,Outperform,Neutral,up
+2013-12-12,Bank of America,Buy,,main
+2014-01-06,Cowen & Co.,Outperform,Market Perform,up
+2014-01-31,UBS,Buy,,main
+2014-04-09,ISI Group,Neutral,Buy,down
+2014-04-25,Jefferies,Hold,,main
+2014-04-25,JP Morgan,Overweight,,main
+2014-05-05,Janney Capital,Buy,Neutral,up
+2014-08-01,JP Morgan,Overweight,,main
+2014-08-12,Stifel Nicolaus,Buy,,init
+2014-09-08,Morgan Stanley,Overweight,,init
+2014-12-02,Goldman Sachs,Neutral,Buy,down
+2015-01-06,JP Morgan,Neutral,Overweight,down
+2015-03-10,UBS,,,init
+2015-05-04,KeyBanc,Sector Weight,Overweight,down
+2015-06-30,Stifel Nicolaus,Buy,,main
+2015-07-31,Citigroup,Buy,,main
+2015-08-27,Cantor Fitzgerald,Buy,,init
+2015-12-03,Wedbush,Neutral,Outperform,down
+2015-12-08,Goldman Sachs,Sell,Neutral,down
+2016-01-06,Deutsche Bank,Hold,,init
+2016-01-07,Cowen & Co.,Market Perform,Outperform,down
+2016-02-05,Stifel Nicolaus,Buy,,main
+2016-03-01,Barclays,Underweight,,init
+2016-04-05,Bank of America,Neutral,Buy,down
+2016-08-05,JP Morgan,Neutral,,main
+2016-08-05,Jefferies,Hold,,main
+2016-08-05,Barclays,Underweight,,main
+2016-08-05,Mizuho,Neutral,Buy,down
+2016-09-22,UBS,Buy,,main
+2017-01-18,Deutsche Bank,Hold,,init
+2017-02-03,Bank of America,Underperform,Neutral,down
+2017-03-27,Janney Capital,Buy,Neutral,up
+2017-04-19,Cantor Fitzgerald,Neutral,,down
+2017-07-10,Morgan Stanley,Overweight,,main
+2017-07-13,Wells Fargo,Market Perform,,init
+2017-08-07,Citigroup,Buy,,main
+2017-10-06,Morgan Stanley,Overweight,,main
+2017-11-03,Morgan Stanley,Overweight,,main
+2017-11-03,Baird,Outperform,,main
+2017-12-19,Bank of America,Neutral,Underperform,up
+2018-01-04,Evercore ISI Group,In-Line,,init
+2018-01-26,Barclays,Underweight,Underweight,main
+2018-04-09,Deutsche Bank,Hold,Hold,main
+2018-04-11,Morgan Stanley,Overweight,Overweight,main
+2018-05-01,Baird,Outperform,Outperform,main
+2018-05-01,Morgan Stanley,Overweight,Overweight,main
+2018-05-01,Bank of America,Neutral,Neutral,main
+2018-08-02,Bank of America,Neutral,Neutral,main
+2018-08-02,Barclays,Underweight,Underweight,main
+2018-08-02,Morgan Stanley,Overweight,Overweight,main
+2018-09-05,Barclays,Equal-Weight,Underweight,up
+2018-10-10,Morgan Stanley,Overweight,Overweight,main
+2018-11-02,Janney Capital,Neutral,Buy,down
+2019-01-03,Morgan Stanley,Overweight,Overweight,main
+2019-01-03,Needham,Hold,,init
+2019-04-09,Goldman Sachs,Conviction Buy,Neutral,up
+2019-07-30,UBS,Neutral,,main
+2019-09-26,Bank of America,Buy,Neutral,up
+2019-10-18,UBS,Neutral,,main
+2019-10-31,Piper Jaffray,Neutral,Overweight,down
+2019-11-15,Stifel Nicolaus,Buy,,init
+2020-01-02,Evercore ISI Group,Outperform,In-Line,up
+2020-01-07,Citigroup,Neutral,,init
+2020-01-08,Wells Fargo,Equal-Weight,,init
+2020-01-28,UBS,Neutral,,main
+2020-03-20,Citigroup,Neutral,,main
+2020-03-26,Barclays,Equal-Weight,,main
+2020-03-30,Wells Fargo,Equal-Weight,,main
+2020-04-02,Stifel,Buy,,main
+2020-04-20,Citigroup,Neutral,,main
+2020-05-06,JP Morgan,Neutral,,main
+2020-05-06,Baird,Outperform,,main
+2020-05-06,CFRA,Hold,,main
+2020-05-07,UBS,Neutral,,main
+2020-07-29,JP Morgan,Neutral,,main
+2020-07-29,Stifel,Buy,,main
+2020-09-11,Needham,Buy,Hold,up
+2020-10-29,Wells Fargo,Equal-Weight,,main
+2020-11-09,Needham,Buy,,main
+2020-11-10,KeyBanc,Sector Weight,,init
+2021-01-07,Wells Fargo,Overweight,Equal-Weight,up
+2021-11-03,Wells Fargo,Overweight,,main
+2021-12-14,Wells Fargo,Overweight,,main

@@ -1,0 +1,72 @@
+Date,Firm,To Grade,From Grade,Action
+2012-04-12,Deutsche Bank,Sell,,main
+2012-04-25,BGB Securities,Hold,,down
+2012-05-09,UBS,Neutral,,main
+2012-10-02,Goldman Sachs,Sell,,down
+2012-10-12,Citigroup,Neutral,,main
+2012-12-17,RBC Capital,Sector Perform,Outperform,down
+2013-01-31,Goldman Sachs,Sell,,main
+2013-02-01,Deutsche Bank,Hold,Sell,up
+2013-04-23,Compass Point,Neutral,,init
+2013-06-06,Bank of America,Buy,Neutral,up
+2013-07-23,Compass Point,Neutral,,main
+2013-10-16,Macquarie,Neutral,,down
+2013-12-02,Goldman Sachs,Sell,Neutral,down
+2014-01-30,Deutsche Bank,Sell,Hold,down
+2014-04-25,Compass Point,Neutral,,main
+2014-04-25,Deutsche Bank,Sell,,main
+2014-08-04,Deutsche Bank,Sell,,main
+2014-10-27,Keefe Bruyette & Woods,Market Perform,,main
+2014-10-27,Compass Point,Neutral,,main
+2015-04-01,Credit Suisse,Underperform,,init
+2015-05-06,Goldman Sachs,Neutral,Sell,up
+2015-07-07,Deutsche Bank,Hold,Sell,up
+2015-07-08,Goldman Sachs,Buy,Neutral,up
+2015-07-09,Bank of America,Neutral,Buy,down
+2015-07-20,UBS,Sell,Neutral,down
+2015-09-21,Sterne Agee CRT,Neutral,,init
+2016-01-21,Morgan Stanley,Equal-Weight,Underweight,up
+2016-11-15,Goldman Sachs,Neutral,Buy,down
+2017-10-25,UBS,Sell,,main
+2017-10-25,Bank of America,Neutral,,main
+2017-10-25,Deutsche Bank,Hold,,main
+2018-06-14,Bank of America,Underperform,Neutral,down
+2018-06-18,Goldman Sachs,Sell,,init
+2018-08-07,Credit Suisse,Neutral,,init
+2019-01-03,Morgan Stanley,Equal-Weight,Equal-Weight,main
+2019-02-27,Credit Suisse,Outperform,Neutral,up
+2019-04-24,UBS,Sell,,main
+2019-06-27,Deutsche Bank,Sell,Hold,down
+2019-08-14,Morgan Stanley,Equal-Weight,,main
+2019-09-12,Buckingham,Neutral,,main
+2019-12-05,RBC Capital,Outperform,Sector Perform,up
+2019-12-11,Credit Suisse,Outperform,,main
+2020-01-22,Buckingham,Buy,Neutral,up
+2020-01-29,RBC Capital,Outperform,,main
+2020-01-29,Deutsche Bank,Sell,,main
+2020-02-28,Morgan Stanley,Equal-Weight,,main
+2020-04-01,Morgan Stanley,Equal-Weight,,main
+2020-04-08,RBC Capital,Outperform,,main
+2020-04-14,Deutsche Bank,Hold,Sell,up
+2020-04-24,CFRA,Hold,,main
+2020-07-22,Deutsche Bank,Hold,,main
+2020-07-23,Morgan Stanley,Equal-Weight,,main
+2020-07-27,UBS,Neutral,,main
+2020-10-26,Morgan Stanley,Equal-Weight,,main
+2020-11-24,Morgan Stanley,Equal-Weight,,main
+2021-01-08,Goldman Sachs,Neutral,Sell,up
+2021-01-11,Credit Suisse,Outperform,,main
+2021-01-12,Morgan Stanley,Equal-Weight,,main
+2021-01-27,Morgan Stanley,Equal-Weight,,main
+2021-02-24,UBS,Buy,Neutral,up
+2021-03-24,Morgan Stanley,Equal-Weight,,main
+2021-04-07,Wells Fargo,Overweight,,init
+2021-04-16,Morgan Stanley,Equal-Weight,,main
+2021-04-21,Deutsche Bank,Hold,,main
+2021-04-22,Morgan Stanley,Equal-Weight,,main
+2021-07-23,RBC Capital,Outperform,,main
+2021-08-19,B of A Securities,Neutral,Underperform,up
+2021-09-20,Boenning & Scattergood,Outperform,Neutral,up
+2021-10-22,RBC Capital,Outperform,,main
+2021-12-09,Truist Securities,Buy,,init
+2021-12-16,Evercore ISI Group,Outperform,,init

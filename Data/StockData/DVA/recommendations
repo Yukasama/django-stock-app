@@ -1,0 +1,77 @@
+Date,Firm,To Grade,From Grade,Action
+2012-02-17,Citigroup,Neutral,,main
+2012-02-17,Goldman Sachs,Buy,,main
+2012-04-05,Bank oferica,Buy,,main
+2012-05-03,Feltl & Co.,Buy,,down
+2012-07-03,Bank of America,Buy,,main
+2012-08-02,Feltl & Co.,Buy,,main
+2012-10-02,Bank of America,Buy,,main
+2012-10-11,Bank of America,Buy,,main
+2012-10-31,Feltl & Co.,Buy,,main
+2012-11-06,Deutsche Bank,Buy,,main
+2012-12-20,JP Morgan,Overweight,,init
+2013-01-28,Bernstein,Market Perform,,init
+2013-02-15,Goldman Sachs,Neutral,Buy,down
+2013-02-15,Bank of America,Buy,,main
+2013-03-07,Deutsche Bank,Hold,Buy,down
+2013-03-11,SunTrust Robinson Humphrey,Neutral,Buy,down
+2013-04-02,Deutsche Bank,Buy,Hold,up
+2013-07-02,Raymond James,Market Perform,Outperform,down
+2013-07-16,Goldman Sachs,Sell,Neutral,down
+2013-08-07,RBC Capital,Sector Perform,Outperform,down
+2013-10-10,Atlantic Equities,Overweight,,init
+2013-11-25,Deutsche Bank,Buy,,main
+2013-11-25,Citigroup,Neutral,,main
+2013-12-17,KeyBanc,Buy,,init
+2013-12-18,KeyBanc,Buy,,init
+2014-01-06,Raymond James,Outperform,Market Perform,up
+2014-04-17,Citigroup,Neutral,,main
+2014-05-02,Deutsche Bank,Buy,,main
+2014-06-30,Jefferies,Buy,,init
+2014-07-21,Raymond James,Market Perform,Outperform,down
+2014-08-15,Deutsche Bank,Hold,Buy,down
+2014-09-17,KeyBanc,Hold,Buy,down
+2014-11-07,JP Morgan,Overweight,,main
+2015-03-13,Deutsche Bank,Hold,,main
+2015-04-27,Baird,Outperform,Neutral,up
+2015-09-16,JP Morgan,Neutral,,init
+2016-03-02,Bernstein,Market Perform,,main
+2016-08-09,JP Morgan,Neutral,,main
+2016-09-06,Bank of America,Neutral,Buy,down
+2016-09-06,Citigroup,Neutral,,init
+2016-09-20,Raymond James,Outperform,Market Perform,up
+2016-12-13,Baird,Neutral,Outperform,down
+2017-06-26,Jefferies,Hold,Buy,down
+2017-10-09,JP Morgan,Underweight,Neutral,down
+2017-11-08,Bank of America,Neutral,,main
+2017-12-07,Raymond James,Strong Buy,Outperform,up
+2017-12-11,Citigroup,Buy,Neutral,up
+2018-01-04,Bank of America,Buy,Neutral,up
+2018-09-13,JP Morgan,Neutral,Underweight,up
+2018-11-08,RBC Capital,Sector Perform,Sector Perform,main
+2018-11-08,Raymond James,Market Perform,Strong Buy,down
+2018-11-16,UBS,Sell,,init
+2018-11-28,Raymond James,Outperform,Market Perform,up
+2018-12-14,Barclays,Overweight,,init
+2019-01-03,Deutsche Bank,Buy,,init
+2019-01-08,UBS,Neutral,Sell,up
+2019-05-09,Deutsche Bank,Buy,,main
+2019-07-26,Baird,Neutral,Outperform,down
+2019-08-22,UBS,Neutral,,main
+2019-09-11,William Blair,Market Perform,Outperform,down
+2019-11-06,Baird,Neutral,,main
+2019-11-07,Raymond James,Market Perform,Outperform,down
+2019-11-19,Barclays,Overweight,,main
+2019-12-18,SunTrust Robinson Humphrey,Hold,,main
+2019-12-20,JP Morgan,Neutral,,main
+2020-01-24,Goldman Sachs,Buy,Neutral,up
+2020-04-13,SunTrust Robinson Humphrey,Hold,,main
+2020-05-06,SunTrust Robinson Humphrey,Hold,,main
+2021-01-05,B of A Securities,Neutral,Buy,down
+2021-03-26,B of A Securities,Underperform,Neutral,down
+2021-07-19,Deutsche Bank,Buy,,main
+2021-08-12,Barclays,Equal-Weight,Overweight,down
+2021-09-10,Cowen & Co.,Market Perform,,init
+2021-10-13,Truist Securities,Hold,,main
+2021-10-29,RBC Capital,Sector Perform,,main
+2022-01-05,Truist Securities,Hold,,main

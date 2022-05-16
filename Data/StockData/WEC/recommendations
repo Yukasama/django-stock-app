@@ -1,0 +1,118 @@
+Date,Firm,To Grade,From Grade,Action
+2012-03-27,UBS,Buy,,main
+2012-05-01,Wellington Shields,Buy,,main
+2012-05-02,Wunderlich,Hold,,main
+2012-05-02,ISI Group,Hold,,main
+2012-05-24,UBS,Neutral,,down
+2012-06-28,Barclays,Overweight,,main
+2012-08-02,Barclays,Overweight,,main
+2012-08-02,Wunderlich,Hold,,main
+2012-08-02,DA Davidson,Neutral,,main
+2012-08-07,Wellington Shields,Hold,Buy,down
+2012-11-01,Nomura,Neutral,,main
+2012-11-08,Wellington Shields,Buy,Hold,up
+2013-01-18,DA Davidson,Neutral,,main
+2013-02-05,UBS,Neutral,,main
+2013-05-01,Wunderlich,Hold,,main
+2013-05-01,UBS,Neutral,,main
+2013-05-01,Gabelli & Co.,Hold,Buy,down
+2013-07-02,Deutsche Bank,Hold,,init
+2013-07-11,Atlantic Equities,Overweight,Neutral,up
+2013-10-17,Wunderlich,Hold,,main
+2013-12-11,Deutsche Bank,Hold,,main
+2014-01-06,Barclays,Equal-Weight,Overweight,down
+2014-04-23,Edward Jones,Sell,Hold,down
+2014-04-23,Deutsche Bank,Hold,,main
+2014-05-01,Wunderlich,Hold,,main
+2014-05-09,UBS,Sell,Neutral,down
+2014-06-23,Edward Jones,Hold,Sell,up
+2014-06-24,Wells Fargo,Outperform,Market Perform,up
+2014-06-24,CRT Capital,Fair Value,,main
+2014-06-24,ISI Group,Neutral,Cautious,up
+2014-06-26,UBS,Neutral,Sell,up
+2014-07-21,CRT Capital,Fair Value,,main
+2014-08-01,UBS,Neutral,,main
+2014-10-30,Wunderlich,Hold,,main
+2014-10-31,Deutsche Bank,Hold,,main
+2014-11-05,Evercore ISI Group,Sell,Hold,down
+2014-11-06,Wells Fargo,Market Perform,Outperform,down
+2014-12-17,Deutsche Bank,Hold,,main
+2015-05-06,UBS,Neutral,,main
+2015-05-08,Evercore ISI Group,Hold,Sell,up
+2015-06-15,Deutsche Bank,Hold,,main
+2015-06-18,Gabelli & Co.,Buy,Hold,up
+2015-06-30,Barclays,Equal-Weight,,init
+2015-07-16,Baird,Outperform,Neutral,up
+2015-07-28,Goldman Sachs,Buy,Neutral,up
+2015-10-26,UBS,Sell,Neutral,down
+2015-12-14,Deutsche Bank,Buy,Hold,up
+2016-01-04,Barclays,Equal-Weight,,main
+2016-01-27,Goldman Sachs,Neutral,Buy,down
+2016-02-05,Barclays,Equal-Weight,,main
+2016-02-05,BMO Capital,Market Perform,,main
+2016-02-05,Deutsche Bank,Hold,Buy,down
+2016-03-01,Argus,Buy,,main
+2016-05-09,UBS,Neutral,Sell,up
+2016-11-04,Guggenheim,Buy,,init
+2017-02-02,Mizuho,Neutral,Buy,down
+2017-06-26,Goldman Sachs,Sell,Neutral,down
+2017-11-15,Bank of America,Neutral,,main
+2017-12-07,Credit Suisse,Neutral,,init
+2018-02-01,Wells Fargo,Market Perform,Market Perform,main
+2018-02-02,UBS,Neutral,,init
+2018-02-23,Credit Suisse,Neutral,Neutral,main
+2018-04-13,Citigroup,Neutral,,init
+2018-05-02,Credit Suisse,Neutral,Neutral,main
+2018-07-10,Barclays,Equal-Weight,,init
+2018-07-10,Citigroup,Neutral,Neutral,main
+2018-07-20,Goldman Sachs,Neutral,Sell,up
+2018-08-01,Deutsche Bank,Hold,Hold,main
+2018-09-17,Wells Fargo,Outperform,Outperform,main
+2018-10-03,Citigroup,Neutral,Neutral,main
+2018-11-01,Credit Suisse,Neutral,Neutral,main
+2018-11-19,Barclays,Equal-Weight,Equal-Weight,main
+2018-12-06,Argus,Buy,Buy,main
+2019-02-13,Wells Fargo,Outperform,Outperform,main
+2019-02-14,Credit Suisse,Neutral,Neutral,main
+2019-04-08,Goldman Sachs,Sell,Neutral,down
+2019-05-09,Scotiabank,Sector Perform,Outperform,down
+2019-06-24,Bank of America,Underperform,Neutral,down
+2019-08-07,Credit Suisse,Underperform,Neutral,down
+2019-08-27,Wells Fargo,Outperform,,main
+2019-09-04,Guggenheim,Neutral,Buy,down
+2019-09-06,UBS,Neutral,,main
+2019-10-08,JP Morgan,Neutral,,init
+2019-10-30,Citigroup,Neutral,,main
+2019-11-13,Credit Suisse,Underperform,,main
+2020-01-16,Citigroup,Neutral,,main
+2020-01-31,Wells Fargo,Overweight,,main
+2020-03-12,Barclays,Underweight,Equal-Weight,down
+2020-03-13,KeyBanc,Overweight,Sector Weight,up
+2020-03-16,Evercore ISI Group,In-Line,Underperform,up
+2020-03-16,UBS,Neutral,,main
+2020-03-26,Barclays,Underweight,,main
+2020-03-31,JP Morgan,Neutral,,main
+2020-04-24,Wells Fargo,Equal-Weight,Overweight,down
+2020-04-30,Credit Suisse,Underperform,,main
+2020-05-05,CFRA,Strong Sell,,main
+2020-05-05,Wells Fargo,Equal-Weight,,main
+2020-05-27,JP Morgan,Neutral,,main
+2020-06-05,UBS,Neutral,,main
+2020-06-22,UBS,Neutral,,main
+2020-07-21,KeyBanc,Overweight,,main
+2020-09-04,Atlantic Equities,Overweight,,init
+2020-09-11,KeyBanc,Overweight,,main
+2020-10-19,KeyBanc,Overweight,,main
+2020-11-02,Credit Suisse,Underperform,,main
+2020-11-04,Credit Suisse,Underperform,,main
+2021-01-12,KeyBanc,Sector Weight,Overweight,down
+2021-01-13,Barclays,Equal-Weight,Underweight,up
+2021-03-04,Wells Fargo,Overweight,Equal-Weight,up
+2021-04-09,Mizuho,Neutral,,init
+2021-05-25,Barclays,Overweight,,main
+2021-10-15,B of A Securities,Neutral,Underperform,up
+2021-10-19,Wolfe Research,Peer Perform,Underperform,up
+2021-11-03,Wells Fargo,Overweight,,main
+2021-11-03,Scotiabank,Sector Outperform,Sector Perform,up
+2022-01-13,Goldman Sachs,Neutral,Sell,up
+2022-01-24,Wolfe Research,Underperform,Peer Perform,down

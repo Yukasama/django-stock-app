@@ -1,0 +1,25 @@
+Date,Firm,To Grade,From Grade,Action
+2020-03-17,Morgan Stanley,Equal-Weight,,main
+2020-03-27,Wells Fargo,Equal-Weight,,main
+2020-04-03,JP Morgan,Overweight,,main
+2020-04-07,Citigroup,Neutral,,main
+2020-04-21,KeyBanc,Overweight,,main
+2020-04-21,Mizuho,Buy,,main
+2020-04-29,Raymond James,Market Perform,Outperform,down
+2020-08-21,Morgan Stanley,Equal-Weight,,main
+2020-10-16,Mizuho,Neutral,Buy,down
+2020-12-10,Wells Fargo,Underweight,Equal-Weight,down
+2020-12-14,KeyBanc,Sector Weight,Overweight,down
+2021-03-15,Morgan Stanley,Equal-Weight,,main
+2021-03-30,B of A Securities,Buy,Neutral,up
+2021-05-20,Berenberg,Buy,Hold,up
+2021-05-20,JP Morgan,Neutral,Overweight,down
+2021-05-24,RBC Capital,Outperform,,main
+2021-07-23,Wells Fargo,Underweight,,main
+2021-07-26,Morgan Stanley,Equal-Weight,,main
+2021-09-13,Morgan Stanley,Equal-Weight,,main
+2021-11-18,RBC Capital,Outperform,,main
+2021-11-29,Morgan Stanley,Equal-Weight,,main
+2021-12-06,Wolfe Research,Peer Perform,,init
+2021-12-20,JP Morgan,Overweight,Neutral,up
+2022-02-01,Credit Suisse,Neutral,,init

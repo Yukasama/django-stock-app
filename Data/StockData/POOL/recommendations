@@ -1,0 +1,46 @@
+Date,Firm,To Grade,From Grade,Action
+2012-02-17,Morgan Keegan,Outperform,,main
+2012-05-25,Wunderlich,Buy,,init
+2012-07-17,Wedbush,Neutral,,main
+2013-02-15,Wunderlich,Buy,,main
+2013-07-17,Wunderlich,Buy,,main
+2013-11-04,Stephens & Co.,Overweight,,init
+2014-02-14,Wunderlich,Buy,,main
+2014-11-19,KeyBanc,Hold,Buy,down
+2015-07-27,William Blair,Outperform,Market Perform,up
+2015-09-08,KeyBanc,Overweight,,up
+2015-10-12,Sidoti & Co.,Neutral,Buy,down
+2016-02-02,Stephens & Co.,Equal-Weight,,down
+2016-07-15,Johnson Rice,Accumulate,Buy,down
+2016-08-24,Wedbush,Outperform,,init
+2017-02-17,Baird,Outperform,Market Perform,up
+2017-07-24,Johnson Rice,Buy,Accumulate,up
+2017-08-25,KeyBanc,Sector Weight,Overweight,down
+2017-09-15,Sidoti & Co.,Buy,Neutral,up
+2017-10-20,Baird,Outperform,,main
+2018-06-20,Berenberg,Hold,,init
+2018-07-03,Baird,Neutral,Outperform,down
+2018-10-12,Jefferies,Hold,,init
+2018-10-19,Baird,Neutral,Neutral,main
+2019-02-22,Baird,Outperform,Neutral,up
+2019-08-23,Sidoti & Co.,Neutral,Buy,down
+2019-09-23,Stephens & Co.,Equal-Weight,,reit
+2019-10-18,Baird,Outperform,,main
+2020-01-07,Loop Capital,Hold,,init
+2020-02-18,Stephens & Co.,Equal-Weight,,main
+2020-03-18,KeyBanc,Overweight,Sector Weight,up
+2020-04-24,KeyBanc,Overweight,,main
+2020-04-27,Stephens & Co.,Equal-Weight,,main
+2020-05-19,KeyBanc,Overweight,,main
+2020-05-27,CFRA,Strong Buy,,main
+2020-06-02,KeyBanc,Overweight,,main
+2020-06-19,Baird,Outperform,,main
+2020-10-08,Sidoti & Co.,Neutral,,main
+2020-10-23,KeyBanc,Overweight,,main
+2021-04-20,Loop Capital,Hold,,main
+2021-05-18,Goldman Sachs,Buy,,init
+2021-06-04,Loop Capital,Buy,,main
+2021-06-08,Keybanc,Overweight,,main
+2021-10-22,Keybanc,Overweight,,main
+2021-10-22,Loop Capital,Hold,,main
+2021-10-25,Stephens & Co.,Equal-Weight,,main

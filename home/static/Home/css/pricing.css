@@ -1,0 +1,44 @@
+
+
+.pricing {
+    flex-direction: column;
+}
+.pricing_container {
+    justify-content: space-evenly;
+    align-items: center;
+}
+.pricing_panel {
+    height: 600px;
+    width: 300px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.pricing_p {
+    text-align: center;
+}
+.pricing_class {
+    font-size: 1.6em;
+    color: var(--color-first);
+}
+.pricing_description {
+    color: var(--color-light);
+}
+.pricing_icon {
+    color: rgb(0, 255, 0);
+}
+.pricing_text {
+    margin-left: 5px;
+}
+.pricing_price {
+    font-size: 2em;
+    color: var(--color-light);
+}
+.pricing_period {
+    color: var(--color-light);   
+}
+.pricing_button {
+    border-radius: 10px;
+}

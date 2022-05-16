@@ -1,0 +1,37 @@
+,0
+symbol,JKHY
+price,198.55
+beta,0.589215
+volAvg,640111
+mktCap,14459404288
+lastDiv,1.8699999999999999
+range,147.5-205.37
+changes,-1.9799957
+companyName,"Jack Henry & Associates, Inc."
+currency,USD
+cik,0000779152
+isin,US4262811015
+cusip,426281101
+exchange,NASDAQ Global Select
+exchangeShortName,NASDAQ
+industry,Information Technology Services
+website,https://www.jackhenry.com
+description,"Jack Henry & Associates, Inc. provides technology solutions and payment processing services primarily for financial services organizations in the United States. It operates through four segments: Core, Payments, Complementary, and Corporate and Other. The company offers information and transaction processing solutions for banks ranging from community to multi-billion-dollar asset institutions under the Jack Henry Banking brand; core data processing solutions for various credit unions under the Symitar brand; and specialized financial performance, imaging and payments processing, information security and risk management, retail delivery, and online and mobile solutions to financial institutions and corporate entities under the ProfitStars brand. It also provides a suite of integrated applications required to process deposit, loan, and general ledger transactions, as well as to maintain centralized customer/member information; and complementary products and services that enable core bank and credit union clients to respond to evolving customer/member demands. The company's Jack Henry Banking business brand offers SilverLake, a robust primarily designed for commercial-focused banks; CIF 20/20, a parameter-driven, easy-to-use system for banks; and Core Director, a cost-efficient system with point-and-click operation. Its Symitar business brand provides Episys, a robust designed for credit unions. In addition, the company offers digital products and services and electronic payment solutions; purchases and resells hardware systems, including servers, workstations, scanners, and other devices; and provides implementation, training, and support services. Jack Henry & Associates, Inc. was founded in 1976 and is headquartered in Monett, Missouri."
+ceo,Mr. David Foss
+sector,Technology
+country,US
+fullTimeEmployees,6714
+phone,14172356652
+address,"663 Hwy 60, PO Box 807"
+city,Monett
+state,MISSOURI
+zip,65708
+dcfDiff,0.673984
+dcf,199.224
+image,https://financialmodelingprep.com/image-stock/JKHY.png
+ipoDate,1985-11-21
+defaultImage,False
+isEtf,False
+isActivelyTrading,True
+isAdr,False
+isFund,False

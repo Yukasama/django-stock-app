@@ -1,0 +1,37 @@
+,0
+symbol,HAL
+price,39.94
+beta,2.439215
+volAvg,14011285
+mktCap,35968323584
+lastDiv,0.25499999999999995
+range,17.82-40.0
+changes,2.1899986
+companyName,Halliburton Company
+currency,USD
+cik,0000045012
+isin,US4062161017
+cusip,406216101
+exchange,New York Stock Exchange
+exchangeShortName,NYSE
+industry,Oil & Gas Equipment & Services
+website,https://www.halliburton.com
+description,"Halliburton Company provides products and services to the energy industry worldwide. It operates in two segments, Completion and Production, and Drilling and Evaluation. The Completion and Production segment offers production enhancement services that include stimulation and sand control services; cementing services, such as well bonding and casing, and casing equipment; completion tools that offer downhole solutions and services, including well completion products and services, intelligent well completions, and service tools, as well as liner hanger, sand control, and multilateral systems; production solutions comprising coiled tubing, hydraulic workover units, downhole tools, and pumping and nitrogen services; and pipeline and process services, such as pre-commissioning, commissioning, maintenance, and decommissioning. This segment also provides electrical submersible pumps, as well as artificial lift services. The Drilling and Evaluation segment offers drilling fluid systems, performance additives, completion fluids, solids control, specialized testing equipment, and waste management services; oilfield completion, production, and downstream water and process treatment chemicals and services; drilling systems and services; wireline and perforating services consists of open-hole logging, and cased-hole and slickline; and drill bits and services comprising roller cone rock bits, fixed cutter bits, hole enlargement, and related downhole tools and services, as well as coring equipment and services. This segment also provides cloud based digital services and artificial intelligence solutions on an open architecture for subsurface insights, integrated well construction, and reservoir and production management; testing and subsea services, such as acquisition and analysis of reservoir information and optimization solutions; and project management and integrated asset management services. Halliburton Company was founded in 1919 and is based in Houston, Texas."
+ceo,Mr. Jeffrey Miller
+sector,Energy
+country,US
+fullTimeEmployees,40000
+phone,12818712699
+address,3000 N Sam Houston Pkwy E
+city,Houston
+state,TEXAS
+zip,77032
+dcfDiff,3.40492
+dcf,43.3449
+image,https://financialmodelingprep.com/image-stock/HAL.png
+ipoDate,1948-09-15
+defaultImage,False
+isEtf,False
+isActivelyTrading,True
+isAdr,False
+isFund,False

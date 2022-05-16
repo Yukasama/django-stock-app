@@ -1,0 +1,38 @@
+Date,Firm,To Grade,From Grade,Action
+2019-12-16,Citigroup,Neutral,,main
+2019-12-16,Credit Suisse,Neutral,,init
+2020-02-03,Stephens & Co.,Equal-Weight,,main
+2020-03-17,Baird,Outperform,Neutral,up
+2020-03-27,Citigroup,Neutral,,main
+2020-04-01,Wells Fargo,Overweight,,main
+2020-04-02,Deutsche Bank,Buy,,main
+2020-04-06,Credit Suisse,Neutral,,main
+2020-04-06,Wells Fargo,Overweight,,main
+2020-04-06,UBS,Neutral,,main
+2020-04-09,Janney Capital,Neutral,,main
+2020-04-14,Compass Point,Buy,,init
+2020-04-21,CFRA,Buy,,main
+2020-04-21,Piper Sandler,Overweight,Neutral,up
+2020-04-21,Argus Research,Buy,,main
+2020-05-04,UBS,Neutral,,main
+2020-05-13,Compass Point,Buy,,main
+2020-06-17,Raymond James,Outperform,Market Perform,up
+2020-06-25,Morgan Stanley,Equal-Weight,,main
+2020-09-18,Raymond James,Outperform,,main
+2020-10-16,Morgan Stanley,Equal-Weight,,main
+2020-10-16,B of A Securities,Buy,,main
+2020-11-30,Morgan Stanley,Equal-Weight,,main
+2021-01-07,Baird,Neutral,Outperform,down
+2021-01-07,Raymond James,Outperform,,main
+2021-01-22,B of A Securities,Buy,,main
+2021-01-22,Credit Suisse,Neutral,,main
+2021-01-22,Morgan Stanley,Equal-Weight,,main
+2021-03-01,Morgan Stanley,Equal-Weight,,main
+2021-03-24,Morgan Stanley,Equal-Weight,,main
+2021-04-07,Raymond James,Outperform,,main
+2021-05-10,Raymond James,Market Perform,Outperform,down
+2021-10-05,Wolfe Research,Underperform,Outperform,down
+2021-11-29,Stephens & Co.,Overweight,Equal-Weight,up
+2021-12-06,Morgan Stanley,Equal-Weight,,main
+2021-12-10,UBS,Neutral,,init
+2022-01-06,JP Morgan,Neutral,,main

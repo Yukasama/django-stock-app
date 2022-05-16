@@ -1,0 +1,37 @@
+,0
+symbol,INTC
+price,47.02
+beta,0.549019
+volAvg,38957232
+mktCap,192250675200
+lastDiv,1.4089999999999998
+range,43.63-68.49
+changes,-0.5400009
+companyName,Intel Corporation
+currency,USD
+cik,0000050863
+isin,US4581401001
+cusip,458140100
+exchange,NASDAQ Global Select
+exchangeShortName,NASDAQ
+industry,Semiconductors
+website,https://www.intel.com
+description,"Intel Corporation engages in the design, manufacture, and sale of computer products and technologies worldwide. The company operates through CCG, DCG, IOTG, Mobileye, NSG, PSG, and All Other segments. It offers platform products, such as central processing units and chipsets, and system-on-chip and multichip packages; and non-platform or adjacent products, including accelerators, boards and systems, connectivity products, graphics, and memory and storage products. The company also provides high-performance compute solutions for targeted verticals and embedded applications for retail, industrial, and healthcare markets; and solutions for assisted and autonomous driving comprising compute platforms, computer vision and machine learning-based sensing, mapping and localization, driving policy, and active sensors. In addition, it offers workload-optimized platforms and related products for cloud service providers, enterprise and government, and communications service providers. The company serves original equipment manufacturers, original design manufacturers, and cloud service providers. Intel Corporation has a strategic partnership with MILA to develop and apply advances in artificial intelligence methods for enhancing the search in the space of drugs. The company was incorporated in 1968 and is headquartered in Santa Clara, California."
+ceo,Mr. Robert Swan
+sector,Technology
+country,US
+fullTimeEmployees,121100
+phone,14087658080
+address,2200 Mission College Blvd
+city,Santa Clara
+state,CALIFORNIA
+zip,95054-1549
+dcfDiff,1.18135
+dcf,48.2014
+image,https://financialmodelingprep.com/image-stock/INTC.png
+ipoDate,1971-10-13
+defaultImage,False
+isEtf,False
+isActivelyTrading,True
+isAdr,False
+isFund,False

@@ -1,0 +1,37 @@
+,0
+symbol,ISRG
+price,278.96
+beta,1.169607
+volAvg,2142265
+mktCap,104116240384
+lastDiv,0.0
+range,254.2-369.69
+changes,-10.899994
+companyName,"Intuitive Surgical, Inc."
+currency,USD
+cik,0001035267
+isin,US46120E6023
+cusip,46120E602
+exchange,NASDAQ Global Select
+exchangeShortName,NASDAQ
+industry,Medical Instruments & Supplies
+website,https://www.intuitive.com
+description,"Intuitive Surgical, Inc. develops, manufactures, and markets products that enable physicians and healthcare providers to enhance the quality of and access to minimally invasive care in the United States and internationally. The company offers the da Vinci Surgical System to enable complex surgery using a minimally invasive approach; and Ion endoluminal system, which extends its commercial offerings beyond surgery into diagnostic procedures enabling minimally invasive biopsies in the lung. It also provides a suite of stapling, energy, and core instrumentation for its surgical systems; progressive learning pathways to support the use of its technology; a complement of services to its customers, including support, installation, repair, and maintenance; and integrated digital capabilities providing unified and connected offerings, streamlining performance for hospitals with program-enhancing insights. The company was incorporated in 1995 and is headquartered in Sunnyvale, California."
+ceo,Dr. Gary Guthart
+sector,Healthcare
+country,US
+fullTimeEmployees,9793
+phone,14085232100
+address,1020 Kifer Rd
+city,Sunnyvale
+state,CALIFORNIA
+zip,94086-5304
+dcfDiff,3.51937
+dcf,282.479
+image,https://financialmodelingprep.com/image-stock/ISRG.png
+ipoDate,2006-06-01
+defaultImage,False
+isEtf,False
+isActivelyTrading,True
+isAdr,False
+isFund,False

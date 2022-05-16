@@ -1,0 +1,105 @@
+Date,Firm,To Grade,From Grade,Action
+2016-01-13,Keefe Bruyette & Woods,Outperform,,main
+2016-02-02,Deutsche Bank,Hold,,main
+2016-02-03,SunTrust Robinson Humphrey,Buy,Neutral,up
+2016-02-10,JP Morgan,Underweight,,main
+2016-02-16,Raymond James,Strong Buy,Outperform,up
+2016-03-28,Deutsche Bank,Hold,,main
+2016-06-24,Janney Capital,Neutral,Buy,down
+2016-08-08,Jefferies,Buy,,main
+2016-08-09,Citigroup,Buy,,main
+2016-09-27,UBS,Buy,,main
+2016-09-30,Keefe Bruyette & Woods,Outperform,,main
+2016-09-30,Jefferies,Buy,,main
+2016-09-30,Citigroup,Buy,,main
+2016-10-03,Baird,Outperform,,main
+2016-10-11,Citigroup,Buy,,main
+2016-10-20,Deutsche Bank,Sell,Hold,down
+2016-11-15,Goldman Sachs,Buy,Neutral,up
+2017-01-06,Credit Suisse,Outperform,Neutral,up
+2017-01-27,Bank of America,Neutral,Buy,down
+2017-06-30,Barclays,Overweight,,main
+2017-07-13,Citigroup,Buy,,main
+2017-08-07,Citigroup,Buy,,main
+2017-10-16,Barclays,Overweight,,main
+2017-11-03,Wells Fargo,Market Perform,Underperform,up
+2017-12-04,Goldman Sachs,Sell,,init
+2018-01-16,William Blair,Market Perform,Outperform,down
+2018-02-05,Stifel Nicolaus,Buy,Buy,main
+2018-02-09,Deutsche Bank,Sell,Sell,main
+2018-02-20,Barclays,Overweight,Overweight,main
+2018-03-15,Goldman Sachs,Neutral,Sell,up
+2018-03-26,Bank of America,Underperform,Neutral,down
+2018-04-10,Citigroup,Buy,Buy,main
+2018-04-13,Sandler O'Neill,Buy,Hold,up
+2018-07-12,Citigroup,Buy,Buy,main
+2018-08-03,Morgan Stanley,Overweight,Overweight,main
+2018-08-07,Credit Suisse,Neutral,,init
+2018-10-08,Credit Suisse,Outperform,Neutral,up
+2018-10-12,Citigroup,Buy,Buy,main
+2018-11-05,Wells Fargo,Market Perform,Market Perform,main
+2018-11-06,Raymond James,Strong Buy,Strong Buy,main
+2018-11-14,Morgan Stanley,Overweight,Overweight,main
+2019-01-08,Goldman Sachs,Buy,Neutral,up
+2019-02-08,Deutsche Bank,Hold,Sell,up
+2019-04-01,Barclays,Overweight,Overweight,main
+2019-04-02,Wells Fargo,Market Perform,Market Perform,main
+2019-04-08,MKM Partners,Buy,Buy,main
+2019-05-02,Wells Fargo,Market Perform,Market Perform,main
+2019-05-06,Raymond James,Strong Buy,,reit
+2019-05-07,UBS,Buy,Buy,main
+2019-05-15,Morgan Stanley,Overweight,,main
+2019-05-22,Barclays,Overweight,,main
+2019-07-01,Barclays,Overweight,,main
+2019-07-10,UBS,Buy,,main
+2019-07-11,Wells Fargo,Outperform,Market Perform,up
+2019-07-11,SunTrust Robinson Humphrey,Buy,,main
+2019-07-19,Morgan Stanley,Overweight,,main
+2019-08-02,Morgan Stanley,Overweight,,main
+2019-08-15,Morgan Stanley,Overweight,,main
+2019-11-04,Morgan Stanley,Overweight,,main
+2020-01-21,Citigroup,Buy,,init
+2020-02-07,Wells Fargo,Overweight,,main
+2020-02-10,Credit Suisse,Neutral,Outperform,down
+2020-02-10,Raymond James,Strong Buy,,main
+2020-02-14,Morgan Stanley,Equal-Weight,Overweight,down
+2020-02-28,Morgan Stanley,Equal-Weight,,main
+2020-03-09,CFRA,Buy,Hold,up
+2020-03-10,Stifel,Hold,Buy,down
+2020-03-11,Morgan Stanley,Equal-Weight,,main
+2020-03-17,Deutsche Bank,Hold,,main
+2020-03-23,Raymond James,Outperform,Strong Buy,down
+2020-04-01,Wells Fargo,Overweight,,main
+2020-04-21,Citigroup,Buy,,main
+2020-04-23,Morgan Stanley,Equal-Weight,,main
+2020-05-01,Wells Fargo,Overweight,,main
+2020-05-01,Stifel,Hold,,main
+2020-05-01,MKM Partners,Neutral,Buy,down
+2020-05-04,Morgan Stanley,Equal-Weight,,main
+2020-05-05,Raymond James,Outperform,,main
+2020-05-11,UBS,Neutral,,main
+2020-05-18,Morgan Stanley,Equal-Weight,,main
+2020-08-05,Raymond James,Market Perform,Outperform,down
+2020-08-19,Morgan Stanley,Equal-Weight,,main
+2020-10-19,Morgan Stanley,Equal-Weight,,main
+2020-11-02,Piper Sandler,Neutral,Overweight,down
+2020-11-03,MKM Partners,Neutral,,main
+2020-11-24,Morgan Stanley,Equal-Weight,,main
+2021-01-11,Raymond James,Outperform,Market Perform,up
+2021-01-12,Morgan Stanley,Equal-Weight,,main
+2021-02-10,Truist Securities,Buy,,main
+2021-02-11,Raymond James,Strong Buy,Outperform,up
+2021-03-24,Morgan Stanley,Equal-Weight,,main
+2021-04-16,Morgan Stanley,Equal-Weight,,main
+2021-05-04,Deutsche Bank,Hold,,main
+2021-05-27,Morgan Stanley,Equal-Weight,,main
+2021-06-21,Citigroup,Buy,,main
+2021-08-17,Wolfe Research,Outperform,,init
+2021-09-10,Piper Sandler,Neutral,,main
+2021-10-20,Wolfe Research,Peer Perform,Outperform,down
+2021-10-29,Wells Fargo,Overweight,,main
+2021-11-19,Jefferies,Hold,,init
+2021-12-16,Evercore ISI Group,In-Line,,init
+2022-01-04,Wells Fargo,Overweight,,main
+2022-01-24,Piper Sandler,Neutral,,main
+2022-02-09,Wells Fargo,Equal-Weight,Overweight,down

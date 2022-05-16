@@ -1,0 +1,45 @@
+Date,Firm,To Grade,From Grade,Action
+2020-11-04 13:23:46,Morgan Stanley,Overweight,,main
+2020-11-04 14:01:39,Deutsche Bank,Hold,,main
+2020-11-23 13:07:42,Morgan Stanley,Overweight,,main
+2020-11-24 13:44:33,Morgan Stanley,Overweight,,main
+2020-11-25 09:37:14,Morgan Stanley,Overweight,,main
+2020-11-25 09:37:14,Morgan Stanley,Overweight,,main
+2020-11-25 09:37:15,Morgan Stanley,Overweight,,main
+2020-11-25 09:37:15,Morgan Stanley,Overweight,,main
+2020-11-25 09:37:17,Morgan Stanley,Overweight,,main
+2020-11-25 09:37:17,Stifel,Hold,,main
+2020-11-25 09:37:19,Deutsche Bank,Hold,Buy,down
+2020-11-25 09:37:19,Credit Suisse,Neutral,,main
+2020-11-25 09:37:19,Baird,Outperform,,main
+2020-11-25 09:37:19,Morgan Stanley,Overweight,,main
+2020-11-25 09:37:19,UBS,Neutral,,main
+2020-11-25 09:37:22,Citigroup,Neutral,,main
+2020-11-25 09:37:22,Morgan Stanley,Overweight,,main
+2020-11-25 09:37:22,Deutsche Bank,Hold,,main
+2020-11-25 09:37:24,Jefferies,Buy,,init
+2020-12-15 17:15:38,Morgan Stanley,Overweight,,main
+2021-01-15 11:12:02,UBS,Buy,Neutral,up
+2021-01-20 14:53:36,Morgan Stanley,Overweight,,main
+2021-02-24 12:57:14,Morgan Stanley,Overweight,,main
+2021-02-24 13:45:49,Credit Suisse,Neutral,,main
+2021-04-12 13:47:43,Morgan Stanley,Overweight,,main
+2021-04-30 12:20:55,Morgan Stanley,Overweight,,main
+2021-05-19 11:59:32,Morgan Stanley,Overweight,,main
+2021-05-20 10:26:50,Deutsche Bank,Buy,Hold,up
+2021-06-14 12:31:21,Credit Suisse,Neutral,,main
+2021-06-17 13:52:57,Vertical Research,Buy,Hold,up
+2021-07-06 10:18:05,Goldman Sachs,Buy,Neutral,up
+2021-07-12 12:36:49,Wolfe Research,Outperform,Peer Perform,up
+2021-07-30 12:36:09,Credit Suisse,Neutral,,main
+2021-10-08 08:53:24,Wells Fargo,Equal-Weight,,init
+2021-11-05 14:51:42,Barclays,Overweight,,main
+2021-11-08 13:19:32,Credit Suisse,Neutral,,main
+2021-11-19 11:19:08,Wells Fargo,Overweight,Equal-Weight,up
+2021-11-19 13:32:59,Credit Suisse,Neutral,,main
+2021-12-06 12:28:38,Barclays,Overweight,,main
+2021-12-15 14:36:58,Morgan Stanley,Overweight,,main
+2022-01-04 13:06:27,Barclays,Overweight,,main
+2022-02-25 14:00:08,Morgan Stanley,Overweight,,main
+2022-02-25 15:54:27,Credit Suisse,Neutral,,main
+2022-02-25 16:29:24,Deutsche Bank,Buy,,main

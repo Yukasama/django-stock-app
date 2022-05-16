@@ -1,0 +1,38 @@
+Date,Firm,To Grade,From Grade,Action
+2016-11-11 11:10:39,Stifel Nicolaus,Buy,,init
+2016-11-16 13:02:19,Bank of America,Buy,,init
+2016-11-17 12:19:09,Jefferies,Buy,,init
+2017-02-08 11:26:04,Goldman Sachs,Neutral,,init
+2017-04-07 16:04:03,Stifel Nicolaus,Hold,Buy,down
+2017-05-16 16:21:17,Berenberg,Buy,,init
+2017-05-24 11:40:07,CL King,Strong Buy,,init
+2017-07-10 21:24:33,Bank of America,Buy,,main
+2017-07-26 20:32:44,Morgan Stanley,Equal-Weight,,main
+2017-10-05 12:46:35,Morgan Stanley,Equal-Weight,,main
+2017-11-06 15:51:27,Bank of America,Buy,,main
+2018-04-06 11:35:12,Morgan Stanley,Equal-Weight,Equal-Weight,main
+2018-05-22 11:51:58,Vertical Group,Sell,,init
+2018-06-19 13:28:50,Bank of America,Buy,Buy,main
+2018-07-27 15:27:44,Jefferies,Buy,Buy,main
+2018-10-03 11:21:58,Stifel Nicolaus,Hold,Hold,main
+2018-10-25 11:51:09,CL King,Neutral,Buy,down
+2018-11-15 11:39:08,Bank of America,Neutral,Buy,down
+2019-01-07 14:51:02,Barclays,Overweight,Overweight,main
+2019-01-23 11:37:20,Stifel Nicolaus,Buy,Hold,up
+2019-04-03 14:05:51,Stifel Nicolaus,Buy,Buy,main
+2019-05-07 12:30:51,Bank of America,Buy,Neutral,up
+2019-06-17 11:00:50,JP Morgan,Neutral,,init
+2019-06-19 10:25:09,Goldman Sachs,Buy,Neutral,up
+2020-01-06 12:12:13,Stifel Nicolaus,Hold,Buy,down
+2020-01-23 11:33:47,Jefferies,Hold,,init
+2020-03-20 10:38:50,B of A Securities,Neutral,Buy,down
+2020-04-02 20:02:30,Stifel,Hold,,main
+2020-04-02 20:25:14,JP Morgan,Neutral,,main
+2020-10-08 15:33:38,B of A Securities,Neutral,,main
+2020-12-07 10:24:27,JP Morgan,Overweight,Neutral,up
+2021-04-05 10:55:55,B of A Securities,Buy,Neutral,up
+2021-04-08 10:14:04,Goldman Sachs,Neutral,Buy,down
+2021-05-21 10:29:05,Stifel,Buy,Hold,up
+2021-10-08 13:01:28,Jefferies,Buy,,main
+2022-03-16 13:08:39,Goldman Sachs,Neutral,,main
+2022-03-22 13:52:29,JP Morgan,Overweight,,main

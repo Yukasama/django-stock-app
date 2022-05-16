@@ -1,0 +1,32 @@
+Date,Firm,To Grade,From Grade,Action
+2012-08-06 12:35:00,Barclays,Overweight,,main
+2012-10-01 12:26:00,Barclays,Overweight,,main
+2013-01-03 12:23:37,Barclays,Overweight,,main
+2014-03-31 23:29:59,Barclays,Overweight,,main
+2014-10-02 09:00:00,Barclays,Overweight,,main
+2014-11-10 09:00:00,Barclays,Overweight,,main
+2015-01-08 09:00:00,Barclays,Overweight,,main
+2015-05-04 09:00:00,Barclays,Overweight,,main
+2015-08-10 11:00:00,Barclays,Overweight,,main
+2016-05-06 06:37:27,UBS,Buy,,init
+2017-07-07 10:06:24,Morgan Stanley,Equal-Weight,,init
+2017-08-11 12:36:57,Barclays,Overweight,,main
+2017-09-14 11:19:15,JP Morgan,Overweight,,init
+2017-10-10 11:48:33,UBS,Buy,,main
+2017-11-08 17:36:34,Morgan Stanley,Equal-Weight,,main
+2018-07-09 12:03:37,Barclays,Overweight,Overweight,main
+2018-08-07 13:25:05,UBS,Buy,Buy,main
+2019-05-06 15:22:46,UBS,Buy,Buy,main
+2019-07-19 13:10:32,Morgan Stanley,Equal-Weight,,main
+2019-10-17 12:23:05,UBS,Buy,,main
+2019-11-06 14:00:26,Morgan Stanley,Equal-Weight,,main
+2019-11-11 14:37:11,Barclays,Overweight,,main
+2020-01-28 15:58:41,UBS,Buy,,main
+2020-02-24 17:19:38,CFRA,Hold,,main
+2020-02-28 13:20:56,Morgan Stanley,Equal-Weight,,main
+2020-04-02 07:52:52,Morgan Stanley,Equal-Weight,,main
+2020-04-24 16:11:19,UBS,Buy,,main
+2020-05-05 12:19:48,Morgan Stanley,Equal-Weight,,main
+2020-08-11 12:34:15,Morgan Stanley,Equal-Weight,,main
+2021-05-27 12:30:51,Morgan Stanley,Equal-Weight,,main
+2021-08-16 12:32:14,Morgan Stanley,Equal-Weight,,main

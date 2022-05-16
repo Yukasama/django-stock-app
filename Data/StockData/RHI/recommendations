@@ -1,0 +1,98 @@
+Date,Firm,To Grade,From Grade,Action
+2012-03-07,UBS,Buy,,init
+2012-04-25,Citigroup,Neutral,,main
+2012-04-25,Bank oferica,Neutral,,main
+2012-04-25,Morgan Stanley,Overweight,,main
+2012-04-25,Deutsche Bank,Hold,,main
+2012-12-10,Deutsche Bank,Buy,Hold,up
+2013-01-30,Citigroup,Neutral,,main
+2013-04-24,BMO Capital,Outperform,,main
+2013-07-02,RBC Capital,Outperform,,init
+2013-07-24,Avondale Partners,Market Outperform,Market Perform,up
+2013-07-26,Barclays,Equal-Weight,Overweight,down
+2013-10-11,Jefferies,Hold,,init
+2013-12-16,Credit Suisse,Neutral,,init
+2014-01-15,SunTrust Robinson Humphrey,Buy,,up
+2014-01-27,Northcoast Research,Buy,Neutral,up
+2014-04-24,Barclays,Equal-Weight,,main
+2014-06-30,Northcoast Research,Neutral,Buy,down
+2014-07-23,Deutsche Bank,Buy,,main
+2014-07-23,JP Morgan,Overweight,,main
+2014-08-01,Barclays,Equal-Weight,,main
+2014-10-17,Jefferies,Hold,,main
+2014-10-22,Bank of America,Buy,,main
+2014-10-23,Jefferies,Hold,,main
+2014-11-18,Deutsche Bank,Buy,,main
+2014-11-18,Deutsche Bank,Buy,,main
+2014-11-25,Bank of America,Buy,,main
+2015-01-30,Deutsche Bank,Buy,,main
+2015-02-03,Barclays,Equal-Weight,,main
+2015-02-10,Credit Suisse,Neutral,,main
+2015-03-09,Jefferies,Hold,,main
+2015-03-13,Macquarie,Neutral,Outperform,down
+2015-04-24,BMO Capital,Outperform,,main
+2015-04-28,Barclays,Equal-Weight,,main
+2015-07-28,Barclays,Underweight,Equal-Weight,down
+2015-07-31,Jefferies,Buy,Hold,up
+2015-10-23,Macquarie,Neutral,,main
+2015-10-23,Barclays,Underweight,,main
+2015-12-09,Deutsche Bank,Hold,Buy,down
+2016-02-03,BMO Capital,Outperform,,main
+2016-02-03,Baird,Outperform,,main
+2016-02-03,SunTrust Robinson Humphrey,Buy,,main
+2016-02-10,Barclays,Underweight,,main
+2016-03-22,Sterne Agee CRT,Neutral,,init
+2016-04-19,Nomura,Buy,,init
+2016-04-26,Credit Suisse,Neutral,,main
+2016-04-27,Avondale Partners,Market Perform,Market Outperform,down
+2016-07-13,Bank of America,Neutral,Buy,down
+2016-07-27,BMO Capital,Market Perform,Outperform,down
+2016-08-18,Deutsche Bank,Buy,,init
+2016-08-25,Macquarie,Neutral,,init
+2016-09-29,Northcoast Research,Sell,Neutral,down
+2016-10-03,Credit Suisse,Underperform,Neutral,down
+2016-10-27,William Blair,Market Perform,Outperform,down
+2016-11-28,RBC Capital,Sector Perform,Outperform,down
+2017-01-10,Barclays,Equal-Weight,Underweight,up
+2017-10-11,SunTrust Robinson Humphrey,Hold,Buy,down
+2017-10-25,Baird,Outperform,,main
+2017-10-25,Nomura,Buy,,main
+2017-10-25,Credit Suisse,Underperform,,main
+2017-10-25,BMO Capital,Market Perform,,main
+2018-01-31,Barclays,Equal-Weight,Equal-Weight,main
+2018-03-27,Goldman Sachs,Neutral,,init
+2018-04-03,Barclays,Overweight,Equal-Weight,up
+2018-04-25,Baird,Outperform,Outperform,main
+2018-04-25,BMO Capital,Market Perform,Market Perform,main
+2018-07-18,Barclays,Overweight,Overweight,main
+2018-07-25,Baird,Outperform,Outperform,main
+2018-07-25,BMO Capital,Market Perform,Market Perform,main
+2018-08-10,Credit Suisse,Underperform,,init
+2018-09-05,Goldman Sachs,Sell,Neutral,down
+2018-09-18,Nomura,Buy,Buy,main
+2018-10-24,BMO Capital,Market Perform,Market Perform,main
+2018-10-24,JP Morgan,Overweight,Overweight,main
+2018-11-19,Barclays,Underweight,Overweight,down
+2019-01-03,Bank of America,Neutral,Buy,down
+2019-04-17,RBC Capital,Sector Perform,,init
+2019-04-25,BMO Capital,Market Perform,Market Perform,main
+2019-07-24,BMO Capital,Market Perform,,main
+2019-07-24,Nomura,Buy,,main
+2019-10-24,BMO Capital,Market Perform,,main
+2019-10-24,Credit Suisse,Underperform,,main
+2019-10-28,CL King,Buy,,init
+2019-11-22,Jefferies,Underperform,,init
+2020-01-14,Barclays,Underweight,,main
+2020-04-03,SunTrust Robinson Humphrey,Hold,,main
+2020-04-20,BMO Capital,Market Perform,,main
+2020-04-24,B of A Securities,Neutral,,main
+2020-05-21,Credit Suisse,Neutral,Underperform,up
+2020-07-24,Credit Suisse,Neutral,,main
+2020-07-24,BMO Capital,Market Perform,,main
+2020-11-19,Credit Suisse,Underperform,Neutral,down
+2020-11-23,BMO Capital,Outperform,Market Perform,up
+2021-01-29,Credit Suisse,Underperform,,main
+2021-02-03,B of A Securities,Buy,Neutral,up
+2021-04-22,Credit Suisse,Underperform,,main
+2021-04-22,Truist Securities,Hold,,main
+2021-07-26,BMO Capital,Outperform,,main

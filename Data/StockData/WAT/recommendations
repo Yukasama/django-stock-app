@@ -1,0 +1,122 @@
+Date,Firm,To Grade,From Grade,Action
+2012-03-06,Morgan Stanley,Overweight,,init
+2012-04-25,Goldman Sachs,Neutral,,main
+2012-04-25,Bank oferica,Buy,,main
+2012-05-23,Jefferies,Hold,,main
+2012-07-10,ISI Group,Market Weight,,init
+2012-07-23,Barclays,Overweight,,main
+2012-07-24,Citigroup,Neutral,,main
+2012-07-24,ISI Group,Market Weight,,main
+2012-07-25,Barclays,Overweight,,main
+2012-07-25,UBS,Neutral,,main
+2012-07-25,Morgan Stanley,Overweight,,main
+2012-07-25,Jefferies,Hold,,main
+2012-10-23,Goldman Sachs,Neutral,,main
+2012-10-23,ISI Group,Market Weight,,main
+2012-10-23,JP Morgan,Overweight,,main
+2013-01-03,JP Morgan,Neutral,Overweight,down
+2013-01-03,Morgan Stanley,Equal-Weight,Overweight,down
+2013-01-03,Leerink Swann,Market Perform,Outperform,down
+2013-01-04,Morgan Stanley,Equal-Weight,Overweight,down
+2013-01-17,Wells Fargo,Market Perform,Outperform,down
+2013-01-22,JP Morgan,Neutral,,main
+2013-01-22,Jefferies,Hold,,main
+2013-01-23,Gabelli & Co.,Hold,Buy,down
+2013-01-23,UBS,Neutral,,main
+2013-01-23,Jefferies,Hold,,main
+2013-04-23,Goldman Sachs,Neutral,,main
+2013-04-23,ISI Group,Neutral,,main
+2013-04-24,Citigroup,Neutral,,main
+2013-06-25,Goldman Sachs,Buy,Neutral,up
+2013-07-19,William Blair,Market Perform,,init
+2013-08-15,Janney Capital,Neutral,,init
+2013-09-27,Maxim Group,Buy,,init
+2013-10-14,Mizuho,Neutral,Buy,down
+2013-10-23,Bank of America,Neutral,Buy,down
+2013-10-23,Jefferies,Hold,,main
+2014-08-12,Stifel Nicolaus,Hold,,init
+2014-09-08,Morgan Stanley,Underweight,,init
+2015-01-27,Citigroup,Neutral,,main
+2015-03-10,UBS,Neutral,,init
+2015-04-29,Leerink Swann,Market Perform,,main
+2015-04-29,Cantor Fitzgerald,Buy,,main
+2015-07-29,Wells Fargo,Outperform,Market Perform,up
+2015-08-27,Cantor Fitzgerald,Buy,,init
+2015-10-28,Leerink Swann,Market Perform,,main
+2016-01-06,Avondale Partners,Market Outperform,,init
+2016-01-06,Deutsche Bank,Hold,,init
+2016-01-27,Deutsche Bank,Hold,,main
+2016-03-01,Barclays,Equal-Weight,,init
+2016-04-05,Bank of America,Neutral,Buy,down
+2016-07-27,Citigroup,Neutral,,main
+2016-07-27,Barclays,Equal-Weight,,main
+2017-01-06,William Blair,Outperform,Market Perform,up
+2017-01-18,Deutsche Bank,Buy,,init
+2017-05-01,Janney Capital,Buy,Neutral,up
+2017-07-10,Deutsche Bank,Hold,Buy,down
+2017-07-26,Morgan Stanley,Underweight,,main
+2017-10-06,Morgan Stanley,Underweight,Underweight,main
+2017-10-25,Citigroup,Neutral,,main
+2017-10-25,Barclays,Equal-Weight,,main
+2017-10-25,Deutsche Bank,Hold,,main
+2017-10-25,Baird,Outperform,,main
+2017-11-10,Bank of America,Neutral,,main
+2017-12-04,Morgan Stanley,Equal-Weight,Underweight,up
+2018-01-04,Evercore ISI Group,In-Line,,init
+2018-01-05,BTIG Research,Buy,,init
+2018-01-24,Barclays,Equal-Weight,Equal-Weight,main
+2018-01-24,JP Morgan,Neutral,Neutral,main
+2018-01-24,Baird,Outperform,Outperform,main
+2018-01-24,Citigroup,Neutral,Neutral,main
+2018-04-11,Morgan Stanley,Equal-Weight,Equal-Weight,main
+2018-04-25,Barclays,Equal-Weight,Equal-Weight,main
+2018-04-25,Morgan Stanley,Equal-Weight,Equal-Weight,main
+2018-04-25,Baird,Outperform,Outperform,main
+2018-07-13,Morgan Stanley,Equal-Weight,Equal-Weight,main
+2018-07-16,Bank of America,Underperform,Neutral,down
+2018-07-17,Janney Capital,Neutral,Buy,down
+2018-07-25,Morgan Stanley,Equal-Weight,Equal-Weight,main
+2018-07-25,Baird,Outperform,Outperform,main
+2018-10-08,Leerink Swann,Market Perform,Outperform,down
+2018-10-10,Morgan Stanley,Equal-Weight,Equal-Weight,main
+2018-10-24,UBS,Neutral,Neutral,main
+2018-10-24,Barclays,Equal-Weight,Equal-Weight,main
+2018-10-24,JP Morgan,Neutral,Neutral,main
+2018-11-30,Goldman Sachs,Sell,Neutral,down
+2018-12-12,JP Morgan,Underweight,Neutral,down
+2019-01-03,Needham,Hold,,init
+2019-01-03,Bank of America,Neutral,Underperform,up
+2019-01-24,Baird,Neutral,Outperform,down
+2019-04-24,Baird,Neutral,Neutral,main
+2019-04-24,Barclays,Equal-Weight,Equal-Weight,main
+2019-04-24,UBS,Neutral,,main
+2019-04-24,UBS,Neutral,Neutral,main
+2019-07-16,Bank of America,Underperform,Neutral,down
+2019-10-09,Barclays,Underweight,Equal-Weight,down
+2019-10-30,Baird,Neutral,,main
+2019-11-15,Stifel Nicolaus,Hold,,init
+2019-12-05,BTIG Research,Neutral,Buy,down
+2020-01-07,Citigroup,Sell,,init
+2020-01-08,Wells Fargo,Underweight,,init
+2020-01-08,Needham,Underperform,Hold,down
+2020-03-20,Citigroup,Sell,,main
+2020-03-26,Barclays,Underweight,,main
+2020-03-30,Wells Fargo,Underweight,,main
+2020-04-02,Stifel,Hold,,main
+2020-04-29,UBS,Neutral,,main
+2020-04-29,B of A Securities,Underperform,,main
+2020-04-29,Stifel,Hold,,main
+2020-07-29,Stifel,Hold,,main
+2020-07-29,SVB Leerink,Market Perform,,main
+2020-10-28,Stifel,Hold,,main
+2020-10-28,Wells Fargo,Equal-Weight,,main
+2020-10-28,SVB Leerink,Market Perform,,main
+2020-11-10,KeyBanc,Sector Weight,,init
+2020-12-16,Citigroup,Neutral,Sell,up
+2021-01-07,Wells Fargo,Underweight,Equal-Weight,down
+2021-05-06,Wells Fargo,Underweight,,main
+2021-05-06,SVB Leerink,Market Perform,,main
+2021-07-06,Evercore ISI Group,Outperform,In-Line,up
+2021-08-04,Baird,Neutral,,main
+2021-08-04,SVB Leerink,Market Perform,,main
+2022-02-02,SVB Leerink,Market Perform,,main

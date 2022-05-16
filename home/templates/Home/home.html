@@ -1,0 +1,41 @@
+{% extends "Home/index.html" %}
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'Home/css/home.css' %}">
+
+
+<div class="home_background">
+            
+</div>
+
+
+<div class="home flex content">
+
+
+
+    <div class="home_container">
+        <div class="home_title">Explore the Market {{company_name}}</div>
+        <div class="home_buttons flex">
+            <div class="home_button smart_button">Explore</div>
+            <div class="home_button smart_button_outline">Explore</div>
+        </div>
+    </div>
+
+    <div class="home_container">
+        <div class="home_boxes flex">
+            <div class="home_box smart_box home_box1"></div>
+            <div class="home_box smart_box home_box2"></div>
+            <div class="home_box smart_box home_box3"></div>
+        </div>
+        <div class="home_boxes flex">
+            <div class="home_box smart_box home_box4"></div>
+            <div class="home_box smart_box home_box5"></div>
+        </div>
+    </div>
+
+</div>
+
+
+
+{% endblock content %}

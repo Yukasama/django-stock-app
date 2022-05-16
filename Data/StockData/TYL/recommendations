@@ -1,0 +1,58 @@
+Date,Firm,To Grade,From Grade,Action
+2012-09-27,Northland Securities,Outperform,,init
+2012-10-02,Thinkequity,Buy,,init
+2013-01-11,B. Riley FBR,Neutral,,init
+2013-07-25,Sidoti & Co.,Neutral,Buy,down
+2013-07-25,Sidoti & Co.,Neutral,Buy,down
+2014-05-30,Dougherty,Neutral,Buy,down
+2015-04-14,Maxim Group,Hold,Buy,down
+2015-07-07,JMP Securities,Market Outperform,,init
+2015-07-14,Needham,Buy,,init
+2016-02-17,B. Riley FBR,Buy,Neutral,up
+2016-02-19,B. Riley FBR,Buy,,main
+2016-04-14,Avondale Partners,Market Perform,,init
+2016-04-28,Maxim Group,Buy,,main
+2016-06-20,Pacific Crest,Overweight,,init
+2016-06-27,Evercore ISI Group,Buy,,up
+2016-07-26,PiperJaffray,Overweight,,init
+2016-07-28,JMP Securities,Market Outperform,,main
+2016-09-13,KeyBanc,Overweight,,main
+2017-09-22,Citigroup,Buy,,init
+2017-10-17,KeyBanc,Sector Weight,Overweight,down
+2017-10-27,B. Riley FBR,Neutral,Buy,down
+2018-03-07,DA Davidson,Neutral,,init
+2018-03-12,Evercore ISI Group,In-Line,Outperform,down
+2018-03-14,Baird,Outperform,,init
+2018-04-23,DA Davidson,Neutral,Neutral,main
+2018-07-30,B. Riley FBR,Neutral,Neutral,main
+2018-07-30,Baird,Outperform,Outperform,main
+2018-11-01,JMP Securities,Market Outperform,Market Outperform,main
+2018-11-02,Baird,Outperform,Outperform,main
+2018-12-21,DA Davidson,Buy,Neutral,up
+2019-02-22,DA Davidson,Neutral,Buy,down
+2019-03-28,Northcoast Research,Buy,,init
+2019-08-02,Benchmark,Buy,,main
+2019-09-27,JMP Securities,Market Outperform,,main
+2019-10-08,Oppenheimer,Outperform,,init
+2019-11-01,DA Davidson,Neutral,,main
+2020-01-13,Baird,Neutral,Outperform,down
+2020-02-13,Needham,Buy,,main
+2020-04-16,BTIG,Neutral,,init
+2020-06-18,RBC Capital,Outperform,,init
+2020-07-28,Oppenheimer,Perform,Outperform,down
+2020-09-22,Baird,Outperform,Neutral,up
+2020-11-05,Needham,Buy,,main
+2020-11-09,JMP Securities,Market Outperform,,main
+2021-02-02,DA Davidson,Neutral,,main
+2021-02-11,JMP Securities,Market Outperform,,main
+2021-03-11,Northcoast Research,Buy,Neutral,up
+2021-04-01,Needham,Buy,,main
+2021-06-08,Piper Sandler,Overweight,,main
+2021-07-14,Baird,Outperform,,main
+2021-07-29,Needham,Buy,,main
+2021-07-29,JMP Securities,Market Outperform,,main
+2021-08-31,BTIG,Buy,Neutral,up
+2021-09-13,Wolfe Research,Outperform,,init
+2021-10-29,Piper Sandler,Overweight,,main
+2021-11-01,JMP Securities,Market Outperform,,main
+2022-02-09,Truist Securities,Buy,,main

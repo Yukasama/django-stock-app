@@ -1,0 +1,37 @@
+,0
+symbol,HST
+price,17.82
+beta,1.294607
+volAvg,8306016
+mktCap,12726153216
+lastDiv,0.03
+range,14.67-20.25
+changes,-0.13000107
+companyName,"Host Hotels & Resorts, Inc."
+currency,USD
+cik,0001070750
+isin,US44107P1049
+cusip,44107P104
+exchange,NASDAQ Global Select
+exchangeShortName,NASDAQ
+industry,REIT—Hotel & Motel
+website,https://www.hosthotels.com
+description,"Host Hotels & Resorts, Inc. is an S&P 500 company and is the largest lodging real estate investment trust and one of the largest owners of luxury and upper-upscale hotels. The Company currently owns 74 properties in the United States and five properties internationally totaling approximately 46,100 rooms. The Company also holds non-controlling interests in six domestic and one international joint ventures. Guided by a disciplined approach to capital allocation and aggressive asset management, the Company partners with premium brands such as Marriott®, Ritz-Carlton®, Westin®, Sheraton®, W®, St. Regis®, The Luxury Collection®, Hyatt®, Fairmont®, Hilton®, Swissôtel®, ibis® and Novotel®, as well as independent brands. For additional information, please visit the Company's website at www.hosthotels.com."
+ceo,Mr. James Risoleo
+sector,Real Estate
+country,US
+fullTimeEmployees,160
+phone,12407441000
+address,"4747 BETHESDA AVENUE, SUITE 1300"
+city,Bethesda
+state,MARYLAND
+zip,20817
+dcfDiff,1.13614
+dcf,18.9561
+image,https://financialmodelingprep.com/image-stock/HST.png
+ipoDate,1998-12-29
+defaultImage,False
+isEtf,False
+isActivelyTrading,True
+isAdr,False
+isFund,False

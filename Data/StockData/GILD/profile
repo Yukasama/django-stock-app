@@ -1,0 +1,37 @@
+,0
+symbol,GILD
+price,62.3
+beta,0.415686
+volAvg,11369198
+mktCap,78235713536
+lastDiv,2.86
+range,57.19-74.12
+changes,1.3099976
+companyName,"Gilead Sciences, Inc."
+currency,USD
+cik,0000882095
+isin,US3755581036
+cusip,375558103
+exchange,NASDAQ Global Select
+exchangeShortName,NASDAQ
+industry,Drug Manufacturers—General
+website,https://www.gilead.com
+description,"Gilead Sciences, Inc., a biopharmaceutical company, discovers, develops, and commercializes medicines in the areas of unmet medical need in the United States, Europe, and internationally. The company provides Biktarvy, Genvoya, Descovy, Odefsey, Truvada, Complera/ Eviplera, Stribild, and Atripla products for the treatment of HIV/AIDS; Veklury, an injection for intravenous use, for the treatment of coronavirus disease 2019; and Epclusa, Harvoni, Vosevi, Vemlidy, and Viread for the treatment of liver diseases. It also offers Yescarta, Tecartus, Trodelvy, and Zydelig products for the treatment of hematology, oncology, and cell therapy patients. In addition, the company provides Letairis, an oral formulation for the treatment of pulmonary arterial hypertension; Ranexa, an oral formulation for the treatment of chronic angina; and AmBisome, a liposomal formulation for the treatment of serious invasive fungal infections. Gilead Sciences, Inc. has collaboration agreements with Arcus Biosciences, Inc.; Pionyr Immunotherapeutics Inc.; Tizona Therapeutics, Inc.; Tango Therapeutics, Inc.; Jounce Therapeutics, Inc.; Galapagos NV; Janssen Sciences Ireland Unlimited Company; Japan Tobacco, Inc.; Gadeta B.V.; Bristol-Myers Squibb Company; and Merck & Co, Inc. The company was incorporated in 1987 and is headquartered in Foster City, California."
+ceo,Mr. Daniel O'Day
+sector,Healthcare
+country,US
+fullTimeEmployees,14400
+phone,16505743000
+address,333 LAKESIDE DR
+city,Foster City
+state,CALIFORNIA
+zip,94404
+dcfDiff,4.22979
+dcf,66.5298
+image,https://financialmodelingprep.com/image-stock/GILD.png
+ipoDate,1992-01-01
+defaultImage,False
+isEtf,False
+isActivelyTrading,True
+isAdr,False
+isFund,False

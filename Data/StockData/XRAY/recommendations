@@ -1,0 +1,94 @@
+Date,Firm,To Grade,From Grade,Action
+2012-07-03,UBS,Neutral,,init
+2012-08-01,Jefferies,Buy,,main
+2012-10-22,UBS,Sell,Neutral,down
+2012-11-08,Stifel Nicolaus,Hold,,init
+2013-02-21,UBS,Sell,,main
+2013-02-21,Wellington Shields,Hold,Gradually Accumulate,down
+2013-04-15,Citigroup,Buy,Neutral,up
+2013-05-20,Barrington Research,Market Perform,Outperform,down
+2013-08-06,Northcoast Research,Neutral,Buy,down
+2013-10-04,Bank of America,Buy,Underperform,up
+2013-12-11,Goldman Sachs,Buy,Neutral,up
+2013-12-11,Credit Suisse,Outperform,Neutral,up
+2014-05-16,Barrington Research,Outperform,Market Perform,up
+2014-10-20,Goldman Sachs,Neutral,Buy,down
+2015-01-02,Baird,Neutral,Outperform,down
+2015-07-31,Credit Suisse,Outperform,,main
+2015-09-14,Morgan Stanley,Overweight,,up
+2015-09-16,Baird,Outperform,,up
+2015-09-16,Barrington Research,Outperform,Market Perform,up
+2015-09-16,Bank of America,Buy,,main
+2015-09-21,William Blair,Outperform,,up
+2015-09-21,Northcoast Research,Outperform,Market Perform,up
+2016-02-25,UBS,Neutral,Sell,up
+2016-03-03,Jefferies,Buy,Neutral,up
+2016-03-14,William Blair,Market Perform,Outperform,down
+2016-03-15,Credit Suisse,Outperform,,init
+2016-03-24,Morgan Stanley,Equal-Weight,Overweight,down
+2016-06-13,PiperJaffray,Overweight,,init
+2016-08-08,Barrington Research,Market Perform,Outperform,down
+2016-09-22,JP Morgan,Neutral,,init
+2016-11-01,Morgan Stanley,Overweight,Equal-Weight,up
+2016-12-05,Barrington Research,Outperform,Market Perform,up
+2017-02-14,Stifel Nicolaus,Buy,Hold,up
+2017-02-21,Barrington Research,Market Perform,Outperform,down
+2017-05-23,Goldman Sachs,Sell,Neutral,down
+2017-07-11,H.C. Wainwright,Buy,,init
+2017-08-10,Morgan Stanley,Overweight,,main
+2017-08-23,Jefferies,Buy,,main
+2017-10-06,Morgan Stanley,Overweight,,main
+2017-11-06,Stifel Nicolaus,Buy,,main
+2017-11-06,Barrington Research,Outperform,Market Perform,up
+2017-11-28,Stephens & Co.,Overweight,,init
+2017-11-30,H.C. Wainwright,Neutral,Buy,down
+2017-12-08,Deutsche Bank,Buy,,init
+2017-12-13,JP Morgan,Overweight,Neutral,up
+2018-03-02,Credit Suisse,Outperform,Outperform,main
+2018-03-05,JP Morgan,Overweight,Overweight,main
+2018-03-05,H.C. Wainwright,Neutral,Neutral,main
+2018-03-08,Barclays,Equal-Weight,,init
+2018-05-08,Baird,Outperform,Outperform,main
+2018-05-08,Stifel Nicolaus,Buy,Buy,main
+2018-06-05,Northcoast Research,Neutral,Buy,down
+2018-06-14,Morgan Stanley,Overweight,Overweight,main
+2018-08-07,Baird,Neutral,Outperform,down
+2018-08-08,Jefferies,Buy,Buy,main
+2018-08-08,Morgan Stanley,Equal-Weight,Overweight,down
+2018-08-08,Stephens & Co.,Equal-Weight,Overweight,down
+2018-08-08,Stifel Nicolaus,Buy,Buy,main
+2018-08-08,Barclays,Equal-Weight,Equal-Weight,main
+2018-08-09,Barrington Research,Market Perform,Outperform,down
+2018-10-19,Goldman Sachs,Buy,Sell,up
+2019-01-17,UBS,Neutral,,init
+2019-03-04,Baird,Neutral,Neutral,main
+2019-03-12,UBS,Neutral,Neutral,main
+2019-03-18,William Blair,Outperform,Market Perform,up
+2019-04-18,Guggenheim,Neutral,,init
+2019-07-26,Evercore ISI Group,In-Line,,init
+2019-11-08,Stifel Nicolaus,Buy,,main
+2019-11-08,Barclays,Equal-Weight,,main
+2019-12-11,JP Morgan,Neutral,Overweight,down
+2019-12-16,Goldman Sachs,Buy,,main
+2020-03-03,Baird,Neutral,,main
+2020-03-03,H.C. Wainwright,Neutral,,reit
+2020-03-13,Stifel,Buy,,main
+2020-03-17,JP Morgan,Neutral,,main
+2020-04-02,Wolfe Research,Outperform,Peer Perform,up
+2020-04-08,Baird,Outperform,Neutral,up
+2020-04-24,H.C. Wainwright,Neutral,,reit
+2020-05-11,UBS,Neutral,,main
+2020-05-11,Barclays,Equal-Weight,,main
+2020-05-14,CFRA,Hold,,main
+2020-05-27,Evercore ISI Group,Outperform,In-Line,up
+2020-06-15,HC Wainwright & Co.,Neutral,,main
+2020-06-16,Piper Sandler,Overweight,,init
+2020-07-20,B of A Securities,Buy,,main
+2020-10-22,Guggenheim,Buy,Neutral,up
+2020-11-09,HC Wainwright & Co.,Neutral,,main
+2020-11-17,Barclays,Underweight,Equal-Weight,down
+2020-12-18,Stifel,Hold,Buy,down
+2021-01-05,HC Wainwright & Co.,Neutral,,main
+2021-03-02,Barrington Research,Outperform,Market Perform,up
+2021-05-07,HC Wainwright & Co.,Neutral,,main
+2021-08-09,HC Wainwright & Co.,Neutral,,main

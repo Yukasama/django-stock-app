@@ -1,0 +1,116 @@
+Date,Firm,To Grade,From Grade,Action
+2012-02-17,Morgan Keegan,Market Perform,,main
+2012-05-21,KeyBanc,Buy,,up
+2012-06-21,Susquehanna,Positive,Neutral,up
+2012-09-25,KeyBanc,Hold,Buy,down
+2013-02-08,Jefferies,Buy,,main
+2013-02-28,Goldman Sachs,Neutral,,init
+2013-04-16,Sterne Agee,Buy,Neutral,up
+2013-08-27,Cleveland Research,Buy,,up
+2013-11-04,DA Davidson,Sell,Neutral,down
+2014-01-28,Stifel,Buy,Hold,up
+2014-04-28,Jefferies,Hold,,init
+2014-07-14,RBC Capital,Sector Perform,Outperform,down
+2014-10-09,Bank of America,Buy,,init
+2014-10-09,Longbow Research,Buy,Neutral,up
+2014-11-05,Bank of America,Buy,,main
+2014-12-16,Goldman Sachs,Buy,Neutral,up
+2015-02-06,BB&T Capital,Buy,Hold,up
+2015-02-23,Stifel Nicolaus,Buy,,main
+2015-02-26,RBC Capital,Outperform,Sector Perform,up
+2015-04-14,Stifel Nicolaus,Buy,,main
+2015-05-06,Susquehanna,Positive,,main
+2015-05-06,RBC Capital,Outperform,,main
+2015-08-05,Susquehanna,Positive,,main
+2015-08-17,DA Davidson,Neutral,Underperform,up
+2016-02-05,Susquehanna,Positive,,main
+2016-05-04,BB&T Capital,Buy,,main
+2016-06-08,Goldman Sachs,Buy,,main
+2016-10-26,SunTrust Robinson Humphrey,Buy,Hold,up
+2016-11-16,Bank of America,Neutral,Buy,down
+2016-11-17,Stephens & Co.,Equal-Weight,Overweight,down
+2017-03-30,Citigroup,Buy,,init
+2017-08-03,Stephens & Co.,Overweight,Equal-Weight,up
+2017-10-09,Citigroup,Buy,,main
+2017-10-19,Bank of America,Neutral,,main
+2017-11-03,Jefferies,Hold,,main
+2017-12-13,Barclays,Overweight,,init
+2018-01-25,Citigroup,Buy,Buy,main
+2018-02-05,Bank of America,Neutral,Neutral,main
+2018-02-27,Citigroup,Buy,Buy,main
+2018-05-02,Bank of America,Buy,Neutral,up
+2018-07-25,Bank of America,Neutral,Buy,down
+2018-08-01,Bank of America,Neutral,Neutral,main
+2018-08-01,RBC Capital,Outperform,Sector Perform,up
+2018-08-01,Jefferies,Buy,Hold,up
+2018-10-01,Bank of America,Neutral,Neutral,main
+2018-10-11,DA Davidson,Neutral,Neutral,main
+2018-10-17,Bank of America,Underperform,Neutral,down
+2018-10-29,Nomura,Neutral,,init
+2018-10-31,Citigroup,Buy,Buy,main
+2018-11-01,Citigroup,Buy,Buy,main
+2018-12-06,Nomura,Buy,Neutral,up
+2019-01-03,Deutsche Bank,Buy,,init
+2019-01-04,Citigroup,Buy,Buy,main
+2019-03-21,JP Morgan,Overweight,,init
+2019-04-03,Berenberg,Hold,,init
+2019-07-02,Stifel Nicolaus,Buy,,main
+2019-07-26,Longbow Research,Buy,,main
+2019-09-05,JP Morgan,Overweight,,main
+2019-09-12,Barclays,Overweight,,main
+2019-09-18,Stifel,Buy,,main
+2019-09-18,Stifel Nicolaus,Buy,,main
+2019-09-18,RBC Capital,Outperform,,main
+2019-09-19,Nomura,Buy,,main
+2019-10-15,Bank of America,Neutral,Underperform,up
+2019-10-16,SunTrust Robinson Humphrey,Buy,,main
+2019-10-22,Vertical Research,Hold,,init
+2019-11-21,Deutsche Bank,Hold,,init
+2019-12-19,Loop Capital,Hold,,init
+2020-02-19,Citigroup,Buy,,main
+2020-02-19,RBC Capital,Outperform,,main
+2020-02-24,Stephens & Co.,Equal-Weight,Overweight,down
+2020-03-03,B of A Securities,Buy,Neutral,up
+2020-03-19,Goldman Sachs,Buy,,main
+2020-03-25,Deutsche Bank,Hold,,main
+2020-03-31,Stephens & Co.,Equal-Weight,,main
+2020-04-17,Nomura,Buy,,main
+2020-04-23,JP Morgan,Overweight,,main
+2020-05-06,CFRA,Hold,Buy,down
+2020-05-07,Barclays,Overweight,,main
+2020-05-08,Citigroup,Buy,,main
+2020-05-20,Argus Research,Buy,,main
+2020-06-17,RBC Capital,Outperform,,main
+2020-06-19,Atlantic Equities,Overweight,,init
+2020-07-10,SunTrust Robinson Humphrey,Buy,,main
+2020-07-22,Citigroup,Buy,,main
+2020-08-06,Citigroup,Buy,,main
+2020-08-06,JP Morgan,Neutral,Overweight,down
+2020-10-08,Deutsche Bank,Buy,Hold,up
+2020-10-13,B of A Securities,Neutral,Buy,down
+2020-11-05,RBC Capital,Sector Perform,Outperform,down
+2020-11-06,Jefferies,Hold,Buy,down
+2020-11-20,Goldman Sachs,Neutral,Buy,down
+2020-12-09,UBS,Neutral,,init
+2020-12-18,Morgan Stanley,Equal-Weight,,init
+2021-01-22,Morgan Stanley,Equal-Weight,,main
+2021-02-04,Raymond James,Market Perform,,init
+2021-02-17,DA Davidson,Neutral,,main
+2021-02-23,Morgan Stanley,Equal-Weight,,main
+2021-04-12,Morgan Stanley,Equal-Weight,,main
+2021-05-10,Morgan Stanley,Equal-Weight,,main
+2021-05-26,JP Morgan,Neutral,,main
+2021-06-25,Jefferies,Buy,Hold,up
+2021-07-13,Morgan Stanley,Equal-Weight,,main
+2021-08-09,Morgan Stanley,Equal-Weight,,main
+2021-08-27,Loop Capital,Hold,,main
+2021-10-06,Loop Capital,Buy,Hold,up
+2021-10-07,RBC Capital,Sector Perform,,main
+2021-10-18,DA Davidson,Buy,Neutral,up
+2021-10-26,Citigroup,Buy,,main
+2021-11-09,Argus Research,Buy,Hold,up
+2021-11-10,Stephens & Co.,Overweight,,main
+2021-12-15,JP Morgan,Neutral,,main
+2021-12-17,Barclays,Overweight,,main
+2022-01-13,Barclays,Overweight,,main
+2022-02-22,Truist Securities,Buy,,main

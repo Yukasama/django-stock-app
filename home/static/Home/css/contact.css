@@ -1,0 +1,19 @@
+
+.contact_response {
+    height: 300px;
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px var(--color-block-shadow);
+    background: white;
+}
+.contact_icon_container {
+    background: var(--color-second);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.contact_icon {
+
+}

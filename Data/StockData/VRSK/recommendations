@@ -1,0 +1,115 @@
+Date,Firm,To Grade,From Grade,Action
+2012-02-27,Evercore Partners,Overweight,,init
+2012-03-07,UBS,Neutral,,init
+2012-03-26,Morgan Stanley,Equal-Weight,,main
+2013-01-14,Barclays,Overweight,Equal-weight,up
+2013-02-27,Morgan Stanley,Equal-Weight,,main
+2013-02-27,Evercore Partners,Equal-Weight,Overweight,down
+2013-05-02,Keefe Bruyette & Woods,Market Perform,Outperform,down
+2013-05-03,Keefe Bruyette & Woods,Market Perform,Outperform,down
+2013-05-22,BMO Capital,Outperform,,init
+2013-06-27,Deutsche Bank,Buy,,init
+2013-06-28,Janney Capital,Buy,,init
+2013-09-20,Goldman Sachs,Neutral,,init
+2013-11-07,BMO Capital,Outperform,,main
+2013-12-05,Baird,Outperform,,init
+2013-12-11,Credit Suisse,Neutral,,init
+2014-01-16,Raymond James,Outperform,,main
+2014-02-13,Wells Fargo,Outperform,,init
+2014-02-27,Morgan Stanley,Overweight,,main
+2014-05-01,Deutsche Bank,Buy,,main
+2014-10-27,Barclays,Overweight,,main
+2014-11-11,Deutsche Bank,Hold,Buy,down
+2014-12-17,Deutsche Bank,Hold,,main
+2015-02-26,JP Morgan,Overweight,,main
+2015-02-26,Deutsche Bank,Hold,,main
+2015-02-26,Barclays,Overweight,,main
+2015-02-26,Raymond James,Market Perform,Outperform,down
+2015-03-12,Evercore ISI Group,Buy,Hold,up
+2015-04-30,Barclays,Overweight,,main
+2015-04-30,BMO Capital,Market Perform,Outperform,down
+2015-05-26,Deutsche Bank,Hold,,main
+2015-06-25,Bank of America,Buy,,init
+2015-07-21,UBS,Sell,Neutral,down
+2015-11-10,Cantor Fitzgerald,Buy,,init
+2015-12-17,Barclays,Overweight,,main
+2016-03-22,Sterne Agee CRT,Neutral,,init
+2016-08-04,UBS,Sell,,main
+2016-08-25,Macquarie,Neutral,,init
+2017-01-18,Morgan Stanley,Equal-Weight,,down
+2017-01-20,RBC Capital,Sector Perform,,init
+2017-02-15,Susquehanna,Neutral,Positive,down
+2017-05-03,JP Morgan,Neutral,Overweight,down
+2017-05-05,Macquarie,Outperform,Neutral,up
+2017-08-03,Credit Suisse,Neutral,,main
+2017-08-03,SunTrust Robinson Humphrey,Hold,Buy,down
+2017-10-23,Morgan Stanley,Equal-Weight,,main
+2017-11-02,Barclays,Overweight,,main
+2017-11-02,Morgan Stanley,Equal-Weight,,main
+2017-11-02,BMO Capital,Market Perform,,main
+2017-11-02,Credit Suisse,Neutral,,main
+2017-11-08,Goldman Sachs,Neutral,,init
+2018-01-31,Morgan Stanley,Equal-Weight,Equal-Weight,main
+2018-02-15,JP Morgan,Neutral,Neutral,main
+2018-02-22,Morgan Stanley,Equal-Weight,Equal-Weight,main
+2018-02-22,Baird,Outperform,Outperform,main
+2018-02-22,Credit Suisse,Neutral,Neutral,main
+2018-02-22,JP Morgan,Overweight,Neutral,down
+2018-02-22,BMO Capital,Market Perform,Market Perform,main
+2018-05-03,BMO Capital,Market Perform,Market Perform,main
+2018-07-18,Morgan Stanley,Equal-Weight,Equal-Weight,main
+2018-08-02,Keefe Bruyette & Woods,Market Perform,Outperform,down
+2018-08-02,Morgan Stanley,Equal-Weight,Equal-Weight,main
+2018-09-13,Morgan Stanley,Equal-Weight,Equal-Weight,main
+2019-01-08,UBS,Sell,Sell,main
+2019-03-12,UBS,Sell,Sell,main
+2019-04-09,UBS,Sell,Sell,main
+2019-05-02,UBS,Sell,Sell,main
+2019-07-10,UBS,Sell,,main
+2019-07-31,Bank of America,Neutral,,main
+2019-09-23,"Keefe, Bruyette & Woods",Market Perform,,init
+2019-10-10,Morgan Stanley,Equal-Weight,,main
+2019-10-31,Morgan Stanley,Equal-Weight,,main
+2019-11-04,UBS,Sell,,main
+2019-11-22,Jefferies,Buy,,init
+2020-01-07,Morgan Stanley,Overweight,Equal-Weight,up
+2020-01-22,Baird,Outperform,,main
+2020-01-22,Credit Suisse,Neutral,,main
+2020-02-19,Deutsche Bank,Hold,,main
+2020-02-20,JP Morgan,Overweight,,main
+2020-02-20,Baird,Outperform,,main
+2020-02-20,Morgan Stanley,Overweight,,main
+2020-02-20,UBS,Sell,,main
+2020-03-10,Morgan Stanley,Overweight,,main
+2020-03-20,Wells Fargo,Overweight,,main
+2020-03-31,RBC Capital,Sector Perform,,init
+2020-04-06,UBS,Sell,,main
+2020-04-09,Barclays,Overweight,,main
+2020-04-20,B of A Securities,Neutral,,main
+2020-04-22,Morgan Stanley,Overweight,,main
+2020-05-07,BMO Capital,Market Perform,,main
+2020-05-07,Baird,Outperform,,main
+2020-05-07,UBS,Sell,,main
+2020-05-07,Wells Fargo,Overweight,,main
+2020-05-07,Morgan Stanley,Overweight,,main
+2020-07-10,Morgan Stanley,Overweight,,main
+2020-08-06,BMO Capital,Market Perform,,main
+2020-08-06,Morgan Stanley,Overweight,,main
+2020-10-20,Morgan Stanley,Overweight,,main
+2020-11-06,Credit Suisse,Neutral,,main
+2020-11-06,Morgan Stanley,Overweight,,main
+2020-12-01,Truist Securities,Buy,Hold,up
+2020-12-02,Morgan Stanley,Overweight,,main
+2021-01-06,Morgan Stanley,Overweight,,main
+2021-02-25,Morgan Stanley,Overweight,,main
+2021-03-08,Deutsche Bank,Buy,Hold,up
+2021-03-08,Raymond James,Outperform,Market Perform,up
+2021-03-22,Morgan Stanley,Overweight,,main
+2021-05-06,Morgan Stanley,Overweight,,main
+2021-07-21,Morgan Stanley,Overweight,,main
+2021-08-05,Morgan Stanley,Overweight,,main
+2021-08-09,Raymond James,Outperform,,main
+2021-09-28,RBC Capital,Outperform,,main
+2021-11-05,Raymond James,Outperform,,main
+2021-12-14,RBC Capital,Outperform,,main
+2022-01-05,Morgan Stanley,Equal-Weight,Overweight,down

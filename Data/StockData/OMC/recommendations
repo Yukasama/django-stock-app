@@ -1,0 +1,106 @@
+Date,Firm,To Grade,From Grade,Action
+2012-02-13,Wedbush,Neutral,,main
+2012-02-15,UBS,Neutral,,main
+2012-03-07,Jefferies,Hold,,main
+2012-04-10,Deutsche Bank,Buy,,main
+2012-04-16,Morgan Stanley,Equal-Weight,,main
+2012-04-18,Citigroup,Buy,,main
+2012-06-11,Deutsche Bank,Buy,,main
+2012-07-18,Wedbush,Neutral,,main
+2012-09-07,Goldman Sachs,Neutral,,main
+2012-09-20,UBS,Neutral,,main
+2012-09-24,Deutsche Bank,Buy,,main
+2012-10-08,Morgan Stanley,Equal-Weight,,main
+2012-10-16,Deutsche Bank,Buy,,main
+2012-11-01,Nomura,Neutral,,main
+2012-11-28,Pivotal Research,Buy,Hold,up
+2012-12-10,Deutsche Bank,Hold,Buy,down
+2013-01-07,Pivotal Research,Buy,,main
+2013-02-13,Barclays,Equal-Weight,,main
+2013-02-13,UBS,Neutral,,main
+2013-02-13,Albert Fried,Market Perform,,main
+2013-02-13,BMO Capital,Market Perform,,main
+2013-02-13,Deutsche Bank,Hold,,main
+2013-02-21,Pivotal Research,Hold,Buy,down
+2013-03-18,Nomura,Neutral,,main
+2013-04-03,Jefferies,Hold,,main
+2013-04-12,Deutsche Bank,Hold,,main
+2013-04-15,Wedbush,Neutral,,main
+2013-04-18,Pivotal Research,Hold,,main
+2013-07-19,RBC Capital,Sector Perform,Outperform,down
+2013-07-29,Deutsche Bank,Hold,,main
+2013-07-30,Pivotal Research,Hold,,main
+2013-08-12,Evercore Partners,Overweight,Equal-Weight,up
+2013-09-04,Pivotal Research,Buy,Hold,up
+2013-09-05,Lazard,Buy,Neutral,up
+2013-10-17,Argus,Hold,Buy,down
+2013-10-29,FBR Capital,Outperform,,init
+2013-11-04,BMO Capital,Outperform,Market Perform,up
+2013-11-13,Pivotal Research,Hold,Buy,down
+2013-12-19,Goldman Sachs,Buy,Neutral,up
+2014-01-28,Barclays,Overweight,,init
+2014-05-01,Albert Fried,Underweight,,down
+2014-05-12,Goldman Sachs,Top Pick,Outperform,up
+2014-05-12,Barclays,Overweight,,main
+2014-05-29,Albert Fried,Market Perform,Underweight,up
+2014-07-08,JP Morgan,Overweight,,main
+2014-08-28,Northland Securities,,,init
+2014-09-23,Telsey Advisory Group,Market Perform,,init
+2014-10-22,Goldman Sachs,Sell,Neutral,down
+2014-11-13,Citigroup,Sell,,main
+2015-01-15,Evercore ISI Group,Hold,Buy,down
+2015-01-16,FBR Capital,Market Perform,Outperform,down
+2015-02-11,BMO Capital,Market Perform,Outperform,down
+2015-04-13,Pivotal Research,Sell,Hold,down
+2015-04-22,Nomura,Neutral,,main
+2015-07-15,Wells Fargo,Outperform,Market Perform,up
+2015-12-15,JP Morgan,Overweight,,main
+2016-02-10,FBR Capital,Market Perform,,main
+2016-03-21,JP Morgan,Overweight,,main
+2016-04-14,Wells Fargo,Market Perform,Outperform,down
+2016-04-20,Barclays,Equal-Weight,Overweight,down
+2016-10-07,RBC Capital,Sector Perform,,init
+2017-02-09,Argus,Hold,Buy,down
+2017-02-22,Atlantic Equities,Underweight,,down
+2017-03-02,Bank of America,Neutral,,init
+2017-03-08,RBC Capital,Outperform,Sector Perform,up
+2017-04-18,Evercore ISI Group,In-Line,,init
+2017-06-06,Macquarie,Neutral,Outperform,down
+2017-07-14,Credit Suisse,Neutral,,main
+2017-09-06,Citigroup,Neutral,Sell,up
+2017-10-11,Credit Suisse,Neutral,,main
+2017-10-16,Morgan Stanley,Underweight,Equal-Weight,down
+2017-10-18,Credit Suisse,Neutral,,main
+2017-10-18,Telsey Advisory Group,Outperform,Market Perform,up
+2017-10-31,Argus,Buy,Hold,up
+2018-01-02,Macquarie,Underperform,Neutral,down
+2018-01-31,Morgan Stanley,Underweight,Underweight,main
+2018-02-16,RBC Capital,Sector Perform,Outperform,down
+2018-02-16,BMO Capital,Outperform,Market Perform,up
+2018-02-16,Macquarie,Neutral,Underperform,up
+2018-03-02,Atlantic Equities,Neutral,Underweight,up
+2018-05-23,Morgan Stanley,Underweight,Underweight,main
+2018-06-19,Moffett Nathanson,Sell,,init
+2018-07-18,Wells Fargo,Market Perform,Market Perform,main
+2018-07-23,Argus,Hold,Buy,down
+2018-10-24,Citigroup,Neutral,Neutral,main
+2019-02-13,BMO Capital,Outperform,Outperform,main
+2019-02-14,Citigroup,Neutral,Neutral,main
+2019-04-17,BMO Capital,Outperform,Outperform,main
+2019-04-17,Barclays,Equal-Weight,Underweight,up
+2019-07-15,BMO Capital,Market Perform,Outperform,down
+2019-09-09,Citigroup,Neutral,,main
+2019-09-24,Wells Fargo,Market Perform,,init
+2020-02-12,CFRA,Hold,Buy,down
+2020-03-24,Citigroup,Buy,Neutral,up
+2020-04-28,Morgan Stanley,Underweight,,main
+2020-07-23,Wolfe Research,Peer Perform,,init
+2020-10-28,MoffettNathanson,Neutral,Sell,up
+2020-10-28,Wells Fargo,Equal-Weight,,main
+2020-11-02,Evercore ISI Group,In-Line,Underperform,up
+2021-05-03,Macquarie,Outperform,Neutral,up
+2021-07-02,Morgan Stanley,Underweight,,main
+2021-07-21,Morgan Stanley,Underweight,,main
+2021-10-05,JP Morgan,Overweight,,main
+2022-02-10,Morgan Stanley,Underweight,,main
+2022-02-10,Macquarie,Outperform,,main

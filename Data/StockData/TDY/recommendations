@@ -1,0 +1,32 @@
+Date,Firm,To Grade,From Grade,Action
+2012-04-30,Drexel Hamilton,Hold,,main
+2012-10-26,Jefferies,Hold,,main
+2013-01-08,Needham,Buy,,init
+2013-03-12,Stifel Nicolaus,Buy,,main
+2013-07-12,Drexel Hamilton,Buy,Hold,up
+2013-10-21,Stifel Nicolaus,Buy,,main
+2014-07-25,Jefferies,Hold,,main
+2014-09-04,Jefferies,Hold,,main
+2015-01-15,KeyBanc,Underweight,Hold,down
+2015-07-14,CL King,Buy,,init
+2015-10-06,Needham,Hold,Buy,down
+2016-07-06,CL King,Neutral,Buy,down
+2016-08-05,Jefferies,Hold,,main
+2017-11-03,Jefferies,Hold,,main
+2019-04-02,Cowen & Co.,Outperform,,init
+2019-07-25,Needham,Buy,,main
+2020-01-21,Needham,Buy,,main
+2020-02-11,Cowen & Co.,Outperform,,main
+2020-03-26,Needham,Buy,,main
+2020-04-23,Needham,Buy,,main
+2020-07-15,Jefferies,Buy,Hold,up
+2020-07-23,Needham,Buy,,main
+2020-10-07,Goldman Sachs,Neutral,,init
+2021-01-05,Needham,Buy,,main
+2021-04-29,Needham,Buy,,main
+2021-05-03,Jefferies,Buy,,main
+2021-05-25,B of A Securities,Buy,,init
+2021-07-29,Needham,Buy,,main
+2021-07-30,Cowen & Co.,Outperform,,main
+2021-12-03,Morgan Stanley,Underweight,,init
+2021-12-20,Morgan Stanley,Underweight,,main

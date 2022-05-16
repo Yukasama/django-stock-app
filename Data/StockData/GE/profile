@@ -1,0 +1,37 @@
+,0
+symbol,GE
+price,89.74
+beta,0.964705
+volAvg,6816687
+mktCap,98871042048
+lastDiv,0.25
+range,85.29-116.17
+changes,0.27999878
+companyName,General Electric Company
+currency,USD
+cik,0000040545
+isin,US3696043013
+cusip,369604301
+exchange,New York Stock Exchange
+exchangeShortName,NYSE
+industry,Specialty Industrial Machinery
+website,https://www.ge.com
+description,"General Electric Company operates as a high-tech industrial company in Europe, China, Asia, the Americas, the Middle East, and Africa. It operates through four segments: Power, Renewable Energy, Aviation, and Healthcare segments. The Power segment offers gas and steam turbines, full balance of plant, upgrade, and service solutions, as well as data-leveraging software for power generation, industrial, government, and other customers. The Renewables segment provides various solutions for its customers through combining onshore and offshore wind, blade manufacturing, grid solutions, hydro, storage, hybrid renewables, and digital services offerings. The Aviation segment designs and produces commercial and military aircraft engines, integrated engine components, electric power, and mechanical aircraft systems; and provides aftermarket services. The Healthcare segment provides healthcare technologies to developed and emerging markets in medical imaging, digital solutions, patient monitoring and diagnostics, and drug discovery and performance improvement solutions that are the building blocks of precision health to hospitals and medical facilities. The company also engages in the provision of various financial solutions; and management of run-off insurance operations, which provides life and health insurance and reinsurance products, as well as grid management software. General Electric Company was incorporated in 1892 and is headquartered in Boston, Massachusetts."
+ceo,Mr. H. Lawrence Culp
+sector,Industrials
+country,US
+fullTimeEmployees,168000
+phone,16174433000
+address,5 NECCO STREET
+city,Boston
+state,MASSACHUSETTS
+zip,02210
+dcfDiff,14.3625
+dcf,104.102
+image,https://financialmodelingprep.com/image-stock/GE.png
+ipoDate,1892-06-23
+defaultImage,False
+isEtf,False
+isActivelyTrading,True
+isAdr,False
+isFund,False

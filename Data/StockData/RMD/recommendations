@@ -1,0 +1,104 @@
+Date,Firm,To Grade,From Grade,Action
+2012-03-28,Feltl & Co.,Hold,,down
+2012-04-13,Deutsche Bank,Buy,,main
+2012-04-27,JP Morgan,Overweight,,up
+2012-04-27,Jefferies,Hold,,main
+2012-04-27,Goldman Sachs,Buy,,up
+2012-04-27,Bank oferica,Neutral,,down
+2012-04-27,Feltl & Co.,Buy,,up
+2012-08-01,Morgan Stanley,Overweight,,main
+2012-08-03,Bank of America,Buy,Neutral,up
+2012-08-06,Feltl & Co.,Hold,,main
+2012-08-06,Credit Suisse,Outperform,Neutral,up
+2012-08-07,CBA,Buy,Hold,up
+2012-08-31,Morgan Stanley,Overweight,,main
+2012-10-29,Jefferies,Hold,,main
+2013-01-25,Jefferies,Hold,,main
+2013-01-25,Bank of America,Neutral,Buy,down
+2013-02-26,S&P Capital IQ,Buy,,up
+2013-07-16,Needham,Hold,,init
+2013-07-30,UBS,Buy,Neutral,up
+2013-08-02,Deutsche Bank,Buy,Hold,up
+2013-08-26,Bank of America,Buy,Neutral,up
+2013-09-20,Shaw Stockbroking,Buy,,init
+2013-10-07,Northland Securities,Market Perform,,init
+2013-10-25,UBS,Buy,Neutral,up
+2013-10-25,Deutsche Bank,Hold,Buy,down
+2014-01-24,William Blair,Market Perform,Outperform,down
+2014-01-24,BMO Capital,Market Perform,,main
+2014-02-28,Macquarie,Outperform,,up
+2014-02-28,JP Morgan,Neutral,Overweight,down
+2014-04-24,Deutsche Bank,Buy,Hold,up
+2014-04-24,Morgan Stanley,Equal-Weight,,main
+2014-05-27,Northland Securities,Underperform,Market Perform,down
+2014-06-10,JP Morgan,Overweight,Neutral,up
+2014-07-03,Deutsche Bank,Hold,Buy,down
+2014-08-01,Jefferies,Hold,,main
+2014-10-24,Morgan Stanley,Equal-Weight,,main
+2014-11-18,Morgan Stanley,Equal-Weight,,main
+2015-01-23,Needham,Buy,Hold,up
+2015-02-02,BBY,Underperform,,init
+2015-03-25,Jefferies,Hold,,main
+2015-04-07,Credit Suisse,Outperform,Neutral,up
+2015-04-24,BMO Capital,Market Perform,,main
+2015-04-24,Macquarie,Neutral,Outperform,down
+2015-04-27,Goldman Sachs,Neutral,Buy,down
+2015-04-27,Macquarie,Neutral,Outperform,down
+2015-06-25,Barclays,Equal-Weight,,init
+2015-07-31,Morgan Stanley,Overweight,Equal-Weight,up
+2015-09-25,Goldman Sachs,Buy,Neutral,up
+2015-12-17,Needham,Hold,Buy,down
+2016-01-19,Barclays,Underweight,Equal-Weight,down
+2016-01-22,Credit Suisse,Outperform,Neutral,up
+2016-04-07,Barclays,Underweight,,init
+2016-04-27,PiperJaffray,Neutral,Overweight,down
+2016-04-28,Macquarie,Neutral,Underperform,up
+2016-06-27,Needham,Underperform,Hold,down
+2016-07-29,Jefferies,Hold,,main
+2016-08-23,Jefferies,Underperform,Hold,down
+2016-09-19,JP Morgan,Neutral,Overweight,down
+2016-09-29,Bank of America,Buy,Neutral,up
+2017-01-24,JP Morgan,Overweight,Neutral,up
+2017-08-02,BMO Capital,Market Perform,,main
+2017-08-02,Citigroup,Buy,Neutral,up
+2017-08-02,Bank of America,Neutral,Buy,down
+2017-08-02,Credit Suisse,Neutral,Outperform,down
+2017-09-25,Barclays,Underweight,,main
+2017-10-27,Barclays,Underweight,,main
+2017-10-27,BMO Capital,Market Perform,,main
+2017-10-30,JP Morgan,Overweight,,main
+2018-01-23,Needham,Hold,Underperform,up
+2018-04-04,Citigroup,Neutral,Buy,down
+2018-10-26,BMO Capital,Market Perform,Market Perform,main
+2018-12-10,BMO Capital,Outperform,Market Perform,up
+2019-01-25,JP Morgan,Underweight,Neutral,down
+2019-03-20,Deutsche Bank,Buy,Hold,up
+2019-04-18,JP Morgan,Neutral,Underweight,up
+2019-05-06,UBS,Buy,Neutral,up
+2019-07-29,Goldman Sachs,Buy,Neutral,up
+2019-07-29,UBS,Buy,Neutral,up
+2019-11-22,KeyBanc,Sector Weight,,init
+2020-01-31,UBS,Neutral,Buy,down
+2020-02-03,CLSA,Underperform,,init
+2020-05-01,Oppenheimer,Outperform,Perform,up
+2021-03-16,Needham,Buy,Hold,up
+2021-05-11,Citigroup,Buy,Neutral,up
+2021-05-21,JP Morgan,Overweight,Neutral,up
+2021-06-15,Oppenheimer,Outperform,,main
+2021-06-16,B of A Securities,Underperform,Neutral,down
+2021-06-21,Needham,Buy,,main
+2021-06-22,Baird,Neutral,,init
+2021-07-14,RBC Capital,Underperform,,init
+2021-07-26,JP Morgan,Neutral,Overweight,down
+2021-07-27,RBC Capital,Underperform,,main
+2021-07-28,Jefferies,Hold,Underperform,up
+2021-08-02,CLSA,Sell,Outperform,down
+2021-08-02,Needham,Hold,Buy,down
+2021-10-29,RBC Capital,Underperform,,main
+2021-12-06,Macquarie,Outperform,Neutral,up
+2021-12-21,Keybanc,Overweight,Sector Weight,up
+2022-01-13,Baird,Outperform,Neutral,up
+2022-01-13,RBC Capital,Underperform,,main
+2022-01-13,CLSA,Buy,Outperform,up
+2022-01-24,JP Morgan,Overweight,Neutral,up
+2022-01-24,B of A Securities,Neutral,Underperform,up

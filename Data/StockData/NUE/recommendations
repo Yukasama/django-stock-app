@@ -1,0 +1,154 @@
+Date,Firm,To Grade,From Grade,Action
+2012-03-15,Goldman Sachs,Neutral,,main
+2012-03-19,UBS,Buy,,up
+2012-03-19,Morgan Stanley,Overweight,,main
+2012-06-27,Deutsche Bank,Hold,,main
+2012-07-10,UBS,Buy,,main
+2012-07-20,Credit Suisse,Outperform,,main
+2012-08-23,Dahlman Rose,Hold,Buy,down
+2012-09-17,JP Morgan,Overweight,,main
+2012-09-18,Jefferies,Buy,,main
+2012-10-11,UBS,Buy,,main
+2012-12-18,Bank of America,Buy,,main
+2013-01-07,UBS,Buy,,main
+2013-01-14,KeyBanc,Buy,Hold,up
+2013-01-17,Citigroup,Buy,,main
+2013-01-30,Barclays,Equal-Weight,,main
+2013-01-30,JP Morgan,Overweight,,main
+2013-01-30,Nomura,Buy,,main
+2013-01-30,Credit Suisse,Outperform,,main
+2013-01-31,Jefferies,Buy,,main
+2013-03-04,Longbow Research,Buy,Neutral,up
+2013-07-24,Argus,Hold,Buy,down
+2013-09-04,Wellington Shields,Hold,,init
+2013-09-16,Jefferies,Buy,,main
+2013-09-17,BMO Capital,Outperform,,init
+2013-09-17,Bank of America,Buy,,main
+2013-09-17,CIBC,Underperform,Sector Perform,down
+2013-10-16,Credit Suisse,Outperform,,init
+2013-10-22,UBS,Buy,,main
+2013-11-13,Morgan Stanley,Equal-Weight,Overweight,down
+2013-11-18,Citigroup,Neutral,Buy,down
+2013-11-22,Wells Fargo,Market Perform,Outperform,down
+2013-12-12,Bernstein,Market Perform,,init
+2014-03-14,Credit Suisse,Neutral,Outperform,down
+2014-04-25,JP Morgan,Overweight,,main
+2014-06-23,Jefferies,Buy,,main
+2014-06-23,Macquarie,Neutral,Outperform,down
+2014-07-25,JP Morgan,Overweight,,main
+2014-09-18,Macquarie,Neutral,,main
+2014-09-18,Nomura,Buy,,main
+2014-10-24,CIBC,Sector Underperform,Sector Perform,up
+2015-01-15,Citigroup,Neutral,,main
+2015-01-15,Barclays,Overweight,,init
+2015-01-23,Goldman Sachs,Buy,Neutral,up
+2015-01-28,Jefferies,Buy,,main
+2015-01-28,JP Morgan,Overweight,,main
+2015-01-29,Nomura,Buy,,main
+2015-02-06,Deutsche Bank,Hold,,main
+2015-03-16,Jefferies,Buy,,main
+2015-03-31,JP Morgan,Overweight,,main
+2015-04-14,Clarksons Platou,Buy,,init
+2015-07-09,Barclays,Overweight,,main
+2015-09-16,Citigroup,Neutral,,main
+2015-09-16,Jefferies,Buy,,main
+2015-10-05,Barclays,Overweight,,main
+2015-10-05,Deutsche Bank,Buy,Hold,up
+2015-12-14,Nomura,Buy,Neutral,up
+2015-12-22,Macquarie,Neutral,,main
+2015-12-28,Standpoint Research,Hold,,init
+2016-01-13,Jefferies,Buy,,main
+2016-03-02,Standpoint Research,Buy,Hold,up
+2016-03-10,Credit Suisse,Neutral,,init
+2016-03-23,Deutsche Bank,Hold,Buy,down
+2016-03-23,Credit Suisse,Neutral,,main
+2016-04-05,JP Morgan,Overweight,,main
+2016-04-13,Standpoint Research,Hold,Buy,down
+2016-04-22,CLSA,Sell,Outperform,down
+2016-06-08,Credit Suisse,Neutral,,main
+2016-06-10,Jefferies,Buy,,main
+2016-06-24,Argus,Buy,Hold,up
+2016-07-06,Deutsche Bank,Buy,Hold,up
+2016-07-13,Barclays,Overweight,,main
+2016-07-20,Bank of America,Neutral,Buy,down
+2016-07-22,Berenberg,Hold,Buy,down
+2016-07-25,Berenberg,Hold,Buy,down
+2016-09-15,Jefferies,Buy,,main
+2016-10-03,Deutsche Bank,Buy,,main
+2016-11-02,Berenberg,Buy,Hold,up
+2016-11-09,Bank of America,Buy,Neutral,up
+2016-11-14,Berenberg,Hold,Buy,down
+2016-11-23,Barclays,Overweight,,main
+2016-11-29,Macquarie,Underperform,Neutral,down
+2016-11-30,JP Morgan,Overweight,,main
+2016-12-05,Deutsche Bank,Buy,,main
+2016-12-06,Berenberg,Buy,Hold,up
+2016-12-12,Argus,Buy,,main
+2017-01-09,KeyBanc,Overweight,Sector Weight,up
+2017-02-13,Morgan Stanley,Overweight,Equal-Weight,up
+2017-04-24,Macquarie,Neutral,Underperform,up
+2017-05-09,Longbow Research,Neutral,,init
+2017-05-24,Credit Suisse,Outperform,Neutral,up
+2017-06-19,Longbow Research,Buy,Neutral,up
+2017-08-17,KeyBanc,Sector Weight,Overweight,down
+2017-09-07,Macquarie,Neutral,,init
+2017-09-12,Morgan Stanley,Equal-Weight,Overweight,down
+2017-09-14,Citigroup,Buy,Neutral,up
+2017-10-02,Longbow Research,Neutral,Buy,down
+2017-10-20,Citigroup,Buy,,main
+2017-10-20,Credit Suisse,Outperform,,main
+2017-10-20,Bank of America,Buy,,main
+2017-12-20,Longbow Research,Buy,Neutral,up
+2018-01-31,Credit Suisse,Outperform,Outperform,main
+2018-02-06,Morgan Stanley,Equal-Weight,Equal-Weight,main
+2018-03-20,Goldman Sachs,Buy,,init
+2018-04-17,Morgan Stanley,Equal-Weight,Equal-Weight,main
+2018-04-18,UBS,Neutral,,init
+2018-05-17,Macquarie,Outperform,Neutral,up
+2018-07-24,KeyBanc,Overweight,Sector Weight,up
+2018-10-11,Seaport Global,Buy,,init
+2018-10-15,Credit Suisse,Neutral,Outperform,down
+2018-10-19,BMO Capital,Market Perform,Market Perform,main
+2018-10-19,Citigroup,Buy,Buy,main
+2019-01-08,Credit Suisse,Outperform,Neutral,up
+2019-01-09,Cowen & Co.,Outperform,,init
+2019-03-11,Longbow Research,Neutral,Buy,down
+2019-05-22,KeyBanc,Overweight,,main
+2019-05-31,Bank of America,Underperform,Buy,down
+2019-06-04,Goldman Sachs,Buy,,main
+2019-06-17,KeyBanc,Overweight,,main
+2019-08-27,KeyBanc,Overweight,,main
+2019-11-13,KeyBanc,Overweight,,main
+2019-11-14,UBS,Neutral,,main
+2019-12-09,Longbow Research,Buy,Neutral,up
+2020-01-29,Credit Suisse,Outperform,,main
+2020-01-29,Deutsche Bank,Sell,Hold,down
+2020-01-31,Goldman Sachs,Neutral,Buy,down
+2020-02-18,KeyBanc,Overweight,,main
+2020-03-20,Credit Suisse,Outperform,,main
+2020-03-24,KeyBanc,Overweight,,main
+2020-03-30,Goldman Sachs,Buy,Neutral,up
+2020-04-17,JP Morgan,Overweight,,main
+2020-04-29,BMO Capital,Market Perform,,main
+2020-05-13,KeyBanc,Overweight,,main
+2020-05-14,UBS,Neutral,,main
+2020-06-10,KeyBanc,Overweight,,main
+2020-08-11,Argus Research,Hold,Buy,down
+2020-10-15,Exane BNP Paribas,Neutral,Outperform,down
+2020-11-20,KeyBanc,Sector Weight,Overweight,down
+2020-12-09,Morgan Stanley,Equal-Weight,,init
+2021-02-03,Credit Suisse,Outperform,Neutral,up
+2021-03-12,Morgan Stanley,Equal-Weight,,main
+2021-03-19,Argus Research,Buy,Hold,up
+2021-04-09,Goldman Sachs,Buy,,init
+2021-04-12,Goldman Sachs,Buy,,init
+2021-04-20,B of A Securities,Neutral,Underperform,up
+2021-05-11,Morgan Stanley,Equal-Weight,,main
+2021-06-14,Morgan Stanley,Equal-Weight,,main
+2021-06-16,JP Morgan,Neutral,,init
+2021-07-01,Deutsche Bank,Hold,,main
+2021-08-24,Seaport Global,Buy,,init
+2021-09-15,Deutsche Bank,Hold,,main
+2021-10-06,Goldman Sachs,Neutral,Buy,down
+2021-10-26,Morgan Stanley,Equal-Weight,,main
+2021-11-17,Wolfe Research,Peer Perform,,init

@@ -1,0 +1,85 @@
+Date,Firm,To Grade,From Grade,Action
+2012-08-06,JP Morgan,Neutral,,main
+2012-09-05,Citigroup,Neutral,,main
+2012-09-10,JP Morgan,Neutral,,main
+2012-11-16,Citigroup,Buy,Neutral,up
+2013-01-29,Barclays,Overweight,,main
+2013-01-31,JP Morgan,Neutral,,main
+2013-03-18,Citigroup,Buy,,main
+2013-03-27,Canaccord Genuity,Hold,,init
+2014-01-28,Barclays,Overweight,,main
+2014-04-29,Canaccord Genuity,Hold,,main
+2014-05-08,Barclays,Overweight,,main
+2014-07-29,Citigroup,Buy,,main
+2014-07-29,Barclays,Overweight,,main
+2014-10-06,Barclays,Overweight,,main
+2014-11-25,RBC Capital,Outperform,,init
+2015-01-15,JP Morgan,Neutral,,main
+2015-01-27,JP Morgan,Neutral,,main
+2015-03-17,Barclays,Overweight,,main
+2015-04-28,Canaccord Genuity,Hold,,main
+2015-04-28,Barclays,Overweight,,main
+2015-04-28,JP Morgan,Neutral,,main
+2015-07-28,JP Morgan,Neutral,,main
+2015-09-11,JP Morgan,Underweight,Neutral,down
+2015-10-05,Barclays,Overweight,,main
+2015-10-12,Cowen & Co.,Outperform,,init
+2015-10-12,Barclays,Overweight,,main
+2015-11-25,Stifel Nicolaus,Buy,,init
+2016-01-19,Barclays,Overweight,,main
+2016-02-02,Barclays,Overweight,,main
+2016-02-02,Stifel Nicolaus,Buy,,main
+2016-07-20,Raymond James,Strong Buy,,init
+2016-07-27,JP Morgan,Underweight,,main
+2016-08-01,JP Morgan,Neutral,Underweight,up
+2016-10-19,Argus,Hold,,init
+2017-01-06,Oppenheimer,Outperform,Perform,up
+2017-01-13,JP Morgan,Overweight,Neutral,up
+2017-02-23,Argus,Buy,Hold,up
+2017-09-20,JP Morgan,Overweight,Neutral,up
+2017-10-31,Baird,Neutral,,main
+2018-02-05,Canaccord Genuity,Hold,Hold,main
+2018-02-15,Barclays,Equal-Weight,,init
+2018-04-23,Barclays,Equal-Weight,Equal-Weight,main
+2018-04-24,JP Morgan,Overweight,Overweight,main
+2018-05-22,JP Morgan,Overweight,Overweight,main
+2018-07-27,Raymond James,Outperform,Strong Buy,down
+2018-07-27,JP Morgan,Overweight,Overweight,main
+2018-08-02,Argus,Buy,Buy,main
+2018-09-21,JP Morgan,Neutral,Overweight,down
+2018-10-29,Barclays,Equal-Weight,Equal-Weight,main
+2018-11-20,Stephens & Co.,Overweight,,init
+2018-12-17,Barclays,Equal-Weight,Equal-Weight,main
+2019-02-04,Baird,Neutral,Neutral,main
+2019-02-04,Wells Fargo,Outperform,Outperform,main
+2019-04-03,Barclays,Equal-Weight,Equal-Weight,main
+2019-04-26,Argus Research,Buy,Buy,main
+2019-04-26,Raymond James,Outperform,Outperform,main
+2019-04-30,Stephens & Co.,Overweight,Overweight,main
+2019-07-03,Raymond James,Outperform,,main
+2019-07-09,Barclays,Equal-Weight,,main
+2019-08-27,RBC Capital,Outperform,,main
+2019-10-10,JP Morgan,Neutral,,main
+2020-01-31,Wells Fargo,Overweight,,main
+2020-01-31,RBC Capital,Outperform,,main
+2020-03-16,Wells Fargo,Overweight,,main
+2020-04-29,Argus Research,Buy,,main
+2020-06-12,Oppenheimer,Perform,Outperform,down
+2020-07-07,Barclays,Equal-Weight,,main
+2020-07-29,Raymond James,Outperform,,main
+2020-09-08,JP Morgan,Underweight,Neutral,down
+2021-02-01,JP Morgan,Underweight,,main
+2021-02-02,Argus Research,Buy,,main
+2021-03-17,Oppenheimer,Outperform,Perform,up
+2021-03-18,Barclays,Overweight,Equal-Weight,up
+2021-04-06,Barclays,Overweight,,main
+2021-04-08,Oppenheimer,Outperform,,main
+2021-04-28,RBC Capital,Outperform,,main
+2021-06-30,Oppenheimer,Outperform,,main
+2021-07-26,Barclays,Overweight,,main
+2021-07-26,RBC Capital,Outperform,,main
+2021-10-04,Raymond James,Strong Buy,Outperform,up
+2021-10-25,RBC Capital,Outperform,,main
+2021-12-15,Wolfe Research,Peer Perform,,init
+2021-12-17,Mizuho,Buy,,init
+2022-01-11,Bernstein,Market Perform,,init

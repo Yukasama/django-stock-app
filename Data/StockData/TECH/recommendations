@@ -1,0 +1,53 @@
+Date,Firm,To Grade,From Grade,Action
+2013-08-07,Craig-Hallum,Buy,Hold,up
+2013-09-20,Baird,Outperform,Neutral,up
+2014-04-29,Leerink Swann,Market Perform,,main
+2015-10-29,Stephens & Co.,Equal-Weight,Overweight,down
+2016-02-03,Baird,Outperform,,main
+2016-05-03,Janney Capital,Buy,Neutral,up
+2016-08-18,Baird,Outperform,,main
+2017-01-18,Deutsche Bank,Buy,,init
+2017-02-09,Citigroup,Buy,,init
+2017-03-27,Janney Capital,Neutral,,down
+2017-07-13,Wells Fargo,Market Perform,,init
+2017-08-09,Deutsche Bank,Buy,,main
+2017-10-24,Citigroup,Buy,,main
+2018-02-07,Baird,Outperform,Outperform,main
+2018-03-01,Deutsche Bank,Buy,Buy,main
+2018-05-03,Deutsche Bank,Buy,Buy,main
+2018-06-15,Argus,Buy,,init
+2018-06-27,Deutsche Bank,Hold,Buy,down
+2018-08-09,Citigroup,Buy,Buy,main
+2018-10-02,Argus,Buy,Buy,main
+2018-10-17,Goldman Sachs,Neutral,,init
+2018-10-31,Craig-Hallum,Hold,Buy,down
+2019-01-14,Stephens & Co.,Overweight,Equal-Weight,up
+2019-07-02,Janney Capital,Buy,Neutral,up
+2019-11-15,Stifel Nicolaus,Buy,,init
+2020-01-07,Citigroup,Neutral,,init
+2020-01-08,Wells Fargo,Equal-Weight,,init
+2020-02-05,Baird,Outperform,,main
+2020-02-05,Citigroup,Neutral,,main
+2020-03-20,Citigroup,Neutral,,main
+2020-03-30,Wells Fargo,Equal-Weight,,main
+2020-04-02,Stifel,Buy,,main
+2020-04-20,Citigroup,Neutral,,main
+2020-05-01,Stifel,Buy,,main
+2020-05-01,Wells Fargo,Equal-Weight,,main
+2020-05-01,Stephens & Co.,Overweight,,main
+2020-05-14,Benchmark,Buy,,init
+2020-05-27,Stifel,Hold,Buy,down
+2020-06-18,Citigroup,Neutral,,main
+2020-07-15,Stephens & Co.,Equal-Weight,Overweight,down
+2020-08-05,SVB Leerink,Outperform,,main
+2020-09-30,Atlantic Equities,Overweight,,init
+2020-11-06,SVB Leerink,Outperform,,main
+2020-11-10,KeyBanc,Sector Weight,,init
+2021-02-03,Craig-Hallum,Buy,,main
+2021-02-03,Citigroup,Neutral,,main
+2021-02-23,Stifel,Buy,Hold,up
+2021-03-08,Stephens & Co.,Overweight,Equal-Weight,up
+2021-06-18,Argus Research,Buy,,main
+2021-06-29,SVB Leerink,Outperform,,main
+2021-09-15,Keybanc,Overweight,Sector Weight,up
+2022-02-02,SVB Leerink,Outperform,,main
