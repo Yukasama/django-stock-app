@@ -12,3 +12,8 @@ def screener(request):
 
 def portfolio(request):
     return render(request, 'eye/portfolio.html')
+
+
+def ticker(request):
+    ticker = 'AAPL'
+    return render(request, 'eye/ticker.html', {'ticker': ticker})

@@ -24,8 +24,11 @@ import debug_toolbar
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')), #Path '' => Homepage
-    path('stocks/', include('eye.urls')),
+    path('', include('eye.urls')),
     path('account/', include('account.urls')),
     path('__debug__/', include('debug_toolbar.urls')),
-    path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('General/img/favicon.png'))), #Website Favicon
+    path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('main/img/favicon.png'))), #Website Favicon
+    
+    path('', include('django.contrib.auth.urls')),
+
 ]

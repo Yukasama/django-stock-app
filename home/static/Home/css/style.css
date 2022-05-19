@@ -9,7 +9,7 @@
 :root {
     --color-theme: white;
     --color-reverse: black;
-    --color-light: rgb(224, 224, 224);
+    --color-light: rgb(240, 240, 240);
     --color-reverse-light: rgb(31, 31, 31);
     --color-blur: rgba(255,255,255,0.6);
     --color-block-shadow: rgba(0,0,0,0.2);
@@ -32,9 +32,9 @@
     --border-radius: 15px;
 }
 .dark {
-    --color-theme: black;
+    --color-theme: rgb(15, 15, 15);
     --color-reverse: white;
-    --color-light: rgb(56, 56, 56);
+    --color-light: rgb(29, 29, 29);
     --color-reverse-light: rgb(202, 202, 202);
     --color-blur: rgba(0,0,0,0.6);
     --color-block-shadow: rgba(255,255,255,0.2);
@@ -58,6 +58,7 @@ body {
     min-height: 0;
     overflow-x: hidden;
     background: var(--color-theme);
+    transition: 0;
 }
 
 

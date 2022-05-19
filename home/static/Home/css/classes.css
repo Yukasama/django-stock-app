@@ -129,11 +129,48 @@ OVERVIEW OF EXISTING CLASSES
 
 
 
+.inputField {
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+}
+.inputField.active .input_icon {
+    color: var(--color-first);
+}
+.input_icon {
+    margin-right: 20px;
+}
 .input {
     outline: none;
     resize: none;
     border: none;
+    color: var(--color-reverse);
+    width: 100%;
+    background: transparent;
 }
+.input:focus + span, .input.valid:valid + span {
+    color: var(--color-first);
+    transform: translate(-15px, -35px);
+}
+.input.valid:invalid + span {
+    color: red;
+    transform: translate(-15px, -35px);
+}
+.input + span {
+    position: absolute;
+    left: 65px;
+    z-index: -1;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px var(--color-theme) inset !important;
+}
+
+
+
+
 .circle {
     position: absolute;
     height: 350px;

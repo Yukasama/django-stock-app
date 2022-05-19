@@ -21,7 +21,7 @@
 }
 
 .home_background {
-    background: rgb(31, 29, 29);
+    background: var(--color-theme);
     width: 100%;
     height: 600px;
     position: absolute;

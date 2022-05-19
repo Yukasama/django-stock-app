@@ -1,5 +1,10 @@
 
 
+.content {
+    transform: translate(0, 150px);
+}
+
+
 /* NAVBAR */
 .navbar {
     position: fixed;
@@ -28,10 +33,13 @@
 .nav_container3 {
     flex: 0.5;
 }
-.favicon_img {
+.favicon_img, .favicon_img_footer {
     height: 70px;
     filter: invert(1);
     cursor: pointer;
+}
+.favicon_img.dark, .favicon_img_footer.dark {
+    filter: none;
 }
 .nav_link {
     margin: 15px;
@@ -116,14 +124,30 @@
     font-weight: 600;
 }
 
+
+.webmode_container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    margin: 20px;
+}
 .webmode {
     font-size: 30px !important;
     margin: 0 35px;
     z-index: 2;
+    color: var(--color-reverse);
 }
-.webmode:hover {
+.webmode_container:hover > .webmode {
     color: var(--color-first);
 }
+.webmode_dark, .webmode_light {  opacity: 0;  }
+.webmode_dark.hide_dark, .webmode_light.hide_dark {  opacity: 1;  }
+.webmode_dark.hide_dark {  transform: translate(0, 15px);  }
+.webmode_light.hide_dark {  transform: translate(0, -15px);  }
+
 
 .profile_separator {
     height: 1px;
@@ -226,38 +250,11 @@
 
 
 
-.contact_box {
-    padding: 10px 20px;
-    align-items: center;
-    background: white;
-    gap: 15px;
-    box-shadow: 0 10px 20px var(--color-block-shadow);
-    border-radius: 15px;
-}
-.contact_input::placeholder {
-    transition: transform 0.5s;
-}
-.contact_box:hover > .contact_input::placeholder {
-    transform: translate(-5px, -20px);
-    color: var(--color-first);
-    z-index: 1;
-}
-.contact_input {
-    color: var(--color-theme);
-}
-.contact_icon {
-    color: var(--color-theme);
-}
 .contact_textarea {
     padding: 10px 23px 10px 0;
 }
 
 
-
-
-.content {
-    transform: translate(0, 150px);
-}
 
 
 
@@ -285,8 +282,8 @@
     align-items: center;
 }
 .footer_header {
-    font-size: 1.1em;
-    font-weight: 700;
+    font-size: 1.05em;
+    font-weight: 650;
 }
 .footer_separator {
     height: 2px;
@@ -300,9 +297,14 @@
 .footer_text {
     cursor: pointer;
     font-size: 0.95em;
+    color: var(--color-reverse-light);
 }
 .footer_text:hover {
     text-decoration: underline;
+}
+
+.favicon_img_footer {
+    height: 60px;
 }
 .socials {
     display: grid;

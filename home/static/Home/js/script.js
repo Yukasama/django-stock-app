@@ -21,6 +21,26 @@ eventHandler(contact_link, contact, "click", "show");
 eventHandler(hamburger2, contact, "click", "hide");
 
 
+//INPUT
+const input = document.querySelectorAll(".input");
+const inputField = document.querySelector(".inputField");
+
+if (input === document.activeElement) {
+    input.classList.add("active");
+    inputField.classList.add("active");
+} else {
+    input.classList.remove("active");
+    inputField.classList.remove("active");
+}
+
+if (input.val() != '') {
+    input.classList.add("valid")
+} else {
+    input.classList.remove("valid")
+}
+
+
+
 function eventHandler(eventElement, showElement, event="mouseover", action="show") {
     eventElement.addEventListener(event, () => {
 
@@ -34,13 +54,16 @@ function eventHandler(eventElement, showElement, event="mouseover", action="show
 }
 
 
+
+
+
+
 //SEARCHBAR
 const searchbar = document.querySelector(".searchbar");
 const search_input = document.querySelector(".search_input")
 searchbar.addEventListener("mouseover", () => {
     document.getElementsByName("search_input")[0].placeholder = "New";
 })
-
 
 
 
