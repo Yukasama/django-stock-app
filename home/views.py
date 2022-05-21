@@ -5,14 +5,11 @@ from django.shortcuts import render
 company_name = 'Stocky'
 
 
-#WebPage Views
-
 #Navbar
 def home(request):
     return render(request, 'home/home.html', 
         {'company_name': company_name, }
     )
-
 
 
 #Footer

@@ -27,8 +27,6 @@ urlpatterns = [
     path('', include('eye.urls')),
     path('account/', include('account.urls')),
     path('__debug__/', include('debug_toolbar.urls')),
-    path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('main/img/favicon.png'))), #Website Favicon
-    
-    path('', include('django.contrib.auth.urls')),
-
+    path('favicon.ico', RedirectView.as_view(
+        url=staticfiles_storage.url('main/img/favicon.png'))), #Website Favicon
 ]

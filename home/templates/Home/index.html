@@ -1,5 +1,5 @@
 {% extends 'home/base.html' %}
-{% block title %}
+{% block head %}
 
 {% load static %}
 
@@ -71,7 +71,7 @@
                 </div>
             {% else %}
                 <a href="{% url 'login' %}" class="nav_link sign_up">Login</a>
-                <a class="nav_link sign_up smart_button">Sign Up</a>
+                <a href="{% url 'signup' %}" class="nav_link sign_up smart_button">Sign Up</a>
             {% endif %}
 
             <div class="webmode_container flex">
@@ -90,23 +90,23 @@
 
                 <div class="profile_link flex">
                     <i class="material-icons profile_icon">dashboard</i>
-                    <a class="profile_text" href="">Profile</a>
+                    <a href="{% url 'profile' %}" class="profile_text">Profile</a>
                 </div>
                 <div class="profile_link flex">
                     <i class="material-icons profile_icon">insert_chart</i>
-                    <a class="profile_text" href="">Portfolio</a>
+                    <a href="{% url 'myportfolio' %}" class="profile_text">Portfolio</a>
                 </div>
                 <div class="profile_link flex">
                     <i class="material-icons profile_icon">settings</i>
-                    <a class="profile_text" href="">Settings</a>
+                    <a href="{% url 'settings' %}" class="profile_text">Settings</a>
                 </div>
                 <div class="profile_link flex">
                     <i class="material-icons profile_icon">flag</i>
-                    <a class="profile_text" href="">Help</a>
+                    <a href="{% url 'help' %}" class="profile_text">Help</a>
                 </div>
                 <div class="profile_link flex">
                     <i class="material-icons profile_icon">exit_to_app</i>
-                    <a class="profile_text" href="">Log out</a>
+                    <a href="{% url 'logout' %}" class="profile_text">Log out</a>
                 </div>
 
             </div>

@@ -40,9 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
-    'home.apps.HomeConfig',
-    'eye.apps.EyeConfig',
     'account.apps.AccountConfig',
+    'eye.apps.EyeConfig',
+    'home.apps.HomeConfig',
+    'support.apps.SupportConfig',
     
     'debug_toolbar',
     'fontawesomefree',
