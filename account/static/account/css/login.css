@@ -1,7 +1,7 @@
 
 .login_form {
     flex-direction: column;
-    width: 30%;
-    margin: 200px 30% 0 30%;
+    width: 500px;
+    margin: 200px auto 0 auto;
     gap: 50px;
 }

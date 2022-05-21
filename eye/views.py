@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from eye.models import Stock
 
 
 def stocks(request):
@@ -7,6 +8,9 @@ def stocks(request):
 def calendar(request):
     return render(request, 'eye/calendar.html')
 
+def education(request):
+    return render(request, 'eye/education.html')
+
 def screener(request):
     return render(request, 'eye/screener.html')
 
@@ -14,6 +18,6 @@ def portfolio(request):
     return render(request, 'eye/portfolio.html')
 
 
-def ticker(request):
-    ticker = 'AAPL'
-    return render(request, 'eye/ticker.html', {'ticker': ticker})
+def symbol(request, symbol):
+    symbol = Stock.objects.get(symbol=symbol)
+    return render(request, 'eye/symbol.html', {'symbol': symbol})

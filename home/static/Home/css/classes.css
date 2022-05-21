@@ -98,6 +98,7 @@ OVERVIEW OF EXISTING CLASSES
 
 
 
+
 .effect::before {
     content: "";
     position: absolute;
@@ -133,34 +134,46 @@ OVERVIEW OF EXISTING CLASSES
     display: flex;
     padding: 10px 20px;
     align-items: center;
-}
-.inputField.active .input_icon {
-    color: var(--color-first);
+    border: 0.5px gray solid;
 }
 .input_icon {
     margin-right: 20px;
 }
+
 .input {
     outline: none;
     resize: none;
     border: none;
     color: var(--color-reverse);
     width: 100%;
+    height: 100%;
     background: transparent;
 }
-.input:focus + span, .input.valid:valid + span {
-    color: var(--color-first);
-    transform: translate(-15px, -35px);
+.input::before {
+    content: '';
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    background: var(--color-first);
 }
-.input.valid:invalid + span {
-    color: red;
-    transform: translate(-15px, -35px);
-}
-.input + span {
+.input ~ span {
     position: absolute;
-    left: 65px;
+    left: 64px;
     z-index: -1;
+    transition: 0.275s;
 }
+.input:focus ~ .input::after {
+    transform: scale(1);
+}
+.input:focus ~ span, .input:valid ~ span, .input:invalid ~ span {
+    color: var(--color-first);
+    transform: translate(-50px, -35px);
+}
+.input:invalid ~ span {
+    color: red;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 

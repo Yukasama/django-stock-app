@@ -7,11 +7,6 @@ window.addEventListener("scroll", function() {
 })
 
 
-//PROFILE
-const profile = document.querySelector(".profile");
-const profile_container = document.querySelector(".profile_container");
-eventHandler(profile, profile_container, "click", "show");
-
 
 //CONTACT
 const contact_link = document.querySelector(".contact_link");
@@ -21,49 +16,28 @@ eventHandler(contact_link, contact, "click", "show");
 eventHandler(hamburger2, contact, "click", "hide");
 
 
-//INPUT
-const input = document.querySelectorAll(".input");
-const inputField = document.querySelector(".inputField");
 
-if (input === document.activeElement) {
-    input.classList.add("active");
-    inputField.classList.add("active");
-} else {
-    input.classList.remove("active");
-    inputField.classList.remove("active");
-}
+// INPUT
+const emailinputField = document.querySelector(".emailinputField");
+const email_input = document.querySelector(".email_input");
 
-if (input.val() != '') {
-    input.classList.add("valid")
-} else {
-    input.classList.remove("valid")
-}
-
-
-
-function eventHandler(eventElement, showElement, event="mouseover", action="show") {
-    eventElement.addEventListener(event, () => {
-
-        if (event == "click" || event == "mouseover") {
-            showElement.classList.toggle("show");
-        }
-        if (action == "hide") {
-            showElement.classList.remove("show");
-        }
-    })
-}
+// if (document.activeElement === email_input) {
+//     emailinputField.classList.add("active");
+// }
 
 
 
 
 
 
-//SEARCHBAR
-const searchbar = document.querySelector(".searchbar");
-const search_input = document.querySelector(".search_input")
-searchbar.addEventListener("mouseover", () => {
-    document.getElementsByName("search_input")[0].placeholder = "New";
-})
+
+
+// //SEARCHBAR
+// const searchbar = document.querySelector(".searchbar");
+// const search_input = document.querySelector(".search_input")
+// searchbar.addEventListener("mouseover", () => {
+//     document.getElementsByName("search_input")[0].placeholder = "New";
+// })
 
 
 

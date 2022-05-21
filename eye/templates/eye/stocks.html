@@ -1,8 +1,10 @@
 {% extends "Home/index.html" %}
 {% block content %}
-{% load static %}
 
-<div class="stocks content">
+{% load static %}
+<link rel="stylesheet" href="{% static 'eye/css/stocks.css' %}">
+
+<div class="stocks">
     <h1>This is the stock page.</h1>
 </div>
 {% endblock %}
