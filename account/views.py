@@ -1,16 +1,27 @@
-from django.shortcuts import render
-from django.contrib.auth import login, authenticate
-from django.contrib.auth.forms import UserCreationForm
+from django.shortcuts import render, redirect
+from django.contrib.auth.mixins import LoginRequiredMixin as login
+from . forms import Signup
 
-
-def login(response):
-    form = UserCreationForm()
-    return render(response, 'account/login.html', {'form': form})
+    
 
 def signup(response):
-    form = UserCreationForm()
+    if response.method == "POST":
+        form = UserCreationForm(response.POST)
+        if form.is_valid():
+            form.save()  
+        return redirect('/')  
+    else:
+        form = UserCreationForm()
     return render(response, 'account/signup.html', {'form': form})
 
-def logout(response):
-    form = UserCreationForm()
-    return render(response, 'account/logout.html', {'form': form})
+
+def profile(response):
+    return render(response, 'account/profile.html')
+
+def myportfolio(response):
+    return render(response, 'account/myportfolio.html')
+
+def settings(response):
+    return render(response, 'account/settings.html')
+
+

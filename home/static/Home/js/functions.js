@@ -6,8 +6,16 @@ function eventHandler(eventElement, showElement, event="mouseover", action="show
         if (event == "click" || event == "mouseover") {
             showElement.classList.toggle("show");
         }
+        if (event == "scroll") {
+            showElement.classList.toggle("scroll", window.scrollY > 50);
+        }
+
         if (action == "hide") {
             showElement.classList.remove("show");
+        }
+        if (action == "window") {
+            showElement.classList.toggle("scroll");
+            document.body.classList.toggle("scroll");
         }
     })
 }

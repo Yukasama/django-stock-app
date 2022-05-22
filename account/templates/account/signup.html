@@ -1,0 +1,35 @@
+{% extends 'home/base.html' %}
+{% block head %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'account/css/signup.css' %}">
+
+
+<form method="POST">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit">Sign Up</button>
+</form>
+
+
+
+
+
+
+
+<!-- <form action="/" method="post" class="login_form flex">
+    {% csrf_token %}
+    <div class="emailinputField inputField">
+        <i class="material-icons input_icon">mail</i>
+        <input class="email_input input" type="email" name="email" required>
+        <span>E-Mail</span>
+    </div>
+    <div class="inputField">
+        <i class="material-icons input_icon">lock</i>
+        <input class="password_input input" type="password" name="password" required>
+        <span>Password</span>
+    </div>
+    <button class="smart_button" type="submit" name="submit">Login</button>
+</form> -->
+
+{% endblock %}

@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def help(response):
+    return render(response, 'support/help.html')

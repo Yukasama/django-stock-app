@@ -2,9 +2,14 @@
 
 //STICKY NAVBAR
 const navbar = document.querySelector(".navbar");
-window.addEventListener("scroll", function() {
-    navbar.classList.toggle("scroll", window.scrollY > 50);
-})
+eventHandler(window, navbar, "scroll", "show");
+
+
+
+//SIDEBAR
+const sidebar = document.querySelector(".sidebar");
+const hamburger = document.querySelector(".hamburger");
+eventHandler(hamburger, sidebar, "click", "window");
 
 
 
