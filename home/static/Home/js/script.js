@@ -11,6 +11,9 @@ const sidebar = document.querySelector(".sidebar");
 const hamburger = document.querySelector(".hamburger");
 eventHandler(hamburger, sidebar, "click", "window");
 
+const side_header = document.querySelectorAll(".side_header")
+activeLooper(side_header);
+
 
 
 //CONTACT

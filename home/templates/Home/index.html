@@ -127,12 +127,12 @@
     <div class="sidebar flex">
 
         <div class="side_container side_container1 flex">
-            <div class="side_header flex">
+            <div class="side_header effect_underline flex">
                 <div class="side_title">Account</div>
-                <i class="material-icons side_title_icon">arrow_drop_down</i>
+                <i class="material-icons side_title_icon transition">arrow_drop_down</i>
             </div>
-            <div class="side_wrapper">
-            {% if user.is_authenticated %}
+            <div class="side_wrapper flex">
+                {% if user.is_authenticated %}
                 <div class="side_link flex">
                     <i class="material-icons side_icon">dashboard</i>
                     <a href="{% url 'profile' %}" class="side_text">Profile</a>
@@ -153,39 +153,79 @@
                     <i class="material-icons side_icon">exit_to_app</i>
                     <a href="{% url 'logout' %}" class="side_text">Logout</a>
                 </div>
-            {% else %}
+                {% else %}
                 <a href="{% url 'login' %}" class="side_text sign_up">Login</a>
-                <a href="{% url 'signup' %}" class="side_text sign_up smart_button">Sign Up</a>
+                <a href="{% url 'signup' %}" class="side_text sign_up">Sign Up</a>
                 <div class="webmode_container flex">
                     <i class="material-icons webmode webmode_dark">brightness_2</i>
                     <i class="material-icons webmode webmode_light">brightness_7</i>
                 </div>
-            {% endif %}
+                {% endif %}
+            </div>
+        </div>
+
+
+        <div class="side_container side_container3 flex">
+            <div class="side_header effect_underline flex">
+                <div class="side_title">Calendar</div>
+            </div>
+        </div>
+
+
+        <div class="side_container side_container4 flex">
+            <div class="side_header effect_underline flex">
+                <div class="side_title">News</div>
             </div>
         </div>
 
 
         <div class="side_container side_container2 flex">
-            <div class="side_header flex">
+            <div class="side_header effect_underline flex">
                 <div class="side_title">Markets</div>
-                <i class="material-icons side_title_icon">arrow_drop_down</i>
+                <i class="material-icons side_title_icon transition">arrow_drop_down</i>
             </div>
-            <div class="side_wrapper">
+            <div class="side_wrapper flex">
                 <div class="side_link flex">
                     <i class="material-icons side_icon">school</i>
-                    <a href="{% url 'profile' %}" class="Stocks">Stocks</a>
+                    <a href="{% url 'profile' %}" class="side_text">Stocks</a>
                 </div>
                 <div class="side_link flex">
                     <i class="material-icons side_icon">school</i>
-                    <a href="{% url 'profile' %}" class="Stocks">Commodities</a>
+                    <a href="{% url 'profile' %}" class="side_text">Commodities</a>
                 </div>
                 <div class="side_link flex">
                     <i class="material-icons side_icon">school</i>
-                    <a href="{% url 'profile' %}" class="Stocks">Forex</a>
+                    <a href="{% url 'profile' %}" class="side_text">Forex</a>
                 </div>
                 <div class="side_link flex">
                     <i class="material-icons side_icon">school</i>
-                    <a href="{% url 'profile' %}" class="Stocks">Crypto</a>
+                    <a href="{% url 'profile' %}" class="side_text">Crypto</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="side_container side_container2 flex">
+            <div class="side_header effect_underline flex">
+                <div class="side_title">Education</div>
+                <i class="material-icons side_title_icon transition">arrow_drop_down</i>
+            </div>
+            <div class="side_wrapper flex">
+                <div class="side_link flex">
+                    <i class="material-icons side_icon">school</i>
+                    <a href="{% url 'profile' %}" class="side_text">Markets</a>
+                </div>
+                <div class="side_link flex">
+                    <i class="material-icons side_icon">school</i>
+                    <a href="{% url 'profile' %}" class="side_text">Technicals</a>
+                </div>
+                <div class="side_link flex">
+                    <i class="material-icons side_icon">school</i>
+                    <a href="{% url 'profile' %}" class="side_text">Fundamentals</a>
+                </div>
+                <div class="side_link flex">
+                    <i class="material-icons side_icon">school</i>
+                    <a href="{% url 'profile' %}" class="side_text">Automation</a>
                 </div>
             </div>
         </div>

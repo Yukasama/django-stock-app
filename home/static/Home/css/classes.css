@@ -27,6 +27,7 @@ OVERVIEW OF EXISTING CLASSES
 
 .flex {  display: flex;  }
 .grid {  display: grid;  }
+.transition {  transition: 0.275s;  }
 
 .normal_button, .normal_button_outline {
     display: flex;
