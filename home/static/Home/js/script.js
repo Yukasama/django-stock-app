@@ -8,11 +8,13 @@ eventHandler(window, navbar, "scroll", "show");
 
 //SIDEBAR
 const sidebar = document.querySelector(".sidebar");
-const hamburger = document.querySelector(".hamburger");
-eventHandler(hamburger, sidebar, "click", "window");
+const hamburger1 = document.querySelector(".hamburger1");
+eventHandler(hamburger1, sidebar, "click", "window");
 
 const side_header = document.querySelectorAll(".side_header")
 activeLooper(side_header);
+
+//HAMBURGER
 
 
 

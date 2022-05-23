@@ -16,3 +16,11 @@ class StockInfo(models.Model):
     
     def __str__(self):
         return self.name
+    
+    
+class StockCashFlow(models.Model):
+    stock = models.ForeignKey(Stock, on_delete=models.CASCADE)
+    
+    metric = models.CharField(max_length=200)
+    y2016 = models.IntegerField()
+    

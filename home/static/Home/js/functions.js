@@ -14,9 +14,8 @@ function eventHandler(eventElement, showElement, event="mouseover", action="show
             showElement.classList.remove("show");
         }
         if (action == "window") {
-            eventElement.classList.toggle("scroll");
             showElement.classList.toggle("scroll");
-            document.body.classList.toggle("scroll");
+            eventElement.classList.toggle("scroll");
         }
     })
 }
@@ -34,3 +33,13 @@ function activeLooper(elements) {
         })
     })
 }
+
+
+// //Changes Hamburger to X and Backc
+// function hamburgerChange(hamburger) {
+//     const line1 = document.querySelector('.hamburger1 :nth-child(1)');
+//     const line2 = document.querySelector('.hamburger1 :nth-child(2)');
+//     const line3 = document.querySelector('.hamburger1 :nth-child(3)');
+
+//     line1.classList.toggle("hamburger_line_active1");
+// }
