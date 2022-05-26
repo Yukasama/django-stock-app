@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'support.apps.SupportConfig',
     
+    'django_extensions',
+    'import_export',
     'debug_toolbar',
     'fontawesomefree',
 ]

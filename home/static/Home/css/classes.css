@@ -150,28 +150,19 @@ OVERVIEW OF EXISTING CLASSES
     height: 100%;
     background: transparent;
 }
-.input::before {
-    content: '';
-    right: 0;
-    left: 0;
-    bottom: 0;
-    height: 1px;
-    background: var(--color-first);
-}
 .input ~ span {
     position: absolute;
     left: 64px;
     z-index: -1;
     transition: 0.275s;
+    color: var(--color-reverse);
 }
-.input:focus ~ .input::after {
-    transform: scale(1);
-}
-.input:focus ~ span, .input:valid ~ span, .input:invalid ~ span {
+
+.input_animation:focus ~ span, .input_animation:valid ~ span, .input_animation:invalid ~ span {
     color: var(--color-first);
     transform: translate(-50px, -35px);
 }
-.input:invalid ~ span {
+.input_animation:invalid ~ span {
     color: red;
 }
 

@@ -1,23 +1,28 @@
 
-
+/* * {
+    border: red 1px solid;
+} */
 .home {
     flex-direction: column;
 }
-.home_title {
-    font-size: 30px;
-}
-.home_button {
-    margin: 20px 20px 20px 0;
-}
 
-.home_boxes {
+.home_container1 {
+    width: 100%;
     justify-content: center;
+    margin: 30px 0 30px 0;
 }
-.home_box {
-    height: 200px;
-    width: 250px;
-    margin: 20px 80px;
-    cursor: pointer;
+.searchbar {
+    width: 40%;
+    background: linear-gradient(to left, var(--color-first), rgb(0, 132, 255));
+    border-radius: 20px;
+    border: none;
+}
+.search_icon, .search_input, .search_input::placeholder {
+    color: white;
+}
+.search_icon {
+    font-size: 27px;
+    font-weight: 600;
 }
 
 .home_background {

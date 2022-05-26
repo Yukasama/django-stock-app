@@ -7,7 +7,7 @@ import pandas_datareader.data as web
 import pandas_datareader.nasdaq_trader as nas
 from pandas_datareader import wb
 import yahoo_fin.stock_info as si
-import FundamentalAnalysis as fa
+# import FundamentalAnalysis as fa
 import os
 import numpy as np
 from datetime import datetime as dt
@@ -281,9 +281,7 @@ def dataGet(tickerAsArray, value, fileName=0, year=str(dt.today().year - 1), ope
             
         #If theres only one ticker, print the result
         if (len(tickerAsArray) == 1): return result
-        elif (len(tickerAsArray) > 1): return dataArray
-            
-
+        elif (len(tickerAsArray) > 1): return dataArray            
 
 
 

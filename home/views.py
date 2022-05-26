@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 
 #Company Info
-company_name = 'Stocky'
+company_name = 'Aethega'
 
 
 #Navbar

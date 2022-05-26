@@ -1,0 +1,12 @@
+django
+django-debug-toolbar
+django-extensions
+django-import-export
+
+fontawesomefree
+
+pandas
+yahoo_fin
+yfinance
+matplotlib
+FundamentalAnalysis

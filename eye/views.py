@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from eye.models import Stock
+from eye.models import Stock, Info, Cashflow
 
 
 def stocks(request):
@@ -20,4 +20,32 @@ def portfolio(request):
 
 def symbol(request, symbol):
     symbol = Stock.objects.get(symbol=symbol)
-    return render(request, 'eye/symbol.html', {'symbol': symbol})
+    info = Info.objects.get(symbol=symbol)
+    cashflow = Cashflow.objects.get(symbol=symbol)
+    
+    mode = "dark"
+    
+    stock = {
+        'symbol': symbol,
+        
+        'city': info.city,
+        'state': info.state,
+        'country': info.country,
+        'address': info.address,
+        
+        'name': info.name,
+        'summary': info.summary,
+        'employees': info.employees,
+        'sector': info.sector,
+        'industry': info.industry,
+        'exchange': info.exchange,
+        'quoteType': info.quoteType,
+        'currency': info.currency,
+        
+        'phone': info.phone,
+        'website': info.website,
+        'logo': info.logo,
+        
+        'mode': mode,
+    }
+    return render(request, 'eye/symbol.html', stock)

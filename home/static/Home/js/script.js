@@ -16,6 +16,13 @@ activeLooper(side_header);
 
 //HAMBURGER
 
+var search_input = document.querySelector(".search_input");
+search_input.addEventListener("click", () => {
+    if($(search_input).is(':focus')) {
+        $(search_input).cla
+    } 
+})
+
 
 
 //CONTACT

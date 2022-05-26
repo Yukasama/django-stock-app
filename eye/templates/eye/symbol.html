@@ -3,6 +3,36 @@
 {% load static %}
 
 <div class="stocks">
-    <h1>Symbol: {{symbol}}</h1>
+    <img class="logo" src={{logo}}>
+    <h1>{{symbol}}</h1>
+    <h1>{{city}}</h1>
+    <h1>{{name}}</h1>
 </div>
+
+<div class="tradingview-widget-container">
+  <div id="tradingview_96d90"></div>
+  <div class="tradingview-widget-copyright">
+      <a href="https://de.tradingview.com/symbols/{{symbol}}/" rel="noopener" target="_blank">
+          <span class="blue-text">{{symbol}} Chart</span></a> von TradingView</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
+  new TradingView.widget(
+  {
+  "width": 800,
+  "height": 500,
+  "symbol": "{{symbol}}",
+  "interval": "D",
+  "timezone": "Etc/UTC",
+  "theme": "{{mode}}",
+  "style": "1",
+  "locale": "de_DE",
+  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": false,
+  "allow_symbol_change": true,
+  "container_id": "tradingview_96d90"
+}
+  );
+  </script>
+</div>
+
 {% endblock %}
