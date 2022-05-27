@@ -31,8 +31,8 @@ class Info(models.Model):
     
     #Contact Info
     phone = models.CharField(max_length=50)
-    website = models.CharField(max_length=300)
-    logo = models.CharField(max_length=500)
+    website = models.URLField(max_length=300)
+    logo = models.URLField(max_length=500)
     
     
     def __str__(self):
@@ -40,10 +40,47 @@ class Info(models.Model):
     
     
     
-class Cashflow(models.Model):
+class Financial(models.Model):
+    
+    #Symbol Data
     symbol = models.ForeignKey(Stock, on_delete=models.CASCADE)
     ticker = models.CharField(max_length=10)
+    
+    #Income Statement
+    fillingDate = models.DateField(blank=True, null=True)
+    revenue = models.IntegerField(blank=True, null=True)
+    costOfRevenue = models.IntegerField(blank=True, null=True)
+    grossProfit = models.IntegerField(blank=True, null=True)
+    grossProfitRatio = models.IntegerField(blank=True, null=True)
+    researchAndDevelopmentExpenses = models.IntegerField(blank=True, null=True)
+    generalAndAdministrativeExpenses = models.IntegerField(blank=True, null=True)
+    sellingAndMarketingExpenses = models.IntegerField(blank=True, null=True)
+    sellingGeneralAndAdministrativeExpenses = models.IntegerField(blank=True, null=True)
+    otherExpenses = models.IntegerField(blank=True, null=True)
+    operatingExpenses = models.IntegerField(blank=True, null=True)
+    costAndExpenses = models.IntegerField(blank=True, null=True)
+    interestIncome = models.IntegerField(blank=True, null=True)
+    interestExpense = models.IntegerField(blank=True, null=True)
+    depreciationAndAmortization = models.IntegerField(blank=True, null=True)
+    ebitda = models.IntegerField(blank=True, null=True)
+    ebitdaratio = models.IntegerField(blank=True, null=True)
+    operatingIncome = models.IntegerField(blank=True, null=True)
+    operatingIncomeRatio = models.IntegerField(blank=True, null=True)
+    totalOtherIncomeExpensesNet = models.IntegerField(blank=True, null=True)
+    incomeBeforeTax = models.IntegerField(blank=True, null=True)
+    incomeBeforeTaxRatio = models.IntegerField(blank=True, null=True)
+    incomeTaxExpense = models.IntegerField(blank=True, null=True)
     netIncome = models.IntegerField(blank=True, null=True)
+    netIncomeRatio = models.IntegerField(blank=True, null=True)
+    eps = models.IntegerField(blank=True, null=True)
+    epsdiluted = models.IntegerField(blank=True, null=True)
+    weightedAverageShsOut = models.IntegerField(blank=True, null=True)
+    weightedAverageShsOutDil = models.IntegerField(blank=True, null=True)
+    link = models.URLField(blank=True, null=True, max_length=500)
+    finalLink = models.URLField(blank=True, null=True, max_length=500)
+    
+    #Balance Sheet
+    
     
     
     def __str__(self):

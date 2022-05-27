@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from eye.models import Stock, Info, Cashflow
+from eye.models import Stock, Info, Financial
 from eye.stocks import datahandler as dt
 import pandas as pd
 
@@ -41,7 +41,7 @@ def DataTransfer(ticker):
          
     #Info Model   
     try:   
-        info = Info(
+        Info(
             symbol=symbol, 
             city=city, 
             state=state, 
@@ -58,8 +58,7 @@ def DataTransfer(ticker):
             phone=phone,
             website=website,
             logo=logo,
-        )
-        info.save()
+        ).save()
         print(f"'{ticker}' Info Model saved.")
     except:
         print(f"'{ticker}' Info Model not saved.")
@@ -67,21 +66,21 @@ def DataTransfer(ticker):
         
     #Cashflow  
     try:
-        cashflow = Cashflow(
+        Financial(
             symbol=symbol,
             ticker=ticker,
             netIncome=netIncome,
-        )
-        cashflow.save()
-        print(f"'{ticker}' Cashflow Model saved.")
+        ).save()
+        print(f"'{ticker}' Financial Model saved.")
     except:
-        print(f"'{ticker}' Cashflow Model not saved.")      
+        print(f"'{ticker}' Financial Model not saved.")      
                 
 
 def deleteDuplicates():
     for stock in Stock.objects.all().reverse():
         if Stock.objects.filter(symbol=stock.symbol).count() > 1:
             stock.delete()
+
 
 
 class Command(BaseCommand):
@@ -98,7 +97,7 @@ class Command(BaseCommand):
             for ticker in dt.tickers_sp500: 
                 DataTransfer(ticker)
         else:
-            ticker = "NVDA"
+            ticker = "AAPL"
             DataTransfer(ticker)
             
         deleteDuplicates()
