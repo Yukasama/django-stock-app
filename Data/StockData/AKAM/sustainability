@@ -1,4 +1,4 @@
-2022-2,Value
+2022-5,Value
 palmOil,False
 controversialWeapons,False
 gambling,False
@@ -8,21 +8,21 @@ furLeather,False
 alcoholic,False
 gmo,False
 catholic,False
-socialPercentile,
-peerCount,105
-governanceScore,7.66
-environmentPercentile,
+socialPercentile,0
+peerCount,106
+governanceScore,7.35
+environmentPercentile,0
 animalTesting,False
 tobacco,False
-totalEsg,19.94
+totalEsg,19.63
 highestControversy,1
-esgPerformance,UNDER_PERF
+esgPerformance,LAG_PERF
 coal,False
 pesticides,False
 adult,False
-percentile,23.77
+percentile,23.32
 peerGroup,Software & Services
 smallArms,False
 environmentScore,1.93
-governancePercentile,
+governancePercentile,0
 militaryContract,False

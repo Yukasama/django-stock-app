@@ -189,6 +189,43 @@ def deleteFiles(tickerAsArray, fileName):
         except: 
             print(f"There was no file found for ticker '{t}'")
             continue
+        
+
+
+def copyRows(action="models"):
+    
+    ticker = "AAPL"
+    
+    #Financial Statements
+    income_statement = pd.read_csv(f"Data/StockData/{ticker}/income_statement").iloc[:,0]
+    balance_sheet = pd.read_csv(f"Data/StockData/{ticker}/balance_sheet").iloc[:,0]
+    cash_flow = pd.read_csv(f"Data/StockData/{ticker}/cash_flow").iloc[:,0]
+    key_metrics = pd.read_csv(f"Data/StockData/{ticker}/key_metrics").iloc[:,0]
+    financial_ratios = pd.read_csv(f"Data/StockData/{ticker}/financial_ratios").iloc[:,0]
+    financial_statement_growth = pd.read_csv(f"Data/StockData/{ticker}/financial_statement_growth").iloc[:,0]
+    discounted_cash_flow = pd.read_csv(f"Data/StockData/{ticker}/discounted_cash_flow").iloc[:,0]
+    
+    names = pd.concat([income_statement, balance_sheet, cash_flow, key_metrics,
+               financial_ratios, financial_statement_growth, discounted_cash_flow])
+    names = names.drop_duplicates(keep='first')
+    
+    if(action == "models"):
+        for name in names:
+            print(f'{name} = models.IntegerField(blank=True, null=True)')
+            
+    elif(action == "dataGet"):
+        for name in names:
+            print(f'{name} = dt.dataGet(ticker, "{name}", 0, str(year))')
+            
+    elif(action == "modelInsert"):
+        for name in names:
+            print(f'{name} = {name},')
+            
+    elif(action == "viewModel"):
+        for name in names:
+            print(f"'{name}': financial.{name},")
+            
+# copyRows("viewModel")
 
 
 #-------------------------------------------------------------------------------------------------------------------
@@ -207,9 +244,15 @@ def dataConstruct(data, construct):
     elif(construct == "normal"):
         tempResult = pd.DataFrame(data).to_numpy()[0]
         result = ",".join(map(str, tempResult))
+        
+        if (result == "0.0"):
+            result = 0
         #If result == integer
-        if(result.isdigit()):
-            result = float(result)
+        elif(result.isdigit()):
+            if(result == 0.0):
+                result = int(result)
+            else:
+                result = float(result)
         
     return result
 
@@ -231,9 +274,12 @@ def dataGetTemp(tickerAsArray, value, fileName=0, year=str(acYear - 1)):
                     if (year == "ALL"): 
                         df_new = df.loc[df["Unnamed: 0"] == value]
                         result = dataConstruct(df_new, "floatArray")
-                    elif(year == str(acYear - 1)):
+                    elif (year == str(acYear - 1)):
                         try: df_new = df.loc[df["Unnamed: 0"] == value][str(acYear)]
                         except: df_new = df.loc[df["Unnamed: 0"] == value][str(acYear - 1)]
+                        result = dataConstruct(df_new, "normal")
+                    else:
+                        df_new = df.loc[df["Unnamed: 0"] == value][str(year)]
                         result = dataConstruct(df_new, "normal")
                     return result
                     exit()
@@ -281,9 +327,6 @@ def dataGet(tickerAsArray, value, fileName=0, year=str(dt.today().year - 1), ope
             
         #If theres only one ticker, print the result
         if (len(tickerAsArray) == 1): return result
-        elif (len(tickerAsArray) > 1): return dataArray            
+        elif (len(tickerAsArray) > 1): return dataArray
 
-
-
-
-
+print(dataGet("AAPL", "priceFairValue", 0, 2020))

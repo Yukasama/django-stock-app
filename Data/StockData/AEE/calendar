@@ -1,8 +1,8 @@
-,Value
-Earnings Date,2022-05-05 20:00:00
-Earnings Average,0.95
-Earnings Low,0.82
-Earnings High,1.05
-Revenue Average,1591500000
-Revenue Low,1567470000
-Revenue High,1610510000
+,0,1
+Earnings Date,2022-02-16 00:00:00,2022-02-21 00:00:00
+Earnings Average,0.87,0.87
+Earnings Low,0.84,0.84
+Earnings High,0.92,0.92
+Revenue Average,1530920000,1530920000
+Revenue Low,1501940000,1501940000
+Revenue High,1592000000,1592000000

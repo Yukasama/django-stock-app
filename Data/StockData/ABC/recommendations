@@ -118,3 +118,9 @@ Date,Firm,To Grade,From Grade,Action
 2021-12-17 13:54:18,Morgan Stanley,Overweight,,main
 2022-01-11 12:17:10,Barclays,Equal-Weight,,main
 2022-02-03 13:19:06,Mizuho,Neutral,,main
+2022-04-12 10:05:02,Morgan Stanley,Equal-Weight,Overweight,down
+2022-05-05 12:33:09,Mizuho,Neutral,,main
+2022-05-05 15:03:28,Deutsche Bank,Hold,,main
+2022-05-25 12:08:46,Deutsche Bank,Hold,,main
+2022-05-26 11:11:42,Barclays,Overweight,Equal-Weight,up
+2022-05-27 11:40:57,Morgan Stanley,Equal-Weight,,main

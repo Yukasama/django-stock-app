@@ -54,15 +54,15 @@ Date,Firm,To Grade,From Grade,Action
 2014-06-27,JP Morgan,Overweight,,main
 2014-09-16,Bernstein,Market Perform,,init
 2014-09-16,Citigroup,Neutral,Buy,down
-2014-09-25,JP Morgan,Overweight,,main
 2014-09-25,Citigroup,Neutral,,main
+2014-09-25,JP Morgan,Overweight,,main
 2014-09-30,CLSA,Outperform,,init
 2014-11-03,Monness Crespi Hardt,Neutral,,init
 2014-12-16,Barclays,Equal-Weight,,main
+2014-12-19,Barclays,Equal-Weight,,main
 2014-12-19,JP Morgan,Overweight,,main
 2014-12-19,Credit Suisse,Outperform,,main
 2014-12-19,Citigroup,Neutral,,main
-2014-12-19,Barclays,Equal-Weight,,main
 2015-01-09,Citigroup,Neutral,,main
 2015-03-30,Jefferies,Hold,,main
 2015-05-26,Cowen & Co.,Outperform,Market Perform,up
@@ -71,8 +71,8 @@ Date,Firm,To Grade,From Grade,Action
 2015-06-26,Deutsche Bank,Buy,,main
 2015-06-29,Citigroup,Neutral,,main
 2015-09-08,Argus,Buy,Hold,up
-2015-09-21,Barclays,Equal-Weight,,main
 2015-09-21,BMO Capital,Market Perform,,main
+2015-09-21,Barclays,Equal-Weight,,main
 2015-12-17,Sterne Agee CRT,Buy,,init
 2016-02-19,Cowen & Co.,Outperform,,init
 2016-03-21,Stifel Nicolaus,Buy,,main
@@ -99,9 +99,9 @@ Date,Firm,To Grade,From Grade,Action
 2017-09-22,Morgan Stanley,Equal-Weight,,main
 2017-09-22,Baird,Neutral,,main
 2017-09-27,Barclays,Equal-Weight,,main
-2017-09-29,BMO Capital,Market Perform,,main
 2017-09-29,Baird,Neutral,,main
 2017-09-29,Wells Fargo,Outperform,,main
+2017-09-29,BMO Capital,Market Perform,,main
 2017-10-03,Susquehanna,Neutral,Positive,down
 2017-11-08,Pivotal Research,Buy,,init
 2017-11-20,KeyBanc,Overweight,,main
@@ -124,15 +124,15 @@ Date,Firm,To Grade,From Grade,Action
 2018-09-28,Baird,Neutral,Neutral,main
 2018-12-19,KeyBanc,Overweight,Overweight,main
 2018-12-19,Citigroup,Neutral,Neutral,main
-2018-12-21,KeyBanc,Overweight,Overweight,main
 2018-12-21,Baird,Neutral,Neutral,main
+2018-12-21,KeyBanc,Overweight,Overweight,main
 2019-01-08,Bank of America,Buy,Neutral,up
 2019-01-16,Citigroup,Buy,Neutral,up
-2019-03-29,Citigroup,Buy,Buy,main
+2019-03-29,KeyBanc,Overweight,Overweight,main
+2019-03-29,Morgan Stanley,Overweight,Overweight,main
 2019-03-29,Cantor Fitzgerald,Overweight,Overweight,main
 2019-03-29,Baird,Neutral,Neutral,main
-2019-03-29,Morgan Stanley,Overweight,Overweight,main
-2019-03-29,KeyBanc,Overweight,Overweight,main
+2019-03-29,Citigroup,Buy,Buy,main
 2019-05-03,Bank of America,Neutral,Buy,down
 2019-06-13,Wells Fargo,Outperform,,main
 2019-06-20,Bank of America,Neutral,,main
@@ -166,8 +166,8 @@ Date,Firm,To Grade,From Grade,Action
 2020-04-15,Exane BNP Paribas,Outperform,,init
 2020-05-22,Piper Sandler,Neutral,,init
 2020-06-17,Citigroup,Buy,,main
-2020-06-18,Wells Fargo,Equal-Weight,Overweight,down
 2020-06-18,B of A Securities,Underperform,,main
+2020-06-18,Wells Fargo,Equal-Weight,Overweight,down
 2020-06-19,Stifel,Buy,,main
 2020-06-23,Morgan Stanley,Overweight,,main
 2020-06-26,Wolfe Research,Peer Perform,,main
@@ -196,12 +196,12 @@ Date,Firm,To Grade,From Grade,Action
 2021-04-06,Deutsche Bank,Buy,,main
 2021-06-21,Jefferies,Hold,,init
 2021-06-23,Exane BNP Paribas,Outperform,Neutral,up
-2021-06-25,Cowen & Co.,Outperform,,main
+2021-06-25,Citigroup,Buy,,main
+2021-06-25,RBC Capital,Outperform,,main
 2021-06-25,Susquehanna,Positive,,main
 2021-06-25,Morgan Stanley,Overweight,,main
+2021-06-25,Cowen & Co.,Outperform,,main
 2021-06-25,BMO Capital,Market Perform,,main
-2021-06-25,RBC Capital,Outperform,,main
-2021-06-25,Citigroup,Buy,,main
 2021-06-28,Barclays,Overweight,,main
 2021-06-29,Argus Research,Buy,,main
 2021-07-26,Redburn Partners,Buy,Neutral,up
@@ -212,10 +212,15 @@ Date,Firm,To Grade,From Grade,Action
 2021-09-24,Morgan Stanley,Overweight,,main
 2021-09-24,Piper Sandler,Neutral,,main
 2021-09-27,Barclays,Overweight,,main
+2021-12-17,Piper Sandler,Neutral,,main
+2021-12-17,Morgan Stanley,Overweight,,main
 2021-12-17,Citigroup,Buy,,main
 2021-12-17,BMO Capital,Market Perform,,main
 2021-12-17,B of A Securities,Buy,,main
-2021-12-17,Morgan Stanley,Overweight,,main
-2021-12-17,Piper Sandler,Neutral,,main
 2021-12-20,Barclays,Overweight,,main
 2022-01-10,Goldman Sachs,Neutral,,init
+2022-03-07,Goldman Sachs,Neutral,,main
+2022-03-18,RBC Capital,Outperform,,main
+2022-03-18,Piper Sandler,Neutral,,main
+2022-04-08,Morgan Stanley,Overweight,,main
+2022-04-08,Baird,Neutral,,main
