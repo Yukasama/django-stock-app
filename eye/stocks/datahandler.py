@@ -13,6 +13,7 @@ import numpy as np
 from datetime import datetime as dt
 import matplotlib.pyplot as plt
 
+import ast
 
 #Globals
 api_key = "1451443e6ac73f65840c60adab375261" #ApiKey for FundamentalAnalysis
@@ -224,8 +225,13 @@ def copyRows(action="models"):
     elif(action == "viewModel"):
         for name in names:
             print(f"'{name}': financial.{name},")
-            
-# copyRows("viewModel")
+        
+    elif(action == "array"):
+        array = []
+        for name in names:
+            array.append(name)
+        print(array)    
+copyRows("array")
 
 
 #-------------------------------------------------------------------------------------------------------------------
@@ -328,5 +334,3 @@ def dataGet(tickerAsArray, value, fileName=0, year=str(dt.today().year - 1), ope
         #If theres only one ticker, print the result
         if (len(tickerAsArray) == 1): return result
         elif (len(tickerAsArray) > 1): return dataArray
-
-print(dataGet("AAPL", "priceFairValue", 0, 2020))

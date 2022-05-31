@@ -71,6 +71,7 @@ def DataTransfer(ticker):
     #Cashflow 
     try:
         for year in range(2020, 2021):
+            
             #Basic Data
             fillingDate = dt.dataGet(ticker, "fillingDate", 0, str(year))
             period = dt.dataGet(ticker, "period", 0, str(year))
@@ -323,7 +324,6 @@ def DataTransfer(ticker):
             debtGrowth = dt.dataGet(ticker, "debtGrowth", 0, str(year))
             rdexpenseGrowth = dt.dataGet(ticker, "rdexpenseGrowth", 0, str(year))
             sgaexpensesGrowth = dt.dataGet(ticker, "sgaexpensesGrowth", 0, str(year))
-            print(priceFairValue)
             
             #Discounted Cash Flow
             date = dt.dataGet(ticker, "date", 0, str(year))
