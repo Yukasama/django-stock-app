@@ -24,21 +24,22 @@ def symbol(request, symbol):
     symbol = Stock.objects.get(symbol=symbol)
     info = Info.objects.get(symbol=symbol)
     #financial = Financial.objects.filter(symbol=symbol)
-    
+  
+    mode = "dark" 
+     
     data = {
-        "netIncome2022": netIncome2022,
+        'mode': mode,
     }
     
     findata = dt.findata
-    yearRange = range(2017, 2022)
     
-    for year in yearRange:
+    for year in range(2017, 2022):
         financial = Financial.objects.filter(symbol=symbol, year=year)
         for fin in findata:
             key = f'{fin}{year}'
             value = financial.values_list(fin, flat=True).first()
             data[key] = value
     
-    mode = "dark"
+
     
     return render(request, 'eye/symbol.html', data)
