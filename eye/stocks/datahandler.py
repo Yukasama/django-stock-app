@@ -229,7 +229,12 @@ def copyRows(action="models", output=False):
         
     elif(action == "array"):
         array = []
+        blackList = ["acceptedDate", "calendarYear"]
         for name in names:
+            if name in blackList:
+                continue
+            elif (name == "Stock Price"):
+                name = "stockPrice"
             array.append(name)
         print(array)
         
@@ -237,7 +242,7 @@ def copyRows(action="models", output=False):
             newData = pd.DataFrame(array)
             newData.to_csv("Data/SymbolData/FinData")
                 
-# copyRows("array", True)
+#copyRows("array", True)
 
 
 #-------------------------------------------------------------------------------------------------------------------

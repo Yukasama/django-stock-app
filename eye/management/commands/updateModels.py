@@ -5,6 +5,7 @@ import pandas as pd
 import datetime
 
 
+
 def DataTransfer(ticker):
     
     try:    
@@ -68,7 +69,7 @@ def DataTransfer(ticker):
         
        
     #Cashflow 
-    for year in range(2020, 2021):
+    for year in range(1990, 2022):
         
         #Basic Data
         fillingDate = dt.dataGet(ticker, "fillingDate", 0, str(year))
@@ -333,6 +334,7 @@ def DataTransfer(ticker):
             symbol = symbol,
             year = year,
             ticker = ticker,
+            verification = f'{ticker}{year}',
             
             #Basic Data
             fillingDate = fillingDate,
@@ -592,7 +594,7 @@ def DataTransfer(ticker):
             
         ).save()
     
-    print(f"'{ticker}' Financial Model for {year} saved.")
+        print(f"'{ticker}' Financial Model for {year} saved.")
 
 
 
@@ -608,7 +610,7 @@ class Command(BaseCommand):
         single = False
         
         if (single==False):
-            tickers = ["AAPL", "AMT", "ABC"]
+            tickers = ["AAPL"]
             for ticker in tickers:
                 DataTransfer(ticker)
         else:
