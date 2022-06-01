@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from eye.models import Stock, Info, Financial
+from eye.stocks import datahandler as dt
 
 
 def stocks(request):
@@ -23,17 +24,22 @@ def symbol(request, symbol):
     info = Info.objects.get(symbol=symbol)
     financial = Financial.objects.get(symbol=symbol)
     
+    data = {}
+    findata = dt.findata
     
-    test = Financial.objects.filter(symbol=symbol, year=2020)[0].netIncome
+    
+        
+
+    test1 = Financial.objects.filter(symbol=symbol, year=2020).\
+    values_list("netIncome", flat=True).first()
     
     mode = "dark"
     
-    data = {}
+
     
     stock = {
         'mode': mode,
-        'test': test,
-        'fin': financial,
+        'test1': test1,
         
         'symbol': symbol,
         'city': info.city,

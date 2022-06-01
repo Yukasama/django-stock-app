@@ -20,9 +20,9 @@ class Info(models.Model):
     address = models.CharField(max_length=300)
     
     #Company Info
-    name = models.CharField(max_length=300)
+    name = models.CharField(max_length=300, primary_key=True)
     summary = models.CharField(max_length=10000)
-    employees = models.IntegerField()
+    employees = models.IntegerField(blank=True, null=True)
     sector = models.CharField(max_length=200)
     industry = models.CharField(max_length=200)
     exchange = models.CharField(max_length=50)
@@ -44,8 +44,8 @@ class Financial(models.Model):
     
     #Symbol Data
     symbol = models.ForeignKey(Stock, on_delete=models.CASCADE)
-    year = models.IntegerField(primary_key=True, default=2022)
-    ticker = models.CharField(max_length=10)
+    year = models.IntegerField(default=2021)
+    ticker = models.CharField(max_length=10, primary_key=True)
     
     #Basic Data
     fillingDate = models.DateField(blank=True, null=True)
@@ -115,8 +115,8 @@ class Financial(models.Model):
     otherLiabilities = models.IntegerField(blank=True, null=True)
     capitalLeaseObligations = models.IntegerField(blank=True, null=True)
     totalLiabilities = models.IntegerField(blank=True, null=True)
-    preferredStock = models.IntegerField(blank=True, null=True)
-    commonStock = models.IntegerField(blank=True, null=True)
+    preferredStock = models.FloatField(blank=True, null=True)
+    commonStock = models.FloatField(blank=True, null=True)
     retainedEarnings = models.IntegerField(blank=True, null=True)
     accumulatedOtherComprehensiveIncomeLoss = models.IntegerField(blank=True, null=True)
     othertotalStockholdersEquity = models.IntegerField(blank=True, null=True)

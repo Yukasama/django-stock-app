@@ -20,6 +20,7 @@ api_key = "1451443e6ac73f65840c60adab375261" #ApiKey for FundamentalAnalysis
 tickers_sp500 = pd.read_csv("Data/SymbolData/S&P500")["0"] #S&P 500 Ticker List
 tickers_dax40 = pd.read_csv("Data/SymbolData/DAX40")["0"] #DAX Ticker List
 tickers = pd.concat([tickers_sp500, tickers_dax40], axis=0)
+findata = pd.read_csv("Data/SymbolData/FinData")["0"] #Financial Data in String Format
 request_cooler = 181
 messageSign, commandSign, errorSign = "=>", "//", "[!]"
 acYear = dt.today().year
@@ -193,7 +194,7 @@ def deleteFiles(tickerAsArray, fileName):
         
 
 
-def copyRows(action="models"):
+def copyRows(action="models", output=False):
     
     ticker = "AAPL"
     
@@ -230,8 +231,13 @@ def copyRows(action="models"):
         array = []
         for name in names:
             array.append(name)
-        print(array)    
-copyRows("array")
+        print(array)
+        
+        if (output == True):
+            newData = pd.DataFrame(array)
+            newData.to_csv("Data/SymbolData/FinData")
+                
+# copyRows("array", True)
 
 
 #-------------------------------------------------------------------------------------------------------------------
