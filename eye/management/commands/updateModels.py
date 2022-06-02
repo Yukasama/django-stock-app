@@ -15,7 +15,7 @@ def DataTransfer(ticker):
         state = dt.dataGet(ticker, "state", "info")
         country = dt.dataGet(ticker, "country", "info")
         address = dt.dataGet(ticker, "address1", "info")
-        name = dt.dataGet(ticker, "shortName", "info")
+        name = dt.dataGet(ticker, "longName", "info")
         summary = dt.dataGet(ticker, "longBusinessSummary", "info")
         employees = dt.dataGet(ticker, "fullTimeEmployees", "info")
         sector = dt.dataGet(ticker, "sector", "info")
@@ -26,6 +26,10 @@ def DataTransfer(ticker):
         phone = dt.dataGet(ticker, "phone", "info")
         website = dt.dataGet(ticker, "website", "info")
         logo = dt.dataGet(ticker, "logo_url", "info")
+        period = dt.dataGet(ticker, "period", 0, str(2021))
+        cik = dt.dataGet(ticker, "cik", 0, str(2021))
+        link = dt.dataGet(ticker, "link", 0, str(2021))
+        finalLink = dt.dataGet(ticker, "finalLink", 0, str(2021))
     except:
         print("Data could'nt be fetched.")
         exit()
@@ -43,45 +47,44 @@ def DataTransfer(ticker):
             stock.delete()
          
          
-    #Info Model   
-    try:   
-        Info(
-            symbol=symbol, 
-            city=city, 
-            state=state, 
-            country=country, 
-            address=address, 
-            name=name,
-            summary=summary,
-            employees=employees,
-            sector=sector,
-            industry=industry,
-            exchange=exchange,
-            quoteType=quoteType,
-            currency=currency,
-            phone=phone,
-            website=website,
-            logo=logo,
-        ).save()
-        print(f"'{ticker}' Info Model saved.")
-    except:
-        print(f"'{ticker}' Info Model not saved.")
-        
-       
+    #Info Model    
+    Info(
+        symbol=symbol,
+        ticker=ticker,
+        city=city, 
+        state=state, 
+        country=country, 
+        address=address, 
+        name=name,
+        summary=summary,
+        employees=employees,
+        sector=sector,
+        industry=industry,
+        exchange=exchange,
+        quoteType=quoteType,
+        currency=currency,
+        phone=phone,
+        website=website,
+        logo=logo,
+        period=period,
+        cik=cik,
+        link=link,
+        finalLink=finalLink,
+    ).save()
+    
+    print(f"'{ticker}' Info Model saved.")
+    
+    
     #Cashflow 
     for year in range(1990, 2022):
         
         #Basic Data
         fillingDate = dt.dataGet(ticker, "fillingDate", 0, str(year))
-        period = dt.dataGet(ticker, "period", 0, str(year))
-        link = dt.dataGet(ticker, "link", 0, str(year))
-        finalLink = dt.dataGet(ticker, "finalLink", 0, str(year))
-        
+
         #Income Statement
         revenue = dt.dataGet(ticker, "revenue", 0, str(year))
         costOfRevenue = dt.dataGet(ticker, "costOfRevenue", 0, str(year))
         grossProfit = dt.dataGet(ticker, "grossProfit", 0, str(year))
-        grossProfitRatio = dt.dataGet(ticker, "grossProfitRatio", 0, str(year))
         researchAndDevelopmentExpenses = dt.dataGet(ticker, "researchAndDevelopmentExpenses", 0, str(year))
         generalAndAdministrativeExpenses = dt.dataGet(ticker, "generalAndAdministrativeExpenses", 0, str(year))
         sellingAndMarketingExpenses = dt.dataGet(ticker, "sellingAndMarketingExpenses", 0, str(year))
@@ -95,13 +98,10 @@ def DataTransfer(ticker):
         ebitda = dt.dataGet(ticker, "ebitda", 0, str(year))
         ebitdaratio = dt.dataGet(ticker, "ebitdaratio", 0, str(year))
         operatingIncome = dt.dataGet(ticker, "operatingIncome", 0, str(year))
-        operatingIncomeRatio = dt.dataGet(ticker, "operatingIncomeRatio", 0, str(year))
         totalOtherIncomeExpensesNet = dt.dataGet(ticker, "totalOtherIncomeExpensesNet", 0, str(year))
         incomeBeforeTax = dt.dataGet(ticker, "incomeBeforeTax", 0, str(year))
-        incomeBeforeTaxRatio = dt.dataGet(ticker, "incomeBeforeTaxRatio", 0, str(year))
         incomeTaxExpense = dt.dataGet(ticker, "incomeTaxExpense", 0, str(year))
         netIncome = dt.dataGet(ticker, "netIncome", 0, str(year))
-        netIncomeRatio = dt.dataGet(ticker, "netIncomeRatio", 0, str(year))
         eps = dt.dataGet(ticker, "eps", 0, str(year))
         epsdiluted = dt.dataGet(ticker, "epsdiluted", 0, str(year))
         weightedAverageShsOut = dt.dataGet(ticker, "weightedAverageShsOut", 0, str(year))
@@ -255,7 +255,6 @@ def DataTransfer(ticker):
         netProfitMargin = dt.dataGet(ticker, "netProfitMargin", 0, str(year))
         effectiveTaxRate = dt.dataGet(ticker, "effectiveTaxRate", 0, str(year))
         returnOnAssets = dt.dataGet(ticker, "returnOnAssets", 0, str(year))
-        returnOnEquity = dt.dataGet(ticker, "returnOnEquity", 0, str(year))
         returnOnCapitalEmployed = dt.dataGet(ticker, "returnOnCapitalEmployed", 0, str(year))
         netIncomePerEBT = dt.dataGet(ticker, "netIncomePerEBT", 0, str(year))
         ebtPerEbit = dt.dataGet(ticker, "ebtPerEbit", 0, str(year))
@@ -275,16 +274,7 @@ def DataTransfer(ticker):
         shortTermCoverageRatios = dt.dataGet(ticker, "shortTermCoverageRatios", 0, str(year))
         capitalExpenditureCoverageRatio = dt.dataGet(ticker, "capitalExpenditureCoverageRatio", 0, str(year))
         dividendPaidAndCapexCoverageRatio = dt.dataGet(ticker, "dividendPaidAndCapexCoverageRatio", 0, str(year))
-        dividendPayoutRatio = dt.dataGet(ticker, "dividendPayoutRatio", 0, str(year))
-        priceBookValueRatio = dt.dataGet(ticker, "priceBookValueRatio", 0, str(year))
-        priceToBookRatio = dt.dataGet(ticker, "priceToBookRatio", 0, str(year))
-        priceToSalesRatio = dt.dataGet(ticker, "priceToSalesRatio", 0, str(year))
-        priceEarningsRatio = dt.dataGet(ticker, "priceEarningsRatio", 0, str(year))
-        priceToFreeCashFlowsRatio = dt.dataGet(ticker, "priceToFreeCashFlowsRatio", 0, str(year))
-        priceToOperatingCashFlowsRatio = dt.dataGet(ticker, "priceToOperatingCashFlowsRatio", 0, str(year))
-        priceCashFlowRatio = dt.dataGet(ticker, "priceCashFlowRatio", 0, str(year))
         priceEarningsToGrowthRatio = dt.dataGet(ticker, "priceEarningsToGrowthRatio", 0, str(year))
-        priceSalesRatio = dt.dataGet(ticker, "priceSalesRatio", 0, str(year))
         enterpriseValueMultiple = dt.dataGet(ticker, "enterpriseValueMultiple", 0, str(year))
         priceFairValue = dt.dataGet(ticker, "priceFairValue", 0, str(year))
         
@@ -331,22 +321,18 @@ def DataTransfer(ticker):
         
         
         Financial(
+            #Symbol Data
             symbol = symbol,
             year = year,
-            ticker = ticker,
-            verification = f'{ticker}{year}',
+            verification = f'{ticker}, {year}',
             
             #Basic Data
             fillingDate = fillingDate,
-            period = period,
-            link = link,
-            finalLink = finalLink,
             
             #Income Statement
             revenue = revenue,
             costOfRevenue = costOfRevenue,
             grossProfit = grossProfit,
-            grossProfitRatio = grossProfitRatio,
             researchAndDevelopmentExpenses = researchAndDevelopmentExpenses,
             generalAndAdministrativeExpenses = generalAndAdministrativeExpenses,
             sellingAndMarketingExpenses = sellingAndMarketingExpenses,
@@ -360,13 +346,10 @@ def DataTransfer(ticker):
             ebitda = ebitda,
             ebitdaratio = ebitdaratio,
             operatingIncome = operatingIncome,
-            operatingIncomeRatio = operatingIncomeRatio,
             totalOtherIncomeExpensesNet = totalOtherIncomeExpensesNet,
             incomeBeforeTax = incomeBeforeTax,
-            incomeBeforeTaxRatio = incomeBeforeTaxRatio,
             incomeTaxExpense = incomeTaxExpense,
             netIncome = netIncome,
-            netIncomeRatio = netIncomeRatio,
             eps = eps,
             epsdiluted = epsdiluted,
             weightedAverageShsOut = weightedAverageShsOut,
@@ -464,7 +447,6 @@ def DataTransfer(ticker):
             pocfratio = pocfratio,
             pfcfRatio = pfcfRatio,
             pbRatio = pbRatio,
-            ptbRatio = ptbRatio,
             evToSales = evToSales,
             enterpriseValueOverEBITDA = enterpriseValueOverEBITDA,
             evToOperatingCashFlow = evToOperatingCashFlow,
@@ -519,8 +501,6 @@ def DataTransfer(ticker):
             pretaxProfitMargin = pretaxProfitMargin,
             netProfitMargin = netProfitMargin,
             effectiveTaxRate = effectiveTaxRate,
-            returnOnAssets = returnOnAssets,
-            returnOnEquity = returnOnEquity,
             returnOnCapitalEmployed = returnOnCapitalEmployed,
             netIncomePerEBT = netIncomePerEBT,
             ebtPerEbit = ebtPerEbit,
@@ -539,15 +519,6 @@ def DataTransfer(ticker):
             shortTermCoverageRatios = shortTermCoverageRatios,
             capitalExpenditureCoverageRatio = capitalExpenditureCoverageRatio,
             dividendPaidAndCapexCoverageRatio = dividendPaidAndCapexCoverageRatio,
-            dividendPayoutRatio = dividendPayoutRatio,
-            priceBookValueRatio = priceBookValueRatio,
-            priceToBookRatio = priceToBookRatio,
-            priceEarningsRatio = priceEarningsRatio,
-            priceToFreeCashFlowsRatio = priceToFreeCashFlowsRatio,
-            priceToOperatingCashFlowsRatio = priceToOperatingCashFlowsRatio,
-            priceCashFlowRatio = priceCashFlowRatio,
-            priceEarningsToGrowthRatio = priceEarningsToGrowthRatio,
-            priceSalesRatio = priceSalesRatio,
             enterpriseValueMultiple = enterpriseValueMultiple,
             priceFairValue = priceFairValue,
             

@@ -6,7 +6,8 @@ django-import-export
 fontawesomefree
 
 pandas
+pandas-datareader
 yahoo_fin
 yfinance
 matplotlib
-FundamentalAnalysis
+fundamental-analysis

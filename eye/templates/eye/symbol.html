@@ -2,12 +2,12 @@
 {% block content %}
 {% load static %}
 
-<div class="stocks">
+<link rel="stylesheet" href="{% static 'eye/css/symbol.css' %}">
+
+<div class="stocks flex">
     <img class="logo" src={{logo}}>
-    <h1>{{symbol}}</h1>
-    <h1>{{netIncome2020}}</h1>
-    <h1>{{netIncome2015}}</h1>
-    <h1>{{financial}}</h1>
+    <h1 class="stock-name">{{name}}</h1>
+    <h1>{{netIncome2019}}</h1>
 </div>
 
 <div class="tradingview-widget-container">

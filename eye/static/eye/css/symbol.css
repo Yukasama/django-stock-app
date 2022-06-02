@@ -1,0 +1,16 @@
+
+
+.stocks {
+    background: red;
+    height: 100px;
+    width: 90%;
+    margin: 0 auto;
+}
+.logo {
+    height: 100px;
+    width: 100px;
+}
+.stock-name {
+    font-size: 1.5em;
+}
+

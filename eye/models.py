@@ -11,7 +11,9 @@ class Stock(models.Model):
     
     
 class Info(models.Model):
+    #Symbol
     symbol = models.ForeignKey(Stock, on_delete=models.CASCADE)
+    ticker = models.CharField(max_length=10, primary_key=True)
     
     #Address
     city = models.CharField(max_length=50)
@@ -20,7 +22,7 @@ class Info(models.Model):
     address = models.CharField(max_length=300)
     
     #Company Info
-    name = models.CharField(max_length=300, primary_key=True)
+    name = models.CharField(max_length=300)
     summary = models.CharField(max_length=10000)
     employees = models.FloatField(blank=True, null=True)
     sector = models.CharField(max_length=200)
@@ -34,34 +36,34 @@ class Info(models.Model):
     website = models.URLField(max_length=300)
     logo = models.URLField(max_length=500)
     
+    #Financials
+    period = models.CharField(max_length=5, blank=True, null=True)
+    cik = models.IntegerField(blank=True, null=True)
+    link = models.URLField(blank=True, null=True, max_length=500)
+    finalLink = models.URLField(blank=True, null=True, max_length=500)
+    
     
     def __str__(self):
         return self.name
     
     
     
+
+    
 class Financial(models.Model):
     
     #Symbol Data
     symbol = models.ForeignKey(Stock, on_delete=models.CASCADE)
     year = models.IntegerField()
-    ticker = models.CharField(max_length=10)
-    
     verification = models.CharField(max_length=15, primary_key=True)
     
     #Basic Data
-    reportedCurrency = models.CharField(max_length=5, blank=True, null=True)
-    cik = models.IntegerField(blank=True, null=True)
     fillingDate = models.DateField(blank=True, null=True)
-    period = models.CharField(max_length=5, blank=True, null=True)
-    link = models.URLField(blank=True, null=True, max_length=500)
-    finalLink = models.URLField(blank=True, null=True, max_length=500)
     
     #Income Statement
     revenue = models.FloatField(blank=True, null=True)
     costOfRevenue = models.FloatField(blank=True, null=True)
     grossProfit = models.FloatField(blank=True, null=True)
-    grossProfitRatio = models.FloatField(blank=True, null=True)
     researchAndDevelopmentExpenses = models.FloatField(blank=True, null=True)
     generalAndAdministrativeExpenses = models.FloatField(blank=True, null=True)
     sellingAndMarketingExpenses = models.FloatField(blank=True, null=True)
@@ -75,13 +77,11 @@ class Financial(models.Model):
     ebitda = models.FloatField(blank=True, null=True)
     ebitdaratio = models.FloatField(blank=True, null=True)
     operatingIncome = models.FloatField(blank=True, null=True)
-    operatingIncomeRatio = models.FloatField(blank=True, null=True)
     totalOtherIncomeExpensesNet = models.FloatField(blank=True, null=True)
     incomeBeforeTax = models.FloatField(blank=True, null=True)
     incomeBeforeTaxRatio = models.FloatField(blank=True, null=True)
     incomeTaxExpense = models.FloatField(blank=True, null=True)
     netIncome = models.FloatField(blank=True, null=True)
-    netIncomeRatio = models.FloatField(blank=True, null=True)
     eps = models.FloatField(blank=True, null=True)
     epsdiluted = models.FloatField(blank=True, null=True)
     weightedAverageShsOut = models.FloatField(blank=True, null=True)
@@ -179,7 +179,6 @@ class Financial(models.Model):
     pocfratio = models.FloatField(blank=True, null=True)
     pfcfRatio = models.FloatField(blank=True, null=True)
     pbRatio = models.FloatField(blank=True, null=True)
-    ptbRatio = models.FloatField(blank=True, null=True)
     evToSales = models.FloatField(blank=True, null=True)
     enterpriseValueOverEBITDA = models.FloatField(blank=True, null=True)
     evToOperatingCashFlow = models.FloatField(blank=True, null=True)
@@ -254,15 +253,7 @@ class Financial(models.Model):
     shortTermCoverageRatios = models.FloatField(blank=True, null=True)
     capitalExpenditureCoverageRatio = models.FloatField(blank=True, null=True)
     dividendPaidAndCapexCoverageRatio = models.FloatField(blank=True, null=True)
-    dividendPayoutRatio = models.FloatField(blank=True, null=True)
-    priceBookValueRatio = models.FloatField(blank=True, null=True)
-    priceToBookRatio = models.FloatField(blank=True, null=True)
-    priceEarningsRatio = models.FloatField(blank=True, null=True)
-    priceToFreeCashFlowsRatio = models.FloatField(blank=True, null=True)
-    priceToOperatingCashFlowsRatio = models.FloatField(blank=True, null=True)
-    priceCashFlowRatio = models.FloatField(blank=True, null=True)
     priceEarningsToGrowthRatio = models.FloatField(blank=True, null=True)
-    priceSalesRatio = models.FloatField(blank=True, null=True)
     enterpriseValueMultiple = models.FloatField(blank=True, null=True)
     priceFairValue = models.FloatField(blank=True, null=True)
     
@@ -309,5 +300,5 @@ class Financial(models.Model):
     
     
     def __str__(self):
-        return f'{self.ticker}, {self.year}'
+        return self.verification
         

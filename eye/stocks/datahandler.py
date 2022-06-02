@@ -229,7 +229,11 @@ def copyRows(action="models", output=False):
         
     elif(action == "array"):
         array = []
-        blackList = ["acceptedDate", "calendarYear"]
+        blackList = ["reportedCurrency", "acceptedDate", "calendarYear", "priceEarningsRatio", "priceBookValueRatio",
+                     "priceToBookRatio", "ptbRatio", "priceToSalesRatio", "priceToFreeCashFlowsRatio",
+                     "priceCashFlowRatio", "returnOnEquity", "grossProfitRatio", "operatingIncomeRatio",
+                     "incomeBeforeTaxRatio", "netIncomeRatio", "priceSalesRatio", "dividendPayoutRatio",
+                     "priceToOperatingCashFlowsRatio", "period", "cik", "link", "finalLink"]
         for name in names:
             if name in blackList:
                 continue
@@ -241,6 +245,7 @@ def copyRows(action="models", output=False):
         if (output == True):
             newData = pd.DataFrame(array)
             newData.to_csv("Data/SymbolData/FinData")
+            print(len(newData))
                 
 #copyRows("array", True)
 
@@ -283,7 +288,7 @@ def dataGetTemp(tickerAsArray, value, fileName=0, year=str(acYear - 1)):
         
         if(fileName == 0):
             files = ["income_statement", "balance_sheet", "cash_flow", "financial_ratios",
-                     "key_metrics", "financial_statement_growth"]
+                     "key_metrics", "financial_statement_growth", "discounted_cash_flow"]
             
             for f in files:       
                 try:

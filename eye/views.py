@@ -22,18 +22,26 @@ def portfolio(request):
 
 def symbol(request, symbol):
     symbol = Stock.objects.get(symbol=symbol)
-    info = Info.objects.get(symbol=symbol)
-    #financial = Financial.objects.filter(symbol=symbol)
+    info = Info.objects.filter(symbol=symbol)
   
+    #Data
     mode = "dark" 
-     
+    infoList = ["city", "state", "country", "address", "name", "summary", "employees",
+                "sector", "industry", "exchange", "quoteType", "currency", "phone",
+                "website", "logo", "period", "cik", "link", "finalLink"]
+    findata = dt.findata
+    
     data = {
         'mode': mode,
     }
     
-    findata = dt.findata
     
-    for year in range(2017, 2022):
+    for item in infoList:
+        key = f'{item}'
+        value = info.values_list(item, flat=True).first()
+        data[key] = value
+    
+    for year in range(2021, 2022):
         financial = Financial.objects.filter(symbol=symbol, year=year)
         for fin in findata:
             key = f'{fin}{year}'
@@ -41,5 +49,4 @@ def symbol(request, symbol):
             data[key] = value
     
 
-    
     return render(request, 'eye/symbol.html', data)
