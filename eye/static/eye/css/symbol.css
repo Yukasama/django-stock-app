@@ -1,14 +1,17 @@
 
 
-.stocks {
-    background: red;
+.stock-title {
     height: 100px;
     width: 90%;
     margin: 0 auto;
+    align-items: center;
 }
-.logo {
-    height: 100px;
-    width: 100px;
+.logo-container {
+    height: 130px;
+    width: 130px;
+    justify-content: center;
+    align-items: center;
+    background: white;
 }
 .stock-name {
     font-size: 1.5em;

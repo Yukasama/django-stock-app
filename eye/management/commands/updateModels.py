@@ -581,7 +581,7 @@ class Command(BaseCommand):
         single = False
         
         if (single==False):
-            tickers = ["AAPL"]
+            tickers = dt.tickers_sp500
             for ticker in tickers:
                 DataTransfer(ticker)
         else:

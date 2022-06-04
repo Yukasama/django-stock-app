@@ -4,24 +4,36 @@
 
 <link rel="stylesheet" href="{% static 'eye/css/symbol.css' %}">
 
-<div class="stocks flex">
-    <img class="logo" src={{logo}}>
-    <h1 class="stock-name">{{name}}</h1>
-    <h1>{{netIncome2019}}</h1>
+
+<div class="stock-nav flex">
+  <div class="stock-navlink">Summary</div>
+  <div class="stock-navlink">Charting</div>
+  <div class="stock-navlink">Financials</div>
+  <div class="stock-navlink"></div>
+  <div class="stock-navlink"></div>
 </div>
+
+<div class="stock-title flex">
+  <div class="logo-container smart_box">
+    <img class="logo" src={{logo}}>
+  </div>
+  
+  <h1 class="stock-name">{{name}}</h1>
+</div>
+
 
 <div class="tradingview-widget-container">
   <div id="tradingview_96d90"></div>
   <div class="tradingview-widget-copyright">
-      <a href="https://de.tradingview.com/symbols/{{symbol}}/" rel="noopener" target="_blank">
-          <span class="blue-text">{{symbol}} Chart</span></a> von TradingView</div>
+      <a href="https://de.tradingview.com/symbols/{{symbol2020}}/" rel="noopener" target="_blank">
+          <span class="blue-text">{{symbol2020}} Chart</span></a> from TradingView</div>
   <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
   <script type="text/javascript">
   new TradingView.widget(
   {
   "width": 800,
   "height": 500,
-  "symbol": "{{symbol}}",
+  "symbol": "{{symbol2020}}",
   "interval": "D",
   "timezone": "Etc/UTC",
   "theme": "{{mode}}",
