@@ -17,7 +17,7 @@ class Info(models.Model):
     
     #Address
     city = models.CharField(max_length=50)
-    state = models.CharField(max_length=100)
+    state = models.CharField(max_length=100, default="N/A", null=True, blank=True)
     country = models.CharField(max_length=200)
     address = models.CharField(max_length=300)
     
