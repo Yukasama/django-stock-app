@@ -12,7 +12,10 @@ const hamburger1 = document.querySelector(".hamburger1");
 eventHandler(hamburger1, sidebar, "click", "window");
 
 const side_header = document.querySelectorAll(".side_header")
-activeLooper(side_header);
+activeLooper(side_header, "list");
+
+const stock_navlink = document.querySelectorAll(".stock-navlink");
+activeLooper(stock_navlink, "navigation");
 
 //HAMBURGER
 

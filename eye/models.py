@@ -16,25 +16,25 @@ class Info(models.Model):
     ticker = models.CharField(max_length=10, primary_key=True)
     
     #Address
-    city = models.CharField(max_length=50)
-    state = models.CharField(max_length=100, default="N/A", null=True, blank=True)
-    country = models.CharField(max_length=200)
-    address = models.CharField(max_length=300)
+    city = models.CharField(max_length=50, null=True, blank=True)
+    state = models.CharField(max_length=100, null=True, blank=True)
+    country = models.CharField(max_length=200, null=True, blank=True)
+    address = models.CharField(max_length=300, null=True, blank=True)
     
     #Company Info
-    name = models.CharField(max_length=300)
-    summary = models.CharField(max_length=10000)
+    name = models.CharField(max_length=300, null=True, blank=True)
+    summary = models.CharField(max_length=10000, null=True, blank=True)
     employees = models.FloatField(blank=True, null=True)
-    sector = models.CharField(max_length=200)
-    industry = models.CharField(max_length=200)
-    exchange = models.CharField(max_length=50)
-    quoteType = models.CharField(max_length=50)
-    currency = models.CharField(max_length=10)
+    sector = models.CharField(max_length=200, null=True, blank=True)
+    industry = models.CharField(max_length=200, null=True, blank=True)
+    exchange = models.CharField(max_length=50, null=True, blank=True)
+    quoteType = models.CharField(max_length=50, null=True, blank=True)
+    currency = models.CharField(max_length=10, null=True, blank=True)
     
     #Contact Info
-    phone = models.CharField(max_length=50)
-    website = models.URLField(max_length=300)
-    logo = models.URLField(max_length=500)
+    phone = models.CharField(max_length=50, null=True, blank=True)
+    website = models.URLField(max_length=300, null=True, blank=True)
+    logo = models.URLField(max_length=500, null=True, blank=True)
     
     #Financials
     period = models.CharField(max_length=5, blank=True, null=True)

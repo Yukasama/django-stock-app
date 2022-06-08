@@ -22,16 +22,27 @@ function eventHandler(eventElement, showElement, event="mouseover", action="show
 
 
 //loops through Elements to determine Active Element
-function activeLooper(elements) {
-    elements.forEach(element => {
-        element.addEventListener("click", () => {
-            if(element.classList.contains("active")) {
-                element.classList.remove("active");
-            } else { 
-                element.classList.add("active")
-            }
+function activeLooper(elements, loopType) {
+
+    if (loopType == "list") {
+        elements.forEach(element => {
+            element.addEventListener("click", () => {
+                if(element.classList.contains("active")) {
+                    element.classList.remove("active");
+                } else { 
+                    element.classList.add("active")
+                }
+            })
         })
-    })
+    }
+
+    else if (loopType == "navigation") {
+        $(document).ready(function () {
+            $(elements).click(function (){
+              $(this).addClass("active").siblings().removeClass("active");
+            });
+        });               
+    }
 }
 
 

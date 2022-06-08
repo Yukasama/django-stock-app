@@ -27,7 +27,7 @@ OVERVIEW OF EXISTING CLASSES
 
 .flex {  display: flex;  }
 .grid {  display: grid;  }
-.transition {  transition: 0.275s;  }
+.transition {  transition: 0.3s;  }
 
 .normal_button, .normal_button_outline {
     display: flex;
@@ -207,6 +207,19 @@ input:-webkit-autofill:active {
 .hamburger_line_active3 {
     transform: rotate(-45deg) translate(6.2px, -6.2px);
 } 
+
+
+.grid-item {  box-shadow: 0 10px 10px var(--color-block-shadow);  }
+.grid-item1 {  grid-area: grid-item1;  }
+.grid-item2 {  grid-area: grid-item2;  }
+.grid-item3 {  grid-area: grid-item3;  }
+.grid-item4 {  grid-area: grid-item4;  }
+.grid-item5 {  grid-area: grid-item5;  }
+.grid-item6 {  grid-area: grid-item6;  }
+.grid-system {
+    display: grid;
+    grid-gap: 20px;
+}
 
 
 

@@ -14,6 +14,7 @@
     --color-blur: rgba(255,255,255,0.6);
     --color-block-shadow: rgba(17,17,17,0.2);
     --color-hover: rgb(236, 236, 236);
+    --color-text-theme: rgb(160, 160, 160);
 
     --color-first: rgb(19, 98, 218);
     --color-second: rgb(2, 184, 93);
@@ -21,8 +22,7 @@
     --color-first-light: rgba(19, 98, 218, 0.4);
     --color-rainbow: linear-gradient(red, yellow, green, blue, purple, pink);
 
-    --height-navbar: 90px;
-    --height-navbar-scroll: 80px;
+    --height-navbar: 100px;
 
     --font-size-navbar: 1em;
     --font-size-text: 1em;
@@ -40,6 +40,7 @@
     --color-reverse-light: rgb(202, 202, 202);
     --color-blur: rgba(0,0,0,0.6);
     --color-block-shadow: rgba(255,255,255,0.1);
+    --color-text-theme: rgb(112, 112, 112);
 }
 * {
     margin: 0;

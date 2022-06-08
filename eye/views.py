@@ -28,7 +28,7 @@ def symbol(request, symbol):
     mode = "dark" 
     infoList = ["city", "state", "country", "address", "name", "summary", "employees",
                 "sector", "industry", "exchange", "quoteType", "currency", "phone",
-                "website", "logo", "period", "cik", "link", "finalLink"]
+                "website", "logo", "period", "cik", "link", "finalLink", "ticker"]
     findata = dt.findata
     
     data = {
@@ -40,7 +40,7 @@ def symbol(request, symbol):
         key = f'{item}'
         value = info.values_list(item, flat=True).first()
         data[key] = value
-    
+            
     for year in range(2021, 2022):
         financial = Financial.objects.filter(symbol=symbol, year=year)
         for fin in findata:
