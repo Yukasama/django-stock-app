@@ -1,8 +1,11 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 
 class Stock(models.Model):
+    
+    #Symbol
     symbol = models.CharField(max_length=10)
     
     def __str__(self):
@@ -44,10 +47,8 @@ class Info(models.Model):
     
     
     def __str__(self):
-        return self.name
-    
-    
-    
+        return self.ticker
+
 
     
 class Financial(models.Model):
@@ -301,4 +302,25 @@ class Financial(models.Model):
     
     def __str__(self):
         return self.verification
+    
+    
+    
+
+
+class Portfolio(models.Model):
+    
+    #User Based
+    host = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    portf_name = models.CharField(max_length=100)
+    
+    #Stocks
+    stocks = models.ManyToManyField(Stock, related_name="stocks", blank=True)
+    
+    #Additional
+    updated = models.DateTimeField(auto_now=True)
+    created = models.DateTimeField(auto_now_add=True)
+    
+    
+    def __str__(self):
+        return f'{self.host}-{self.portf_name}'
         

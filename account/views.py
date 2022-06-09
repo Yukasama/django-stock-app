@@ -18,9 +18,6 @@ def signup(response):
 def profile(response):
     return render(response, 'account/profile.html')
 
-def myportfolio(response):
-    return render(response, 'account/myportfolio.html')
-
 def settings(response):
     return render(response, 'account/settings.html')
 

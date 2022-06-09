@@ -1,9 +1,5 @@
 {% extends "home/index.html" %}
 
-{% block fixed %}
-
-{% endblock %}
-
 
 {% block content %}
 {% load static %}
@@ -15,45 +11,47 @@
 <div class="stocks flex">
 
 
-  <div class="stock-nav flex">
-    <div class="stock-navlink flex active">
-      <i class="fa-solid fa-house stock-icon"></i>
-      <p class="stock-navtext">Dashboard</p>
+  <div class="stock_nav flex">
+    <div class="stock_navlink flex active">
+      <i class="fa-solid fa-house stock_icon"></i>
+      <p class="stock_navtext">Dashboard</p>
     </div>
-    <div class="stock-navlink flex">
-      <i class="fa-solid fa-chart-line stock-icon"></i>
-      <p class="stock-navtext">Chart</p>
+    <div class="stock_navlink flex">
+      <i class="fa-solid fa-chart-line stock_icon"></i>
+      <p class="stock_navtext">Chart</p>
     </div>
-    <div class="stock-navlink flex">
-      <i class="fa-solid fa-chart-simple stock-icon"></i>
-      <p class="stock-navtext">Financials</p>
+    <div class="stock_navlink flex">
+      <i class="fa-solid fa-coins stock_icon"></i>
+      <p class="stock_navtext">Earnings</p>
     </div>
-    <div class="stock-navlink flex">
-      <i class="fa-solid fa-scale-balanced stock-icon"></i>
-      <p class="stock-navtext">Holdings</p>
+    <div class="stock_navlink flex">
+      <i class="fa-solid fa-chart-simple stock_icon"></i>
+      <p class="stock_navtext">Financials</p>
     </div>
-    <div class="stock-navlink flex">
-      <i class="fa-solid fa-newspaper stock-icon"></i>
-      <p class="stock-navtext">Articles</p>
+    <div class="stock_navlink flex">
+      <i class="fa-solid fa-scale-balanced stock_icon"></i>
+      <p class="stock_navtext">Holdings</p>
+    </div>
+    <div class="stock_navlink flex">
+      <i class="fa-solid fa-newspaper stock_icon"></i>
+      <p class="stock_navtext">Articles</p>
     </div>
   </div>
 
 
-  <div class="stock-window">
-    <div class="stock-view stock-view1 grid-system">
-
-      
-      <div class="stock-title stock-view-item flex">
-        <div class="stock-logo smart_box">
-          <img class="stock-img" src={{logo}}>
+  <div class="stock_window">
+    <div class="stock_view stock_view1 active grid-system">
+      <div class="stock_title stock_view-item flex">
+        <div class="stock_logo smart_box">
+          <img class="stock_img" src={{logo}}>
         </div>
-        <h1 class="stock-name">{{name}}</h1>
-        <div class="stock-price"></div>
-        <div class="stock-percent"></div>
+        <h1 class="stock_name">{{name}}</h1>
+        <div class="stock_price"></div>
+        <div class="stock_percent"></div>
       </div>
   
 
-      <div class="stock-chart stock-view-item flex">
+      <div class="stock_chart stock_view-item flex">
         <div class="tradingview-widget-container">
           <div id="tradingview_96d90"></div>
           <div class="tradingview-widget-copyright">
@@ -78,69 +76,100 @@
       </div>
 
 
-      <div class="stock-ratings stock-view-item">
-        <p class="stock-header">Ratings</p>
+      <div class="stock_ratings stock_view-item">
+        <p class="stock_header">Ratings</p>
       </div>
 
 
-      <div class="stock-suggestions stock-view-item">
-        <p class="stock-header stock-suggest-header">Industry Competitors</p>
-        <div class="stock-suggest flex">
-          <div class="stock-logo stock-logo-s smart_box">
-            <img class="stock-img-s" src={{logo}}>
+      <div class="stock_suggestions stock_view-item">
+        <p class="stock_header stock_suggest-header">Industry Competitors</p>
+        <div class="stock_suggest flex">
+          <div class="stock_logo stock_logo-s smart_box">
+            <img class="stock_img-s" src={{logo}}>
           </div>
-          <div class="stock-suggest-info flex">
-            <div class="stock-name-s">Microsoft Inc.</div>
-            <div class="stock-suggest-data flex">
-              <div class="stock-price-s">1500.00$</div>
-              <div class="stock-percent-s">+1.59%</div>
+          <div class="stock_suggest-info flex">
+            <div class="stock_name-s">Microsoft Inc.</div>
+            <div class="stock_suggest-data flex">
+              <div class="stock_price-s">1500.00$</div>
+              <div class="stock_percent-s">+1.59%</div>
             </div>
           </div>
         </div>
 
-        <div class="stock-suggest flex">
-          <div class="stock-logo stock-logo-s smart_box">
-            <img class="stock-img-s" src={{logo}}>
+        <div class="stock_suggest flex">
+          <div class="stock_logo stock_logo-s smart_box">
+            <img class="stock_img-s" src={{logo}}>
           </div>
-          <div class="stock-suggest-info flex">
-            <div class="stock-name-s">Microsoft Inc.</div>
-            <div class="stock-suggest-data flex">
-              <div class="stock-price-s">1500.00$</div>
-              <div class="stock-percent-s">+1.59%</div>
+          <div class="stock_suggest-info flex">
+            <div class="stock_name-s">Microsoft Inc.</div>
+            <div class="stock_suggest-data flex">
+              <div class="stock_price-s">1500.00$</div>
+              <div class="stock_percent-s">+1.59%</div>
             </div>
           </div>
         </div>
 
-        <div class="stock-suggest flex">
-          <div class="stock-logo stock-logo-s smart_box">
-            <img class="stock-img-s" src={{logo}}>
+        <div class="stock_suggest flex">
+          <div class="stock_logo stock_logo-s smart_box">
+            <img class="stock_img-s" src={{logo}}>
           </div>
-          <div class="stock-suggest-info flex">
-            <div class="stock-name-s">Microsoft Inc.</div>
-            <div class="stock-suggest-data flex">
-              <div class="stock-price-s">1500.00$</div>
-              <div class="stock-percent-s">+1.59%</div>
+          <div class="stock_suggest-info flex">
+            <div class="stock_name-s">Microsoft Inc.</div>
+            <div class="stock_suggest-data flex">
+              <div class="stock_price-s">1500.00$</div>
+              <div class="stock_percent-s">+1.59%</div>
             </div>
           </div>
         </div>
       </div>
 
 
-      <div class="stock-metrics stock-view-item">
-        <p class="stock-header">Key Metrics</p>
+      <div class="stock_metrics stock_view-item">
+        <p class="stock_header">Key Metrics</p>
       </div>
 
 
-      <div class="stock-margins stock-view-item">
-        <p class="stock-header">Margins</p>
+      <div class="stock_margins stock_view-item">
+        <p class="stock_header">Margins</p>
       </div>
 
 
-      <div class="stock-financials stock-view-item">
-        <p class="stock-header">Financials</p>
+      <div class="stock_financials stock_view-item">
+        <p class="stock_header">Financials</p>
+      </div>
+    </div>
+
+
+    <div class="stock_view stock_view2 grid-system">
+      <div class="stock_chart stock_view-item flex">
+        <div class="tradingview-widget-container">
+          <div id="tradingview_96d90"></div>
+          <div class="tradingview-widget-copyright">
+              <a href="https://de.tradingview.com/symbols/{{ticker}}/" rel="noopener" target="_blank">
+                  <span class="blue-text">{{ticker}} Chart</span></a> from TradingView</div>
+          <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+          <script type="text/javascript">
+          new TradingView.widget({
+          "width": 900, "height": 500,
+          "symbol": "{{ticker}}",
+          "interval": "D",
+          "timezone": "Etc/UTC",
+          "theme": "{{mode}}",
+          "style": "1",
+          "locale": "de_DE",
+          "toolbar_bg": "#f1f3f6",
+          "enable_publishing": false,
+          "allow_symbol_change": true,
+          "container_id": "tradingview_96d90"});
+          </script>
+        </div>
       </div>
 
 
+
+      <div class="stock_view stock_view3 grid-system">
+        <p>Stock view 3</p>
+      </div>
     </div>
   </div>
 </div>

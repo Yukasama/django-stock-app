@@ -8,6 +8,19 @@ import datetime
 
 def DataTransfer(ticker):
     
+    #Duplicate Handling  
+    try:
+        Stock.objects.delete(symbol=ticker)
+        symbol = Stock.objects.create(symbol=ticker)
+    except:
+        symbol = Stock.objects.create(symbol=ticker)
+        
+    for stock in Stock.objects.all():
+        if Stock.objects.filter(symbol=stock.symbol).count() > 1:
+            stock.delete()
+            
+            
+            
     try:    
         df = pd.read_csv(f"Data/StockData/{ticker}/info")
         
@@ -33,21 +46,9 @@ def DataTransfer(ticker):
     except:
         print("Data could'nt be fetched.")
         exit()
-        
-      
-    #Duplicate Handling  
-    try:
-        Stock.objects.delete(symbol=ticker)
-        symbol = Stock.objects.create(symbol=ticker)
-    except:
-        symbol = Stock.objects.create(symbol=ticker)
-        
-    for stock in Stock.objects.all():
-        if Stock.objects.filter(symbol=stock.symbol).count() > 1:
-            stock.delete()
          
          
-    #Info Model    
+    #Stock Model    
     Info(
         symbol=symbol,
         ticker=ticker,
@@ -578,14 +579,14 @@ class Command(BaseCommand):
     def handle(sef, *args, **options):
         
         skip = False
-        single = False
+        single = True
         
         if (single==False):
             tickers = dt.tickers_sp500
             for ticker in tickers:
                 DataTransfer(ticker)
         else:
-            ticker = "ACN"
+            ticker = "AMT"
             DataTransfer(ticker)
             
             

@@ -1,0 +1,18 @@
+{% extends "home/index.html" %}
+
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'eye/css/portfolio.css' %}">
+
+<div class="portfolio">
+    
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit" class="create-button smart_button">New Portfolio</button>
+    </form>
+</div>
+
+
+{% endblock %}

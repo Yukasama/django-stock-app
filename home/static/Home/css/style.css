@@ -16,6 +16,8 @@
     --color-hover: rgb(236, 236, 236);
     --color-text-theme: rgb(160, 160, 160);
 
+    --color-theme-contrast: rgb(252, 252, 252);
+
     --color-first: rgb(19, 98, 218);
     --color-second: rgb(2, 184, 93);
     --color-third: rgb(156, 14, 221);
@@ -41,6 +43,8 @@
     --color-blur: rgba(0,0,0,0.6);
     --color-block-shadow: rgba(255,255,255,0.1);
     --color-text-theme: rgb(112, 112, 112);
+
+    --color-theme-contrast: rgb(20, 20, 20);
 }
 * {
     margin: 0;

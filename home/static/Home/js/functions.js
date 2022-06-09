@@ -22,7 +22,7 @@ function eventHandler(eventElement, showElement, event="mouseover", action="show
 
 
 //loops through Elements to determine Active Element
-function activeLooper(elements, loopType) {
+function activeLooper(elements, loopType, views="") {
 
     if (loopType == "list") {
         elements.forEach(element => {
@@ -42,6 +42,21 @@ function activeLooper(elements, loopType) {
               $(this).addClass("active").siblings().removeClass("active");
             });
         });               
+    }
+
+    else if (loopType == "navtabs") {
+        elements.forEach(function(element, i) {
+            element.addEventListener("click", () => {
+                elements.forEach((element) => {
+                    element.classList.remove("active");
+                });
+                views.forEach((view) => {
+                    view.classList.remove("active");
+                }); 
+                elements[i].classList.add("active");
+                views[i].classList.add("active");    
+            })
+        })
     }
 }
 

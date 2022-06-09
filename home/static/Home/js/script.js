@@ -14,32 +14,33 @@ eventHandler(hamburger1, sidebar, "click", "window");
 const side_header = document.querySelectorAll(".side_header")
 activeLooper(side_header, "list");
 
-const stock_navlink = document.querySelectorAll(".stock-navlink");
-activeLooper(stock_navlink, "navigation");
+let stock_navlink = document.querySelectorAll(".stock_navlink");
+let stock_view = document.querySelectorAll(".stock_view");
+activeLooper(stock_navlink, "navtabs", stock_view);
 
 //HAMBURGER
 
-var search_input = document.querySelector(".search_input");
-search_input.addEventListener("click", () => {
-    if($(search_input).is(':focus')) {
-        $(search_input).cla
-    } 
-})
+// var search_input = document.querySelector(".search_input");
+// search_input.addEventListener("click", () => {
+//     if($(search_input).is(':focus')) {
+//         $(search_input).cla
+//     } 
+// })
 
 
 
 //CONTACT
-const contact_link = document.querySelector(".contact_link");
-const contact = document.querySelector(".contact");
-const hamburger2 = document.querySelector(".hamburger2");
-eventHandler(contact_link, contact, "click", "show");
-eventHandler(hamburger2, contact, "click", "hide");
+// const contact_link = document.querySelector(".contact_link");
+// const contact = document.querySelector(".contact");
+// const hamburger2 = document.querySelector(".hamburger2");
+// eventHandler(contact_link, contact, "click", "show");
+// eventHandler(hamburger2, contact, "click", "hide");
 
 
 
-// INPUT
-const emailinputField = document.querySelector(".emailinputField");
-const email_input = document.querySelector(".email_input");
+// // INPUT
+// const emailinputField = document.querySelector(".emailinputField");
+// const email_input = document.querySelector(".email_input");
 
 // if (document.activeElement === email_input) {
 //     emailinputField.classList.add("active");

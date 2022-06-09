@@ -14,14 +14,14 @@
 
 
         <div class="nav_container nav_container2 flex">
-            <a href="{% url 'pricing' %}" class="nav_link effect_underline">Calendar</a>
-            <a href="{% url 'pricing' %}" class="nav_link effect_underline">News</a>
+            <a href="{% url 'calendar' %}" class="nav_link effect_underline">Calendar</a>
+            <a href="{% url 'news' %}" class="nav_link effect_underline">News</a>
             <div class="nav_link effect_underline nav_link_ex flex">Markets
                 <div class="nav_sub_element">
                     <div class="nav_link_sub smart_list">
                         <div class="nav_sub flex">
                             <i class="material-icons nav_sub_icon">school</i>
-                            <a class="nav_link_text effect_underline">Stocks</a>
+                            <a href="{% url 'news' %}" class="nav_link_text effect_underline">Stocks</a>
                         </div>
                         <div class="nav_sub flex">
                             <i class="material-icons nav_sub_icon">school</i>
@@ -85,18 +85,18 @@
 
                 <div class="profile_link profile_link1 flex">
                     <i class="material-icons profile_icon">account_circle</i>
-                    <a class="profile_text profile_username" href="">Yukasama</a>
+                    <a href="{% url 'profile' %}" class="profile_text profile_username" href="">Yukasama</a>
                 </div>
 
                 <div class="profile_separator"></div>
 
                 <div class="profile_link flex">
-                    <i class="material-icons profile_icon">dashboard</i>
-                    <a href="{% url 'profile' %}" class="profile_text">Profile</a>
+                    <i class="material-icons profile_icon">insert_chart</i>
+                    <a href="{% url 'portfolio' %}" class="profile_text">Portfolios</a>
                 </div>
                 <div class="profile_link flex">
-                    <i class="material-icons profile_icon">insert_chart</i>
-                    <a href="{% url 'myportfolio' %}" class="profile_text">Portfolio</a>
+                    <i class="material-icons profile_icon">dashboard</i>
+                    <a href="{% url 'profile' %}" class="profile_text">Posts</a>
                 </div>
                 <div class="profile_link flex">
                     <i class="material-icons profile_icon">settings</i>
@@ -139,7 +139,11 @@
                 </div>
                 <div class="side_link flex">
                     <i class="material-icons side_icon">insert_chart</i>
-                    <a href="{% url 'myportfolio' %}" class="side_text">My Portfolios</a>
+                    <a href="{% url 'portfolio' %}" class="side_text">My Portfolios</a>
+                </div>
+                <div class="side_link flex">
+                    <i class="material-icons side_icon">insert_chart</i>
+                    <a href="{% url 'portfolio' %}" class="side_text">My Posts</a>
                 </div>
                 <div class="side_link flex">
                     <i class="material-icons side_icon">settings</i>
