@@ -8,5 +8,9 @@ class PortfolioForm(ModelForm):
     
     class Meta:
         model = Portfolio
-        fields = ["portf_name"]
+        fields = ["name"]
+        
+    def __init__(self, *args, **kwargs):
+        super(PortfolioForm, self).__init__(*args, **kwargs)
+        self.fields["name"].widget.attrs.update({"class": "portfolio_input input"})
 

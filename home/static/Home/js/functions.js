@@ -3,17 +3,26 @@
 function eventHandler(eventElement, showElement, event="mouseover", action="show") {
     eventElement.addEventListener(event, () => {
 
-        if (event == "click" || event == "mouseover") {
+        if (event == "mouseover" && showElement == 0) {
+            eventElement.classList.add("show"); 
+        }
+        else if (event == "mouseleave" && showElement == 0) {
+            eventElement.classList.remove("show"); 
+        }
+        else if (event == "click" && action == "remove") {
+            showElement.classList.remove("show");
+        }
+        else if (event == "click" || event == "mouseover") {
             showElement.classList.toggle("show");
         }
-        if (event == "scroll") {
+        else if (event == "scroll") {
             showElement.classList.toggle("scroll", window.scrollY > 50);
         }
 
-        if (action == "hide") {
+        else if (action == "hide") {
             showElement.classList.remove("show");
         }
-        if (action == "window") {
+        else if (action == "window") {
             showElement.classList.toggle("scroll");
             eventElement.classList.toggle("scroll");
         }
@@ -57,6 +66,15 @@ function activeLooper(elements, loopType, views="") {
                 views[i].classList.add("active");    
             })
         })
+    }
+}
+
+
+function zero(eventElement) {
+    if (eventElement.value.length == 0) {
+        eventElement.classList.remove("show");
+    } else {
+        eventElement.classList.add("show");
     }
 }
 

@@ -28,16 +28,21 @@ OVERVIEW OF EXISTING CLASSES
 .flex {  display: flex;  }
 .grid {  display: grid;  }
 .transition {  transition: 0.3s;  }
+.border {  border: 1px solid red;  }
 
-.normal_button, .normal_button_outline {
+.normal_button, .normal_button, .smart_button, .smart_button_outline, .icon_button, .create_button, .delete_button {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 9px 23px;
+    font-size: 0.95em !important;
+    cursor: pointer;
+    border: none;
+}
+
+.normal_button {
+    padding: 8px 25px;
     background: var(--color-first);
     color: white;
-    border-radius: 50px;
-    font-size: 0.95em !important;
 }
 .normal_button_outline {
     background: var(--color-theme);
@@ -47,9 +52,6 @@ OVERVIEW OF EXISTING CLASSES
 }
 
 .smart_button, .smart_button_outline {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 10px 25.5px;
     border-radius: var(--border-radius);
 
@@ -63,8 +65,6 @@ OVERVIEW OF EXISTING CLASSES
     box-shadow: 0 10px 20px var(--color-block-shadow);
 
     transition: 0.8s, padding 0s, border 0s;
-    cursor: pointer;
-    border: none;
 }
 .smart_button_outline {
     background: linear-gradient(to right, 
@@ -82,6 +82,59 @@ OVERVIEW OF EXISTING CLASSES
     color: white !important;
     padding: 10px 25.5px;
 }
+
+
+.icon_button {  /* NEEDS TO BE TOGGLED (CLASS) IN JAVASCRIPT */
+    border: 1px transparent solid;
+    height: 40px;
+    width: 85px;
+    transition: width 0.2s, height 0.2s;
+    background: var(--color-first);
+}
+.icon_button.show {
+    background: var(--color-theme);
+    border: 1px var(--color-reverse) solid;
+    height: 40px;
+    width: 60px;
+}
+.icon_button > i {
+    color: var(--color-reverse);
+    font-size: 25px;
+    position: absolute;
+    opacity: 0;
+    transition: transform 0.15s ease, opacity 0.2s;
+    transform: translate(-30px, 0);
+}
+.icon_button.show > i {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.icon_button > a {
+    position: absolute;
+    opacity: 1;
+    transition: opacity 0.3s;
+    color: white;
+}
+.icon_button.show > a {
+    opacity: 0;
+}
+
+
+
+.create_button, .delete_button {
+    background: transparent;
+    height: 40px;
+    width: 40px;
+}
+.create_button > i, .delete_button > i {
+    font-size: 25px;
+    color: rgb(0, 255, 0);
+}
+.delete_button > i {
+    color: rgb(255, 0, 0);
+}
+
+
 
 .smart_box, .smart_list {
     display: flex;

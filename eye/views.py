@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
-from eye.models import Stock, Info, Financial
+from eye.models import Stock, Info, Financial, Portfolio
 from eye.stocks import datahandler as dt
 from eye.forms import PortfolioForm
+from django.shortcuts import HttpResponseRedirect
 
 
 
@@ -26,15 +27,34 @@ def screener(request):
 
 
 def portfolio(request):
-    form = PortfolioForm()
+    form = PortfolioForm(initial={"host": request.user.username})
+    
+    #Check for Create Form
     if (request.method == 'POST'):
         form = PortfolioForm(request.POST)
         if (form.is_valid()):
             form.save()
-            return redirect('portfolio')
+            return redirect("portfolio")
+     
+    exists = False
+    portfolios = Portfolio.objects.all()
+    if (portfolios.exists()): exists = True
             
-    data = {'form': form}
+    data = {
+        'form': form,
+        'portfolios': portfolios,
+        'exists': exists,
+    }
     return render(request, 'eye/portfolio.html', data)
+
+
+def portfolioCreate(request):
+
+    return render(request, 'eye/portfolio.html')
+
+
+def portfolioUpdate(request):
+    pass
 
 
 def symbol(request, symbol):

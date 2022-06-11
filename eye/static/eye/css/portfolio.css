@@ -1,0 +1,68 @@
+
+
+.portfolio_s {
+    height: 800px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.portfolio_message_c {
+    flex-direction: column;
+    align-items: center;
+}
+.portfolio_message {
+    color: var(--color-text-theme);
+    font-size: 2em;
+    font-weight: 300;
+}
+.portfolio_login, .portfolio_create {
+    margin: 10px;
+}
+.portfolio_login.show > i {
+    transform: translate(-1px, 0);
+}
+
+.portfolio_create {
+    width: 100px;
+    margin: 20px;
+}
+.portfolio_create2, .portfolio_delete {
+    margin: 20px;
+}
+.portfolio_delete > i {
+    font-size: 27px;
+}
+
+
+.portfolio_form_c {
+    position: fixed;
+    width: 60%;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    background: var(--color-theme);
+    box-shadow: 5px 5px 10px var(--color-block-shadow);
+    display: none;
+    overflow: hidden;
+}
+.portfolio_form_c.show {
+    display: flex;
+}
+.portfolio_name_c, .portfolio_name_c > .inputField {
+    width: 100%;
+    height: 100%;
+}
+.portfolio_name_c {
+    align-items: center;
+}
+.portfolio_name_c > .inputField {
+    border: none;
+}
+.portfolio_name_c > .inputField > span {
+    margin: -45px;
+    color: var(--color-text-theme);
+}
+.portfolio_input:focus + span, .portfolio_input:valid + span {
+    display: none;
+}

@@ -5,13 +5,55 @@
 
 <link rel="stylesheet" href="{% static 'eye/css/portfolio.css' %}">
 
-<div class="portfolio">
-    
-    <form action="" method="POST">
-        {% csrf_token %}
-        {{form}}
-        <button type="submit" class="create-button smart_button">New Portfolio</button>
-    </form>
+<div class="portfolio_s flex">
+
+
+    {% if user.is_authenticated and exists == True %}
+        {% for portfolio in portfolios %}
+        <h1>{{portfolio.name}}</h1>
+        {% endfor %}
+        <form action="" method="POST" class="invisible">
+            {% csrf_token %}
+            {{form}}
+            <button type="submit" class="create_button">
+                <i class="fa-solid fa-plus create_icon"></i>
+            </button>
+        </form>
+    {% elif user.is_authenticated %}
+        <div class="portfolio_message_c flex">
+            <p class="portfolio_message">You have no Portfolios yet.</p>
+            <button class="icon_button portfolio_create transition">
+                <i class="fa-solid fa-arrow-right-to-bracket portfolio_icon"></i>
+                <a>Create One</a>
+            </button>
+            <div class="portfolio_form_c flex">
+                <form action="" method="POST" class="portfolio_name_c flex">
+                    {% csrf_token %}
+                    <div class="inputField">
+                        {{form.name}}
+                        <span>Portfolio Name</span>
+                    </div>
+                    <button type="submit" class="create_button portfolio_create2">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </form>
+                <button class="delete_button portfolio_delete">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+        </div>
+    {% else %}
+        <div class="portfolio_message_c flex">
+            <p class="portfolio_message">You need to Login to create Portfolios.</p>
+            <div class="buttonset flex">
+                <button class="icon_button portfolio_login transition">
+                    <i class="fa-solid fa-arrow-right-to-bracket portfolio_icon"></i>
+                    <a href="{% url 'login' %}">Login</a>
+                </button>
+            </div>   
+        </div>
+    {% endif %}
+
 </div>
 
 

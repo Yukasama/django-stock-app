@@ -311,7 +311,7 @@ class Portfolio(models.Model):
     
     #User Based
     host = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
-    portf_name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
     
     #Stocks
     stocks = models.ManyToManyField(Stock, related_name="stocks", blank=True)
@@ -322,5 +322,5 @@ class Portfolio(models.Model):
     
     
     def __str__(self):
-        return f'{self.host}-{self.portf_name}'
+        return f'{self.host}-{self.name}'
         
