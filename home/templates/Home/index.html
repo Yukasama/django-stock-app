@@ -158,8 +158,14 @@
                     <a href="{% url 'logout' %}" class="side_text">Logout</a>
                 </div>
                 {% else %}
-                <a href="{% url 'login' %}" class="side_text sign_up">Login</a>
-                <a href="{% url 'signup' %}" class="side_text sign_up">Sign Up</a>
+                <div class="side_link flex">
+                    <i class="material-icons side_icon">flag</i>
+                    <a href="{% url 'login' %}" class="side_text">Login</a>
+                </div>
+                <div class="side_link flex">
+                    <i class="material-icons side_icon">flag</i>
+                    <a href="{% url 'signup' %}" class="side_text">Sign Up</a>
+                </div>
                 <div class="webmode_container flex">
                     <i class="material-icons webmode webmode_dark">brightness_2</i>
                     <i class="material-icons webmode webmode_light">brightness_7</i>
@@ -290,6 +296,7 @@
     {% block fixed %} {% endblock %}
 
     <div class="content">
+        {% load static %}
         {% block content %} {% endblock %}
     </div>
 

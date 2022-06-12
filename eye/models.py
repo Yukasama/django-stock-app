@@ -306,7 +306,6 @@ class Financial(models.Model):
     
     
 
-
 class Portfolio(models.Model):
     
     #User Based

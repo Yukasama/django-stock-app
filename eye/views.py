@@ -27,19 +27,16 @@ def screener(request):
 
 
 def portfolio(request):
-    form = PortfolioForm(initial={"host": request.user.username})
-    
+    form = PortfolioForm(initial={"host": request.user})
     #Check for Create Form
     if (request.method == 'POST'):
         form = PortfolioForm(request.POST)
         if (form.is_valid()):
             form.save()
             return redirect("portfolio")
-     
     exists = False
-    portfolios = Portfolio.objects.all()
+    portfolios = Portfolio.objects.filter()
     if (portfolios.exists()): exists = True
-            
     data = {
         'form': form,
         'portfolios': portfolios,
@@ -48,35 +45,22 @@ def portfolio(request):
     return render(request, 'eye/portfolio.html', data)
 
 
-def portfolioCreate(request):
-
-    return render(request, 'eye/portfolio.html')
-
-
-def portfolioUpdate(request):
-    pass
-
-
 def symbol(request, symbol):
     symbol = Stock.objects.get(symbol=symbol)
     info = Info.objects.filter(symbol=symbol)
-  
     #Data
     mode = "dark" 
     infoList = ["ticker", "city", "state", "country", "address", "name", "summary", 
                 "employees", "sector", "industry", "exchange", "quoteType", "currency", 
                 "phone", "website", "logo", "period", "cik", "link", "finalLink"]
     findata = dt.findata
-    
     data = {
         'mode': mode,
     }
-    
     for item in infoList:
         key = f'{item}'
         value = info.values_list(item, flat=True).first()
-        data[key] = value
-            
+        data[key] = value    
     for year in range(2021, 2022):
         financial = Financial.objects.filter(symbol=symbol, year=year)
         for fin in findata:
@@ -84,5 +68,4 @@ def symbol(request, symbol):
             value = financial.values_list(fin, flat=True).first()
             data[key] = value
     
-
     return render(request, 'eye/symbol.html', data)

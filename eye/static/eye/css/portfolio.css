@@ -1,11 +1,26 @@
 
 
-.portfolio_s {
+.portfolio {
     height: 800px;
     width: 100%;
     align-items: center;
     justify-content: center;
 }
+
+.portfolio_window {
+    height: 100%;
+    width: 100%;
+}
+.portfolio_select {
+    width: 200px;
+    height: 50px;
+    justify-content: center;
+}
+.portfolio_select option {
+    color: var(--color-reverse);
+    background: var(--color-theme);
+}
+
 .portfolio_message_c {
     flex-direction: column;
     align-items: center;
@@ -15,25 +30,6 @@
     font-size: 2em;
     font-weight: 300;
 }
-.portfolio_login, .portfolio_create {
-    margin: 10px;
-}
-.portfolio_login.show > i {
-    transform: translate(-1px, 0);
-}
-
-.portfolio_create {
-    width: 100px;
-    margin: 20px;
-}
-.portfolio_create2, .portfolio_delete {
-    margin: 20px;
-}
-.portfolio_delete > i {
-    font-size: 27px;
-}
-
-
 .portfolio_form_c {
     position: fixed;
     width: 60%;
@@ -49,6 +45,10 @@
 .portfolio_form_c.show {
     display: flex;
 }
+
+
+
+
 .portfolio_name_c, .portfolio_name_c > .inputField {
     width: 100%;
     height: 100%;
@@ -63,6 +63,17 @@
     margin: -45px;
     color: var(--color-text-theme);
 }
+
+.portfolio_login, .portfolio_createone {
+    margin: 10px;
+}
+.portfolio_createone {
+    width: 100px;
+}
+.portfolio_create, .portfolio_delete {
+    margin: 20px;
+}
+
 .portfolio_input:focus + span, .portfolio_input:valid + span {
     display: none;
 }

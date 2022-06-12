@@ -4,53 +4,84 @@
 {% load static %}
 
 <link rel="stylesheet" href="{% static 'eye/css/portfolio.css' %}">
+<link rel="stylesheet" href="{% static 'eye/css/symbol.css' %}">
 
-<div class="portfolio_s flex">
+<div class="portfolio flex">
 
 
     {% if user.is_authenticated and exists == True %}
-        {% for portfolio in portfolios %}
-        <h1>{{portfolio.name}}</h1>
+    <div class="stock_nav flex">
+      <div class="stock_navlink flex active">
+        <i class="fa-solid fa-house stock_icon"></i>
+        <p class="stock_navtext">Dashboard</p>
+      </div>
+      <div class="stock_navlink flex">
+        <i class="fa-solid fa-chart-line stock_icon"></i>
+        <p class="stock_navtext">Chart</p>
+      </div>
+      <div class="stock_navlink flex">
+        <i class="fa-solid fa-coins stock_icon"></i>
+        <p class="stock_navtext">Earnings</p>
+      </div>
+      <div class="stock_navlink flex">
+        <i class="fa-solid fa-chart-simple stock_icon"></i>
+        <p class="stock_navtext">Financials</p>
+      </div>
+      <div class="stock_navlink flex">
+        <i class="fa-solid fa-scale-balanced stock_icon"></i>
+        <p class="stock_navtext">Holdings</p>
+      </div>
+      <div class="stock_navlink flex">
+        <i class="fa-solid fa-newspaper stock_icon"></i>
+        <p class="stock_navtext">Articles</p>
+        </div>
+    </div>
+    <div class="portfolio_window border flex">
+      <select class="input border portfolio_select flex">
+        {% for p in portfolios %}
+        <option>{{p.name}}</option>
         {% endfor %}
-        <form action="" method="POST" class="invisible">
+      </select>
+    </div>
+        
+    {% elif user.is_authenticated %}
+    <div class="portfolio_message_c flex">
+      <p class="portfolio_message">You have no Portfolios yet.</p>
+      <button class="icon_button portfolio_createone transition">
+        <i class="fa-solid fa-arrow-right-to-bracket portfolio_icon"></i>
+        <a>Create One</a>
+      </button>
+      <div class="portfolio_form_c flex">
+        <form action="" method="POST" class="portfolio_name_c flex">
             {% csrf_token %}
-            {{form}}
-            <button type="submit" class="create_button">
-                <i class="fa-solid fa-plus create_icon"></i>
+            <div class="inputField">
+                {{form.name}}
+                <span>Portfolio Name</span>
+            </div>
+            <button type="submit" class="create_button portfolio_create">
+                <i class="fa-solid fa-plus"></i>
             </button>
         </form>
-    {% elif user.is_authenticated %}
-        <div class="portfolio_message_c flex">
-            <p class="portfolio_message">You have no Portfolios yet.</p>
-            <button class="icon_button portfolio_create transition">
-                <i class="fa-solid fa-arrow-right-to-bracket portfolio_icon"></i>
-                <a>Create One</a>
-            </button>
-            <div class="portfolio_form_c flex">
-                <form action="" method="POST" class="portfolio_name_c flex">
-                    {% csrf_token %}
-                    <div class="inputField">
-                        {{form.name}}
-                        <span>Portfolio Name</span>
-                    </div>
-                    <button type="submit" class="create_button portfolio_create2">
-                        <i class="fa-solid fa-plus"></i>
-                    </button>
-                </form>
-                <button class="delete_button portfolio_delete">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
-        </div>
+        <button class="delete_button portfolio_delete">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+    <!-- <form action="" method="POST" class="invisible">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit" class="create_button">
+            <i class="fa-solid fa-plus create_icon"></i>
+        </button>
+    </form> -->
+
     {% else %}
         <div class="portfolio_message_c flex">
-            <p class="portfolio_message">You need to Login to create Portfolios.</p>
-            <div class="buttonset flex">
-                <button class="icon_button portfolio_login transition">
-                    <i class="fa-solid fa-arrow-right-to-bracket portfolio_icon"></i>
-                    <a href="{% url 'login' %}">Login</a>
-                </button>
-            </div>   
+          <p class="portfolio_message">You need to Login to create Portfolios.</p>
+          <button class="icon_button portfolio_login transition">
+            <i class="fa-solid fa-arrow-right-to-bracket portfolio_icon"></i>
+            <a href="{% url 'login' %}">Login</a>
+          </button> 
         </div>
     {% endif %}
 

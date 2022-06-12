@@ -10,7 +10,6 @@ urlpatterns = [
     path('education', views.education, name='education'),
     path('screener', views.screener, name='screener'),
     path('portfolio', views.portfolio, name='portfolio'),
-    path('portfolio', views.portfolioCreate, name="portfolioCreate"),
     
     path('stocks/<str:symbol>', views.symbol, name='symbol'),
 ]

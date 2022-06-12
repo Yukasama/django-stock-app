@@ -36,7 +36,7 @@
 .dark {
     --color-first: rgb(19, 145, 218);
     
-    --color-theme: rgb(17, 17, 17);
+    --color-theme: rgb(20, 20, 20);
     --color-reverse: white;
     --color-light: rgb(29, 29, 29);
     --color-reverse-light: rgb(202, 202, 202);
@@ -44,7 +44,7 @@
     --color-block-shadow: rgba(255,255,255,0.1);
     --color-text-theme: rgb(112, 112, 112);
 
-    --color-theme-contrast: rgb(20, 20, 20);
+    --color-theme-contrast: rgb(24, 24, 24);
 }
 * {
     margin: 0;

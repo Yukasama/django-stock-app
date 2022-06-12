@@ -19,18 +19,6 @@ let stock_view = document.querySelectorAll(".stock_view");
 activeLooper(stock_navlink, "navtabs", stock_view);
 
 
-//PORTFOLIO CREATE FIELD
-const portfolio_form_c = document.querySelector(".portfolio_form_c");
-const portfolio_create = document.querySelector(".portfolio_create");
-const portfolio_delete = document.querySelector(".portfolio_delete");
-eventHandler(portfolio_create, portfolio_form_c, "click");
-eventHandler(portfolio_delete, portfolio_form_c, "click", "remove");
-
-
-//IS FORM NULL
-const portfolio_input = document.querySelector(".portfolio_input");
-zero(portfolio_input);
-
 //LOGIN BUTTON
 const portfolio_login = document.querySelector(".portfolio_login");
 eventHandler(portfolio_login, 0, "mouseover");

@@ -12,19 +12,18 @@ function eventHandler(eventElement, showElement, event="mouseover", action="show
         else if (event == "click" && action == "remove") {
             showElement.classList.remove("show");
         }
-        else if (event == "click" || event == "mouseover") {
-            showElement.classList.toggle("show");
-        }
-        else if (event == "scroll") {
-            showElement.classList.toggle("scroll", window.scrollY > 50);
-        }
-
         else if (action == "hide") {
             showElement.classList.remove("show");
         }
         else if (action == "window") {
             showElement.classList.toggle("scroll");
             eventElement.classList.toggle("scroll");
+        }
+        else if (event == "click" || event == "mouseover") {
+            showElement.classList.toggle("show");
+        }
+        else if (event == "scroll") {
+            showElement.classList.toggle("scroll", window.scrollY > 50);
         }
     })
 }

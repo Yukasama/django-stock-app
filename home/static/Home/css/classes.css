@@ -28,7 +28,7 @@ OVERVIEW OF EXISTING CLASSES
 .flex {  display: flex;  }
 .grid {  display: grid;  }
 .transition {  transition: 0.3s;  }
-.border {  border: 1px solid red;  }
+.border {  border: 1px solid red !important;  }
 
 .normal_button, .normal_button, .smart_button, .smart_button_outline, .icon_button, .create_button, .delete_button {
     display: flex;
@@ -132,6 +132,7 @@ OVERVIEW OF EXISTING CLASSES
 }
 .delete_button > i {
     color: rgb(255, 0, 0);
+    font-size: 27px;
 }
 
 

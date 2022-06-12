@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.contrib.auth.mixins import LoginRequiredMixin as login
 from . forms import Signup
 
@@ -6,12 +6,11 @@ from . forms import Signup
 
 def signup(response):
     if response.method == "POST":
-        form = UserCreationForm(response.POST)
+        form = Signup(response.POST)
         if form.is_valid():
             form.save()  
-        return redirect(HttpResponseRedirect(request.path_info))
     else:
-        form = UserCreationForm()
+        form = Signup()
     return render(response, 'account/signup.html', {'form': form})
 
 
