@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="{% static 'account/css/login.css' %}">
 
 
-<form method="POST">
+<form method="POST" action="{{request.META.HTTP_REFERER}}">
     {% csrf_token %}
     {{form}}
     <button type="submit">Login</button>

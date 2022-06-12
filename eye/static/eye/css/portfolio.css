@@ -20,6 +20,12 @@
     color: var(--color-reverse);
     background: var(--color-theme);
 }
+.portfolio_select option:hover {
+    background: var(--color-light);
+}
+.portfolio_select::after {
+    color: var(--color-first);
+}
 
 .portfolio_message_c {
     flex-direction: column;
