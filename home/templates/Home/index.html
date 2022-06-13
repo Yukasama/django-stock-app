@@ -124,47 +124,47 @@
 
 
 
-    <div class="sidebar flex">
+    <div class="sidenavbar flex">
 
-        <div class="side_container side_container1 flex">
-            <div class="side_header effect_underline flex">
-                <div class="side_title">Account</div>
-                <i class="material-icons side_title_icon transition">arrow_drop_down</i>
+        <div class="sidenav_container sidenav_container1 flex">
+            <div class="sidenav_header effect_underline flex">
+                <div class="sidenav_title">Account</div>
+                <i class="material-icons sidenav_title_icon transition">arrow_drop_down</i>
             </div>
-            <div class="side_wrapper flex">
+            <div class="sidenav_wrapper flex">
                 {% if user.is_authenticated %}
-                <div class="side_link flex">
-                    <i class="material-icons side_icon">dashboard</i>
-                    <a href="{% url 'profile' %}" class="side_text">Profile</a>
+                <div class="sidenav_link flex">
+                    <i class="material-icons sidenav_icon">dashboard</i>
+                    <a href="{% url 'profile' %}" class="sidenav_text">Profile</a>
                 </div>
-                <div class="side_link flex">
-                    <i class="material-icons side_icon">insert_chart</i>
-                    <a href="{% url 'portfolio' %}" class="side_text">My Portfolios</a>
+                <div class="sidenav_link flex">
+                    <i class="material-icons sidenav_icon">insert_chart</i>
+                    <a href="{% url 'portfolio' %}" class="sidenav_text">My Portfolios</a>
                 </div>
-                <div class="side_link flex">
-                    <i class="material-icons side_icon">insert_chart</i>
-                    <a href="{% url 'portfolio' %}" class="side_text">My Posts</a>
+                <div class="sidenav_link flex">
+                    <i class="material-icons sidenav_icon">insert_chart</i>
+                    <a href="{% url 'portfolio' %}" class="sidenav_text">My Posts</a>
                 </div>
-                <div class="side_link flex">
-                    <i class="material-icons side_icon">settings</i>
-                    <a href="{% url 'settings' %}" class="side_text">Settings</a>
+                <div class="sidenav_link flex">
+                    <i class="material-icons sidenav_icon">settings</i>
+                    <a href="{% url 'settings' %}" class="sidenav_text">Settings</a>
                 </div>
-                <div class="side_link flex">
-                    <i class="material-icons side_icon">flag</i>
-                    <a href="{% url 'help' %}" class="side_text">Help</a>
+                <div class="sidenav_link flex">
+                    <i class="material-icons sidenav_icon">flag</i>
+                    <a href="{% url 'help' %}" class="sidenav_text">Help</a>
                 </div>
-                <div class="side_link flex">
-                    <i class="material-icons side_icon">exit_to_app</i>
-                    <a href="{% url 'logout' %}" class="side_text">Logout</a>
+                <div class="sidenav_link flex">
+                    <i class="material-icons sidenav_icon">exit_to_app</i>
+                    <a href="{% url 'logout' %}" class="sidenav_text">Logout</a>
                 </div>
                 {% else %}
-                <div class="side_link flex">
-                    <i class="material-icons side_icon">flag</i>
-                    <a href="{% url 'login' %}" class="side_text">Login</a>
+                <div class="sidenav_link flex">
+                    <i class="material-icons sidenav_icon">flag</i>
+                    <a href="{% url 'login' %}" class="sidenav_text">Login</a>
                 </div>
-                <div class="side_link flex">
-                    <i class="material-icons side_icon">flag</i>
-                    <a href="{% url 'signup' %}" class="side_text">Sign Up</a>
+                <div class="sidenav_link flex">
+                    <i class="material-icons sidenav_icon">flag</i>
+                    <a href="{% url 'signup' %}" class="sidenav_text">Sign Up</a>
                 </div>
                 <div class="webmode_container flex">
                     <i class="material-icons webmode webmode_dark">brightness_2</i>
@@ -175,67 +175,67 @@
         </div>
 
 
-        <div class="side_container side_container3 flex">
-            <div class="side_header effect_underline flex">
-                <div class="side_title">Calendar</div>
+        <div class="sidenav_container sidenav_container3 flex">
+            <div class="sidenav_header effect_underline flex">
+                <div class="sidenav_title">Calendar</div>
             </div>
         </div>
 
 
-        <div class="side_container side_container4 flex">
-            <div class="side_header effect_underline flex">
-                <div class="side_title">News</div>
+        <div class="sidenav_container sidenav_container4 flex">
+            <div class="sidenav_header effect_underline flex">
+                <div class="sidenav_title">News</div>
             </div>
         </div>
 
 
-        <div class="side_container side_container2 flex">
-            <div class="side_header effect_underline flex">
-                <div class="side_title">Markets</div>
-                <i class="material-icons side_title_icon transition">arrow_drop_down</i>
+        <div class="sidenav_container sidenav_container2 flex">
+            <div class="sidenav_header effect_underline flex">
+                <div class="sidenav_title">Markets</div>
+                <i class="material-icons sidenav_title_icon transition">arrow_drop_down</i>
             </div>
-            <div class="side_wrapper flex">
-                <div class="side_link flex">
-                    <i class="material-icons side_icon">school</i>
-                    <a href="{% url 'profile' %}" class="side_text">Stocks</a>
+            <div class="sidenav_wrapper flex">
+                <div class="sidenav_link flex">
+                    <i class="material-icons sidenav_icon">school</i>
+                    <a href="{% url 'profile' %}" class="sidenav_text">Stocks</a>
                 </div>
-                <div class="side_link flex">
-                    <i class="material-icons side_icon">school</i>
-                    <a href="{% url 'profile' %}" class="side_text">Commodities</a>
+                <div class="sidenav_link flex">
+                    <i class="material-icons sidenav_icon">school</i>
+                    <a href="{% url 'profile' %}" class="sidenav_text">Commodities</a>
                 </div>
-                <div class="side_link flex">
-                    <i class="material-icons side_icon">school</i>
-                    <a href="{% url 'profile' %}" class="side_text">Forex</a>
+                <div class="sidenav_link flex">
+                    <i class="material-icons sidenav_icon">school</i>
+                    <a href="{% url 'profile' %}" class="sidenav_text">Forex</a>
                 </div>
-                <div class="side_link flex">
-                    <i class="material-icons side_icon">school</i>
-                    <a href="{% url 'profile' %}" class="side_text">Crypto</a>
+                <div class="sidenav_link flex">
+                    <i class="material-icons sidenav_icon">school</i>
+                    <a href="{% url 'profile' %}" class="sidenav_text">Crypto</a>
                 </div>
             </div>
         </div>
 
 
-        <div class="side_container side_container2 flex">
-            <div class="side_header effect_underline flex">
-                <div class="side_title">Education</div>
-                <i class="material-icons side_title_icon transition">arrow_drop_down</i>
+        <div class="sidenav_container sidenav_container2 flex">
+            <div class="sidenav_header effect_underline flex">
+                <div class="sidenav_title">Education</div>
+                <i class="material-icons sidenav_title_icon transition">arrow_drop_down</i>
             </div>
-            <div class="side_wrapper flex">
-                <div class="side_link flex">
-                    <i class="material-icons side_icon">school</i>
-                    <a href="{% url 'profile' %}" class="side_text">Markets</a>
+            <div class="sidenav_wrapper flex">
+                <div class="sidenav_link flex">
+                    <i class="material-icons sidenav_icon">school</i>
+                    <a href="{% url 'profile' %}" class="sidenav_text">Markets</a>
                 </div>
-                <div class="side_link flex">
-                    <i class="material-icons side_icon">school</i>
-                    <a href="{% url 'profile' %}" class="side_text">Technicals</a>
+                <div class="sidenav_link flex">
+                    <i class="material-icons sidenav_icon">school</i>
+                    <a href="{% url 'profile' %}" class="sidenav_text">Technicals</a>
                 </div>
-                <div class="side_link flex">
-                    <i class="material-icons side_icon">school</i>
-                    <a href="{% url 'profile' %}" class="side_text">Fundamentals</a>
+                <div class="sidenav_link flex">
+                    <i class="material-icons sidenav_icon">school</i>
+                    <a href="{% url 'profile' %}" class="sidenav_text">Fundamentals</a>
                 </div>
-                <div class="side_link flex">
-                    <i class="material-icons side_icon">school</i>
-                    <a href="{% url 'profile' %}" class="side_text">Automation</a>
+                <div class="sidenav_link flex">
+                    <i class="material-icons sidenav_icon">school</i>
+                    <a href="{% url 'profile' %}" class="sidenav_text">Automation</a>
                 </div>
             </div>
         </div>
@@ -296,7 +296,6 @@
     {% block fixed %} {% endblock %}
 
     <div class="content">
-        {% load static %}
         {% block content %} {% endblock %}
     </div>
 

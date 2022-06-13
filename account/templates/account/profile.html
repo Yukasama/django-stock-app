@@ -1,0 +1,49 @@
+{% extends 'home/index.html' %}
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'account/css/profile.css' %}">
+
+
+  {% if user.is_authenticated %}
+  <div class="sidebar flex">
+    <div class="side_link flex active">
+      <i class="fa-solid fa-house side_icon"></i>
+      <p class="side_text">Dashboard</p>
+    </div>
+    <div class="side_link flex">
+      <i class="fa-solid fa-chart-line side_icon"></i>
+      <p class="side_text">Chart</p>
+    </div>
+    <div class="side_link flex">
+      <i class="fa-solid fa-coins side_icon"></i>
+      <p class="side_text">Earnings</p>
+    </div>
+    <div class="side_link flex">
+      <i class="fa-solid fa-chart-simple side_icon"></i>
+      <p class="side_text">Financials</p>
+    </div>
+    <div class="side_link flex">
+      <i class="fa-solid fa-scale-balanced side_icon"></i>
+      <p class="side_text">Holdings</p>
+    </div>
+    <div class="side_link flex">
+      <i class="fa-solid fa-newspaper side_icon"></i>
+      <p class="side_text">Articles</p>
+    </div>
+  </div>
+  {% else %}
+  <div class="portfolio_message_c flex">
+    <p class="portfolio_message">You need to Login to create Portfolios.</p>
+    <button class="icon_button portfolio_login transition">
+      <i class="fa-solid fa-arrow-right-to-bracket portfolio_icon"></i>
+      <a href="{% url 'login' %}">Login</a>
+    </button> 
+  </div>
+  {% endif %}
+
+
+
+
+
+{% endblock %}

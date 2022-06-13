@@ -1,60 +1,22 @@
 
 
-//STICKY NAVBAR
+//INDEX TEMPLATE
+
 const navbar = document.querySelector(".navbar");
-eventHandler(window, navbar, "scroll", "show");
+eventHandler(window, navbar, "scroll", "show"); //SCROLL-STICKY NAVBAR
 
-
-
-//SIDEBAR
-const sidebar = document.querySelector(".sidebar");
+const sidenavbar = document.querySelector(".sidenavbar");
 const hamburger1 = document.querySelector(".hamburger1");
-eventHandler(hamburger1, sidebar, "click", "window");
+eventHandler(hamburger1, sidenavbar, "click", "window"); //sidenavBAR (MOBILE NAVBAR)
 
-const side_header = document.querySelectorAll(".side_header")
-activeLooper(side_header, "list");
+const sidenav_header = document.querySelectorAll(".sidenav_header")
+activeLooper(sidenav_header, "list"); //SIDENAVBAR ACTIVE HOVER ANIMATION
 
-let stock_navlink = document.querySelectorAll(".stock_navlink");
-let stock_view = document.querySelectorAll(".stock_view");
-activeLooper(stock_navlink, "navtabs", stock_view);
-
-
-//LOGIN BUTTON
-const portfolio_login = document.querySelector(".portfolio_login");
-eventHandler(portfolio_login, 0, "mouseover");
-eventHandler(portfolio_login, 0, "mouseleave");
-
-
-
-
-
-//HAMBURGER
-
-// var search_input = document.querySelector(".search_input");
-// search_input.addEventListener("click", () => {
-//     if($(search_input).is(':focus')) {
-//         $(search_input).cla
-//     } 
-// })
-
-
-
-//CONTACT
-// const contact_link = document.querySelector(".contact_link");
-// const contact = document.querySelector(".contact");
-// const hamburger2 = document.querySelector(".hamburger2");
-// eventHandler(contact_link, contact, "click", "show");
-// eventHandler(hamburger2, contact, "click", "hide");
-
-
-
-// // INPUT
-// const emailinputField = document.querySelector(".emailinputField");
-// const email_input = document.querySelector(".email_input");
-
-// if (document.activeElement === email_input) {
-//     emailinputField.classList.add("active");
-// }
+const contact_link = document.querySelector(".contact_link");
+const contact = document.querySelector(".contact");
+const hamburger2 = document.querySelector(".hamburger2");
+eventHandler(contact_link, contact, "click", "show"); //CONTACT WINDOW TOGGLE
+eventHandler(hamburger2, contact, "click", "hide"); //CONTACT WINDOW HIDE
 
 
 
@@ -63,12 +25,18 @@ eventHandler(portfolio_login, 0, "mouseleave");
 
 
 
-// //SEARCHBAR
-// const searchbar = document.querySelector(".searchbar");
-// const search_input = document.querySelector(".search_input")
-// searchbar.addEventListener("mouseover", () => {
-//     document.getElementsByName("search_input")[0].placeholder = "New";
-// })
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -141,7 +109,7 @@ function dragElement(elmnt) {
     // if present, the header is where you move the DIV from:
     document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
   } else {
-    // otherwise, move the DIV from anywhere inside the DIV:
+    // otherwise, move the DIV from anywhere insidenav the DIV:
     elmnt.onmousedown = dragMouseDown;
   }
 

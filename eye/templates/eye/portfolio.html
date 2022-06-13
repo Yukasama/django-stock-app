@@ -4,37 +4,35 @@
 {% load static %}
 
 <link rel="stylesheet" href="{% static 'eye/css/portfolio.css' %}">
-<link rel="stylesheet" href="{% static 'eye/css/symbol.css' %}">
 
 <div class="portfolio flex">
 
-
     {% if user.is_authenticated and exists == True %}
-    <div class="stock_nav flex">
-      <div class="stock_navlink flex active">
-        <i class="fa-solid fa-house stock_icon"></i>
-        <p class="stock_navtext">Dashboard</p>
+    <div class="sidebar flex">
+      <div class="side_link flex active">
+        <i class="fa-solid fa-house side_icon"></i>
+        <p class="side_text">Dashboard</p>
       </div>
-      <div class="stock_navlink flex">
-        <i class="fa-solid fa-chart-line stock_icon"></i>
-        <p class="stock_navtext">Chart</p>
+      <div class="side_link flex">
+        <i class="fa-solid fa-chart-line side_icon"></i>
+        <p class="side_text">Chart</p>
       </div>
-      <div class="stock_navlink flex">
-        <i class="fa-solid fa-coins stock_icon"></i>
-        <p class="stock_navtext">Earnings</p>
+      <div class="side_link flex">
+        <i class="fa-solid fa-coins side_icon"></i>
+        <p class="side_text">Earnings</p>
       </div>
-      <div class="stock_navlink flex">
-        <i class="fa-solid fa-chart-simple stock_icon"></i>
-        <p class="stock_navtext">Financials</p>
+      <div class="side_link flex">
+        <i class="fa-solid fa-chart-simple side_icon"></i>
+        <p class="side_text">Financials</p>
       </div>
-      <div class="stock_navlink flex">
-        <i class="fa-solid fa-scale-balanced stock_icon"></i>
-        <p class="stock_navtext">Holdings</p>
+      <div class="side_link flex">
+        <i class="fa-solid fa-scale-balanced side_icon"></i>
+        <p class="side_text">Holdings</p>
       </div>
-      <div class="stock_navlink flex">
-        <i class="fa-solid fa-newspaper stock_icon"></i>
-        <p class="stock_navtext">Articles</p>
-        </div>
+      <div class="side_link flex">
+        <i class="fa-solid fa-newspaper side_icon"></i>
+        <p class="side_text">Articles</p>
+      </div>
     </div>
     <div class="portfolio_window border flex">
       <select class="input border portfolio_select flex">
@@ -47,7 +45,7 @@
     {% elif user.is_authenticated %}
     <div class="portfolio_message_c flex">
       <p class="portfolio_message">You have no Portfolios yet.</p>
-      <button class="icon_button portfolio_createone transition">
+      <button class="icon_button portfolio_createone">
         <i class="fa-solid fa-arrow-right-to-bracket portfolio_icon"></i>
         <a>Create One</a>
       </button>
@@ -76,13 +74,13 @@
     </form> -->
 
     {% else %}
-        <div class="portfolio_message_c flex">
-          <p class="portfolio_message">You need to Login to create Portfolios.</p>
-          <button class="icon_button portfolio_login transition">
-            <i class="fa-solid fa-arrow-right-to-bracket portfolio_icon"></i>
-            <a href="{% url 'login' %}">Login</a>
-          </button> 
-        </div>
+    <div class="portfolio_message_c flex">
+      <p class="portfolio_message">You need to Login to create Portfolios.</p>
+      <button class="icon_button portfolio_login transition">
+        <i class="fa-solid fa-arrow-right-to-bracket portfolio_icon"></i>
+        <a href="{% url 'login' %}">Login</a>
+      </button> 
+    </div>
     {% endif %}
 
 </div>

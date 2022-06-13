@@ -8,7 +8,7 @@ def signup(response):
     if response.method == "POST":
         form = Signup(response.POST)
         if form.is_valid():
-            form.save()  
+            form.save()
     else:
         form = Signup()
     return render(response, 'account/signup.html', {'form': form})
