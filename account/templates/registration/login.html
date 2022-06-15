@@ -5,29 +5,38 @@
 
 <link rel="stylesheet" href="{% static 'account/css/login.css' %}">
 
-
-<form method="POST">
+{% if user.is_authenticated %}
+<p>You are logged in already.</p>
+{% else %}
+<div class="login">
+  <form method="POST" class="login_form flex">
     {% csrf_token %}
-    {{form}}
-    <button type="submit">Login</button>
-    <p>Don't have an account? <a href="{url 'signup'}">Sign Up</a></p>
-</form>
-
-
-
-<!-- <form action="/" method="post" class="login_form flex">
-    {% csrf_token %}
-    <div class="emailinputField inputField">
-        <i class="material-icons input_icon">mail</i>
-        <input class="email_input input" type="email" name="email" required>
-        <span>E-Mail</span>
+    <h1 class="login_header">Login</h1>
+    <div class="inputField">
+      <i class="fa-solid fa-user"></i>
+      <input type="text" name="username" class="input input_valid username_input" placeholder="Username" required>
+      <i class="fa-solid fa-check"></i>
     </div>
     <div class="inputField">
-        <i class="material-icons input_icon">lock</i>
-        <input class="password_input input" type="password" name="password" required>
-        <span>Password</span>
+      <i class="fa-solid fa-key"></i>
+      <input type="password" name="password" class="input password_input" placeholder="Password" required>
     </div>
-    <button class="smart_button" type="submit" name="submit">Login</button>
-</form> -->
+    <button type="submit" class="icon_button login_button">
+      <i class="fa-solid fa-arrow-right-to-bracket portfolio_icon"></i>
+      <a>Login</a>
+    </button>
+    <p class="login_redirect">Don't have an account? <a class="login_link" href="{% url 'signup' %}">Sign Up</a></p>
+
+    {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+      <li>{{message}}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </form>
+</div>
+{% endif %}
+
 
 {% endblock %}

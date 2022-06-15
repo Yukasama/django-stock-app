@@ -80,12 +80,11 @@
                 <i class="material-icons webmode webmode_dark">brightness_2</i>
                 <i class="material-icons webmode webmode_light">brightness_7</i>
             </div>
-            
+            {% if user.is_authenticated %}
             <div class="profile_container flex">
-
                 <div class="profile_link profile_link1 flex">
                     <i class="material-icons profile_icon">account_circle</i>
-                    <a href="{% url 'profile' %}" class="profile_text profile_username" href="">Yukasama</a>
+                    <a href="{% url 'profile' %}" class="profile_text profile_username" href="">{{request.user}}</a>
                 </div>
 
                 <div class="profile_separator"></div>
@@ -110,8 +109,8 @@
                     <i class="material-icons profile_icon">exit_to_app</i>
                     <a href="{% url 'logout' %}" class="profile_text">Logout</a>
                 </div>
-
             </div>
+            {% endif %}
             <div class="hamburger hamburger1 flex">
                 <div class="hamburger_line"></div>
                 <div class="hamburger_line"></div>

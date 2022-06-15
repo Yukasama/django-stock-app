@@ -481,14 +481,13 @@
     margin: 25px;
 }
 
-
 .contact_textarea {
     padding: 10px 23px 10px 0;
 }
 
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
     .nav_link, .nav_link_icon, .profile, .profile_container, .webmode_container {
         display: none !important;
     }

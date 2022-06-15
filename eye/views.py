@@ -1,8 +1,11 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+from django.contrib.auth.models import User
 from eye.models import Stock, Info, Financial, Portfolio
 from eye.stocks import datahandler as dt
 from eye.forms import PortfolioForm
-from django.shortcuts import HttpResponseRedirect
+
 
 
 

@@ -3,5 +3,23 @@
     flex-direction: column;
     width: 500px;
     margin: 200px auto 0 auto;
-    gap: 50px;
+    align-items: center;
+}
+.login_header {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+.inputField {
+    margin: 20px 0;
+    width: 350px;
+}
+.login_button {
+    margin: 35px 0;
+}
+
+.login_redirect {
+    color: var(--color-text-theme);
+}
+.login_link {
+    color: var(--color-first);
 }

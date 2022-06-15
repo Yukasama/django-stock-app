@@ -189,10 +189,11 @@ OVERVIEW OF EXISTING CLASSES
     display: flex;
     padding: 10px 20px;
     align-items: center;
-    border: 0.5px gray solid;
+    border: 0.5px var(--color-light) solid;
 }
-.input_icon {
+.inputField > i:first-child {
     margin-right: 20px;
+    font-size: 20px;
 }
 
 .input {
@@ -204,21 +205,20 @@ OVERVIEW OF EXISTING CLASSES
     height: 100%;
     background: transparent;
 }
-.input ~ span {
-    position: absolute;
-    left: 64px;
-    z-index: -1;
-    transition: 0.275s;
-    color: var(--color-reverse);
+
+
+.input_valid + i {
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 20px;
+}
+.input_valid:valid + i {
+    color: rgb(0, 255, 0);
+    opacity: 1;
 }
 
-.input_animation:focus ~ span, .input_animation:valid ~ span, .input_animation:invalid ~ span {
-    color: var(--color-first);
-    transform: translate(-50px, -35px);
-}
-.input_animation:invalid ~ span {
-    color: red;
-}
+
+
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 

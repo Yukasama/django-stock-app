@@ -4,36 +4,29 @@
 {% load static %}
 
 <link rel="stylesheet" href="{% static 'account/css/signup.css' %}">
+<link rel="stylesheet" href="{% static 'account/css/login.css' %}">
 
-
-<form method="POST">
+<div class="signup">
+  <form method="POST" class="login_form flex">
     {% csrf_token %}
+    <h1 class="login_header">Login</h1>
     {{form}}
     <button type="submit" class="icon_button signup_button">
-        <i class="fa-solid fa-arrow-right-to-bracket portfolio_icon"></i>
-        <a>Sign Up</a>
+      <i class="fa-solid fa-arrow-right-to-bracket portfolio_icon"></i>
+      <a>Sign Up</a>
     </button>
-</form>
+    <p class="login_redirect">Already signed up? <a class="login_link" href="{% url 'login' %}">Login</a></p>
+  
+    {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+      <li>{{message}}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </form>
+</div>
 
 
-
-
-
-
-
-<!-- <form action="/" method="post" class="login_form flex">
-    {% csrf_token %}
-    <div class="emailinputField inputField">
-        <i class="material-icons input_icon">mail</i>
-        <input class="email_input input" type="email" name="email" required>
-        <span>E-Mail</span>
-    </div>
-    <div class="inputField">
-        <i class="material-icons input_icon">lock</i>
-        <input class="password_input input" type="password" name="password" required>
-        <span>Password</span>
-    </div>
-    <button class="smart_button" type="submit" name="submit">Login</button>
-</form> -->
 
 {% endblock %}
