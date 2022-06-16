@@ -5,7 +5,6 @@ from django.contrib.auth.models import User
 
 class Stock(models.Model):
     
-    #Symbol
     symbol = models.CharField(max_length=10)
     
     def __str__(self):

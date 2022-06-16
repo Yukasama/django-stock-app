@@ -3,360 +3,360 @@
 
 {% load static %}
 
-    <!-- NAVBAR -->
-    <div class="navbar flex">
+<!-- NAVBAR -->
+<div class="navbar flex">
 
-        <div class="nav_container nav_container1 flex">
-            <a href="{% url 'home' %}" class="favicon">
-                <img class="favicon_img" src="{% static 'main/img/favicon.png' %}">
-            </a>
+  <div class="nav_container nav_container1 flex">
+    <a href="{% url 'home' %}" class="favicon">
+      <img class="favicon_img" src="{% static 'main/img/favicon.png' %}">
+    </a>
+  </div>
+
+
+  <div class="nav_container nav_container2 flex">
+      <a href="{% url 'calendar' %}" class="nav_link effect_underline">Calendar</a>
+      <a href="{% url 'news' %}" class="nav_link effect_underline">News</a>
+      <div class="nav_link effect_underline nav_link_ex flex">Markets
+        <div class="nav_sub_element">
+          <div class="nav_link_sub smart_list">
+            <div class="nav_sub flex">
+              <i class="material-icons nav_sub_icon">school</i>
+              <a href="{% url 'stocks' %}" class="nav_link_text effect_underline">Stocks</a>
+            </div>
+            <div class="nav_sub flex">
+              <i class="material-icons nav_sub_icon">school</i>
+              <a class="nav_link_text effect_underline">Commodities</a>
+            </div>
+            <div class="nav_sub flex">
+              <i class="material-icons nav_sub_icon">school</i>
+              <a class="nav_link_text effect_underline">Forex</a>
+            </div>
+            <div class="nav_sub flex">
+              <i class="material-icons nav_sub_icon">school</i>
+              <a class="nav_link_text effect_underline">Crypto</a>
+            </div>
+          </div>
         </div>
-
-
-        <div class="nav_container nav_container2 flex">
-            <a href="{% url 'calendar' %}" class="nav_link effect_underline">Calendar</a>
-            <a href="{% url 'news' %}" class="nav_link effect_underline">News</a>
-            <div class="nav_link effect_underline nav_link_ex flex">Markets
-                <div class="nav_sub_element">
-                    <div class="nav_link_sub smart_list">
-                        <div class="nav_sub flex">
-                            <i class="material-icons nav_sub_icon">school</i>
-                            <a href="{% url 'stocks' %}" class="nav_link_text effect_underline">Stocks</a>
-                        </div>
-                        <div class="nav_sub flex">
-                            <i class="material-icons nav_sub_icon">school</i>
-                            <a class="nav_link_text effect_underline">Commodities</a>
-                        </div>
-                        <div class="nav_sub flex">
-                            <i class="material-icons nav_sub_icon">school</i>
-                            <a class="nav_link_text effect_underline">Forex</a>
-                        </div>
-                        <div class="nav_sub flex">
-                            <i class="material-icons nav_sub_icon">school</i>
-                            <a class="nav_link_text effect_underline">Crypto</a>
-                        </div>
-                    </div>
-                </div>
+      </div>
+      <i class="material-icons nav_link_icon invisible">expand_more</i>
+      <div class="nav_link effect_underline nav_link_ex flex">Education
+        <div class="nav_sub_element">
+          <div class="nav_link_sub smart_list">
+            <div class="nav_sub flex">
+              <i class="material-icons nav_sub_icon">school</i>
+              <a class="nav_link_text effect_underline">Markets</a>
             </div>
-            <i class="material-icons nav_link_icon invisible">expand_more</i>
-            <div class="nav_link effect_underline nav_link_ex flex">Education
-                <div class="nav_sub_element">
-                    <div class="nav_link_sub smart_list">
-                        <div class="nav_sub flex">
-                            <i class="material-icons nav_sub_icon">school</i>
-                            <a class="nav_link_text effect_underline">Markets</a>
-                        </div>
-                        <div class="nav_sub flex">
-                            <i class="material-icons nav_sub_icon">school</i>
-                            <a class="nav_link_text effect_underline">Technicals</a>
-                        </div>
-                        <div class="nav_sub flex">
-                            <i class="material-icons nav_sub_icon">school</i>
-                            <a class="nav_link_text effect_underline">Fundamentals</a>
-                        </div>
-                        <div class="nav_sub flex">
-                            <i class="material-icons nav_sub_icon">school</i>
-                            <a class="nav_link_text effect_underline">Automation</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="nav_sub flex">
+              <i class="material-icons nav_sub_icon">school</i>
+              <a class="nav_link_text effect_underline">Technicals</a>
             </div>
-            <i class="material-icons nav_link_icon invisible">expand_more</i>  
+            <div class="nav_sub flex">
+              <i class="material-icons nav_sub_icon">school</i>
+              <a class="nav_link_text effect_underline">Fundamentals</a>
+            </div>
+            <div class="nav_sub flex">
+              <i class="material-icons nav_sub_icon">school</i>
+              <a class="nav_link_text effect_underline">Automation</a>
+            </div>
+          </div>
         </div>
+      </div>
+      <i class="material-icons nav_link_icon invisible">expand_more</i>  
+  </div>
 
 
-        <div class="nav_container nav_container3 flex">
+  <div class="nav_container nav_container3 flex">
 
-            {% if user.is_authenticated %}
-                <div class="profile smart_box">
-                    <i class="material-icons user_icon">account_circle</i>
-                </div>
-            {% else %}
-                <a href="{% url 'login' %}" class="nav_link sign_up">Login</a>
-                <a href="{% url 'signup' %}" class="nav_link sign_up smart_button">Sign Up</a>
-            {% endif %}
+    {% if user.is_authenticated %}
+      <div class="profile smart_box">
+        <i class="material-icons user_icon">account_circle</i>
+      </div>
+    {% else %}
+      <a href="{% url 'login' %}" class="nav_link sign_up">Login</a>
+      <a href="{% url 'signup' %}" class="nav_link sign_up smart_button">Sign Up</a>
+    {% endif %}
 
-            <div class="webmode_container flex">
-                <i class="material-icons webmode webmode_dark">brightness_2</i>
-                <i class="material-icons webmode webmode_light">brightness_7</i>
-            </div>
-            {% if user.is_authenticated %}
-            <div class="profile_container flex">
-                <div class="profile_link profile_link1 flex">
-                    <i class="material-icons profile_icon">account_circle</i>
-                    <a href="{% url 'profile' %}" class="profile_text profile_username" href="">{{request.user}}</a>
-                </div>
+    <div class="webmode_container flex">
+      <i class="material-icons webmode webmode_dark">brightness_2</i>
+      <i class="material-icons webmode webmode_light">brightness_7</i>
+    </div>
+    {% if user.is_authenticated %}
+    <div class="profile_container flex">
+      <div class="profile_link profile_link1 flex">
+        <i class="material-icons profile_icon">account_circle</i>
+        <a href="{% url 'profile' %}" class="profile_text profile_username" href="">{{request.user}}</a>
+      </div>
 
-                <div class="profile_separator"></div>
+      <div class="profile_separator"></div>
 
-                <div class="profile_link flex">
-                    <i class="material-icons profile_icon">insert_chart</i>
-                    <a href="{% url 'portfolio' %}" class="profile_text">Portfolios</a>
-                </div>
-                <div class="profile_link flex">
-                    <i class="material-icons profile_icon">dashboard</i>
-                    <a href="{% url 'profile' %}" class="profile_text">Posts</a>
-                </div>
-                <div class="profile_link flex">
-                    <i class="material-icons profile_icon">settings</i>
-                    <a href="{% url 'settings' %}" class="profile_text">Settings</a>
-                </div>
-                <div class="profile_link flex">
-                    <i class="material-icons profile_icon">flag</i>
-                    <a href="{% url 'help' %}" class="profile_text">Help</a>
-                </div>
-                <div class="profile_link flex">
-                    <i class="material-icons profile_icon">exit_to_app</i>
-                    <a href="{% url 'logout' %}" class="profile_text">Logout</a>
-                </div>
-            </div>
-            {% endif %}
-            <div class="hamburger hamburger1 flex">
-                <div class="hamburger_line"></div>
-                <div class="hamburger_line"></div>
-                <div class="hamburger_line"></div>
-            </div>
-        </div>
+      <div class="profile_link flex">
+        <i class="material-icons profile_icon">insert_chart</i>
+        <a href="{% url 'portfolio' %}" class="profile_text">Portfolios</a>
+      </div>
+      <div class="profile_link flex">
+        <i class="material-icons profile_icon">dashboard</i>
+        <a href="{% url 'profile' %}" class="profile_text">Posts</a>
+      </div>
+      <div class="profile_link flex">
+        <i class="material-icons profile_icon">settings</i>
+        <a href="{% url 'settings' %}" class="profile_text">Settings</a>
+      </div>
+      <div class="profile_link flex">
+        <i class="material-icons profile_icon">flag</i>
+        <a href="{% url 'help' %}" class="profile_text">Help</a>
+      </div>
+      <div class="profile_link flex">
+        <i class="material-icons profile_icon">exit_to_app</i>
+        <a href="{% url 'logout' %}" class="profile_text">Logout</a>
+      </div>
+    </div>
+    {% endif %}
+    <div class="hamburger hamburger1 flex">
+        <div class="hamburger_line"></div>
+        <div class="hamburger_line"></div>
+        <div class="hamburger_line"></div>
+    </div>
+  </div>
 
+</div>
+
+
+
+
+<div class="sidenavbar flex">
+
+  <div class="sidenav_container sidenav_container1 flex">
+    <div class="sidenav_header effect_underline flex">
+      <div class="sidenav_title">Account</div>
+      <i class="material-icons sidenav_title_icon transition">arrow_drop_down</i>
+    </div>
+    <div class="sidenav_wrapper flex">
+      {% if user.is_authenticated %}
+      <div class="sidenav_link flex">
+        <i class="material-icons sidenav_icon">dashboard</i>
+        <a href="{% url 'profile' %}" class="sidenav_text">Profile</a>
+      </div>
+      <div class="sidenav_link flex">
+        <i class="material-icons sidenav_icon">insert_chart</i>
+        <a href="{% url 'portfolio' %}" class="sidenav_text">My Portfolios</a>
+      </div>
+      <div class="sidenav_link flex">
+          <i class="material-icons sidenav_icon">insert_chart</i>
+          <a href="{% url 'portfolio' %}" class="sidenav_text">My Posts</a>
+      </div>
+      <div class="sidenav_link flex">
+        <i class="material-icons sidenav_icon">settings</i>
+        <a href="{% url 'settings' %}" class="sidenav_text">Settings</a>
+      </div>
+      <div class="sidenav_link flex">
+        <i class="material-icons sidenav_icon">flag</i>
+        <a href="{% url 'help' %}" class="sidenav_text">Help</a>
+      </div>
+      <div class="sidenav_link flex">
+        <i class="material-icons sidenav_icon">exit_to_app</i>
+        <a href="{% url 'logout' %}" class="sidenav_text">Logout</a>
+      </div>
+
+      {% else %}
+      <div class="sidenav_link flex">
+        <i class="material-icons sidenav_icon">flag</i>
+        <a href="{% url 'login' %}" class="sidenav_text">Login</a>
+      </div>
+      <div class="sidenav_link flex">
+        <i class="material-icons sidenav_icon">flag</i>
+        <a href="{% url 'signup' %}" class="sidenav_text">Sign Up</a>
+      </div>
+      <div class="webmode_container flex">
+        <i class="material-icons webmode webmode_dark">brightness_2</i>
+        <i class="material-icons webmode webmode_light">brightness_7</i>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+
+  <div class="sidenav_container sidenav_container3 flex">
+    <div class="sidenav_header effect_underline flex">
+      <div class="sidenav_title">Calendar</div>
+    </div>
+  </div>
+
+
+  <div class="sidenav_container sidenav_container4 flex">
+    <div class="sidenav_header effect_underline flex">
+      <div class="sidenav_title">News</div>
+    </div>
+  </div>
+
+
+  <div class="sidenav_container sidenav_container2 flex">
+    <div class="sidenav_header effect_underline flex">
+      <div class="sidenav_title">Markets</div>
+      <i class="material-icons sidenav_title_icon transition">arrow_drop_down</i>
+    </div>
+    <div class="sidenav_wrapper flex">
+      <div class="sidenav_link flex">
+        <i class="material-icons sidenav_icon">school</i>
+        <a href="{% url 'stocks' %}" class="sidenav_text">Stocks</a>
+      </div>
+      <div class="sidenav_link flex">
+        <i class="material-icons sidenav_icon">school</i>
+        <a href="{% url 'profile' %}" class="sidenav_text">Commodities</a>
+      </div>
+      <div class="sidenav_link flex">
+        <i class="material-icons sidenav_icon">school</i>
+        <a href="{% url 'profile' %}" class="sidenav_text">Forex</a>
+      </div>
+      <div class="sidenav_link flex">
+        <i class="material-icons sidenav_icon">school</i>
+        <a href="{% url 'profile' %}" class="sidenav_text">Crypto</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="sidenav_container sidenav_container2 flex">
+    <div class="sidenav_header effect_underline flex">
+      <div class="sidenav_title">Education</div>
+      <i class="material-icons sidenav_title_icon transition">arrow_drop_down</i>
+    </div>
+    <div class="sidenav_wrapper flex">
+      <div class="sidenav_link flex">
+        <i class="material-icons sidenav_icon">school</i>
+        <a href="{% url 'profile' %}" class="sidenav_text">Markets</a>
+      </div>
+      <div class="sidenav_link flex">
+        <i class="material-icons sidenav_icon">school</i>
+        <a href="{% url 'profile' %}" class="sidenav_text">Technicals</a>
+      </div>
+      <div class="sidenav_link flex">
+        <i class="material-icons sidenav_icon">school</i>
+        <a href="{% url 'profile' %}" class="sidenav_text">Fundamentals</a>
+      </div>
+      <div class="sidenav_link flex">
+        <i class="material-icons sidenav_icon">school</i>
+        <a href="{% url 'profile' %}" class="sidenav_text">Automation</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+<div class="contact flex">
+
+  <div class="contact_container contact_container1 flex">
+    <div class="contact_info flex">
+      <i class="material-icons contact_info_icon">contact_mail</i>
+      <p class="contact_text contact_info_text">E-Mail: stocky.business@gmail.com</p>
+    </div>
+    <div class="contact_info flex">
+      <i class="material-icons contact_info_icon">phone</i>
+      <p class="contact_text contact_info_text">Tel: 420 69 69</p>
+    </div>
+    <p class="contact_title">Contact Us</p>
+  </div>
+
+
+  <form class="contact_container contact_container2 flex" method="post" action="contact">
+    {% csrf_token %}
+
+    <div class="hamburger hamburger2 flex">
+      <div class="hamburger_line hamburger_line_active1"></div>
+      <div class="hamburger_line hamburger_line_active2"></div>
+      <div class="hamburger_line hamburger_line_active3"></div>
     </div>
 
-
-
-
-    <div class="sidenavbar flex">
-
-        <div class="sidenav_container sidenav_container1 flex">
-            <div class="sidenav_header effect_underline flex">
-                <div class="sidenav_title">Account</div>
-                <i class="material-icons sidenav_title_icon transition">arrow_drop_down</i>
-            </div>
-            <div class="sidenav_wrapper flex">
-                {% if user.is_authenticated %}
-                <div class="sidenav_link flex">
-                    <i class="material-icons sidenav_icon">dashboard</i>
-                    <a href="{% url 'profile' %}" class="sidenav_text">Profile</a>
-                </div>
-                <div class="sidenav_link flex">
-                    <i class="material-icons sidenav_icon">insert_chart</i>
-                    <a href="{% url 'portfolio' %}" class="sidenav_text">My Portfolios</a>
-                </div>
-                <div class="sidenav_link flex">
-                    <i class="material-icons sidenav_icon">insert_chart</i>
-                    <a href="{% url 'portfolio' %}" class="sidenav_text">My Posts</a>
-                </div>
-                <div class="sidenav_link flex">
-                    <i class="material-icons sidenav_icon">settings</i>
-                    <a href="{% url 'settings' %}" class="sidenav_text">Settings</a>
-                </div>
-                <div class="sidenav_link flex">
-                    <i class="material-icons sidenav_icon">flag</i>
-                    <a href="{% url 'help' %}" class="sidenav_text">Help</a>
-                </div>
-                <div class="sidenav_link flex">
-                    <i class="material-icons sidenav_icon">exit_to_app</i>
-                    <a href="{% url 'logout' %}" class="sidenav_text">Logout</a>
-                </div>
-                {% else %}
-                <div class="sidenav_link flex">
-                    <i class="material-icons sidenav_icon">flag</i>
-                    <a href="{% url 'login' %}" class="sidenav_text">Login</a>
-                </div>
-                <div class="sidenav_link flex">
-                    <i class="material-icons sidenav_icon">flag</i>
-                    <a href="{% url 'signup' %}" class="sidenav_text">Sign Up</a>
-                </div>
-                <div class="webmode_container flex">
-                    <i class="material-icons webmode webmode_dark">brightness_2</i>
-                    <i class="material-icons webmode webmode_light">brightness_7</i>
-                </div>
-                {% endif %}
-            </div>
-        </div>
-
-
-        <div class="sidenav_container sidenav_container3 flex">
-            <div class="sidenav_header effect_underline flex">
-                <div class="sidenav_title">Calendar</div>
-            </div>
-        </div>
-
-
-        <div class="sidenav_container sidenav_container4 flex">
-            <div class="sidenav_header effect_underline flex">
-                <div class="sidenav_title">News</div>
-            </div>
-        </div>
-
-
-        <div class="sidenav_container sidenav_container2 flex">
-            <div class="sidenav_header effect_underline flex">
-                <div class="sidenav_title">Markets</div>
-                <i class="material-icons sidenav_title_icon transition">arrow_drop_down</i>
-            </div>
-            <div class="sidenav_wrapper flex">
-                <div class="sidenav_link flex">
-                    <i class="material-icons sidenav_icon">school</i>
-                    <a href="{% url 'stocks' %}" class="sidenav_text">Stocks</a>
-                </div>
-                <div class="sidenav_link flex">
-                    <i class="material-icons sidenav_icon">school</i>
-                    <a href="{% url 'profile' %}" class="sidenav_text">Commodities</a>
-                </div>
-                <div class="sidenav_link flex">
-                    <i class="material-icons sidenav_icon">school</i>
-                    <a href="{% url 'profile' %}" class="sidenav_text">Forex</a>
-                </div>
-                <div class="sidenav_link flex">
-                    <i class="material-icons sidenav_icon">school</i>
-                    <a href="{% url 'profile' %}" class="sidenav_text">Crypto</a>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="sidenav_container sidenav_container2 flex">
-            <div class="sidenav_header effect_underline flex">
-                <div class="sidenav_title">Education</div>
-                <i class="material-icons sidenav_title_icon transition">arrow_drop_down</i>
-            </div>
-            <div class="sidenav_wrapper flex">
-                <div class="sidenav_link flex">
-                    <i class="material-icons sidenav_icon">school</i>
-                    <a href="{% url 'profile' %}" class="sidenav_text">Markets</a>
-                </div>
-                <div class="sidenav_link flex">
-                    <i class="material-icons sidenav_icon">school</i>
-                    <a href="{% url 'profile' %}" class="sidenav_text">Technicals</a>
-                </div>
-                <div class="sidenav_link flex">
-                    <i class="material-icons sidenav_icon">school</i>
-                    <a href="{% url 'profile' %}" class="sidenav_text">Fundamentals</a>
-                </div>
-                <div class="sidenav_link flex">
-                    <i class="material-icons sidenav_icon">school</i>
-                    <a href="{% url 'profile' %}" class="sidenav_text">Automation</a>
-                </div>
-            </div>
-        </div>
-
+    <p class="contact_header">Send a Message</p>
+    <div class="contact_box flex">
+      <i class="material-icons contact_icon">mail</i>
+      <input class="contact_input input" placeholder="E-Mail" type="email" name="mail">
     </div>
-
-
-
-
-    <div class="contact flex">
-
-        <div class="contact_container contact_container1 flex">
-            <div class="contact_info flex">
-                <i class="material-icons contact_info_icon">contact_mail</i>
-                <p class="contact_text contact_info_text">E-Mail: stocky.business@gmail.com</p>
-            </div>
-            <div class="contact_info flex">
-                <i class="material-icons contact_info_icon">phone</i>
-                <p class="contact_text contact_info_text">Tel: 420 69 69</p>
-            </div>
-            <p class="contact_title">Contact Us</p>
-        </div>
-
-
-        <form class="contact_container contact_container2 flex" method="post" action="contact">
-            
-            {% csrf_token %}
-
-            <div class="hamburger hamburger2 flex">
-                <div class="hamburger_line hamburger_line_active1"></div>
-                <div class="hamburger_line hamburger_line_active2"></div>
-                <div class="hamburger_line hamburger_line_active3"></div>
-            </div>
-
-            <p class="contact_header">Send a Message</p>
-            <div class="contact_box flex">
-                <i class="material-icons contact_icon">mail</i>
-                <input class="contact_input input" placeholder="E-Mail" type="email" name="mail">
-            </div>
-            <div class="contact_box flex">
-                <i class="material-icons contact_icon">folder</i>
-                <input class="contact_input input" placeholder="Subject" name="subject">
-            </div>
-            <div class="contact_box flex">
-                <i class="material-icons contact_icon">event_note</i>
-                <textarea class="contact_input contact_textarea input" 
-                name="message" placeholder="Message"></textarea>
-            </div> 
-            <button class="smart_button" type="submit" name="submit">Submit</button>
-        </form>
-        
+    <div class="contact_box flex">
+      <i class="material-icons contact_icon">folder</i>
+      <input class="contact_input input" placeholder="Subject" name="subject">
     </div>
+    <div class="contact_box flex">
+      <i class="material-icons contact_icon">event_note</i>
+      <textarea class="contact_input contact_textarea input" 
+      name="message" placeholder="Message"></textarea>
+    </div> 
+    <button class="smart_button" type="submit" name="submit">Submit</button>
+  </form>
+  
+</div>
 
 
 
 
-    <!-- BLOCKS -->
-    {% block fixed %} {% endblock %}
+<!-- BLOCKS -->
+{% block fixed %} {% endblock %}
 
-    <div class="content">
-        {% block content %} {% endblock %}
+<div class="content">
+  {% block content %} {% endblock %}
+</div>
+
+
+
+
+<div class="footer flex content">
+
+  <div class="footer_wrapper flex">
+    <div class="footer_container">
+      <a href="{% url 'home' %}" class="favicon">
+        <img class="favicon_img_footer" src="{% static 'main/img/favicon.png' %}">
+      </a>
+      <div class="socials flex">
+        <a class="social_link social_link_twitter" href="">
+          <i class="social_icon fab fa-twitter"></i>
+        </a>
+        <a class="social_link social_link_instagram" href="">
+          <i class="social_icon fab fa-instagram"></i>
+        </a>
+        <a class="social_link social_link_youtube" href="">
+          <i class="social_icon fab fa-youtube"></i>
+        </a>
+        <a class="social_link social_link_facebook" href="">
+          <i class="social_icon fab fa-facebook"></i>
+        </a>
+      </div>
     </div>
-
-
-
-
-    <div class="footer flex content">
-
-        <div class="footer_wrapper flex">
-            <div class="footer_container">
-                <a href="{% url 'home' %}" class="favicon">
-                    <img class="favicon_img_footer" src="{% static 'main/img/favicon.png' %}">
-                </a>
-                <div class="socials flex">
-                    <a class="social_link social_link_twitter" href="">
-                        <i class="social_icon fab fa-twitter"></i>
-                    </a>
-                    <a class="social_link social_link_instagram" href="">
-                        <i class="social_icon fab fa-instagram"></i>
-                    </a>
-                    <a class="social_link social_link_youtube" href="">
-                        <i class="social_icon fab fa-youtube"></i>
-                    </a>
-                    <a class="social_link social_link_facebook" href="">
-                        <i class="social_icon fab fa-facebook"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="footer_container">
-                <div class="footer_list flex">
-                    <div class="footer_header">Company</div>
-                    <div class="footer_separator"></div>
-                    <a href="{% url 'aboutus' %}" class="footer_text">About Us</a>
-                    <a href="{% url 'careers' %}" class="footer_text">Careers</a>
-                </div>
-            </div>
-            <div class="footer_container">
-                <div class="footer_list flex">
-                    <div class="footer_header">Info & Support</div>
-                    <div class="footer_separator"></div>
-                    <a href="{% url 'faq' %}" class="footer_text">FAQ</a>
-                    <a class="footer_text contact_link">Contact</a>
-                </div>
-            </div>
-            <div class="footer_container">
-                <div class="footer_list flex">
-                    <div class="footer_header">Exploration</div>
-                    <div class="footer_separator"></div>
-                    <a href="{% url 'pricing' %}" class="footer_text">Pricing</a>
-                    <a href="{% url 'development' %}" class="footer_text">Development</a>
-                    <a href="{% url 'newsletter' %}" class="footer_text">Newsletter</a>
-                </div>
-            </div>
+      <div class="footer_container">
+        <div class="footer_list flex">
+          <div class="footer_header">Company</div>
+          <div class="footer_separator"></div>
+          <a href="{% url 'aboutus' %}" class="footer_text">About Us</a>
+          <a href="{% url 'careers' %}" class="footer_text">Careers</a>
         </div>
-
-        <div class="footer_close"></div>
-        <div class="footer_end_links flex">
-            <a href="{% url 'terms' %}" class="footer_text">Terms & Conditions</a>
-            <a href="{% url 'privacy' %}" class="footer_text">Privacy Policy</a>
+      </div>
+      <div class="footer_container">
+        <div class="footer_list flex">
+          <div class="footer_header">Info & Support</div>
+          <div class="footer_separator"></div>
+          <a href="{% url 'faq' %}" class="footer_text">FAQ</a>
+          <a class="footer_text contact_link">Contact</a>
         </div>
-
+      </div>
+      <div class="footer_container">
+        <div class="footer_list flex">
+          <div class="footer_header">Exploration</div>
+          <div class="footer_separator"></div>
+          <a href="{% url 'pricing' %}" class="footer_text">Pricing</a>
+          <a href="{% url 'development' %}" class="footer_text">Development</a>
+          <a href="{% url 'newsletter' %}" class="footer_text">Newsletter</a>
+      </div>
     </div>
+  </div>
+
+  <div class="footer_close"></div>
+  <div class="footer_end_links flex">
+    <a href="{% url 'terms' %}" class="footer_text">Terms & Conditions</a>
+    <a href="{% url 'privacy' %}" class="footer_text">Privacy Policy</a>
+  </div>
+
+</div>
 
 
 {% endblock %}

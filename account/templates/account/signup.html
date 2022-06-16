@@ -3,9 +3,18 @@
 
 {% load static %}
 
-<link rel="stylesheet" href="{% static 'account/css/signup.css' %}">
 <link rel="stylesheet" href="{% static 'account/css/login.css' %}">
 
+{% if user.is_authenticated %}
+<div class="message_field flex">
+  <p class="message_text">You are logged in already.</p>
+  <button class="icon_button transition">
+    <i class="fa-solid fa-arrow-right-to-bracket portfolio_icon"></i>
+    <a href="{% url 'home' %}">Back</a>
+  </button> 
+</div>
+
+{% else %}
 <div class="signup">
   <form method="POST" class="login_form flex">
     {% csrf_token %}
@@ -26,6 +35,7 @@
     {% endif %}
   </form>
 </div>
+{% endif %}
 
 
 

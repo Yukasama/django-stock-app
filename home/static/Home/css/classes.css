@@ -111,9 +111,14 @@ OVERVIEW OF EXISTING CLASSES
 }
 .icon_button > a {
     position: absolute;
+    display: flex;
     opacity: 1;
     transition: opacity 0.3s;
     color: white;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 }
 .icon_button.show > a {
     opacity: 0;
@@ -232,6 +237,9 @@ OVERVIEW OF EXISTING CLASSES
     color: var(--color-text-theme);
     font-size: 2em;
     font-weight: 300;
+}
+.message_field button {
+    margin: 20px;
 }
 
 

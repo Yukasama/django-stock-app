@@ -12,16 +12,22 @@ def home(request):
     )
 
 
+
 #Footer
 def aboutus(request):
     return render(request, 'home/aboutus.html')
+
+
 
 def careers(request):
     return render(request, 'home/careers.html')
 
 
+
 def faq(request):
     return render(request, 'home/faq.html')
+
+
 
 def contact(request):
     mail = request.POST['mail']
@@ -35,18 +41,26 @@ def contact(request):
     return render(request, 'home/contact.html', contactData)
 
 
+
 def pricing(request):
     return render(request, 'home/pricing.html')
     
+    
+    
 def development(request):
     return render(request, 'home/development.html')
+
+
 
 def newsletter(request):
     return render(request, 'home/newsletter.html')
 
 
+
 def terms(request):
     return render(request, 'home/terms.html')
+
+
 
 def privacy(request):
     return render(request, 'home/privacy.html')

@@ -45,7 +45,6 @@
 
 
 
-
 .portfolio_name_c, .portfolio_name_c > .inputField {
     width: 100%;
     height: 100%;
@@ -61,10 +60,8 @@
     color: var(--color-text-theme);
 }
 
-.portfolio_login, .portfolio_createone {
-    margin: 10px;
-}
 .portfolio_createone {
+    margin: 10px;
     width: 100px;
 }
 .portfolio_create, .portfolio_delete {

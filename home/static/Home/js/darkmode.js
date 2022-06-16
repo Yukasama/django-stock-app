@@ -1,5 +1,4 @@
 
-//DARK MODE
 let darkMode = localStorage.getItem("darkMode");
 const webmode_container = document.querySelector(".webmode_container");
 const webmode_dark = document.querySelector(".webmode_dark");
