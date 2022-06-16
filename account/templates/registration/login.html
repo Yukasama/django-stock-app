@@ -6,7 +6,13 @@
 <link rel="stylesheet" href="{% static 'account/css/login.css' %}">
 
 {% if user.is_authenticated %}
-<p>You are logged in already.</p>
+<div class="message_field flex">
+  <p class="message_text">You are logged in already.</p>
+  <button class="icon_button portfolio_login transition">
+    <i class="fa-solid fa-arrow-right-to-bracket portfolio_icon"></i>
+    <a href="{% url 'home' %}">Back</a>
+  </button> 
+</div>
 {% else %}
 <div class="login">
   <form method="POST" class="login_form flex">

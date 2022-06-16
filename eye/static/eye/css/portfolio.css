@@ -27,15 +27,6 @@
     color: var(--color-first);
 }
 
-.portfolio_message_c {
-    flex-direction: column;
-    align-items: center;
-}
-.portfolio_message {
-    color: var(--color-text-theme);
-    font-size: 2em;
-    font-weight: 300;
-}
 .portfolio_form_c {
     position: fixed;
     width: 60%;

@@ -195,7 +195,6 @@ OVERVIEW OF EXISTING CLASSES
     margin-right: 20px;
     font-size: 20px;
 }
-
 .input {
     outline: none;
     resize: none;
@@ -205,8 +204,6 @@ OVERVIEW OF EXISTING CLASSES
     height: 100%;
     background: transparent;
 }
-
-
 .input_valid + i {
     opacity: 0;
     transition: opacity 0.3s;
@@ -216,27 +213,27 @@ OVERVIEW OF EXISTING CLASSES
     color: rgb(0, 255, 0);
     opacity: 1;
 }
-
-
-
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active {
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover, 
+.input:-webkit-autofill:focus, 
+.input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 30px var(--color-theme) inset !important;
 }
 
 
-.searchInput {
-    outline: none;
-    resize: none;
-    border: none;
-    color: var(--color-reverse);
+.message_field {
+    height: 800px;
     width: 100%;
-    height: 100%;
-    background: transparent;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
+.message_text {
+    color: var(--color-text-theme);
+    font-size: 2em;
+    font-weight: 300;
+}
+
 
 
 .circle {
