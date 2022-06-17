@@ -11,8 +11,12 @@ class Signup(UserCreationForm):
     class Meta:
         model = User
         fields = ['username', 'password1', 'password2']
-        
+
     def __init__(self, *args, **kwargs):
         super(Signup, self).__init__(*args, **kwargs)
+        self.fields['username'].widget.attrs={'placeholder': 'Username', 'class': 'input input_valid'}
+        self.fields['password1'].widget.attrs={'placeholder': 'Password', 'class': 'input input_valid'}
+        self.fields['password2'].widget.attrs={'placeholder': 'Repeat Password', 'class': 'input input_valid'}
+
         
 

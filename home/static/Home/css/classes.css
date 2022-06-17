@@ -209,6 +209,9 @@ OVERVIEW OF EXISTING CLASSES
     height: 100%;
     background: transparent;
 }
+.input + i {
+    opacity: 0;
+}
 .input_valid + i {
     opacity: 0;
     transition: opacity 0.3s;

@@ -11,12 +11,19 @@ eventHandler(hamburger1, sidenavbar, "click", "window"); //sidenavBAR (MOBILE NA
 const sidenav_header = document.querySelectorAll(".sidenav_header")
 activeLooper(sidenav_header, "list"); //SIDENAVBAR ACTIVE HOVER ANIMATION
 
+const profile = document.querySelector(".profile");
+const profile_wrapper = document.querySelector(".profile_wrapper");
+eventHandler(profile, profile_wrapper, "click", "show");
+eventHandler(profile_wrapper, 0, "mouseleave", "hide"); //PROFILE CONTAINER
+
 const contact_link = document.querySelector(".contact_link");
 const contact = document.querySelector(".contact");
 const hamburger2 = document.querySelector(".hamburger2");
 eventHandler(contact_link, contact, "click", "show"); //CONTACT WINDOW TOGGLE
 eventHandler(hamburger2, contact, "click", "hide"); //CONTACT WINDOW HIDE 
 
+
+let side_link = document.querySelectorAll(".side_link");
 
 
 

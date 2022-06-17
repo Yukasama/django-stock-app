@@ -1,7 +1,6 @@
 
 
 //STOCK TEMPLATE
-let side_link = document.querySelectorAll(".sidelink");
 let stock_view = document.querySelectorAll(".stock_view");
 activeLooper(side_link, "navtabs", stock_view); // STOCK TABS (NAVIGATION)
 

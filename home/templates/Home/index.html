@@ -81,33 +81,35 @@
       <i class="material-icons webmode webmode_light">brightness_7</i>
     </div>
     {% if user.is_authenticated %}
-    <div class="profile_container flex">
-      <div class="profile_link profile_link1 flex">
-        <i class="material-icons profile_icon">account_circle</i>
-        <a href="{% url 'profile' %}" class="profile_text profile_username" href="">{{request.user}}</a>
-      </div>
+    <div class="profile_wrapper flex">
+      <div class="profile_container flex">
+        <div class="profile_link profile_link1 flex">
+          <i class="material-icons profile_icon">account_circle</i>
+          <a href="{% url 'profile' %}" class="profile_text profile_username" href="">{{request.user}}</a>
+        </div>
 
-      <div class="profile_separator"></div>
+        <div class="profile_separator"></div>
 
-      <div class="profile_link flex">
-        <i class="material-icons profile_icon">insert_chart</i>
-        <a href="{% url 'portfolio' %}" class="profile_text">Portfolios</a>
-      </div>
-      <div class="profile_link flex">
-        <i class="material-icons profile_icon">dashboard</i>
-        <a href="{% url 'profile' %}" class="profile_text">Posts</a>
-      </div>
-      <div class="profile_link flex">
-        <i class="material-icons profile_icon">settings</i>
-        <a href="{% url 'settings' %}" class="profile_text">Settings</a>
-      </div>
-      <div class="profile_link flex">
-        <i class="material-icons profile_icon">flag</i>
-        <a href="{% url 'help' %}" class="profile_text">Help</a>
-      </div>
-      <div class="profile_link flex">
-        <i class="material-icons profile_icon">exit_to_app</i>
-        <a href="{% url 'logout' %}" class="profile_text">Logout</a>
+        <div class="profile_link flex">
+          <i class="material-icons profile_icon">insert_chart</i>
+          <a href="{% url 'portfolio' %}" class="profile_text">Portfolios</a>
+        </div>
+        <div class="profile_link flex">
+          <i class="material-icons profile_icon">dashboard</i>
+          <a href="{% url 'profile' %}" class="profile_text">Posts</a>
+        </div>
+        <div class="profile_link flex">
+          <i class="material-icons profile_icon">settings</i>
+          <a href="{% url 'settings' %}" class="profile_text">Settings</a>
+        </div>
+        <div class="profile_link flex">
+          <i class="material-icons profile_icon">flag</i>
+          <a href="{% url 'help' %}" class="profile_text">Help</a>
+        </div>
+        <div class="profile_link flex">
+          <i class="material-icons profile_icon">exit_to_app</i>
+          <a href="{% url 'logout' %}" class="profile_text">Logout</a>
+        </div>
       </div>
     </div>
     {% endif %}
@@ -319,7 +321,7 @@
           <i class="social_icon fab fa-youtube"></i>
         </a>
         <a class="social_link social_link_facebook" href="">
-          <i class="social_icon fab fa-facebook"></i>
+          <i class="social_icon fab fa-facebook-f"></i>
         </a>
       </div>
     </div>

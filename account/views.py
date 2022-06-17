@@ -9,6 +9,7 @@ from . forms import Signup
 
 def signupView(request):
     form = Signup()
+    icons = ["user", "key", "key"]
     if request.method == "POST":
         form = Signup(request.POST)
         if form.is_valid():
@@ -19,7 +20,7 @@ def signupView(request):
             return redirect('home')
         else:
             messages.error(request, "Error during registration.")
-    return render(request, 'account/signup.html', {'form': form})
+    return render(request, 'account/signup.html', {'form': form, "icons": icons})
 
 
 

@@ -92,7 +92,6 @@ INTERNAL_IPS = [
 
 ROOT_URLCONF = 'Aethega.urls'
 
-
 WSGI_APPLICATION = 'Aethega.wsgi.application'
 
 

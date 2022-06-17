@@ -1,4 +1,5 @@
 
-const profile = document.querySelector(".profile");
-const profile_container = document.querySelector(".profile_container");
-eventHandler(profile, profile_container, "click", "show"); //PROFILE CONTAINER
+
+//STOCK TEMPLATE
+let profile_view = document.querySelectorAll(".profile_view");
+activeLooper(side_link, "navtabs", profile_view); // STOCK TABS (NAVIGATION)

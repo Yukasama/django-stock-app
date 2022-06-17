@@ -13,6 +13,15 @@
     margin: 20px 0;
     width: 350px;
 }
+.password_requirements {
+    margin-top: -10px;
+}
+.password_requirements li {
+    color: var(--color-text-theme);
+    font-size: 0.9em;
+    list-style: square;
+}
+
 .login_button {
     margin: 35px 0;
 }
@@ -25,4 +34,7 @@
 
 .message_field {
     margin-top: var(--height-navbar);
+}
+.messages li {
+    color: red;
 }
