@@ -15,9 +15,13 @@
 </div>
 
 {% else %}
-<div class="signup">
+<div class="signup login flex">
   <form method="POST" class="login_form flex">
     {% csrf_token %}
+    <div class="arrow_back flex">
+      <i class="fa-solid fa-arrow-left-long"></i>
+      <a href="{{request.META.HTTP_REFERER}}"></a>
+    </div>
     <h1 class="login_header">Sign Up</h1>
     <div class="inputField">
       <i class="fa-solid fa-user"></i>

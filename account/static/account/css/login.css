@@ -1,13 +1,29 @@
 
+.login {
+    background: linear-gradient(to right bottom, var(--color-first), var(--color-third));
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
 .login_form {
     flex-direction: column;
     width: 500px;
-    margin: 200px auto 0 auto;
+    height: 600px;
+    border-radius: 30px;
+    margin: 0 auto 0 auto;
     align-items: center;
+    justify-content: center;
+    background: var(--color-theme);
+}
+.arrow_back {
+    position: absolute;
+    top: 30px;
+    left: 30px;
 }
 .login_header {
     font-size: 1.5em;
-    margin: 10px 0;
+    margin: 0 0 10px 0;
 }
 .inputField {
     margin: 20px 0;
@@ -16,9 +32,15 @@
 .password_requirements {
     margin-top: -10px;
 }
-.password_requirements li {
+
+.forgot_password, .password_requirements li {
+    font-size: 0.85em;
     color: var(--color-text-theme);
+}
+.forgot_password {
     font-size: 0.9em;
+}
+.password_requirements li {
     list-style: square;
 }
 

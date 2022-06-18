@@ -247,6 +247,36 @@ OVERVIEW OF EXISTING CLASSES
 
 
 
+
+.arrow_back {
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: 45px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.4s;
+}
+.arrow_back i {
+    font-size: 27px;
+    color: var(--color-text-theme);
+    transition: color 0.3s;
+}
+.arrow_back a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.arrow_back:hover {
+    background: var(--color-first);
+}
+.arrow_back:hover i {
+    color: white;
+}
+
+
+
+
 .circle {
     position: absolute;
     height: 350px;
