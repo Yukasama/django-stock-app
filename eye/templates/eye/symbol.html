@@ -36,8 +36,8 @@
   </div>
 
   <div class="stock_window">
-    <div class="stock_view stock_view1 active grid-system">
-      <div class="stock_title stock_view-item flex">
+    <div class="stock_view stock_view1 active grid_system">
+      <div class="stock_title stock_view_item flex">
         <div class="stock_logo smart_box">
           <img class="stock_img" src={{logo}}>
         </div>
@@ -46,7 +46,7 @@
         <div class="stock_percent"></div>
       </div>
   
-      <div class="stock_chart stock_view-item flex">
+      <div class="stock_chart stock_view_item flex">
         <div class="tradingview-widget-container">
           <div id="tradingview_96d90"></div>
           <div class="tradingview-widget-copyright">
@@ -70,62 +70,67 @@
         </div>
       </div>
 
-      <div class="stock_ratings stock_view-item">
+      <div class="stock_ratings stock_view_item">
         <p class="stock_header">Ratings</p>
       </div>
 
-      <div class="stock_suggestions stock_view-item">
-        <p class="stock_header stock_suggest-header">Industry Competitors</p>
+      <div class="stock_suggestions stock_view_item">
+        <p class="stock_header stock_suggest_header">Industry Competitors</p>
         <div class="stock_suggest flex">
-          <div class="stock_logo stock_logo-s smart_box">
-            <img class="stock_img-s" src={{logo}}>
+          <div class="stock_logo stock_logo_s smart_box">
+            <img class="stock_img_s" src={{logo}}>
           </div>
           <div class="stock_suggest-info flex">
-            <div class="stock_name-s">Microsoft Inc.</div>
-            <div class="stock_suggest-data flex">
-              <div class="stock_price-s">1500.00$</div>
-              <div class="stock_percent-s">+1.59%</div>
+            <div class="stock_name_s">Microsoft Inc.</div>
+            <div class="stock_suggest_data flex">
+              <div class="stock_price_s">1500.00$</div>
+              <div class="stock_percent_s">+1.59%</div>
             </div>
           </div>
         </div>
 
         <div class="stock_suggest flex">
-          <div class="stock_logo stock_logo-s smart_box">
-            <img class="stock_img-s" src={{logo}}>
+          <div class="stock_logo stock_logo_s smart_box">
+            <img class="stock_img_s" src={{logo}}>
           </div>
           <div class="stock_suggest-info flex">
-            <div class="stock_name-s">Microsoft Inc.</div>
-            <div class="stock_suggest-data flex">
-              <div class="stock_price-s">1500.00$</div>
-              <div class="stock_percent-s">+1.59%</div>
+            <div class="stock_name_s">Microsoft Inc.</div>
+            <div class="stock_suggest_data flex">
+              <div class="stock_price_s">1500.00$</div>
+              <div class="stock_percent_s">+1.59%</div>
             </div>
           </div>
         </div>
 
         <div class="stock_suggest flex">
-          <div class="stock_logo stock_logo-s smart_box">
-            <img class="stock_img-s" src={{logo}}>
+          <div class="stock_logo stock_logo_s smart_box">
+            <img class="stock_img_s" src={{logo}}>
           </div>
           <div class="stock_suggest-info flex">
-            <div class="stock_name-s">Microsoft Inc.</div>
-            <div class="stock_suggest-data flex">
-              <div class="stock_price-s">1500.00$</div>
-              <div class="stock_percent-s">+1.59%</div>
+            <div class="stock_name_s">Microsoft Inc.</div>
+            <div class="stock_suggest_data flex">
+              <div class="stock_price_s">1500.00$</div>
+              <div class="stock_percent_s">+1.59%</div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="stock_metrics stock_view-item">
+      <div class="stock_metrics stock_view_item">
         <p class="stock_header">Key Metrics</p>
       </div>
 
-      <div class="stock_margins stock_view-item">
+      <div class="stock_margins stock_view_item">
         <p class="stock_header">Margins</p>
+        <div class="info flex">
+          <i class="fa-solid fa-question info_icon"></i>
+          <div class="flex">Margins give an Overview of how efficient a company runs it's operations</div>
+          <div></div>
+        </div>
         <canvas class="stock_margins_chart"></canvas>
       </div>
 
-      <div class="stock_financials stock_view-item">
+      <div class="stock_financials stock_view_item">
         <p class="stock_header">Financials</p>
       </div>
     </div>
@@ -177,6 +182,8 @@
   const profitMarginV = JSON.parse("{{profitMarginV|safe}}");
 
   const ctx = document.querySelector('.stock_margins_chart').getContext('2d');
+  ctx.width = 900;
+  ctx.height = 500;
   const myChart = new Chart(ctx, {
     type: 'bar',
     data: {
@@ -204,7 +211,7 @@
         legend: {
           labels: {
             font: {
-              size: 15,
+              size: 16,
             }
           }
         }

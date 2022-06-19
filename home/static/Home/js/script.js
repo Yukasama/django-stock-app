@@ -26,6 +26,15 @@ eventHandler(hamburger2, contact, "click", "hide"); //CONTACT WINDOW HIDE
 let side_link = document.querySelectorAll(".side_link");
 
 
+const info = document.querySelector(".info");
+const info_icon = document.querySelector(".info_icon");
+const infodesc = document.querySelector(".info_desc");
+eventHandler(info, 0, "mouseover", "add");
+eventHandler(info, 0, "mouseleave", "hide");
+eventHandler(info_icon, 0, "mouseover", "add");
+
+
+
 
 
 

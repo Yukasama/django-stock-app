@@ -22,6 +22,9 @@ function events(eventElement, showElement, event, action) {
             else if (action == "hide") {
                 showElement.classList.remove("show");
             }
+            else if (action == "add") {
+                showElement.classList.add("show");
+            }
             else if (action == "window") {
                 showElement.classList.toggle("scroll");
                 eventElement.classList.toggle("scroll");

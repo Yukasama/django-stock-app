@@ -310,6 +310,12 @@ class History(models.Model):
     symbol = models.ForeignKey(Stock, on_delete=models.CASCADE)
     updated = models.DateTimeField(auto_now=True)
     
+    openPrice = models.FloatField(null=True, blank=True)
+    highPrice = models.FloatField(null=True, blank=True)
+    lowPrice = models.FloatField(null=True, blank=True)
+    closePrice = models.FloatField(null=True, blank=True)
+    closePct = models.FloatField(null=True, blank=True)
+    
     def __str__(self):
         return self.symbol
     

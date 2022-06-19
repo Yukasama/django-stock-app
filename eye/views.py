@@ -72,7 +72,7 @@ def symbol(request, symbol):
     for key, value in info.items():
         data[key] = value
     #Create Auto-Generated Dict from Financial Data Model
-    for year in range(2015, 2022):
+    for year in range(2014, 2022):
         financial = Financial.objects.filter(symbol=symbol, year=year).values()[0]
         marginLabels.append(year)
         for key, value in financial.items():

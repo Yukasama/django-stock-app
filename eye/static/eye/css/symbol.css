@@ -30,17 +30,17 @@
 }
 .stock_view1 {
     width: 100%;
-    grid-template-areas: "stock_title stock_title stock_title stock_ratings"
-                         "stock_chart stock_chart stock_chart stock_ratings"
-                         "stock_chart stock_chart stock_chart stock_suggestions"
-                         "stock_chart stock_chart stock_chart stock_suggestions"
-                         "stock_metrics stock_metrics stock_margins stock_margins"
-                         "stock_financials stock_financials stock_financials stock_financials";
+    grid-template-areas: "stock_title stock_title stock_title stock_title stock_ratings stock_ratings"
+                         "stock_chart stock_chart stock_chart stock_chart stock_ratings stock_ratings"
+                         "stock_chart stock_chart stock_chart stock_chart stock_suggestions stock_suggestions"
+                         "stock_chart stock_chart stock_chart stock_chart stock_suggestions stock_suggestions"
+                         "stock_margins stock_metrics stock_metrics stock_metrics stock_metrics stock_metrics"
+                         "stock_financials stock_financials stock_financials stock_financials stock_financials stock_financials";
 }
 .stock_view.active {
     display: grid;
 }
-.stock_view-item {
+.stock_view_item {
     border-radius: 15px;
     background: var(--color-theme-contrast);
 }
@@ -81,32 +81,34 @@
     align-items: center;
     cursor: pointer;
 }
-.stock_logo-s {
+.stock_logo_s {
     height: 50px;
     width: 50px;
     margin: 20px;
     border-radius: 5px;
 }
-.stock_img-s {
+.stock_img_s {
     transform: scale(0.4);
 }
-.stock_suggest-info {
+.stock_suggest_info {
     flex-direction: column;
 }
-.stock_suggest-data {
+.stock_suggest_data {
     gap: 20px;
 }
 .stock_suggest:hover {
     background: var(--color-light);
 }
 
-
 .stock_margins {
-    width: 800px;
+    width: 900px;
     height: 500px;
 }
 .stock_margins_chart {
     transform: scale(0.95);
+}
+.info div {
+    height: 120px;
 }
 
 

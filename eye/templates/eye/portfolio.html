@@ -40,6 +40,9 @@
       <option>{{p.name}}</option>
       {% endfor %}
     </select>
+    <div class="portfolio_list">
+      {% for stock in portfolio.stocks.all %}
+    </div>
   </div>
       
   {% elif user.is_authenticated %}

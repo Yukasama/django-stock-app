@@ -289,6 +289,49 @@ OVERVIEW OF EXISTING CLASSES
     }
 }
 
+
+
+
+.info {
+    position: absolute;
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    justify-content: center;
+    align-items: center;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+}
+.info_icon {
+    color: var(--color-text-theme);
+    font-size: 18px;
+    transition: color 0.2s;
+}
+.info div {
+    display: none;
+    position: absolute;
+    margin-left: 300px;
+    width: 200px;
+    height: 100px;
+    background: var(--color-light);
+    text-align: center;
+    align-items: center;
+}
+.info div:last-child {
+    height: 30px;
+    width: 30px;
+    margin-right: 198px;
+    transform: rotate(45deg);
+    background: var(--color-light);
+}
+.info.show i {
+    color: var(--color-reverse);
+}
+.info.show div, .info.show div:last-child {
+    display: flex;
+}
+
 .circle {
     position: absolute;
     height: 350px;
@@ -329,7 +372,7 @@ OVERVIEW OF EXISTING CLASSES
 .grid-item4 {  grid-area: grid-item4;  }
 .grid-item5 {  grid-area: grid-item5;  }
 .grid-item6 {  grid-area: grid-item6;  }
-.grid-system {
+.grid_system {
     display: grid;
     grid-gap: 20px;
 }
