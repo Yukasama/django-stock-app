@@ -278,6 +278,7 @@
     transition: width 0.3s;
     overflow: hidden;
     z-index: 5;
+    margin-right: 3px;
 }
 .sidebar:hover {
     width: 210px;

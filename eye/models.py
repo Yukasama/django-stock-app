@@ -54,7 +54,7 @@ class Financial(models.Model):
     
     #Symbol Data
     symbol = models.ForeignKey(Stock, on_delete=models.CASCADE)
-    year = models.IntegerField()
+    year = models.IntegerField(db_index=True)
     verification = models.CharField(max_length=15, primary_key=True)
     
     #Basic Data
@@ -299,16 +299,29 @@ class Financial(models.Model):
     DCF = models.FloatField(blank=True, null=True)
     
     
+    
     def __str__(self):
         return self.verification
     
+
+
+
+class History(models.Model):
+    symbol = models.ForeignKey(Stock, on_delete=models.CASCADE)
+    updated = models.DateTimeField(auto_now=True)
+    
+    def __str__(self):
+        return self.symbol
+    
+ 
+ 
     
     
 
 class Portfolio(models.Model):
     
     #User Based
-    host = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     name = models.CharField(max_length=100)
     
     #Stocks
@@ -320,5 +333,8 @@ class Portfolio(models.Model):
     
     
     def __str__(self):
-        return f'{self.host}-{self.name}'
+        return f'{self.user}-{self.name}'
+    
+    
+
         

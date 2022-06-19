@@ -101,6 +101,15 @@
 }
 
 
+.stock_margins {
+    width: 800px;
+    height: 500px;
+}
+.stock_margins_chart {
+    transform: scale(0.95);
+}
+
+
 
 
 @media screen and (max-width: 800px) {

@@ -5,6 +5,8 @@ from django.contrib.auth.models import User
 from eye.models import Stock, Info, Financial, Portfolio
 from eye.stocks import datahandler as dt
 from eye.forms import PortfolioForm
+from django.core import serializers
+import pandas as pd
 
 
 
@@ -56,25 +58,32 @@ def portfolio(request):
 
 def symbol(request, symbol):
     symbol = Stock.objects.get(symbol=symbol)
-    info = Info.objects.filter(symbol=symbol)
-    #Data
-    mode = "dark" 
-    infoList = ["ticker", "city", "state", "country", "address", "name", "summary", 
-                "employees", "sector", "industry", "exchange", "quoteType", "currency", 
-                "phone", "website", "logo", "period", "cik", "link", "finalLink"]
-    findata = dt.findata
+    marginLabels = []
+    grossMarginV, operatingMarginV, profitMarginV = [], [], []
     data = {
-        'mode': mode,
+        'mode': "dark",
+        'marginLabels': marginLabels,
+        'grossMarginV': grossMarginV,
+        'operatingMarginV': operatingMarginV,
+        'profitMarginV': profitMarginV,
     }
-    for item in infoList:
-        key = f'{item}'
-        value = info.values_list(item, flat=True).first()
-        data[key] = value    
-    for year in range(2021, 2022):
-        financial = Financial.objects.filter(symbol=symbol, year=year)
-        for fin in findata:
-            key = f'{fin}{year}'
-            value = financial.values_list(fin, flat=True).first()
+    #Create Auto-Generated Dict from Info Data Model
+    info = Info.objects.filter(symbol=symbol).values()[0]
+    for key, value in info.items():
+        data[key] = value
+    #Create Auto-Generated Dict from Financial Data Model
+    for year in range(2015, 2022):
+        financial = Financial.objects.filter(symbol=symbol, year=year).values()[0]
+        marginLabels.append(year)
+        for key, value in financial.items():
+            key = f'{key}{year}'
             data[key] = value
-    
+            if(key == f"grossProfitMargin{year}"):
+                grossMarginV.append(value)
+            elif(key == f"operatingProfitMargin{year}"):
+                operatingMarginV.append(value)
+            elif(key == f"netProfitMargin{year}"):
+                profitMarginV.append(value)
+            
+
     return render(request, 'eye/symbol.html', data)

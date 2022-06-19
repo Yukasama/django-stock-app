@@ -251,7 +251,7 @@ OVERVIEW OF EXISTING CLASSES
 .arrow_back {
     justify-content: center;
     align-items: center;
-    height: 45px;
+    height: 35px;
     width: 45px;
     border-radius: 10px;
     cursor: pointer;
@@ -276,6 +276,18 @@ OVERVIEW OF EXISTING CLASSES
 
 
 
+
+.loading_animation {
+    animation: loading;
+}
+.loading_animation * {
+    opacity: 0;
+}
+@keyframes loading {
+    0% {
+
+    }
+}
 
 .circle {
     position: absolute;

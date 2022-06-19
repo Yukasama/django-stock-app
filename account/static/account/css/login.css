@@ -12,25 +12,35 @@
     height: 600px;
     border-radius: 30px;
     margin: 0 auto 0 auto;
-    align-items: center;
     justify-content: center;
     background: var(--color-theme);
 }
-.arrow_back {
+.arrow_back, .home_back {
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 25px;
+}
+.arrow_back {
+    left: 25px;
+}
+.home_back {
+    left: 430px;
+}
+.home_back i {
+    font-size: 24px;
 }
 .login_header {
     font-size: 1.5em;
-    margin: 0 0 10px 0;
+    margin: 0 0 10px;
+    padding-left: 75px;
+    border-left: var(--color-first) 4px solid;
+    color: var(--color-first);
 }
 .inputField {
-    margin: 20px 0;
+    margin: 20px 75px;
     width: 350px;
 }
-.password_requirements {
-    margin-top: -10px;
+.input:focus::placeholder {
+    color: var(--color-first);
 }
 
 .forgot_password, .password_requirements li {
@@ -39,16 +49,23 @@
 }
 .forgot_password {
     font-size: 0.9em;
+    margin: -10px 0 0 85px;
+    cursor: pointer;
+    transition: color 0.15s;
+}
+.forgot_password:hover {
+    color: var(--color-first);
 }
 .password_requirements li {
     list-style: square;
 }
 
 .login_button {
-    margin: 35px 0;
+    margin: 30px 75px;
 }
 .login_redirect {
     color: var(--color-text-theme);
+    margin-left: 75px;
 }
 .login_link {
     color: var(--color-first);
@@ -59,4 +76,8 @@
 }
 .messages li {
     color: red;
+}
+
+.password_requirements {
+    margin: -10px 0 0 105px;
 }

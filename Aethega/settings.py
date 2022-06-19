@@ -106,6 +106,7 @@ DATABASES = {
         'PASSWORD': '',
         'USER': '',
         'PORT': '',
+        'CONN_MAX_AGE': 60,
     }
 }
 

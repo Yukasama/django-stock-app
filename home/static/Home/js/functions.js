@@ -34,7 +34,7 @@ function events(eventElement, showElement, event, action) {
             }
         })
     } catch {
-        console.log(eventElement + " could'nt be processed.");
+        console.log("Error: 'EventHandler' (event=" + event + "), " + "(action=" + action + ")");
     }
 }
 

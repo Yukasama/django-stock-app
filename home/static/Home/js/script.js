@@ -49,8 +49,6 @@ let side_link = document.querySelectorAll(".side_link");
 
 
 
-
-
 // Functions you might need down the road //
 
 //ELEMENT SLIDING

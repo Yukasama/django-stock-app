@@ -1,11 +1,9 @@
 {% extends "home/index.html" %}
 
-
 {% block content %}
 {% load static %}
 
 <link rel="stylesheet" href="{% static 'eye/css/symbol.css' %}">
-
 
 
 <div class="stocks flex">
@@ -44,11 +42,10 @@
           <img class="stock_img" src={{logo}}>
         </div>
         <h1 class="stock_name">{{name}}</h1>
-        <div class="stock_price"></div>
+        <div class="stock_price loading_animation">{{netIncome2021}}</div>
         <div class="stock_percent"></div>
       </div>
   
-
       <div class="stock_chart stock_view-item flex">
         <div class="tradingview-widget-container">
           <div id="tradingview_96d90"></div>
@@ -73,11 +70,9 @@
         </div>
       </div>
 
-
       <div class="stock_ratings stock_view-item">
         <p class="stock_header">Ratings</p>
       </div>
-
 
       <div class="stock_suggestions stock_view-item">
         <p class="stock_header stock_suggest-header">Industry Competitors</p>
@@ -121,21 +116,21 @@
         </div>
       </div>
 
-
       <div class="stock_metrics stock_view-item">
         <p class="stock_header">Key Metrics</p>
       </div>
 
-
       <div class="stock_margins stock_view-item">
         <p class="stock_header">Margins</p>
+        <canvas class="stock_margins_chart"></canvas>
       </div>
-
 
       <div class="stock_financials stock_view-item">
         <p class="stock_header">Financials</p>
       </div>
     </div>
+
+
 
 
     <div class="stock_view stock_view2 grid-system">
@@ -165,6 +160,7 @@
 
 
 
+
       <div class="stock_view stock_view3 grid-system">
         <p>Stock view 3</p>
       </div>
@@ -172,6 +168,72 @@
     </div>
   </div>
 </div>
+
+
+<script>
+  const marginLabels = JSON.parse("{{marginLabels|safe}}");
+  const grossMarginV = JSON.parse("{{grossMarginV|safe}}");
+  const operatingMarginV = JSON.parse("{{operatingMarginV|safe}}");
+  const profitMarginV = JSON.parse("{{profitMarginV|safe}}");
+
+  const ctx = document.querySelector('.stock_margins_chart').getContext('2d');
+  const myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: marginLabels,
+      datasets: [
+      {
+        label: "Gross Margin",
+        data: grossMarginV,
+        backgroundColor: "rgb(0, 110, 255)",
+      },
+      {
+        label: "Operating Margin",
+        data: operatingMarginV,
+        backgroundColor: "red",
+      },
+      {
+        label: "Profit Margin",
+        data: profitMarginV,
+        backgroundColor: "rgb(110, 255, 0)",
+      }
+      ],
+    },
+    options: {
+      plugins: {
+        legend: {
+          labels: {
+            font: {
+              size: 15,
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          grid: {
+            display: false
+          },
+          align: "end",
+        },
+        y: {
+          grid: {
+            display: false
+          },
+          ticks: {
+            beginAtZero: true,
+            callback: function(value, index, values) {
+               return value * 100 + '%';
+            },
+            font: 16,
+          }
+        }
+      }
+    }
+  });
+</script>
+
+
 
 
 
