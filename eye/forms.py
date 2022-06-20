@@ -10,5 +10,5 @@ class PortfolioForm(ModelForm):
         
     def __init__(self, *args, **kwargs):
         super(PortfolioForm, self).__init__(*args, **kwargs)
-        self.fields["name"].widget.attrs.update({"class": "input"})
+        self.fields["name"].widget.attrs.update({"class": "input", "placeholder": "Portfolio Name"})
 

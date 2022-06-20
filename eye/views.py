@@ -37,7 +37,7 @@ def screener(request):
 
 
 def portfolio(request):
-    form = PortfolioForm(initial={"host": request.user})
+    form = PortfolioForm()
     #Check for Create Form
     if (request.method == 'POST'):
         form = PortfolioForm(request.POST)
@@ -45,7 +45,7 @@ def portfolio(request):
             form.save()
             return redirect("portfolio")
     exists = False
-    portfolios = Portfolio.objects.filter()
+    portfolios = Portfolio.objects.filter(user=request.user)
     if (portfolios.exists()): exists = True
     data = {
         'form': form,
@@ -58,14 +58,21 @@ def portfolio(request):
 
 def symbol(request, symbol):
     symbol = Stock.objects.get(symbol=symbol)
-    marginLabels = []
+    yearLabels = []
     grossMarginV, operatingMarginV, profitMarginV = [], [], []
+    peRatioV, pbRatioV, pfcfRatioV = [], [], []
+    dividendYieldV, payoutRatioV = [], []
     data = {
         'mode': "dark",
-        'marginLabels': marginLabels,
+        'yearLabels': yearLabels,
         'grossMarginV': grossMarginV,
         'operatingMarginV': operatingMarginV,
         'profitMarginV': profitMarginV,
+        'peRatioV': peRatioV,
+        'pbRatioV': pbRatioV,
+        'pfcfRatioV': pfcfRatioV,
+        'dividendYieldV': dividendYieldV,
+        'payoutRatioV': payoutRatioV,
     }
     #Create Auto-Generated Dict from Info Data Model
     info = Info.objects.filter(symbol=symbol).values()[0]
@@ -74,16 +81,17 @@ def symbol(request, symbol):
     #Create Auto-Generated Dict from Financial Data Model
     for year in range(2014, 2022):
         financial = Financial.objects.filter(symbol=symbol, year=year).values()[0]
-        marginLabels.append(year)
+        yearLabels.append(year)
         for key, value in financial.items():
             key = f'{key}{year}'
             data[key] = value
-            if(key == f"grossProfitMargin{year}"):
-                grossMarginV.append(value)
-            elif(key == f"operatingProfitMargin{year}"):
-                operatingMarginV.append(value)
-            elif(key == f"netProfitMargin{year}"):
-                profitMarginV.append(value)
-            
+            if(key == f"grossProfitMargin{year}"): grossMarginV.append(value)
+            elif(key == f"operatingProfitMargin{year}"): operatingMarginV.append(value)
+            elif(key == f"netProfitMargin{year}"): profitMarginV.append(value)
+            elif(key == f"peRatio{year}"): peRatioV.append(value)
+            elif(key == f"pbRatio{year}"): pbRatioV.append(value)
+            elif(key == f"pfcfRatio{year}"): pfcfRatioV.append(value)
+            elif(key == f"dividendYield{year}"): dividendYieldV.append(value)
+            elif(key == f"payoutRatio{year}"): payoutRatioV.append(value)
 
     return render(request, 'eye/symbol.html', data)

@@ -20,9 +20,8 @@
 .stock_title {  grid-area: stock_title;  }
 .stock_chart {  grid-area: stock_chart;  }
 .stock_ratings {  grid-area: stock_ratings;  }
-.stock_metrics {  grid-area: stock_metrics;  }
 .stock_suggestions {  grid-area: stock_suggestions;  }
-.stock_margins {  grid-area: stock_margins;  }
+.stock_charts {  grid-area: stock_charts;  }
 .stock_financials {  grid-area: stock_financials;  }
 
 .stock_view {
@@ -34,7 +33,7 @@
                          "stock_chart stock_chart stock_chart stock_chart stock_ratings stock_ratings"
                          "stock_chart stock_chart stock_chart stock_chart stock_suggestions stock_suggestions"
                          "stock_chart stock_chart stock_chart stock_chart stock_suggestions stock_suggestions"
-                         "stock_margins stock_metrics stock_metrics stock_metrics stock_metrics stock_metrics"
+                         "stock_charts stock_charts stock_charts stock_charts stock_charts stock_charts"
                          "stock_financials stock_financials stock_financials stock_financials stock_financials stock_financials";
 }
 .stock_view.active {
@@ -100,15 +99,20 @@
     background: var(--color-light);
 }
 
-.stock_margins {
-    width: 900px;
-    height: 500px;
+.stock_charts {
+    justify-content: space-between;
+    width: 100%;
 }
-.stock_margins_chart {
+.stock_chart_item {
+    width: 32.5%;
+}
+.stock_margins_chart, .stock_metrics_chart, .stock_dividend_chart {
     transform: scale(0.95);
 }
-.info div {
-    height: 120px;
+.info {
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
 

@@ -42,12 +42,14 @@
     </select>
     <div class="portfolio_list">
       {% for stock in portfolio.stocks.all %}
+      <p>stock</p>
+      {% endfor %}
     </div>
   </div>
       
   {% elif user.is_authenticated %}
-  <div class="portfolio_message_c flex">
-    <p class="portfolio_message">You have no Portfolios yet.</p>
+  <div class="message_field flex">
+    <p class="message_text">You have no Portfolios yet.</p>
     <button class="icon_button portfolio_createone">
       <i class="fa-solid fa-arrow-right-to-bracket portfolio_icon"></i>
       <a>Create One</a>
@@ -57,7 +59,6 @@
         {% csrf_token %}
         <div class="inputField">
           {{form.name}}
-          <span>Portfolio Name</span>
         </div>
         <button type="submit" class="create_button portfolio_create">
           <i class="fa-solid fa-plus"></i>

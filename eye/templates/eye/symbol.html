@@ -116,24 +116,45 @@
         </div>
       </div>
 
-      <div class="stock_metrics stock_view_item">
-        <p class="stock_header">Key Metrics</p>
+
+      <div class="stock_charts flex">
+        <div class="stock_margins stock_chart_item stock_view_item">
+          <p class="stock_header">Margins</p>
+          <div class="info flex">
+            <i class="fa-solid fa-question info_icon"></i>
+            <div class="flex">Margins give an Overview of how efficient a company runs it's operations</div>
+            <div></div>
+          </div>
+          <canvas class="stock_margins_chart"></canvas>
+        </div>
+
+        <div class="stock_metrics stock_chart_item stock_view_item">
+          <p class="stock_header">Key Metrics</p>
+          <div class="info flex">
+            <i class="fa-solid fa-question info_icon"></i>
+            <div class="flex">Margins give an Overview of how efficient a company runs it's operations</div>
+            <div></div>
+          </div>
+          <canvas class="stock_metrics_chart"></canvas>
+        </div>
+
+        <div class="stock_dividend stock_chart_item stock_view_item">
+          <p class="stock_header">Dividend</p>
+          <div class="info flex">
+            <i class="fa-solid fa-question info_icon"></i>
+            <div class="flex">Margins give an Overview of how efficient a company runs it's operations</div>
+            <div></div>
+          </div>
+          <canvas class="stock_dividend_chart"></canvas>
+        </div>
       </div>
 
-      <div class="stock_margins stock_view_item">
-        <p class="stock_header">Margins</p>
-        <div class="info flex">
-          <i class="fa-solid fa-question info_icon"></i>
-          <div class="flex">Margins give an Overview of how efficient a company runs it's operations</div>
-          <div></div>
-        </div>
-        <canvas class="stock_margins_chart"></canvas>
-      </div>
 
       <div class="stock_financials stock_view_item">
         <p class="stock_header">Financials</p>
       </div>
     </div>
+
 
 
 
@@ -176,18 +197,52 @@
 
 
 <script>
-  const marginLabels = JSON.parse("{{marginLabels|safe}}");
+  const yearLabels = JSON.parse("{{yearLabels|safe}}");
   const grossMarginV = JSON.parse("{{grossMarginV|safe}}");
   const operatingMarginV = JSON.parse("{{operatingMarginV|safe}}");
   const profitMarginV = JSON.parse("{{profitMarginV|safe}}");
+  const peRatioV = JSON.parse("{{peRatioV|safe}}");
+  const pbRatioV = JSON.parse("{{pbRatioV|safe}}");
+  const pfcfRatioV = JSON.parse("{{pfcfRatioV|safe}}");
+  const dividendYieldV = JSON.parse("{{dividendYieldV|safe}}");
+  const payoutRatioV = JSON.parse("{{payoutRatioV|safe}}");
 
-  const ctx = document.querySelector('.stock_margins_chart').getContext('2d');
-  ctx.width = 900;
-  ctx.height = 500;
-  const myChart = new Chart(ctx, {
+  function chartConfig(args="normal") {
+    var config = {
+      plugins: { legend: { labels: {
+        font: {
+          size: 14,
+        } } } 
+      },
+      scales: {
+        x: {
+          grid: {
+            display: false
+          },
+          align: "end",
+        },
+        y: {
+          grid: {
+            display: false
+          },
+          ticks: {
+            beginAtZero: true,
+            callback: function(value, index, values) {
+              if (args == "pct") { return value * 100 + '%'; } 
+              else { return value }
+            },
+            font: 14,
+          }
+    } } }
+    return config
+  }
+
+
+  const stock_margins_chart = document.querySelector('.stock_margins_chart').getContext('2d');
+  const chart1 = new Chart(stock_margins_chart, {
     type: 'bar',
     data: {
-      labels: marginLabels,
+      labels: yearLabels,
       datasets: [
       {
         label: "Gross Margin",
@@ -206,38 +261,62 @@
       }
       ],
     },
-    options: {
-      plugins: {
-        legend: {
-          labels: {
-            font: {
-              size: 16,
-            }
-          }
-        }
-      },
-      scales: {
-        x: {
-          grid: {
-            display: false
-          },
-          align: "end",
-        },
-        y: {
-          grid: {
-            display: false
-          },
-          ticks: {
-            beginAtZero: true,
-            callback: function(value, index, values) {
-               return value * 100 + '%';
-            },
-            font: 16,
-          }
-        }
-      }
-    }
+    options: chartConfig("pct"),
   });
+
+  const stock_metrics_chart = document.querySelector('.stock_metrics_chart').getContext('2d');
+  const chart2 = new Chart(stock_metrics_chart, {
+    type: 'line',
+    data: {
+      labels: yearLabels,
+      datasets: [
+      {
+        label: "P/E Ratio",
+        data: peRatioV,
+        backgroundColor: "red",
+      },
+      {
+        label: "P/B Ratio",
+        data: pbRatioV,
+        backgroundColor: "rgb(110, 255, 0)",
+      },
+      {
+        label: "P/FCF Ratio",
+        data: pfcfRatioV,
+        backgroundColor: "rgb(110, 255, 255)",
+      },
+      ],
+    },
+    options: chartConfig(),
+  });
+
+  const dividend_chart = document.querySelector('.stock_dividend_chart').getContext('2d');
+  const chart3 = new Chart(dividend_chart, {
+    type: 'line',
+    data: {
+      labels: yearLabels,
+      datasets: [
+      {
+        label: "Dividend in %",
+        data: dividendYieldV,
+        backgroundColor: "rgb(0, 110, 255)",
+      },
+      {
+        label: "Payout Ratio",
+        data: payoutRatioV,
+        backgroundColor: "red",
+      },
+      {
+        label: "Profit Margin",
+        data: profitMarginV,
+        backgroundColor: "rgb(110, 255, 0)",
+      }
+      ],
+    },
+    options: chartConfig("pct"),
+  });
+
+
 </script>
 
 

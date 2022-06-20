@@ -24,13 +24,51 @@ OVERVIEW OF EXISTING CLASSES
 */
 
 
-
+/* BASICS */
 .flex {  display: flex;  }
 .grid {  display: grid;  }
+.grid-item {  box-shadow: 0 10px 10px var(--color-block-shadow);  }
+.grid-item1 {  grid-area: grid-item1;  }
+.grid-item2 {  grid-area: grid-item2;  }
+.grid-item3 {  grid-area: grid-item3;  }
+.grid-item4 {  grid-area: grid-item4;  }
+.grid-item5 {  grid-area: grid-item5;  }
+.grid-item6 {  grid-area: grid-item6;  }
+.grid_system {
+    display: grid;
+    grid-gap: 20px;
+}
 .transition {  transition: 0.3s;  }
 .border {  border: 1px solid red !important;  }
 
-.normal_button, .normal_button, .smart_button, .smart_button_outline, .icon_button, .create_button, .delete_button {
+
+
+/* LAYOUTS */
+.flex_box, .smart_box, .smart_list {
+    display: flex;
+}
+.flex_box {
+    align-items: center;
+    justify-content: center;
+}
+.smart_box, .smart_list {
+    box-shadow: 0 10px 20px var(--color-block-shadow);
+    border-radius: var(--border-radius);
+    background: var(--color-theme);
+}
+.smart_box {
+    align-items: center;
+    justify-content: center;
+}
+.smart_list {
+    flex-direction: column;
+}
+
+
+
+/* BUTTONS */
+.normal_button, .normal_button, .smart_button, .smart_button_outline, 
+.icon_button, .create_button, .delete_button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,12 +129,6 @@ OVERVIEW OF EXISTING CLASSES
     transition: width 0.2s, height 0.2s;
     background: var(--color-first);
 }
-.icon_button.show {
-    background: var(--color-theme);
-    border: 1px var(--color-reverse) solid;
-    height: 40px;
-    width: 60px;
-}
 .icon_button > i {
     color: var(--color-reverse);
     font-size: 25px;
@@ -104,10 +136,6 @@ OVERVIEW OF EXISTING CLASSES
     opacity: 0;
     transition: transform 0.15s ease, opacity 0.2s;
     transform: translate(-30px, 0);
-}
-.icon_button.show > i {
-    opacity: 1;
-    transform: translate(0, 0);
 }
 .icon_button > a {
     position: absolute;
@@ -120,11 +148,18 @@ OVERVIEW OF EXISTING CLASSES
     justify-content: center;
     align-items: center;
 }
-.icon_button.show > a {
+.icon_button.show {
+    background: var(--color-theme);
+    border: 1px var(--color-reverse) solid;
+    width: 60px;
+}
+.icon_button.show > i {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.icon_button.show > a {  
     opacity: 0;
 }
-
-
 
 .create_button, .delete_button {
     background: transparent;
@@ -141,24 +176,35 @@ OVERVIEW OF EXISTING CLASSES
 }
 
 
-
-.smart_box, .smart_list {
-    display: flex;
-    box-shadow: 0 10px 20px var(--color-block-shadow);
-    border-radius: var(--border-radius);
-    background: var(--color-theme);
-}
-.smart_box {
-    align-items: center;
+.arrow_back {
     justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 45px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.4s;
 }
-.smart_list {
-    flex-direction: column;
+.arrow_back i {
+    font-size: 27px;
+    color: var(--color-text-theme);
+    transition: color 0.3s;
+}
+.arrow_back a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.arrow_back:hover {
+    background: var(--color-first);
+}
+.arrow_back:hover i {
+    color: white;
 }
 
 
 
-
+/* EFFECTS */
 .effect::before {
     content: "";
     position: absolute;
@@ -190,6 +236,7 @@ OVERVIEW OF EXISTING CLASSES
 
 
 
+/* INPUTFIELDS */
 .inputField {
     display: flex;
     padding: 10px 20px;
@@ -229,6 +276,8 @@ OVERVIEW OF EXISTING CLASSES
 }
 
 
+
+/* LAYOUT FOR MESSAGE */
 .message_field {
     height: 800px;
     width: 100%;
@@ -247,60 +296,13 @@ OVERVIEW OF EXISTING CLASSES
 
 
 
-
-.arrow_back {
-    justify-content: center;
-    align-items: center;
-    height: 35px;
-    width: 45px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background 0.4s;
-}
-.arrow_back i {
-    font-size: 27px;
-    color: var(--color-text-theme);
-    transition: color 0.3s;
-}
-.arrow_back a {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-.arrow_back:hover {
-    background: var(--color-first);
-}
-.arrow_back:hover i {
-    color: white;
-}
-
-
-
-
-.loading_animation {
-    animation: loading;
-}
-.loading_animation * {
-    opacity: 0;
-}
-@keyframes loading {
-    0% {
-
-    }
-}
-
-
-
-
+/* INFO HOVER FIELD */
 .info {
-    position: absolute;
     cursor: pointer;
     height: 35px;
     width: 35px;
     justify-content: center;
     align-items: center;
-    top: 10px;
-    right: 10px;
     z-index: 1;
 }
 .info_icon {
@@ -313,7 +315,7 @@ OVERVIEW OF EXISTING CLASSES
     position: absolute;
     margin-left: 300px;
     width: 200px;
-    height: 100px;
+    height: 120px;
     background: var(--color-light);
     text-align: center;
     align-items: center;
@@ -332,6 +334,9 @@ OVERVIEW OF EXISTING CLASSES
     display: flex;
 }
 
+
+
+/* OBJECTS */
 .circle {
     position: absolute;
     height: 350px;
@@ -341,6 +346,8 @@ OVERVIEW OF EXISTING CLASSES
 }
 
 
+
+/* HAMBURGER DESIGN */
 .hamburger {
     height: 20px;
     width: 20px;
@@ -354,32 +361,16 @@ OVERVIEW OF EXISTING CLASSES
     width: 25px;
     background: var(--color-reverse);
 }
-.hamburger_line_active1 {
-    transform: rotate(45deg) translate(7px, 7px);
+.hamburger_line_active1 {  transform: rotate(45deg) translate(7px, 7px);  }
+.hamburger_line_active2 {  opacity: 0;  }
+.hamburger_line_active3 {  transform: rotate(-45deg) translate(6.2px, -6.2px);  } 
+
+
+
+/* COLOR GRADIENTS */
+.red-gradient, .yellow-gradient, .green-gradient, .cyan-gradient, .blue-gradient, .purple-gradient {
+    background-size: 400%;
 }
-.hamburger_line_active2 {
-    opacity: 0;
-}
-.hamburger_line_active3 {
-    transform: rotate(-45deg) translate(6.2px, -6.2px);
-} 
-
-
-.grid-item {  box-shadow: 0 10px 10px var(--color-block-shadow);  }
-.grid-item1 {  grid-area: grid-item1;  }
-.grid-item2 {  grid-area: grid-item2;  }
-.grid-item3 {  grid-area: grid-item3;  }
-.grid-item4 {  grid-area: grid-item4;  }
-.grid-item5 {  grid-area: grid-item5;  }
-.grid-item6 {  grid-area: grid-item6;  }
-.grid_system {
-    display: grid;
-    grid-gap: 20px;
-}
-
-
-
-
 .red-gradient {
     background: linear-gradient(to left bottom,
             rgb(255, 150, 150),
@@ -388,7 +379,6 @@ OVERVIEW OF EXISTING CLASSES
             rgb(255, 100, 100), 
             rgb(255, 150, 150));
     box-shadow: 0 10px 20px rgba(255, 0, 0, 0.4);
-    background-size: 400%;
 }
 .yellow-gradient {
     background: linear-gradient(to left bottom,
@@ -398,7 +388,6 @@ OVERVIEW OF EXISTING CLASSES
             rgb(255, 201, 66),
             rgb(255, 231, 95));
     box-shadow: 0 10px 20px rgba(255, 242, 0, 0.4);
-    background-size: 400%;
 }
 .green-gradient {
     background: linear-gradient(to left bottom,
@@ -408,7 +397,6 @@ OVERVIEW OF EXISTING CLASSES
             rgb(79, 255, 85),
             rgb(124, 255, 94));
     box-shadow: 0 10px 20px rgba(0, 255, 8, 0.4);
-    background-size: 400%;
 }
 .cyan-gradient {
     background: linear-gradient(to left bottom,
@@ -418,7 +406,6 @@ OVERVIEW OF EXISTING CLASSES
             rgb(79, 190, 255),
             rgb(94, 212, 255));
     box-shadow: 0 10px 20px rgba(0, 153, 255, 0.4);
-    background-size: 400%;
 }
 .blue-gradient {
     background: linear-gradient(to left bottom,
@@ -428,7 +415,6 @@ OVERVIEW OF EXISTING CLASSES
             rgb(50, 43, 255),
             rgb(78, 78, 255));
     box-shadow: 0 10px 20px rgba(0, 4, 255, 0.4);
-    background-size: 400%;
 }
 .purple-gradient {
     background: linear-gradient(to left bottom,
@@ -438,5 +424,19 @@ OVERVIEW OF EXISTING CLASSES
             rgb(160, 43, 255),
             rgb(155, 78, 255));
     box-shadow: 0 10px 20px rgba(140, 0, 255, 0.4);
-    background-size: 400%;
+}
+
+
+
+
+.loading_animation {
+    animation: loading;
+}
+.loading_animation * {
+    opacity: 0;
+}
+@keyframes loading {
+    0% {
+
+    }
 }
