@@ -42,7 +42,6 @@
           <img class="stock_img" src={{logo}}>
         </div>
         <h1 class="stock_name">{{name}}</h1>
-        <div class="stock_price loading_animation">{{netIncome2021}}</div>
         <div class="stock_percent"></div>
       </div>
   
@@ -198,14 +197,14 @@
 
 <script>
   const yearLabels = JSON.parse("{{yearLabels|safe}}");
-  const grossMarginV = JSON.parse("{{grossMarginV|safe}}");
-  const operatingMarginV = JSON.parse("{{operatingMarginV|safe}}");
-  const profitMarginV = JSON.parse("{{profitMarginV|safe}}");
-  const peRatioV = JSON.parse("{{peRatioV|safe}}");
-  const pbRatioV = JSON.parse("{{pbRatioV|safe}}");
-  const pfcfRatioV = JSON.parse("{{pfcfRatioV|safe}}");
-  const dividendYieldV = JSON.parse("{{dividendYieldV|safe}}");
-  const payoutRatioV = JSON.parse("{{payoutRatioV|safe}}");
+  const grossMargin = JSON.parse("{{grossProfitMargin|safe}}");
+  const operatingMargin = JSON.parse("{{operatingProfitMargin|safe}}");
+  const profitMargin = JSON.parse("{{netProfitMargin|safe}}");
+  const peRatio = JSON.parse("{{peRatio|safe}}");
+  const pbRatio = JSON.parse("{{pbRatio|safe}}");
+  const pfcfRatio = JSON.parse("{{pfcfRatio|safe}}");
+  const dividendYield = JSON.parse("{{dividendYield|safe}}");
+  const payoutRatio = JSON.parse("{{payoutRatio|safe}}");
 
   function chartConfig(args="normal") {
     var config = {
@@ -246,19 +245,19 @@
       datasets: [
       {
         label: "Gross Margin",
-        data: grossMarginV,
+        data: grossMargin,
         backgroundColor: "rgb(0, 110, 255)",
       },
       {
         label: "Operating Margin",
-        data: operatingMarginV,
-        backgroundColor: "red",
+        data: operatingMargin,
+        backgroundColor: "rgb(255, 0, 0)",
       },
       {
         label: "Profit Margin",
-        data: profitMarginV,
+        data: profitMargin,
         backgroundColor: "rgb(110, 255, 0)",
-      }
+      },
       ],
     },
     options: chartConfig("pct"),
@@ -272,17 +271,17 @@
       datasets: [
       {
         label: "P/E Ratio",
-        data: peRatioV,
+        data: peRatio,
         backgroundColor: "red",
       },
       {
         label: "P/B Ratio",
-        data: pbRatioV,
+        data: pbRatio,
         backgroundColor: "rgb(110, 255, 0)",
       },
       {
         label: "P/FCF Ratio",
-        data: pfcfRatioV,
+        data: pfcfRatio,
         backgroundColor: "rgb(110, 255, 255)",
       },
       ],
@@ -298,17 +297,17 @@
       datasets: [
       {
         label: "Dividend in %",
-        data: dividendYieldV,
+        data: dividendYield,
         backgroundColor: "rgb(0, 110, 255)",
       },
       {
         label: "Payout Ratio",
-        data: payoutRatioV,
+        data: payoutRatio,
         backgroundColor: "red",
       },
       {
         label: "Profit Margin",
-        data: profitMarginV,
+        data: profitMargin,
         backgroundColor: "rgb(110, 255, 0)",
       }
       ],
