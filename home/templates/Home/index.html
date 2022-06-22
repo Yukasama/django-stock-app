@@ -14,59 +14,62 @@
 
 
   <div class="nav_container nav_container2 flex">
-      <a href="{% url 'calendar' %}" class="nav_link effect_underline">Calendar</a>
-      <a href="{% url 'news' %}" class="nav_link effect_underline">News</a>
-      <div class="nav_link effect_underline nav_link_ex flex">Markets
-        <div class="nav_sub_element">
-          <div class="nav_link_sub smart_list">
-            <div class="nav_sub flex">
-              <i class="material-icons nav_sub_icon">school</i>
-              <a href="{% url 'stocks' %}" class="nav_link_text effect_underline">Stocks</a>
-            </div>
-            <div class="nav_sub flex">
-              <i class="material-icons nav_sub_icon">school</i>
-              <a class="nav_link_text effect_underline">Commodities</a>
-            </div>
-            <div class="nav_sub flex">
-              <i class="material-icons nav_sub_icon">school</i>
-              <a class="nav_link_text effect_underline">Forex</a>
-            </div>
-            <div class="nav_sub flex">
-              <i class="material-icons nav_sub_icon">school</i>
-              <a class="nav_link_text effect_underline">Crypto</a>
-            </div>
+    <div class="inputField search_navbar">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Search.." class="input">
+    </div>  
+    <a href="{% url 'calendar' %}" class="nav_link effect_underline">Calendar</a>
+    <a href="{% url 'news' %}" class="nav_link effect_underline">News</a>
+    <div class="nav_link effect_underline nav_link_ex flex">Markets
+      <div class="nav_sub_element">
+        <div class="nav_link_sub smart_list">
+          <div class="nav_sub flex">
+            <i class="material-icons nav_sub_icon">school</i>
+            <a href="{% url 'stocks' %}" class="nav_link_text effect_underline">Stocks</a>
+          </div>
+          <div class="nav_sub flex">
+            <i class="material-icons nav_sub_icon">school</i>
+            <a class="nav_link_text effect_underline">Commodities</a>
+          </div>
+          <div class="nav_sub flex">
+            <i class="material-icons nav_sub_icon">school</i>
+            <a class="nav_link_text effect_underline">Forex</a>
+          </div>
+          <div class="nav_sub flex">
+            <i class="material-icons nav_sub_icon">school</i>
+            <a class="nav_link_text effect_underline">Crypto</a>
           </div>
         </div>
       </div>
-      <i class="material-icons nav_link_icon invisible">expand_more</i>
-      <div class="nav_link effect_underline nav_link_ex flex">Education
-        <div class="nav_sub_element">
-          <div class="nav_link_sub smart_list">
-            <div class="nav_sub flex">
-              <i class="material-icons nav_sub_icon">school</i>
-              <a class="nav_link_text effect_underline">Markets</a>
-            </div>
-            <div class="nav_sub flex">
-              <i class="material-icons nav_sub_icon">school</i>
-              <a class="nav_link_text effect_underline">Technicals</a>
-            </div>
-            <div class="nav_sub flex">
-              <i class="material-icons nav_sub_icon">school</i>
-              <a class="nav_link_text effect_underline">Fundamentals</a>
-            </div>
-            <div class="nav_sub flex">
-              <i class="material-icons nav_sub_icon">school</i>
-              <a class="nav_link_text effect_underline">Automation</a>
-            </div>
+    </div>
+    <i class="material-icons nav_link_icon invisible">expand_more</i>
+    <div class="nav_link effect_underline nav_link_ex flex">Education
+      <div class="nav_sub_element">
+        <div class="nav_link_sub smart_list">
+          <div class="nav_sub flex">
+            <i class="material-icons nav_sub_icon">school</i>
+            <a class="nav_link_text effect_underline">Markets</a>
+          </div>
+          <div class="nav_sub flex">
+            <i class="material-icons nav_sub_icon">school</i>
+            <a class="nav_link_text effect_underline">Technicals</a>
+          </div>
+          <div class="nav_sub flex">
+            <i class="material-icons nav_sub_icon">school</i>
+            <a class="nav_link_text effect_underline">Fundamentals</a>
+          </div>
+          <div class="nav_sub flex">
+            <i class="material-icons nav_sub_icon">school</i>
+            <a class="nav_link_text effect_underline">Automation</a>
           </div>
         </div>
       </div>
-      <i class="material-icons nav_link_icon invisible">expand_more</i>  
+    </div>
+    <i class="material-icons nav_link_icon invisible">expand_more</i>
   </div>
 
 
   <div class="nav_container nav_container3 flex">
-
     {% if user.is_authenticated %}
       <div class="profile smart_box">
         <i class="material-icons user_icon">account_circle</i>

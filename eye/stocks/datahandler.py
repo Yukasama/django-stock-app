@@ -233,7 +233,7 @@ def copyRows(action="models", output=False):
                      "priceToBookRatio", "ptbRatio", "priceToSalesRatio", "priceToFreeCashFlowsRatio",
                      "priceCashFlowRatio", "returnOnEquity", "grossProfitRatio", "operatingIncomeRatio",
                      "incomeBeforeTaxRatio", "netIncomeRatio", "priceSalesRatio", "dividendPayoutRatio",
-                     "priceToOperatingCashFlowsRatio", "period", "cik", "link", "finalLink"]
+                     "priceToOperatingCashFlowsRatio", "period", "cik", "link", "finalLink", "roe"]
         for name in names:
             if name in blackList:
                 continue
@@ -247,7 +247,7 @@ def copyRows(action="models", output=False):
             newData.to_csv("Data/SymbolData/FinData")
             print(len(newData))
                 
-#copyRows("array", True)
+copyRows("array", True)
 
 
 #-------------------------------------------------------------------------------------------------------------------

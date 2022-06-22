@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from . forms import Signup
+from django.core.mail import send_mail
 
     
 
@@ -16,6 +17,13 @@ def signupView(request):
             user = form.save(commit=False)
             user.username = user.username.lower()
             user.save()
+            send_mail(
+                "Aethega SignUp Notification",
+                "You just created an account on Aethega!",
+                "yukasamaa@gmail.com",
+                ["daszehntefragezeichen@gmail.com"],
+                fail_silently=False,
+            )
             login(request, user)
             return redirect('home')
         else:

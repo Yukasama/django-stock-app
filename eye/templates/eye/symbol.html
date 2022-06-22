@@ -42,7 +42,10 @@
           <img class="stock_img" src={{logo}}>
         </div>
         <h1 class="stock_name">{{name}}</h1>
-        <div class="stock_percent"></div>
+        <div class="stock_price">$130.75</div>
+        <div class="stock_percent">+0.98%</div>
+        <div>{{eps2021}}</div>
+        <div>{{peRatio2021}}</div>
       </div>
   
       <div class="stock_chart stock_view_item flex">
@@ -182,15 +185,16 @@
           </script>
         </div>
       </div>
-
-
-
-
-      <div class="stock_view stock_view3 grid-system">
-        <p>Stock view 3</p>
-      </div>
-      
     </div>
+
+
+
+
+
+    <div class="stock_view stock_view3 grid-system">
+      <p>Stock view 3</p>
+    </div>
+      
   </div>
 </div>
 
@@ -209,6 +213,7 @@
   function chartConfig(args="normal") {
     var config = {
       plugins: { legend: { labels: {
+        fontColor: "rgb(255, 255, 255)",
         font: {
           size: 14,
         } } } 
@@ -272,17 +277,21 @@
       {
         label: "P/E Ratio",
         data: peRatio,
-        backgroundColor: "red",
+        backgroundColor: "rgb(255, 0, 0)",
+        borderColor: "rgb(255, 0, 0, 0.3)",
       },
       {
         label: "P/B Ratio",
         data: pbRatio,
         backgroundColor: "rgb(110, 255, 0)",
+        borderColor: "rgb(110, 255, 0, 0.3)",
       },
       {
         label: "P/FCF Ratio",
         data: pfcfRatio,
         backgroundColor: "rgb(110, 255, 255)",
+        borderColor: "rgb(110, 255, 255, 0.3)",
+
       },
       ],
     },
@@ -298,17 +307,20 @@
       {
         label: "Dividend in %",
         data: dividendYield,
-        backgroundColor: "rgb(0, 110, 255)",
+        backgroundColor: "rgb(255, 179, 0)",
+        borderColor: "rgb(255, 179, 0, 0.3)",
       },
       {
         label: "Payout Ratio",
         data: payoutRatio,
-        backgroundColor: "red",
+        backgroundColor: "rgb(144, 0, 255)",
+        borderColor: "rgb(144, 0, 255, 0.4)",
       },
       {
         label: "Profit Margin",
         data: profitMargin,
-        backgroundColor: "rgb(110, 255, 0)",
+        backgroundColor: "rgb(0, 237, 213)",
+        borderColor: "rgb(0, 237, 213, 0.3)",
       }
       ],
     },

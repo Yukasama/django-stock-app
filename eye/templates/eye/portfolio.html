@@ -35,13 +35,14 @@
     </div>
   </div>
   <div class="portfolio_window border flex">
+    {% csrf_token %}
     <select class="input border portfolio_select flex">
       {% for p in portfolios %}
       <option>{{p.name}}</option>
       {% endfor %}
     </select>
     <div class="portfolio_list">
-      {% for stock in portfolio.stocks.all %}
+      {% for stock in stocks %}
       <p>stock</p>
       {% endfor %}
     </div>

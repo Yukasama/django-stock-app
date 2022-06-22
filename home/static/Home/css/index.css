@@ -24,15 +24,16 @@
 .nav_container {
     align-items: center;
     justify-content: center;
+    transition: flex 0.2s;
 }
 .nav_container1 {
-    flex: 0.5;
+    flex: 0.3;
 }
 .nav_container2 {
-    flex: 1.5em;
+    flex: 0.7;
 }
 .nav_container3 {
-    flex: 0.5;
+    flex: 0.3;
 }
 .favicon_img, .favicon_img_footer {
     height: 70px;
@@ -72,8 +73,12 @@
 .nav_link_icon {
     transform: translate(-15px, 0);
 }
+.search_navbar {
+    margin: 30px;
+}
 .sign_up {
     font-size: 1em;
+    white-space: nowrap;
 }
 
 
@@ -498,11 +503,30 @@
     padding: 10px 23px 10px 0;
 }
 
+@media screen and (max-width: 1700px) {
+    .nav_container1 {
+        flex: 0.3;
+    }
+    .nav_container2 {
+        flex: 0.8;
+    }
+    .nav_container3 {
+        flex: 0.5;
+    }  
+}
 
-
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1500px) {
     .nav_link, .nav_link_icon, .profile, .profile_container, .webmode_container {
         display: none !important;
+    }
+    .nav_container1 {
+        flex: 0.3;
+    }
+    .nav_container2 {
+        flex: 0.8;
+    }
+    .nav_container3 {
+        flex: 0.2;
     }
     .hamburger {
         display: flex;

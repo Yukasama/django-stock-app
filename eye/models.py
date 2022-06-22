@@ -217,7 +217,6 @@ class Financial(models.Model):
     receivablesTurnover = models.FloatField(blank=True, null=True)
     payablesTurnover = models.FloatField(blank=True, null=True)
     inventoryTurnover = models.FloatField(blank=True, null=True)
-    roe = models.FloatField(blank=True, null=True)
     capexPerShare = models.FloatField(blank=True, null=True)
     
     #Financial Ratios
@@ -298,11 +297,54 @@ class Financial(models.Model):
     stockPrice  = models.FloatField(blank=True, null=True)
     DCF = models.FloatField(blank=True, null=True)
     
+    def __str__(self):
+        return self.verification
+    
+    
+    
+class ShortFinancial(models.Model):
+    #Symbol Data
+    symbol = models.ForeignKey(Stock, on_delete=models.CASCADE)
+    year = models.IntegerField(db_index=True)
+    verification = models.CharField(max_length=15, primary_key=True)
+    
+    #Income Statement
+    revenue = models.FloatField(blank=True, null=True)
+    
+    #Key Metrics
+    eps = models.FloatField(blank=True, null=True)
+    marketCap = models.FloatField(blank=True, null=True)
+    enterpriseValue = models.FloatField(blank=True, null=True)
+    peRatio = models.FloatField(blank=True, null=True)
+    priceToSalesRatio = models.FloatField(blank=True, null=True)
+    pfcfRatio = models.FloatField(blank=True, null=True)
+    pbRatio = models.FloatField(blank=True, null=True)
+    debtToEquity = models.FloatField(blank=True, null=True)
+    debtToAssets = models.FloatField(blank=True, null=True)
+    netDebtToEBITDA = models.FloatField(blank=True, null=True)
+    currentRatio = models.FloatField(blank=True, null=True)
+    dividendYield = models.FloatField(blank=True, null=True)
+    payoutRatio = models.FloatField(blank=True, null=True)
+    roic = models.FloatField(blank=True, null=True)
+    roe = models.FloatField(blank=True, null=True)
+    
+    #Financial Ratios
+    quickRatio = models.FloatField(blank=True, null=True)
+    cashRatio = models.FloatField(blank=True, null=True)
+    grossProfitMargin = models.FloatField(blank=True, null=True)
+    operatingProfitMargin = models.FloatField(blank=True, null=True)
+    pretaxProfitMargin = models.FloatField(blank=True, null=True)
+    netProfitMargin = models.FloatField(blank=True, null=True)
+    debtRatio = models.FloatField(blank=True, null=True)
+    assetTurnover = models.FloatField(blank=True, null=True)
+    
+    revenueGrowth = models.FloatField(blank=True, null=True)
+    debtGrowth = models.FloatField(blank=True, null=True)
+    DCF = models.FloatField(blank=True, null=True)
     
     
     def __str__(self):
         return self.verification
-    
 
 
 
@@ -315,6 +357,7 @@ class History(models.Model):
     lowPrice = models.FloatField(null=True, blank=True)
     closePrice = models.FloatField(null=True, blank=True)
     closePct = models.FloatField(null=True, blank=True)
+    
     
     def __str__(self):
         return self.symbol
