@@ -1,0 +1,27 @@
+{% extends 'home/index.html' %}
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'home/css/search.css' %}">
+
+
+<div class="search flex">
+  <p class="search_query">Results for '{{q}}'</p>
+  <div class="search_results flex">
+  {% for r in results %}
+    <div class="search_result flex">
+      <div class="search_img_c flex_box">
+        <img class="search_img" src="{{r.logo}}">
+      </div>
+      <div class="search_result_c flex">
+        <a href="{% url 'symbol' r.symbol %}" class="search_ticker">{{r.ticker}}</a>
+        <p class="search_name">{{r.name}}</p>
+      </div>
+    </div>
+  {% empty %}
+    <p class="search_empty">No results found.</p>
+  {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

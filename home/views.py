@@ -1,5 +1,6 @@
 from django.shortcuts import render
-
+from eye.models import Info
+from django.db.models import Q
 
 #Company Info
 company_name = 'Aethega'
@@ -64,3 +65,14 @@ def terms(request):
 
 def privacy(request):
     return render(request, 'home/privacy.html')
+
+
+
+def search(request):
+    q = request.GET["q"]
+    if q != "":
+        results = Info.objects.filter(Q(ticker__startswith=q) |
+                                      Q(name__startswith=q) |
+                                      Q(sector__startswith=q)).order_by("ticker")[:15]
+        data = {'q': q, 'results': results}
+        return render(request, "home/search.html", data)

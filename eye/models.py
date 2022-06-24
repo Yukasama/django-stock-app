@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 
 class Stock(models.Model):
-    
+    #Symbol
     symbol = models.CharField(max_length=10)
     
     def __str__(self):
@@ -32,6 +32,7 @@ class Info(models.Model):
     exchange = models.CharField(max_length=50, null=True, blank=True)
     quoteType = models.CharField(max_length=50, null=True, blank=True)
     currency = models.CharField(max_length=10, null=True, blank=True)
+    marketCap = models.FloatField(blank=True, null=True)
     
     #Contact Info
     phone = models.CharField(max_length=50, null=True, blank=True)

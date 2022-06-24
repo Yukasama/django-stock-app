@@ -20,7 +20,6 @@ def DataTransfer(ticker):
             stock.delete()
             
             
-            
     try:    
         df = pd.read_csv(f"Data/StockData/{ticker}/info")
         
@@ -46,76 +45,12 @@ def DataTransfer(ticker):
     except:
         print("Data could'nt be fetched.")
         exit()
-         
-         
-    #Stock Model    
-    Info(
-        symbol=symbol,
-        ticker=ticker,
-        city=city, 
-        state=state, 
-        country=country, 
-        address=address, 
-        name=name,
-        summary=summary,
-        employees=employees,
-        sector=sector,
-        industry=industry,
-        exchange=exchange,
-        quoteType=quoteType,
-        currency=currency,
-        phone=phone,
-        website=website,
-        logo=logo,
-        period=period,
-        cik=cik,
-        link=link,
-        finalLink=finalLink,
-    ).save()
-    
-    print(f"'{ticker}' Info Model saved.")
     
     
-    #Cashflow
-    for year in range(2000, 2022):
-        
-        variables = [fillingDate, revenue, costOfRevenue, grossProfit, researchAndDevelopmentExpenses, 
-         generalAndAdministrativeExpenses, sellingAndMarketingExpenses, sellingGeneralAndAdministrativeExpenses, 
-         otherExpenses, operatingExpenses, costAndExpenses, interestIncome, interestExpense, depreciationAndAmortization, 
-         ebitda, ebitdaratio, operatingIncome, totalOtherIncomeExpensesNet, incomeBeforeTax, incomeTaxExpense, netIncome, 
-         eps, epsdiluted, weightedAverageShsOut, weightedAverageShsOutDil, cashAndCashEquivalents, shortTermInvestments,
-         cashAndShortTermInvestments, netReceivables, inventory, otherCurrentAssets, totalCurrentAssets, propertyPlantEquipmentNet, 
-         goodwill, intangibleAssets, goodwillAndIntangibleAssets, longTermInvestments, taxAssets, otherNonCurrentAssets, totalNonCurrentAssets, 
-         otherAssets, totalAssets, accountPayables, shortTermDebt, taxPayables, deferredRevenue, otherCurrentLiabilities, totalCurrentLiabilities, 
-         longTermDebt, deferredRevenueNonCurrent, deferredTaxLiabilitiesNonCurrent, otherNonCurrentLiabilities, totalNonCurrentLiabilities, 
-         otherLiabilities, capitalLeaseObligations, totalLiabilities, preferredStock, commonStock, retainedEarnings, accumulatedOtherComprehensiveIncomeLoss, 
-         othertotalStockholdersEquity, totalStockholdersEquity, totalLiabilitiesAndStockholdersEquity, minorityInterest, totalEquity, totalLiabilitiesAndTotalEquity, 
-         totalInvestments, totalDebt, netDebt, deferredIncomeTax, stockBasedCompensation, changeInWorkingCapital, accountsReceivables, accountsPayables, 
-         otherWorkingCapital, otherNonCashItems, netCashProvidedByOperatingActivities, investmentsInPropertyPlantAndEquipment, acquisitionsNet, purchasesOfInvestments, 
-         salesMaturitiesOfInvestments, otherInvestingActivites, netCashUsedForInvestingActivites, debtRepayment, commonStockIssued, commonStockRepurchased, dividendsPaid, 
-         otherFinancingActivites, netCashUsedProvidedByFinancingActivities, effectOfForexChangesOnCash, netChangeInCash, cashAtEndOfPeriod, cashAtBeginningOfPeriod, 
-         operatingCashFlow, capitalExpenditure, freeCashFlow, revenuePerShare, netIncomePerShare, operatingCashFlowPerShare, freeCashFlowPerShare, cashPerShare, 
-         bookValuePerShare, tangibleBookValuePerShare, shareholdersEquityPerShare, interestDebtPerShare, marketCap, enterpriseValue, peRatio, pocfratio, pfcfRatio, 
-         pbRatio, evToSales, enterpriseValueOverEBITDA, evToOperatingCashFlow, evToFreeCashFlow, earningsYield, freeCashFlowYield, debtToEquity, debtToAssets, 
-         netDebtToEBITDA, currentRatio, interestCoverage, incomeQuality, dividendYield, payoutRatio, salesGeneralAndAdministrativeToRevenue, researchAndDdevelopementToRevenue, 
-         intangiblesToTotalAssets, capexToOperatingCashFlow, capexToRevenue, capexToDepreciation, stockBasedCompensationToRevenue, grahamNumber, roic, returnOnTangibleAssets, 
-         grahamNetNet, workingCapital, tangibleAssetValue, netCurrentAssetValue, investedCapital, averageReceivables, averagePayables, averageInventory, daysSalesOutstanding, 
-         daysPayablesOutstanding, daysOfInventoryOnHand, receivablesTurnover, payablesTurnover, inventoryTurnover, capexPerShare, quickRatio, cashRatio, daysOfSalesOutstanding, 
-         daysOfInventoryOutstanding, operatingCycle, daysOfPayablesOutstanding, cashConversionCycle, grossProfitMargin, operatingProfitMargin, pretaxProfitMargin, netProfitMargin,
-         effectiveTaxRate, returnOnAssets, returnOnCapitalEmployed, netIncomePerEBT, ebtPerEbit, ebitPerRevenue, debtRatio, debtEquityRatio, longTermDebtToCapitalization, 
-         totalDebtToCapitalization, cashFlowToDebtRatio, companyEquityMultiplier, fixedAssetTurnover, assetTurnover, operatingCashFlowSalesRatio, 
-         freeCashFlowOperatingCashFlowRatio, cashFlowCoverageRatios, shortTermCoverageRatios, capitalExpenditureCoverageRatio, dividendPaidAndCapexCoverageRatio, 
-         priceEarningsToGrowthRatio, enterpriseValueMultiple, priceFairValue, revenueGrowth, grossProfitGrowth, ebitgrowth, operatingIncomeGrowth, netIncomeGrowth, 
-         epsgrowth, epsdilutedGrowth, weightedAverageSharesGrowth, weightedAverageSharesDilutedGrowth, dividendsperShareGrowth, operatingCashFlowGrowth, freeCashFlowGrowth, 
-         tenYRevenueGrowthPerShare, fiveYRevenueGrowthPerShare, threeYRevenueGrowthPerShare, tenYOperatingCFGrowthPerShare, fiveYOperatingCFGrowthPerShare, 
-         threeYOperatingCFGrowthPerShare, tenYNetIncomeGrowthPerShare, fiveYNetIncomeGrowthPerShare, threeYNetIncomeGrowthPerShare, tenYShareholdersEquityGrowthPerShare, 
-         fiveYShareholdersEquityGrowthPerShare, threeYShareholdersEquityGrowthPerShare, tenYDividendperShareGrowthPerShare, fiveYDividendperShareGrowthPerShare, 
-         threeYDividendperShareGrowthPerShare, receivablesGrowth, inventoryGrowth, assetGrowth, bookValueperShareGrowth, debtGrowth, rdexpenseGrowth, sgaexpensesGrowth, 
-         date, stockPrice, DCF]
-        
+    #Financial Data
+    for year in range(2014, 2022):
         #Basic Data
         fillingDate = dt.dataGet(ticker, "fillingDate", 0, str(year))
-
         #Income Statement
         revenue = dt.dataGet(ticker, "revenue", 0, str(year))
         costOfRevenue = dt.dataGet(ticker, "costOfRevenue", 0, str(year))
@@ -137,11 +72,11 @@ def DataTransfer(ticker):
         incomeBeforeTax = dt.dataGet(ticker, "incomeBeforeTax", 0, str(year))
         incomeTaxExpense = dt.dataGet(ticker, "incomeTaxExpense", 0, str(year))
         netIncome = dt.dataGet(ticker, "netIncome", 0, str(year))
-        eps = dt.dataGet(ticker, "eps", 0, str(year))
+        try: eps = round(float(dt.dataGet(ticker, "eps", 0, str(year))), 2)
+        except: eps = dt.dataGet(ticker, "eps", 0, str(year))
         epsdiluted = dt.dataGet(ticker, "epsdiluted", 0, str(year))
         weightedAverageShsOut = dt.dataGet(ticker, "weightedAverageShsOut", 0, str(year))
         weightedAverageShsOutDil = dt.dataGet(ticker, "weightedAverageShsOutDil", 0, str(year))
-        
         #Balance Sheet
         cashAndCashEquivalents = dt.dataGet(ticker, "cashAndCashEquivalents", 0, str(year))
         shortTermInvestments = dt.dataGet(ticker, "shortTermInvestments", 0, str(year))
@@ -187,7 +122,6 @@ def DataTransfer(ticker):
         totalInvestments = dt.dataGet(ticker, "totalInvestments", 0, str(year))
         totalDebt = dt.dataGet(ticker, "totalDebt", 0, str(year))
         netDebt = dt.dataGet(ticker, "netDebt", 0, str(year))
-        
         #CashFlow
         deferredIncomeTax = dt.dataGet(ticker, "deferredIncomeTax", 0, str(year))
         stockBasedCompensation = dt.dataGet(ticker, "stockBasedCompensation", 0, str(year))
@@ -216,7 +150,6 @@ def DataTransfer(ticker):
         operatingCashFlow = dt.dataGet(ticker, "operatingCashFlow", 0, str(year))
         capitalExpenditure = dt.dataGet(ticker, "capitalExpenditure", 0, str(year))
         freeCashFlow = dt.dataGet(ticker, "freeCashFlow", 0, str(year))
-        
         #Key Metrics
         revenuePerShare = dt.dataGet(ticker, "revenuePerShare", 0, str(year))
         netIncomePerShare = dt.dataGet(ticker, "netIncomePerShare", 0, str(year))
@@ -229,7 +162,8 @@ def DataTransfer(ticker):
         interestDebtPerShare = dt.dataGet(ticker, "interestDebtPerShare", 0, str(year))
         marketCap = dt.dataGet(ticker, "marketCap", 0, str(year))
         enterpriseValue = dt.dataGet(ticker, "enterpriseValue", 0, str(year))
-        peRatio = round(float(dt.dataGet(ticker, "peRatio", 0, str(year))), 2)
+        try: peRatio = round(float(dt.dataGet(ticker, "peRatio", 0, str(year))), 2)
+        except: peRatio = dt.dataGet(ticker, "peRatio", 0, str(year))
         priceToSalesRatio = dt.dataGet(ticker, "priceToSalesRatio", 0, str(year))
         pocfratio = dt.dataGet(ticker, "pocfratio", 0, str(year))
         pfcfRatio = dt.dataGet(ticker, "pfcfRatio", 0, str(year))
@@ -274,7 +208,6 @@ def DataTransfer(ticker):
         payablesTurnover = dt.dataGet(ticker, "payablesTurnover", 0, str(year))
         inventoryTurnover = dt.dataGet(ticker, "inventoryTurnover", 0, str(year))
         capexPerShare = dt.dataGet(ticker, "capexPerShare", 0, str(year))
-        
         #Financial Ratios
         quickRatio = dt.dataGet(ticker, "quickRatio", 0, str(year))
         cashRatio = dt.dataGet(ticker, "cashRatio", 0, str(year))
@@ -311,7 +244,6 @@ def DataTransfer(ticker):
         priceEarningsToGrowthRatio = dt.dataGet(ticker, "priceEarningsToGrowthRatio", 0, str(year))
         enterpriseValueMultiple = dt.dataGet(ticker, "enterpriseValueMultiple", 0, str(year))
         priceFairValue = dt.dataGet(ticker, "priceFairValue", 0, str(year))
-        
         #Financial Statement Growth
         revenueGrowth = dt.dataGet(ticker, "revenueGrowth", 0, str(year))
         grossProfitGrowth = dt.dataGet(ticker, "grossProfitGrowth", 0, str(year))
@@ -347,22 +279,17 @@ def DataTransfer(ticker):
         debtGrowth = dt.dataGet(ticker, "debtGrowth", 0, str(year))
         rdexpenseGrowth = dt.dataGet(ticker, "rdexpenseGrowth", 0, str(year))
         sgaexpensesGrowth = dt.dataGet(ticker, "sgaexpensesGrowth", 0, str(year))
-        
         #Discounted Cash Flow
         date = dt.dataGet(ticker, "date", 0, str(year))
         stockPrice = dt.dataGet(ticker, "Stock Price", 0, str(year))
         DCF = dt.dataGet(ticker, "DCF", 0, str(year))
-        
-        
+    
         Financial(
             #Symbol Data
             symbol = symbol,
             year = year,
             verification = f'{ticker}, {year}',
-            
-            #Basic Data
             fillingDate = fillingDate,
-            
             #Income Statement
             revenue = revenue,
             costOfRevenue = costOfRevenue,
@@ -388,7 +315,6 @@ def DataTransfer(ticker):
             epsdiluted = epsdiluted,
             weightedAverageShsOut = weightedAverageShsOut,
             weightedAverageShsOutDil = weightedAverageShsOutDil,
-            
             #Balance Sheet
             cashAndCashEquivalents = cashAndCashEquivalents,
             shortTermInvestments = shortTermInvestments,
@@ -434,7 +360,6 @@ def DataTransfer(ticker):
             totalInvestments = totalInvestments,
             totalDebt = totalDebt,
             netDebt = netDebt,
-            
             #Cash Flow
             deferredIncomeTax = deferredIncomeTax,
             stockBasedCompensation = stockBasedCompensation,
@@ -463,7 +388,6 @@ def DataTransfer(ticker):
             operatingCashFlow = operatingCashFlow,
             capitalExpenditure = capitalExpenditure,
             freeCashFlow = freeCashFlow,
-            
             #Key Metrics
             revenuePerShare = revenuePerShare,
             netIncomePerShare = netIncomePerShare,
@@ -520,7 +444,6 @@ def DataTransfer(ticker):
             payablesTurnover = payablesTurnover,
             inventoryTurnover = inventoryTurnover,
             capexPerShare = capexPerShare,
-            
             #Financial Ratios
             quickRatio = quickRatio,
             cashRatio = cashRatio,
@@ -554,7 +477,6 @@ def DataTransfer(ticker):
             dividendPaidAndCapexCoverageRatio = dividendPaidAndCapexCoverageRatio,
             enterpriseValueMultiple = enterpriseValueMultiple,
             priceFairValue = priceFairValue,
-            
             #Financial Statement Growth
             revenueGrowth = revenueGrowth,
             grossProfitGrowth = grossProfitGrowth,
@@ -590,7 +512,6 @@ def DataTransfer(ticker):
             debtGrowth = debtGrowth,
             rdexpenseGrowth = rdexpenseGrowth,
             sgaexpensesGrowth = sgaexpensesGrowth,
-            
             #Discounted Cash Flow
             date = date,
             stockPrice = stockPrice,
@@ -601,11 +522,7 @@ def DataTransfer(ticker):
             symbol = symbol,
             year = year,
             verification = f'{ticker}, {year}',
-            
-            #Income Statement
             revenue = revenue,
-            
-            #Key Metrics
             eps = eps,
             marketCap = marketCap,
             enterpriseValue = enterpriseValue,
@@ -620,8 +537,6 @@ def DataTransfer(ticker):
             dividendYield = dividendYield,
             payoutRatio = payoutRatio,
             roic = roic,
-            
-            #Financial Ratios
             quickRatio = quickRatio,
             cashRatio = cashRatio,
             grossProfitMargin = grossProfitMargin,
@@ -630,13 +545,38 @@ def DataTransfer(ticker):
             netProfitMargin = netProfitMargin,
             debtRatio = debtRatio,
             assetTurnover = assetTurnover,
-            
             revenueGrowth = revenueGrowth,
             debtGrowth = debtGrowth,
             DCF = DCF,
         ).save()
-    
         print(f"'{ticker}' Financial Model for {year} saved.")
+        
+    #Info Model    
+    Info(
+        symbol=symbol,
+        ticker=ticker,
+        city=city, 
+        state=state, 
+        country=country, 
+        address=address, 
+        name=name,
+        summary=summary,
+        employees=employees,
+        sector=sector,
+        industry=industry,
+        exchange=exchange,
+        quoteType=quoteType,
+        currency=currency,
+        marketCap=marketCap,
+        phone=phone,
+        website=website,
+        logo=logo,
+        period=period,
+        cik=cik,
+        link=link,
+        finalLink=finalLink,
+    ).save()
+    print(f"'{ticker}' Info Model saved.")
 
 
 
@@ -647,16 +587,14 @@ class Command(BaseCommand):
         pass
     
     def handle(sef, *args, **options):
-        
         skip = False
         single = True
-        
         if (single == False):
             tickers = dt.tickers_sp500
             for ticker in tickers:
                 DataTransfer(ticker)
         else:
-            ticker = "AAPL"
+            ticker = "ADBE"
             DataTransfer(ticker)
             
             

@@ -511,7 +511,7 @@
         flex: 0.8;
     }
     .nav_container3 {
-        flex: 0.5;
+        flex: 0.3;
     }  
 }
 
@@ -536,6 +536,13 @@
         z-index: 5;
         transform: translate(0, 0);
         height: 110%;
+    }
+    .sidebar:hover {
+        width: 90px;
+    }
+    .sidebar:hover .side_link > .side_text {
+        opacity: 0;
+        transform: translate(0, 0);
     }
     .footer_wrapper {
         display: grid;

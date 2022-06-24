@@ -14,12 +14,14 @@
 
 
   <div class="nav_container nav_container2 flex">
-    <div class="inputField search_navbar">
-      <i class="fa-solid fa-magnifying-glass"></i>
-      <input type="text" placeholder="Search.." class="input">
-    </div>  
     <a href="{% url 'calendar' %}" class="nav_link effect_underline">Calendar</a>
     <a href="{% url 'news' %}" class="nav_link effect_underline">News</a>
+    <form action="{% url 'search' %}">
+      <div class="inputField search_navbar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search.." class="input" name="q">
+      </div>
+    </form>
     <div class="nav_link effect_underline nav_link_ex flex">Markets
       <div class="nav_sub_element">
         <div class="nav_link_sub smart_list">

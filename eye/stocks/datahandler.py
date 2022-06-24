@@ -247,7 +247,7 @@ def copyRows(action="models", output=False):
             newData.to_csv("Data/SymbolData/FinData")
             print(len(newData))
                 
-copyRows("array", True)
+# copyRows("array", True)
 
 
 #-------------------------------------------------------------------------------------------------------------------

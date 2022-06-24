@@ -70,13 +70,18 @@ def symbol(request, symbol):
         yearLabels.append(year)
         for key, value in financial.items():
             yearKey = f'{key}{year}'
-            data[key].append(value)
-            data[yearKey] = value
+            data[key].append(value) if value != None else data[key].append(0)
+            data[yearKey] = value if value != None else 0
     #Create Auto-Generated Dict from Info Data Model
     info = Info.objects.filter(symbol=symbol).values()[0]
-    for key, value in info.items(): data[key] = value    
+    for key, value in info.items(): data[key] = value
+    
+    symbolSector = data["sector"]
+    competitors = Info.objects.filter(sector=symbolSector)\
+    .order_by("marketCap").exclude(symbol=symbol)[:5]
     
     data["yearLabels"], data["mode"] = yearLabels, "dark"
+    data["competitors"] = competitors
 
     return render(request, 'eye/symbol.html', data)
 

@@ -41,11 +41,28 @@
         <div class="stock_logo smart_box">
           <img class="stock_img" src={{logo}}>
         </div>
-        <h1 class="stock_name">{{name}}</h1>
-        <div class="stock_price">$130.75</div>
-        <div class="stock_percent">+0.98%</div>
-        <div>{{eps2021}}</div>
-        <div>{{peRatio2021}}</div>
+        <div class="stock_title_c flex">
+          <div class="stock_title_data">
+            <p class="stock_title_text">{{name}}</p>
+            <p class="stock_title_desc">Company</p>
+          </div>
+          <div class="stock_title_data">
+            <p class="stock_title_text">$149.34</p>
+            <p class="stock_title_desc">Price</p>
+          </div>
+          <div class="stock_title_data">
+            <p class="stock_title_text">+0.98%</p>
+            <p class="stock_title_desc">Percent</p>
+          </div>
+          <div class="stock_title_data">
+            <p class="stock_title_text">{{eps2021}}</p>
+            <p class="stock_title_desc">EPS</p>
+          </div>
+          <div class="stock_title_data">
+            <p class="stock_title_text">{{peRatio2021}}</p>
+            <p class="stock_title_desc">P/E Ratio</p>
+          </div>
+        </div>
       </div>
   
       <div class="stock_chart stock_view_item flex">
@@ -74,50 +91,33 @@
 
       <div class="stock_ratings stock_view_item">
         <p class="stock_header">Ratings</p>
+        <div class="stock_ratings_c">
+          <div class="stock_rating">
+            <p class="stock_rating_text">TA-R</p>
+            <p class="stock_rating_text">0.99</p>
+          </div>
+        </div>
       </div>
 
       <div class="stock_suggestions stock_view_item">
         <p class="stock_header stock_suggest_header">Industry Competitors</p>
+        {% for c in competitors %}
         <div class="stock_suggest flex">
           <div class="stock_logo stock_logo_s smart_box">
-            <img class="stock_img_s" src={{logo}}>
+            <img class="stock_img_s" src={{c.logo}}>
           </div>
-          <div class="stock_suggest-info flex">
-            <div class="stock_name_s">Microsoft Inc.</div>
+          <div class="stock_suggest_info flex">
+            <a href="{% url 'symbol' c.ticker %}" class="stock_name_s">{{c.name}}</a>
             <div class="stock_suggest_data flex">
               <div class="stock_price_s">1500.00$</div>
               <div class="stock_percent_s">+1.59%</div>
             </div>
           </div>
         </div>
-
-        <div class="stock_suggest flex">
-          <div class="stock_logo stock_logo_s smart_box">
-            <img class="stock_img_s" src={{logo}}>
-          </div>
-          <div class="stock_suggest-info flex">
-            <div class="stock_name_s">Microsoft Inc.</div>
-            <div class="stock_suggest_data flex">
-              <div class="stock_price_s">1500.00$</div>
-              <div class="stock_percent_s">+1.59%</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="stock_suggest flex">
-          <div class="stock_logo stock_logo_s smart_box">
-            <img class="stock_img_s" src={{logo}}>
-          </div>
-          <div class="stock_suggest-info flex">
-            <div class="stock_name_s">Microsoft Inc.</div>
-            <div class="stock_suggest_data flex">
-              <div class="stock_price_s">1500.00$</div>
-              <div class="stock_percent_s">+1.59%</div>
-            </div>
-          </div>
-        </div>
+        {% empty %}
+        <p>No Competitors available.</p>
+        {% endfor %}
       </div>
-
 
       <div class="stock_charts flex">
         <div class="stock_margins stock_chart_item stock_view_item">
@@ -151,7 +151,6 @@
         </div>
       </div>
 
-
       <div class="stock_financials stock_view_item">
         <p class="stock_header">Financials</p>
       </div>
@@ -160,28 +159,27 @@
 
 
 
-
-    <div class="stock_view stock_view2 grid-system">
-      <div class="stock_chart stock_view-item flex">
+    <div class="stock_view stock_view2 grid_system">
+      <div class="stock_chart stock_view_item flex">
         <div class="tradingview-widget-container">
-          <div id="tradingview_96d90"></div>
-          <div class="tradingview-widget-copyright">
-            <a href="https://de.tradingview.com/symbols/{{ticker}}/" rel="noopener" target="_blank">
-              <span class="blue-text">{{ticker}} Chart</span></a> from TradingView</div>
+          <div id="tradingview_79edc"></div>
+          <div class="tradingview-widget-copyright"><a href="https://de.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"><span class="blue-text">AAPL Chart</span></a> von TradingView</div>
           <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
           <script type="text/javascript">
           new TradingView.widget({
-          "width": 900, "height": 500,
+          "width": 1650, "height": 800, 
           "symbol": "{{ticker}}",
           "interval": "D",
           "timezone": "Etc/UTC",
-          "theme": "{{mode}}",
+          "theme": "dark",
           "style": "1",
           "locale": "de_DE",
           "toolbar_bg": "#f1f3f6",
           "enable_publishing": false,
           "allow_symbol_change": true,
-          "container_id": "tradingview_96d90"});
+          "container_id": "tradingview_79edc"
+        }
+          );
           </script>
         </div>
       </div>
@@ -190,8 +188,7 @@
 
 
 
-
-    <div class="stock_view stock_view3 grid-system">
+    <div class="stock_view stock_view3 grid_system">
       <p>Stock view 3</p>
     </div>
       
@@ -261,7 +258,7 @@
       {
         label: "Profit Margin",
         data: profitMargin,
-        backgroundColor: "rgb(110, 255, 0)",
+        backgroundColor: "rgb(0, 180, 40)",
       },
       ],
     },
