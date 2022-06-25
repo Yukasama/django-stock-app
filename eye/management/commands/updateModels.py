@@ -588,7 +588,7 @@ class Command(BaseCommand):
     
     def handle(sef, *args, **options):
         skip = False
-        single = True
+        single = False
         if (single == False):
             tickers = dt.tickers_sp500
             for ticker in tickers:

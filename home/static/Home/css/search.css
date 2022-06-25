@@ -46,6 +46,7 @@
   height: 100%;
   line-height: 48px;
   color: var(--color-first);
+  z-index: 5;
 }
 .search_name {
   font-size: 1.2em;
@@ -56,5 +57,6 @@
 .search_empty {
   text-align: center;
   font-size: 1.1em;
-  margin: 20px;
+  margin: 20px 20px 300px 20px;
+  color: var(--color-text-theme);
 }

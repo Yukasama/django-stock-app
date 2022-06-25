@@ -280,7 +280,7 @@
     width: 90px;
     height: 100%;
     flex-direction: column;
-    transition: width 0.3s;
+    transition: width 0.2s;
     overflow: hidden;
     z-index: 5;
     margin-right: 3px;
@@ -316,7 +316,7 @@
 .side_text {
     opacity: 0;
     position: absolute;
-    transition: transform 0.3s, opacity 0.2s, color 0.2s;
+    transition: transform 0.25s, opacity 0.2s, color 0.2s;
 }
 .sidebar:hover .side_link > .side_text {
     opacity: 1;

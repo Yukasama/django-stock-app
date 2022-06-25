@@ -71,8 +71,21 @@ def privacy(request):
 def search(request):
     q = request.GET["q"]
     if q != "":
-        results = Info.objects.filter(Q(ticker__startswith=q) |
-                                      Q(name__startswith=q) |
-                                      Q(sector__startswith=q)).order_by("ticker")[:15]
-        data = {'q': q, 'results': results}
+        results = 0
+        if (q == ":all"):
+            results = Info.objects.all().order_by("ticker")[:100]
+        elif (":ticker" in q):
+            q = q.replace(":ticker", "")
+            results = Info.objects.filter(ticker__startswith=q).order_by("ticker")
+            q = q + " [filter: ticker]"
+        else:       
+            results = Info.objects.filter(Q(ticker__startswith=q) |
+                                        Q(name__startswith=q) |
+                                        Q(sector=q)).order_by("ticker")
+        length = len(results)
+        data = {
+            'q': q, 
+            'results': results,
+            'length': length,
+        }
         return render(request, "home/search.html", data)

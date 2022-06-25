@@ -6,7 +6,7 @@
 
 
 <div class="search flex">
-  <p class="search_query">Results for '{{q}}'</p>
+  <p class="search_query">{{length}} Search Results for '{{q}}'</p>
   <div class="search_results flex">
   {% for r in results %}
     <div class="search_result flex">
@@ -19,7 +19,7 @@
       </div>
     </div>
   {% empty %}
-    <p class="search_empty">No results found.</p>
+    <p class="search_empty">Please check for Spelling Errors.</p>
   {% endfor %}
   </div>
 </div>

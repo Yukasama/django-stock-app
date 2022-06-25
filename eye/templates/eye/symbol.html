@@ -2,6 +2,7 @@
 
 {% block content %}
 {% load static %}
+{% load humanize %}
 
 <link rel="stylesheet" href="{% static 'eye/css/symbol.css' %}">
 
@@ -99,11 +100,11 @@
         </div>
       </div>
 
-      <div class="stock_suggestions stock_view_item">
+      <div class="stock_suggestions stock_view_item flex">
         <p class="stock_header stock_suggest_header">Industry Competitors</p>
         {% for c in competitors %}
         <div class="stock_suggest flex">
-          <div class="stock_logo stock_logo_s smart_box">
+          <div class="stock_logo_s smart_box">
             <img class="stock_img_s" src={{c.logo}}>
           </div>
           <div class="stock_suggest_info flex">
@@ -140,6 +141,12 @@
           <canvas class="stock_metrics_chart"></canvas>
         </div>
 
+        {% if dividendYieldChecker == 0 %}
+        <div class="stock_dividend stock_chart_item stock_view_item dividend_info flex">
+          <p class="stock_header">Dividend</p>
+          <div class="dividend_info_text">Symbol never paid a Dividend</div>
+        </div>
+        {% else %}
         <div class="stock_dividend stock_chart_item stock_view_item">
           <p class="stock_header">Dividend</p>
           <div class="info flex">
@@ -149,30 +156,143 @@
           </div>
           <canvas class="stock_dividend_chart"></canvas>
         </div>
+        {% endif %}
       </div>
 
-      <div class="stock_financials stock_view_item">
+      <div class="stock_financials stock_view_item flex">
         <p class="stock_header">Financials</p>
-        <p class="stock_subheader">Numbers in Millions</p>
         <table class="stock_financials_t">
           <tr>
-            <th></th>
-            <th>2021</th>
-            <th>2020</th>
-            <th>2019</th>
+            <th class="stock_subheader">Numbers in USD Millions</th>
+            <th>Graph</th>
+            <th>2017</th>
             <th>2018</th>
+            <th>2019</th>
+            <th>2020</th>
+            <th>2021</th>
           </tr>
           <tr>
-            <td>Revenue</td>
-            <td>{{revenue2018_M}}</td>
-            <td>{{revenue2019_M}}</td>
-            <td>{{revenue2020_M}}</td>
-            <td>{{revenue2021_M}}</td>
-            <td>
-              <canvas class="chart_revenue"></canvas>
-            </td>
+            <th class="row_header">Revenue</th>
+            <td><canvas class="financial_chart chart_revenue"></canvas></td>
+            <td>${{revenue2017_M|intcomma}} Mio.</td>
+            <td>${{revenue2018_M|intcomma}} Mio.</td>
+            <td>${{revenue2019_M|intcomma}} Mio.</td>
+            <td>${{revenue2020_M|intcomma}} Mio.</td>
+            <td>${{revenue2021_M|intcomma}} Mio.</td>
+          </tr>
+          <tr>
+            <th class="row_header">Gross Profit</th>
+            <td><canvas class="financial_chart chart_grossProfit"></canvas></td>
+            <td>${{grossProfit2017_M|intcomma}} Mio.</td>
+            <td>${{grossProfit2018_M|intcomma}} Mio.</td>
+            <td>${{grossProfit2019_M|intcomma}} Mio.</td>
+            <td>${{grossProfit2020_M|intcomma}} Mio.</td>
+            <td>${{grossProfit2021_M|intcomma}} Mio.</td>
+          </tr>
+          <tr>
+            <th class="row_header">Gross Margin</th>
+            <td><canvas class="financial_chart chart_grossMargin"></canvas></td>
+            <td>{{grossProfitMargin2017_M|stringformat:"d%%"}}</td>
+            <td>{{grossProfitMargin2018_M|stringformat:"d%%"}}</td>
+            <td>{{grossProfitMargin2019_M|stringformat:"d%%"}}</td>
+            <td>{{grossProfitMargin2020_M|stringformat:"d%%"}}</td>
+            <td>{{grossProfitMargin2021_M|stringformat:"d%%"}}</td>
+          </tr>
+          <tr>
+            <th class="row_divider" colspan="7">Costs</th>
+          </tr>
+          <tr>
+            <th class="row_header">Research & Development</th>
+            <td><canvas class="financial_chart chart_operatingMargin"></canvas></td>
+            <td>${{researchAndDevelopmentExpenses2017_M|intcomma}} Mio.</td>
+            <td>${{researchAndDevelopmentExpenses2018_M|intcomma}} Mio.</td>
+            <td>${{researchAndDevelopmentExpenses2019_M|intcomma}} Mio.</td>
+            <td>${{researchAndDevelopmentExpenses2020_M|intcomma}} Mio.</td>
+            <td>${{researchAndDevelopmentExpenses2021_M|intcomma}} Mio.</td>
+          </tr>
+          <tr>
+            <th class="row_header">General & Administrative</th>
+            <td><canvas class="financial_chart chart_operatingMargin"></canvas></td>
+            <td>${{generalAndAdministrativeExpenses2017_M|intcomma}} Mio.</td>
+            <td>${{generalAndAdministrativeExpenses2018_M|intcomma}} Mio.</td>
+            <td>${{generalAndAdministrativeExpenses2019_M|intcomma}} Mio.</td>
+            <td>${{generalAndAdministrativeExpenses2020_M|intcomma}} Mio.</td>
+            <td>${{generalAndAdministrativeExpenses2021_M|intcomma}} Mio.</td>
+          </tr>
+          <tr>
+            <th class="row_header">Operating Expenses</th>
+            <td><canvas class="financial_chart chart_operatingMargin"></canvas></td>
+            <td>${{operatingExpenses2017_M|intcomma}} Mio.</td>
+            <td>${{operatingExpenses2018_M|intcomma}} Mio.</td>
+            <td>${{operatingExpenses2019_M|intcomma}} Mio.</td>
+            <td>${{operatingExpenses2020_M|intcomma}} Mio.</td>
+            <td>${{operatingExpenses2021_M|intcomma}} Mio.</td>
+          </tr>
+          <tr>
+            <th class="row_header">Operating Margin</th>
+            <td><canvas class="financial_chart chart_operatingMargin"></canvas></td>
+            <td>{{operatingProfitMargin2017_M|stringformat:"d%%"}}</td>
+            <td>{{operatingProfitMargin2018_M|stringformat:"d%%"}}</td>
+            <td>{{operatingProfitMargin2019_M|stringformat:"d%%"}}</td>
+            <td>{{operatingProfitMargin2020_M|stringformat:"d%%"}}</td>
+            <td>{{operatingProfitMargin2021_M|stringformat:"d%%"}}</td>
+          </tr>
+          <tr>
+            <th class="row_divider" colspan="7">Taxes & Depreciation</th>
+          </tr>
+          <tr>
+            <th class="row_header">EBITDA</th>
+            <td><canvas class="financial_chart chart_netIncome"></canvas></td>
+            <td>${{ebitda2017_M|intcomma}} Mio.</td>
+            <td>${{ebitda2018_M|intcomma}} Mio.</td>
+            <td>${{ebitda2019_M|intcomma}} Mio.</td>
+            <td>${{ebitda2020_M|intcomma}} Mio.</td>
+            <td>${{ebitda2021_M|intcomma}} Mio.</td>
+          </tr>
+          <tr>
+            <th class="row_header">Income Before Tax</th>
+            <td><canvas class="financial_chart chart_netIncome"></canvas></td>
+            <td>${{incomeBeforeTax2017_M|intcomma}} Mio.</td>
+            <td>${{incomeBeforeTax2018_M|intcomma}} Mio.</td>
+            <td>${{incomeBeforeTax2019_M|intcomma}} Mio.</td>
+            <td>${{incomeBeforeTax2020_M|intcomma}} Mio.</td>
+            <td>${{incomeBeforeTax2021_M|intcomma}} Mio.</td>
+          </tr>
+          <tr>
+            <th class="row_divider" colspan="7">Bottom Line</th>
+          </tr>
+          <tr>
+            <th class="row_header">Net Income</th>
+            <td><canvas class="financial_chart chart_netIncome"></canvas></td>
+            <td>${{netIncome2017_M|intcomma}} Mio.</td>
+            <td>${{netIncome2018_M|intcomma}} Mio.</td>
+            <td>${{netIncome2019_M|intcomma}} Mio.</td>
+            <td>${{netIncome2020_M|intcomma}} Mio.</td>
+            <td>${{netIncome2021_M|intcomma}} Mio.</td>
+          </tr>
+          <tr>
+            <th class="row_header">Profit Margin</th>
+            <td><canvas class="financial_chart chart_profitMargin"></canvas></td>
+            <td>{{netProfitMargin2017_M|stringformat:"d%%"}}</td>
+            <td>{{netProfitMargin2018_M|stringformat:"d%%"}}</td>
+            <td>{{netProfitMargin2019_M|stringformat:"d%%"}}</td>
+            <td>{{netProfitMargin2020_M|stringformat:"d%%"}}</td>
+            <td>{{netProfitMargin2021_M|stringformat:"d%%"}}</td>
+          </tr>
+          <tr>
+            <th class="row_header">Earnings Per Share (EPS)</th>
+            <td><canvas class="financial_chart chart_profitMargin"></canvas></td>
+            <td>{{eps2017}}</td>
+            <td>{{eps2018}}</td>
+            <td>{{eps2019}}</td>
+            <td>{{eps2020}}</td>
+            <td>{{eps2021}}</td>
           </tr>
         </table>
+      </div>
+
+      <div class="stock_description stock_view_item">
+
       </div>
     </div>
 
@@ -224,18 +344,75 @@
   const peRatio = JSON.parse("{{peRatio|safe}}");
   const pbRatio = JSON.parse("{{pbRatio|safe}}");
   const pfcfRatio = JSON.parse("{{pfcfRatio|safe}}");
+  const eps = JSON.parse("{{eps|safe}}");
   const dividendYield = JSON.parse("{{dividendYield|safe}}");
   const payoutRatio = JSON.parse("{{payoutRatio|safe}}");
 
   const revenue = JSON.parse("{{revenue|safe}}");
+  const grossProfit = JSON.parse("{{grossProfit|safe}}");
+  const netIncome = JSON.parse("{{netIncome|safe}}");
 
-  function chartConfig(args="normal", right=false, rightColor='grey') {
+
+  function chartConfig(args="normal", right=false, rightColor='grey', sole=false) {
+    if (sole == true) {
+      var config = {
+        plugins: { legend: {
+            display: false
+        }},
+        scales: {
+          x: {
+            grid: { display: false },
+            align: "end",
+            display: false,
+          },
+          left: {
+            grid: { display: false },
+            ticks: {
+              beginAtZero: true,
+              callback: function(value, index, values) {
+                if (args == "pct") return Math.round(value * 100) + '%';
+                else return value
+              },
+            font: 14,
+            },
+            type: 'linear',
+            position: 'left',
+            display: false,
+          }
+      } }
+      return config
+    } 
+      
+
     if (right == true) {
       var config = {
         plugins: { legend: { labels: {
           fontColor: "rgb(255, 255, 255)",
           font: { size: 14, } 
           } } 
+        },
+        plugins: [{
+          afterDraw: chart => {
+              if (chart.tooltip?._active?.length) {
+                  let x = chart.tooltip._active[0].element.x;
+                  let yAxis = chart.scales.y;
+                  let ctx = chart.ctx;
+                  ctx.save();
+                  ctx.beginPath();
+                  ctx.moveTo(x, yAxis.top);
+                  ctx.lineTo(x, yAxis.bottom);
+                  ctx.lineWidth = 1;
+                  ctx.strokeStyle = '#ff0000';
+                  ctx.stroke();
+                  ctx.restore();
+              }
+          }
+        }],
+        options: {
+          interaction: {
+              intersect: false,
+              mode: 'index',
+          }
         },
         scales: {
           x: {
@@ -270,6 +447,7 @@
             position: 'right',
           }
       } } }
+
     else {
       var config = {
         plugins: { legend: { labels: {
@@ -314,12 +492,12 @@
       {
         label: "Operating Margin",
         data: operatingMargin,
-        backgroundColor: "rgb(255, 0, 0)",
+        backgroundColor: "rgb(20, 150, 255)",
       },
       {
         label: "Profit Margin",
         data: profitMargin,
-        backgroundColor: "rgb(0, 180, 40)",
+        backgroundColor: "rgb(20, 200, 240)",
       },
       ],
     },
@@ -333,10 +511,10 @@
       labels: yearLabels,
       datasets: [
       {
-        label: "P/E Ratio",
-        data: peRatio,
-        backgroundColor: "rgb(255, 0, 0)",
-        borderColor: "rgb(255, 0, 0, 0.3)",
+        label: "EPS",
+        data: eps,
+        backgroundColor: "rgb(110, 255, 255)",
+        borderColor: "rgb(110, 255, 255, 0.3)",
       },
       {
         label: "P/B Ratio",
@@ -345,15 +523,15 @@
         borderColor: "rgb(110, 255, 0, 0.3)",
       },
       {
-        label: "P/FCF Ratio",
-        data: pfcfRatio,
-        backgroundColor: "rgb(110, 255, 255)",
-        borderColor: "rgb(110, 255, 255, 0.3)",
-
+        label: "P/E Ratio",
+        data: peRatio,
+        backgroundColor: "rgb(138, 48, 255)",
+        borderColor: "rgb(138, 48, 255, 0.3)",
+        yAxisID: "right",
       },
       ],
     },
-    options: chartConfig(),
+    options: chartConfig("normal", true, "rgb(138, 48, 255)"),
   });
 
   const dividend_chart = document.querySelector('.stock_dividend_chart').getContext('2d');
@@ -361,45 +539,96 @@
     type: 'line',
     data: {
       labels: yearLabels,
-      datasets: [
-      {
+      datasets: [{
         label: "Dividend in %",
         data: dividendYield,
         backgroundColor: "rgb(255, 179, 0)",
         borderColor: "rgb(255, 179, 0, 0.3)",
         yAxisID: "right",
-      },
-      {
+      }, {
         label: "Payout Ratio",
         data: payoutRatio,
         backgroundColor: "rgb(144, 0, 255)",
         borderColor: "rgb(144, 0, 255, 0.4)",
-      },
-      {
+      }, {
         label: "Profit Margin",
         data: profitMargin,
         backgroundColor: "rgb(0, 237, 213)",
         borderColor: "rgb(0, 237, 213, 0.3)",
-      },
-      ],
+      }]
     },
     options: chartConfig("pct", true, "rgb(255, 179, 0)"),
   });
 
   const chart_revenue = document.querySelector('.chart_revenue').getContext('2d');
-  const chart_revenue1 = new Chart(chart_revenue, {
+  const chart_grossProfit = document.querySelector('.chart_grossProfit').getContext('2d');
+  const chart_grossMargin = document.querySelector('.chart_grossMargin').getContext('2d');
+  const chart_operatingMargin = document.querySelector('.chart_operatingMargin').getContext('2d');
+  const chart_netIncome = document.querySelector('.chart_netIncome').getContext('2d');
+  const chart_profitMargin = document.querySelector('.chart_profitMargin').getContext('2d');
+
+
+  var chart_revenue1 = new Chart(chart_revenue, {
     type: 'bar',
     data: {
-      datasets: [
-      {
+      labels: yearLabels,
+      datasets: [{
         data: revenue,
-        backgroundColor: "rgb(255, 179, 0)",
-        borderColor: "rgb(255, 179, 0, 0.3)",
-      },
-      ],
-    },
-    options: chartConfig(),
+        backgroundColor: "rgb(20, 150, 255)",
+      },],},
+    options: chartConfig("normal", false, "0", true),
   });
+  var chart_grossProfit1 = new Chart(chart_grossProfit, {
+    type: 'bar',
+    data: {
+      labels: yearLabels,
+      datasets: [{
+        data: grossProfit,
+        backgroundColor: "rgb(20, 150, 255)",
+      },],},
+    options: chartConfig("normal", false, "0", true),
+  });
+  var chart_grossMargin1 = new Chart(chart_grossMargin, {
+    type: 'bar',
+    data: {
+      labels: yearLabels,
+      datasets: [{
+        data: grossMargin,
+        backgroundColor: "rgb(20, 150, 255)",
+      },],},
+    options: chartConfig("normal", false, "0", true),
+  });
+  var chart_operatingMargin1 = new Chart(chart_operatingMargin, {
+    type: 'bar',
+    data: {
+      labels: yearLabels,
+      datasets: [{
+        data: operatingMargin,
+        backgroundColor: "rgb(20, 150, 255)",
+      },],},
+    options: chartConfig("normal", false, "0", true),
+  });
+  var chart_netIncome1 = new Chart(chart_netIncome, {
+    type: 'bar',
+    data: {
+      labels: yearLabels,
+      datasets: [{
+        data: netIncome,
+        backgroundColor: "rgb(20, 150, 255)",
+      },],},
+    options: chartConfig("normal", false, "0", true),
+  });
+  var chart_profitMargin1 = new Chart(chart_profitMargin, {
+    type: 'bar',
+    data: {
+      labels: yearLabels,
+      datasets: [{
+        data: profitMargin,
+        backgroundColor: "rgb(20, 150, 255)",
+      },],},
+    options: chartConfig("normal", false, "0", true),
+  });
+
 
 
 </script>

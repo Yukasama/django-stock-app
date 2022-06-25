@@ -74,7 +74,7 @@ def symbol(request, symbol):
             keyZero = f'{key}{year}_M'
             data[key].append(value) if value != None else data[key].append(0)
             data[yearKey] = value if value != None else 0
-            try: data[keyZero] = int(value / 1000000) if value != None else 0
+            try: data[keyZero] = int(value / 1000000)
             except: data[keyZero] = value if value != None else 0
     #Create Auto-Generated Dict from Info Data Model
     info = Info.objects.filter(symbol=symbol).values()[0]
@@ -86,7 +86,10 @@ def symbol(request, symbol):
     
     data["yearLabels"], data["mode"] = yearLabels, "dark"
     data["competitors"] = competitors
-
+    summy = 0
+    for i in data["dividendYield"]:
+        summy = summy + i
+    data["dividendYieldChecker"] = summy
     return render(request, 'eye/symbol.html', data)
 
 
