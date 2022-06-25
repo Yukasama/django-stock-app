@@ -27,6 +27,7 @@ def stocks(request):
                 for key, value in financial.items():
                     key = f'{symbol}_{key}'
                     yearKey = f'{symbol}_{key}{year}'
+                    keyZero = f'{symbol}_{key}{year}_M'
                     data[key].append(value)
                     data[yearKey] = value
             #Create Auto-Generated Dict from Info Data Model
@@ -70,8 +71,11 @@ def symbol(request, symbol):
         yearLabels.append(year)
         for key, value in financial.items():
             yearKey = f'{key}{year}'
+            keyZero = f'{key}{year}_M'
             data[key].append(value) if value != None else data[key].append(0)
             data[yearKey] = value if value != None else 0
+            try: data[keyZero] = int(value / 1000000) if value != None else 0
+            except: data[keyZero] = value if value != None else 0
     #Create Auto-Generated Dict from Info Data Model
     info = Info.objects.filter(symbol=symbol).values()[0]
     for key, value in info.items(): data[key] = value

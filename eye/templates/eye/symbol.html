@@ -153,6 +153,26 @@
 
       <div class="stock_financials stock_view_item">
         <p class="stock_header">Financials</p>
+        <p class="stock_subheader">Numbers in Millions</p>
+        <table class="stock_financials_t">
+          <tr>
+            <th></th>
+            <th>2021</th>
+            <th>2020</th>
+            <th>2019</th>
+            <th>2018</th>
+          </tr>
+          <tr>
+            <td>Revenue</td>
+            <td>{{revenue2018_M}}</td>
+            <td>{{revenue2019_M}}</td>
+            <td>{{revenue2020_M}}</td>
+            <td>{{revenue2021_M}}</td>
+            <td>
+              <canvas class="chart_revenue"></canvas>
+            </td>
+          </tr>
+        </table>
       </div>
     </div>
 
@@ -207,34 +227,75 @@
   const dividendYield = JSON.parse("{{dividendYield|safe}}");
   const payoutRatio = JSON.parse("{{payoutRatio|safe}}");
 
-  function chartConfig(args="normal") {
-    var config = {
-      plugins: { legend: { labels: {
-        fontColor: "rgb(255, 255, 255)",
-        font: {
-          size: 14,
-        } } } 
-      },
-      scales: {
-        x: {
-          grid: {
-            display: false
-          },
-          align: "end",
+  const revenue = JSON.parse("{{revenue|safe}}");
+
+  function chartConfig(args="normal", right=false, rightColor='grey') {
+    if (right == true) {
+      var config = {
+        plugins: { legend: { labels: {
+          fontColor: "rgb(255, 255, 255)",
+          font: { size: 14, } 
+          } } 
         },
-        y: {
-          grid: {
-            display: false
+        scales: {
+          x: {
+            grid: { display: false },
+            align: "end",
           },
-          ticks: {
-            beginAtZero: true,
-            callback: function(value, index, values) {
-              if (args == "pct") { return value * 100 + '%'; } 
-              else { return value }
-            },
+          left: {
+            grid: { display: false },
+            ticks: {
+              beginAtZero: true,
+              callback: function(value, index, values) {
+                if (args == "pct") return Math.round(value * 100) + '%';
+                else return value
+              },
             font: 14,
+            },
+            type: 'linear',
+            position: 'left',
+          },
+          right: {
+            grid: { display: false },
+            ticks: {
+              beginAtZero: true,
+              callback: function(value, index, values) {
+                if (args == "pct") return Math.round(value * 100) + '%';
+                else return value
+              },
+            font: 14,
+            color: rightColor,
+            },
+            type: 'linear',
+            position: 'right',
           }
-    } } }
+      } } }
+    else {
+      var config = {
+        plugins: { legend: { labels: {
+          fontColor: "rgb(255, 255, 255)",
+          font: { size: 14, } 
+          } } 
+        },
+        scales: {
+          x: {
+            grid: { display: false },
+            align: "end",
+          },
+          left: {
+            grid: { display: false },
+            ticks: {
+              beginAtZero: true,
+              callback: function(value, index, values) {
+                if (args == "pct") return Math.round(value * 100) + '%';
+                else return value
+              },
+            font: 14,
+            },
+            type: 'linear',
+            position: 'left',
+          }
+      } } }
     return config
   }
 
@@ -306,6 +367,7 @@
         data: dividendYield,
         backgroundColor: "rgb(255, 179, 0)",
         borderColor: "rgb(255, 179, 0, 0.3)",
+        yAxisID: "right",
       },
       {
         label: "Payout Ratio",
@@ -318,10 +380,25 @@
         data: profitMargin,
         backgroundColor: "rgb(0, 237, 213)",
         borderColor: "rgb(0, 237, 213, 0.3)",
-      }
+      },
       ],
     },
-    options: chartConfig("pct"),
+    options: chartConfig("pct", true, "rgb(255, 179, 0)"),
+  });
+
+  const chart_revenue = document.querySelector('.chart_revenue').getContext('2d');
+  const chart_revenue1 = new Chart(chart_revenue, {
+    type: 'bar',
+    data: {
+      datasets: [
+      {
+        data: revenue,
+        backgroundColor: "rgb(255, 179, 0)",
+        borderColor: "rgb(255, 179, 0, 0.3)",
+      },
+      ],
+    },
+    options: chartConfig(),
   });
 
 

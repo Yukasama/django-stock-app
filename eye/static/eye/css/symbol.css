@@ -4,10 +4,15 @@
 .stocks {
     width: 100%;
 }
-.stock_header {
-    text-transform: uppercase;
+.stock_header, .stock_subheader {
     color: var(--color-text-theme);
     margin: 10px;
+}
+.stock_header {
+    text-transform: uppercase;
+}
+.stock_subheader {
+    font-size: 0.9em;
 }
 
 
@@ -157,6 +162,11 @@
     right: 10px;
 }
 
+
+
+.stock_financials_t {
+    overflow-x: auto;
+}
 
 
 

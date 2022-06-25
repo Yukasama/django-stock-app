@@ -37,7 +37,7 @@ function events(eventElement, showElement, event, action) {
             }
         })
     } catch {
-        console.log("Error: 'EventHandler' (event=" + event + "), " + "(action=" + action + ")");
+        console.log("Error: EventHandler '" + eventElement + "' (event=" + event + "), " + "(action=" + action + ")");
     }
 }
 
