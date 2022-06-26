@@ -28,13 +28,22 @@ def DataTransfer(ticker):
         country = dt.dataGet(ticker, "country", "info")
         address = dt.dataGet(ticker, "address1", "info")
         name = dt.dataGet(ticker, "longName", "info")
-        summary = dt.dataGet(ticker, "longBusinessSummary", "info")
+        description = dt.dataGet(ticker, "longBusinessSummary", "info")
         employees = dt.dataGet(ticker, "fullTimeEmployees", "info")
         sector = dt.dataGet(ticker, "sector", "info")
         industry = dt.dataGet(ticker, "industry", "info")
         exchange = dt.dataGet(ticker, "exchange", "info")
         quoteType = dt.dataGet(ticker, "quoteType", "info")
         currency = dt.dataGet(ticker, "currency", "info")
+        marketCap = dt.dataGet(ticker, "marketCap", "info")
+        sharesOutstanding = dt.dataGet(ticker, "sharesOutstanding", "info")
+        recommendationMean = dt.dataGet(ticker, "recommendationMean", "info")
+        targetMeanPrice = dt.dataGet(ticker, "targetMeanPrice", "info")
+        dividendRate = dt.dataGet(ticker, "dividendRate", "info")
+        beta = dt.dataGet(ticker, "beta", "info")
+        shortRatio = dt.dataGet(ticker, "shortRatio", "info")
+        forwardEPS = dt.dataGet(ticker, "forwardEPS", "info")
+        pegRatio = dt.dataGet(ticker, "pegRatio", "info")
         phone = dt.dataGet(ticker, "phone", "info")
         website = dt.dataGet(ticker, "website", "info")
         logo = dt.dataGet(ticker, "logo_url", "info")
@@ -48,7 +57,7 @@ def DataTransfer(ticker):
     
     
     #Financial Data
-    for year in range(2014, 2022):
+    for year in range(2015, 2022):
         #Basic Data
         fillingDate = dt.dataGet(ticker, "fillingDate", 0, str(year))
         #Income Statement
@@ -560,7 +569,7 @@ def DataTransfer(ticker):
         country=country, 
         address=address, 
         name=name,
-        summary=summary,
+        description=description,
         employees=employees,
         sector=sector,
         industry=industry,
@@ -568,6 +577,14 @@ def DataTransfer(ticker):
         quoteType=quoteType,
         currency=currency,
         marketCap=marketCap,
+        sharesOutstanding = sharesOutstanding,
+        recommendationMean = recommendationMean,
+        targetMeanPrice = targetMeanPrice,
+        dividendRate = dividendRate,
+        beta = beta,
+        shortRatio = shortRatio,
+        forwardEPS = forwardEPS,
+        pegRatio = pegRatio,
         phone=phone,
         website=website,
         logo=logo,
@@ -594,7 +611,7 @@ class Command(BaseCommand):
             for ticker in tickers:
                 DataTransfer(ticker)
         else:
-            ticker = "ADBE"
+            ticker = "A"
             DataTransfer(ticker)
             
             

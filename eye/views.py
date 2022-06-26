@@ -21,15 +21,15 @@ def stocks(request):
         try:
             symbol = Stock.objects.get(symbol=symbol)
             #Create Auto-Generated Dictionary from Financial Model
-            for year in range(2014, 2022):
-                financial = ShortFinancial.objects.filter(symbol=symbol, year=year).values()[0]
-                yearLabels.append(year)
-                for key, value in financial.items():
-                    key = f'{symbol}_{key}'
-                    yearKey = f'{symbol}_{key}{year}'
-                    keyZero = f'{symbol}_{key}{year}_M'
-                    data[key].append(value)
-                    data[yearKey] = value
+            # for year in range(2014, 2022):
+            #     financial = ShortFinancial.objects.filter(symbol=symbol, year=year).values()[0]
+            #     yearLabels.append(year)
+            #     for key, value in financial.items():
+            #         key = f'{symbol}_{key}'
+            #         yearKey = f'{symbol}_{key}{year}'
+            #         keyZero = f'{symbol}_{key}{year}_M'
+            #         data[key].append(value)
+            #         data[yearKey] = value
             #Create Auto-Generated Dict from Info Data Model
             info = Info.objects.filter(symbol=symbol).values()[0]
             for key, value in info.items():
@@ -64,32 +64,36 @@ def screener(request):
 
 def symbol(request, symbol):
     symbol = Stock.objects.get(symbol=symbol)
-    data, yearLabels = defaultdict(list), []
+    data, years = defaultdict(list), []
     #Create Auto-Generated Dictionary from Financial Model
-    for year in range(2014, 2022):
+    for year in range(2015, 2022):
         financial = Financial.objects.filter(symbol=symbol, year=year).values()[0]
-        yearLabels.append(year)
+        years.append(year)
         for key, value in financial.items():
-            yearKey = f'{key}{year}'
-            keyZero = f'{key}{year}_M'
-            data[key].append(value) if value != None else data[key].append(0)
-            data[yearKey] = value if value != None else 0
-            try: data[keyZero] = int(value / 1000000)
-            except: data[keyZero] = value if value != None else 0
+            keyZero = f'{key}_M'
+            if (key == "grossProfitMargin" or key == "operatingProfitMargin" or key == "netProfitMargin"): 
+                data[key].append(round(value * 100, 2)) if value != None else data[key].append(0)
+            else: data[key].append(value) if value != None else data[key].append(0)
+            try: data[keyZero].append(int(value / 1000000))
+            except: data[keyZero].append(value) if value != None else 0
+
     #Create Auto-Generated Dict from Info Data Model
     info = Info.objects.filter(symbol=symbol).values()[0]
     for key, value in info.items(): data[key] = value
     
-    symbolSector = data["sector"]
-    competitors = Info.objects.filter(sector=symbolSector)\
+    #Competitors
+    competitors = Info.objects.filter(sector=data["sector"])\
     .order_by("marketCap").exclude(symbol=symbol)[:5]
-    
-    data["yearLabels"], data["mode"] = yearLabels, "dark"
     data["competitors"] = competitors
-    summy = 0
-    for i in data["dividendYield"]:
-        summy = summy + i
-    data["dividendYieldChecker"] = summy
+    
+    #Extra Fields
+    data["years"], data["mode"] = years, "dark"
+    data["dividendYieldChecker"] = [i + i for i in data["dividendYield"]]
+    desc = data["description"].split(".")
+    data["descShort"] = desc[0]+"." + desc[1]+"." + desc[2]+"."
+    try: data["recommendationMean"] = round(1 - (data["recommendationMean"] - 1) / (5 - 1), 3)
+    except: data["recommendationMean"] = "N/A"
+    data["eye"] = 0.845
     return render(request, 'eye/symbol.html', data)
 
 

@@ -20,7 +20,7 @@
 .stock_window {
     width: 100%;
     height: 100%;
-    margin-right: 10px;
+    margin: 0 10px 20px 0;
 }
 .stock_title {  grid-area: stock_title;  }
 .stock_chart {  grid-area: stock_chart;  }
@@ -28,7 +28,7 @@
 .stock_suggestions {  grid-area: stock_suggestions;  }
 .stock_charts {  grid-area: stock_charts;  }
 .stock_financials {  grid-area: stock_financials;  }
-.stock_description {  grid-area: stock_description;  }
+.stock_profile {  grid-area: stock_profile;  }
 
 .stock_view {
     display: none;
@@ -44,7 +44,7 @@
     "stock_chart stock_chart stock_chart stock_suggestions stock_suggestions"
     "stock_chart stock_chart stock_chart stock_suggestions stock_suggestions"
     "stock_charts stock_charts stock_charts stock_charts stock_charts"
-    "stock_financials stock_financials stock_financials stock_description stock_description";
+    "stock_financials stock_financials stock_financials stock_financials stock_profile";
 }
 .stock_view_item {
     border-radius: 15px;
@@ -81,15 +81,15 @@
 .stock_title_data {
     align-items: center;
 }
+.stock_name {
+    color: var(--color-first);
+}
 .stock_title_text {
     font-size: 1.2em;
 }
 .stock_title_desc {
     font-size: 0.9em;
     color: var(--color-reverse-light);
-}
-.stock_name {
-    font-size: 1.6em;
 }
 
 
@@ -102,24 +102,78 @@
 }
 
 
-.stock_rating {
-
+.stock_ratings_c {
+    flex-direction: column;
+    align-items: center;
 }
+.eye_ratings {
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.stock_rating {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.stock_rating_header {
+    color: var(--color-reverse-light);
+    font-size: 0.9em;
+}
+.stock_rating_text {
+    font-size: 1.1em;
+}
+.eye_rating {
+    margin: 10px;
+}
+.stock_eye_text {
+    font-size: 1.3em;
+}
+.stock_eye_header {
+    color: var(--color-first);
+}
+.progress {
+    width: 90%;
+    height: 40px;
+    align-items: center;
+    flex-direction: column;
+}
+.progress_bar {
+    height: 25px;
+    width: 71%;
+    background: var(--color-light);
+    margin: 5px 0;
+}
+.progressed {
+    background: var(--color-first);
+    width: attr(eye);
+    height: 100%;
+}
+.progress_nums {
+    justify-content: space-between;
+    width: 71%;
+}
+.progress_num {
+    color: var(--color-reverse-light);
+    font-size: 0.8em;
+}
+
 
 .stock_suggestions {
     flex-direction: column;
     min-width: 300px;
-    gap: 7px;
+    gap: 5px;
+    overflow: hidden;
 }
 .stock_suggest {
-    height: 80px;
+    height: 75px;
     cursor: pointer;
 }
 .stock_logo_s {
     height: 60px;
     width: 60px;
     border-radius: 5px;
-    margin: 10px;
+    margin: 7.5px;
     box-shadow: none;
     background-color: white;
 }
@@ -131,9 +185,6 @@
     position: absolute;
     height: 100%;
     width: 100%;
-}
-.stock_suggest_data {
-    margin: 10px 0;
 }
 .stock_name_s {
     position: absolute;
@@ -148,6 +199,8 @@
 .stock_suggest_data {
     padding-left: 85px;
     line-height: 90px;
+    margin: 10px 0;
+    gap: 20px;
 }
 .stock_suggest:hover {
     background: var(--color-light);
@@ -208,7 +261,7 @@
     margin: 1.5px 2.5px 3.5px 2.5px;
 }
 .row_header {
-    width: 200px !important;
+    width: 220px !important;
 }
 .row_divider {
     border-bottom: 1px solid var(--color-first);
@@ -217,7 +270,20 @@
 }
 
 
-@media screen and (max-width: 800px) {
+.stock_profile_container {
+    margin: 20px;
+}
+.stock_profile_header {
+    color: var(--color-text-theme);
+    font-size: 1.05em;
+    margin: 10px 0 3px 0;
+}
+.stock_profile_text {
+    font-size: 0.9em;
+    color: var(--color-reverse-light);
+}
+
+@media screen and (max-width: 1100px) {
     .stock_view.active {
         display: flex;
         flex-direction: column;

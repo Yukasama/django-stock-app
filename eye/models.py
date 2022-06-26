@@ -25,7 +25,7 @@ class Info(models.Model):
     
     #Company Info
     name = models.CharField(max_length=300, null=True, blank=True)
-    summary = models.CharField(max_length=10000, null=True, blank=True)
+    description = models.CharField(max_length=10000, null=True, blank=True)
     employees = models.FloatField(blank=True, null=True)
     sector = models.CharField(max_length=200, null=True, blank=True)
     industry = models.CharField(max_length=200, null=True, blank=True)
@@ -33,6 +33,16 @@ class Info(models.Model):
     quoteType = models.CharField(max_length=50, null=True, blank=True)
     currency = models.CharField(max_length=10, null=True, blank=True)
     marketCap = models.FloatField(blank=True, null=True)
+    sharesOutstanding = models.FloatField(blank=True, null=True)
+    recommendationMean = models.FloatField(blank=True, null=True)
+    targetMeanPrice = models.FloatField(blank=True, null=True)
+    dividendRate = models.FloatField(blank=True, null=True)
+    
+    #Metrics
+    beta = models.FloatField(blank=True, null=True)
+    shortRatio = models.FloatField(blank=True, null=True)
+    forwardEPS = models.FloatField(blank=True, null=True)
+    pegRatio = models.FloatField(blank=True, null=True)
     
     #Contact Info
     phone = models.CharField(max_length=50, null=True, blank=True)
