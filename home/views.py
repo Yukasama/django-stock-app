@@ -80,7 +80,7 @@ def search(request):
             q = q + " [filter: ticker]"
         else:       
             results = Info.objects.filter(Q(ticker__startswith=q) |
-                                        Q(name__startswith=q) |
+                                        Q(longName__startswith=q) |
                                         Q(sector=q)).order_by("ticker")
         length = len(results)
         data = {

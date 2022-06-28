@@ -20,7 +20,6 @@ api_key = "1451443e6ac73f65840c60adab375261" #ApiKey for FundamentalAnalysis
 tickers_sp500 = pd.read_csv("Data/SymbolData/S&P500")["0"] #S&P 500 Ticker List
 tickers_dax40 = pd.read_csv("Data/SymbolData/DAX40")["0"] #DAX Ticker List
 tickers = pd.concat([tickers_sp500, tickers_dax40], axis=0)
-findata = pd.read_csv("Data/SymbolData/FinData")["0"] #Financial Data in String Format
 request_cooler = 181
 messageSign, commandSign, errorSign = "=>", "//", "[!]"
 acYear = dt.today().year
@@ -210,18 +209,31 @@ def copyRows(action="models", output=False):
     names = pd.concat([income_statement, balance_sheet, cash_flow, key_metrics,
                financial_ratios, financial_statement_growth, discounted_cash_flow])
     names = names.drop_duplicates(keep='first')
+    blackList = ["reportedCurrency", "acceptedDate", "calendarYear", "priceEarningsRatio", "priceBookValueRatio",
+                     "priceToBookRatio", "ptbRatio", "priceToFreeCashFlowsRatio",
+                     "priceCashFlowRatio", "returnOnEquity", "grossProfitRatio", "operatingIncomeRatio",
+                     "incomeBeforeTaxRatio", "netIncomeRatio", "priceSalesRatio", "dividendPayoutRatio",
+                     "priceToOperatingCashFlowsRatio", "period", "cik", "link", "finalLink", "roe"]
     
     if(action == "models"):
         for name in names:
             print(f'{name} = models.IntegerField(blank=True, null=True)')
             
     elif(action == "dataGet"):
+        array = []
         for name in names:
-            print(f'{name} = dt.dataGet(ticker, "{name}", 0, str(year))')
+            if name in blackList: continue
+            array.append(name)
+            print(f'{name} = df.loc[df["Unnamed: 0"] == "{name}"][str(year)].tolist()[0]')
+        print(len(array))  
             
     elif(action == "modelInsert"):
+        array = []
         for name in names:
-            print(f'{name} = {name},')
+            if name in blackList: continue
+            array.append(name)
+            print(f'{name} = findict["{name}"],')
+        print(len(array))  
             
     elif(action == "viewModel"):
         for name in names:
@@ -229,11 +241,6 @@ def copyRows(action="models", output=False):
         
     elif(action == "array"):
         array = []
-        blackList = ["reportedCurrency", "acceptedDate", "calendarYear", "priceEarningsRatio", "priceBookValueRatio",
-                     "priceToBookRatio", "ptbRatio", "priceToSalesRatio", "priceToFreeCashFlowsRatio",
-                     "priceCashFlowRatio", "returnOnEquity", "grossProfitRatio", "operatingIncomeRatio",
-                     "incomeBeforeTaxRatio", "netIncomeRatio", "priceSalesRatio", "dividendPayoutRatio",
-                     "priceToOperatingCashFlowsRatio", "period", "cik", "link", "finalLink", "roe"]
         for name in names:
             if name in blackList:
                 continue
@@ -247,7 +254,7 @@ def copyRows(action="models", output=False):
             newData.to_csv("Data/SymbolData/FinData")
             print(len(newData))
                 
-# copyRows("array", True)
+# copyRows("modelInsert")
 
 
 #-------------------------------------------------------------------------------------------------------------------
@@ -288,24 +295,35 @@ def dataGetTemp(tickerAsArray, value, fileName=0, year=str(acYear - 1)):
         
         if(fileName == 0):
             files = ["income_statement", "balance_sheet", "cash_flow", "financial_ratios",
-                     "key_metrics", "financial_statement_growth", "discounted_cash_flow"]
+                     "key_metrics", "discounted_cash_flow"]
+            tickerFrame = pd.DataFrame()
             
-            for f in files:       
-                try:
-                    df = pd.read_csv(f'Data/StockData/{t}/{f}')
-                    if (year == "ALL"): 
-                        df_new = df.loc[df["Unnamed: 0"] == value]
-                        result = dataConstruct(df_new, "floatArray")
-                    elif (year == str(acYear - 1)):
-                        try: df_new = df.loc[df["Unnamed: 0"] == value][str(acYear)]
-                        except: df_new = df.loc[df["Unnamed: 0"] == value][str(acYear - 1)]
-                        result = dataConstruct(df_new, "normal")
-                    else:
-                        df_new = df.loc[df["Unnamed: 0"] == value][str(year)]
-                        result = dataConstruct(df_new, "normal")
-                    return result
-                    exit()
-                except: continue
+            if (value == "all"):
+                if not os.path.exists(f'Data/StockData/{t}/income_statement'):
+                    return pd.DataFrame()
+                else: 
+                    for f in files:
+                        df = pd.read_csv(f'Data/StockData/{t}/{f}')
+                        tickerFrame = pd.concat([tickerFrame, df])
+                    tickerFrame = tickerFrame.drop_duplicates(keep="first")
+                    return tickerFrame
+            else:
+                for f in files:
+                    try:
+                        df = pd.read_csv(f'Data/StockData/{t}/{f}')
+                        if (year == "ALL"): 
+                            df_new = df.loc[df["Unnamed: 0"] == value]
+                            result = dataConstruct(df_new, "floatArray")
+                        elif (year == str(acYear - 1)):
+                            try: df_new = df.loc[df["Unnamed: 0"] == value][str(acYear)]
+                            except: df_new = df.loc[df["Unnamed: 0"] == value][str(acYear - 1)]
+                            result = dataConstruct(df_new, "normal")
+                        else:
+                            df_new = df.loc[df["Unnamed: 0"] == value][str(year)]
+                            result = dataConstruct(df_new, "normal")
+                        return result
+                    except: continue
+
                 
         elif(fileName != 0):
             df = pd.read_csv(f'Data/StockData/{t}/{fileName}')
@@ -317,7 +335,6 @@ def dataGetTemp(tickerAsArray, value, fileName=0, year=str(acYear - 1)):
                 df_new = df.loc[df["2022-2"] == value]["0"]           
             elif (fileName == "history"):
                 return df
-                exit()
                 
             #If no file exists
             else: print("There's no such file/value.")
@@ -327,16 +344,15 @@ def dataGetTemp(tickerAsArray, value, fileName=0, year=str(acYear - 1)):
 
 
 def dataGet(tickerAsArray, value, fileName=0, year=str(dt.today().year - 1), operator=True, output=False):
-    
-    dataArray, tickerArray = [], []
 
     if (operator == True):
         try: 
             result = dataGetTemp(tickerAsArray, value, fileName, year)
             return result
-        except: print("Array Error: Too many values.")
-        
+        except Exception as e: print("Error: " + str(e))
+    
     elif (operator == False):
+        dataArray, tickerArray = [], []
         for t in tickerAsArray: 
              result = dataGetTemp(t, value, fileName)
              dataArray.append(result)
@@ -350,3 +366,4 @@ def dataGet(tickerAsArray, value, fileName=0, year=str(dt.today().year - 1), ope
         #If theres only one ticker, print the result
         if (len(tickerAsArray) == 1): return result
         elif (len(tickerAsArray) > 1): return dataArray
+

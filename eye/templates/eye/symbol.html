@@ -40,11 +40,11 @@
     <div class="stock_view stock_view1 active grid_system">
       <div class="stock_title stock_view_item flex">
         <div class="stock_logo smart_box">
-          <img class="stock_img" src={{logo}}>
+          <img class="stock_img" src={{logo_url}}>
         </div>
         <div class="stock_title_c flex">
           <div class="stock_title_data">
-            <a href="{{website}}" class="stock_title_text stock_name">{{name}}</a>
+            <a href="{{website}}" class="stock_title_text stock_name">{{longName}}</a>
             <p class="stock_title_desc">Company</p>
           </div>
           <div class="stock_title_data">
@@ -146,10 +146,10 @@
         {% for c in competitors %}
         <div class="stock_suggest flex">
           <div class="stock_logo_s smart_box">
-            <img class="stock_img_s" src={{c.logo}}>
+            <img class="stock_img_s" src={{c.logo_url}}>
           </div>
           <div class="stock_suggest_info flex">
-            <a href="{% url 'symbol' c.ticker %}" class="stock_name_s">{{c.name}}</a>
+            <a href="{% url 'symbol' c.ticker %}" class="stock_name_s">{{c.longName}}</a>
             <div class="stock_suggest_data flex">
               <div class="stock_price_s">1500.00$</div>
               <div class="stock_percent_s">+1.59%</div>

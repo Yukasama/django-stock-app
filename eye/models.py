@@ -21,19 +21,18 @@ class Info(models.Model):
     city = models.CharField(max_length=50, null=True, blank=True)
     state = models.CharField(max_length=100, null=True, blank=True)
     country = models.CharField(max_length=200, null=True, blank=True)
-    address = models.CharField(max_length=300, null=True, blank=True)
+    address1 = models.CharField(max_length=300, null=True, blank=True)
     
     #Company Info
-    name = models.CharField(max_length=300, null=True, blank=True)
-    description = models.CharField(max_length=10000, null=True, blank=True)
-    employees = models.FloatField(blank=True, null=True)
+    longName = models.CharField(max_length=300, null=True, blank=True)
+    longBusinessSummary = models.CharField(max_length=10000, null=True, blank=True)
+    fullTimeEmployees = models.FloatField(blank=True, null=True)
     sector = models.CharField(max_length=200, null=True, blank=True)
     industry = models.CharField(max_length=200, null=True, blank=True)
     exchange = models.CharField(max_length=50, null=True, blank=True)
     quoteType = models.CharField(max_length=50, null=True, blank=True)
     currency = models.CharField(max_length=10, null=True, blank=True)
     marketCap = models.FloatField(blank=True, null=True)
-    sharesOutstanding = models.FloatField(blank=True, null=True)
     recommendationMean = models.FloatField(blank=True, null=True)
     targetMeanPrice = models.FloatField(blank=True, null=True)
     dividendRate = models.FloatField(blank=True, null=True)
@@ -41,13 +40,13 @@ class Info(models.Model):
     #Metrics
     beta = models.FloatField(blank=True, null=True)
     shortRatio = models.FloatField(blank=True, null=True)
-    forwardEPS = models.FloatField(blank=True, null=True)
+    forwardEps = models.FloatField(blank=True, null=True)
     pegRatio = models.FloatField(blank=True, null=True)
     
     #Contact Info
     phone = models.CharField(max_length=50, null=True, blank=True)
     website = models.URLField(max_length=300, null=True, blank=True)
-    logo = models.URLField(max_length=500, null=True, blank=True)
+    logo_url = models.URLField(max_length=500, null=True, blank=True)
     
     #Financials
     period = models.CharField(max_length=5, blank=True, null=True)
@@ -67,10 +66,8 @@ class Financial(models.Model):
     symbol = models.ForeignKey(Stock, on_delete=models.CASCADE)
     year = models.IntegerField(db_index=True)
     verification = models.CharField(max_length=15, primary_key=True)
-    
     #Basic Data
     fillingDate = models.DateField(blank=True, null=True)
-    
     #Income Statement
     revenue = models.FloatField(blank=True, null=True)
     costOfRevenue = models.FloatField(blank=True, null=True)
@@ -97,7 +94,6 @@ class Financial(models.Model):
     epsdiluted = models.FloatField(blank=True, null=True)
     weightedAverageShsOut = models.FloatField(blank=True, null=True)
     weightedAverageShsOutDil = models.FloatField(blank=True, null=True)
-    
     #Balance Sheet
     cashAndCashEquivalents = models.FloatField(blank=True, null=True)
     shortTermInvestments = models.FloatField(blank=True, null=True)
@@ -143,7 +139,6 @@ class Financial(models.Model):
     totalInvestments = models.FloatField(blank=True, null=True)
     totalDebt = models.FloatField(blank=True, null=True)
     netDebt = models.FloatField(blank=True, null=True)
-    
     #Cashflow
     deferredIncomeTax = models.FloatField(blank=True, null=True)
     stockBasedCompensation = models.FloatField(blank=True, null=True)
@@ -172,7 +167,6 @@ class Financial(models.Model):
     operatingCashFlow = models.FloatField(blank=True, null=True)
     capitalExpenditure = models.FloatField(blank=True, null=True)
     freeCashFlow = models.FloatField(blank=True, null=True)
-    
     #Key Metrics
     revenuePerShare = models.FloatField(blank=True, null=True)
     netIncomePerShare = models.FloatField(blank=True, null=True)
@@ -229,7 +223,6 @@ class Financial(models.Model):
     payablesTurnover = models.FloatField(blank=True, null=True)
     inventoryTurnover = models.FloatField(blank=True, null=True)
     capexPerShare = models.FloatField(blank=True, null=True)
-    
     #Financial Ratios
     quickRatio = models.FloatField(blank=True, null=True)
     cashRatio = models.FloatField(blank=True, null=True)
@@ -266,42 +259,6 @@ class Financial(models.Model):
     priceEarningsToGrowthRatio = models.FloatField(blank=True, null=True)
     enterpriseValueMultiple = models.FloatField(blank=True, null=True)
     priceFairValue = models.FloatField(blank=True, null=True)
-    
-    #Financial Statement Growth
-    revenueGrowth = models.FloatField(blank=True, null=True)
-    grossProfitGrowth = models.FloatField(blank=True, null=True)
-    ebitgrowth = models.FloatField(blank=True, null=True)
-    operatingIncomeGrowth = models.FloatField(blank=True, null=True)
-    netIncomeGrowth = models.FloatField(blank=True, null=True)
-    epsgrowth = models.FloatField(blank=True, null=True)
-    epsdilutedGrowth = models.FloatField(blank=True, null=True)
-    weightedAverageSharesGrowth = models.FloatField(blank=True, null=True)
-    weightedAverageSharesDilutedGrowth = models.FloatField(blank=True, null=True)
-    dividendsperShareGrowth = models.FloatField(blank=True, null=True)
-    operatingCashFlowGrowth = models.FloatField(blank=True, null=True)
-    freeCashFlowGrowth = models.FloatField(blank=True, null=True)
-    tenYRevenueGrowthPerShare = models.FloatField(blank=True, null=True)
-    fiveYRevenueGrowthPerShare = models.FloatField(blank=True, null=True)
-    threeYRevenueGrowthPerShare = models.FloatField(blank=True, null=True)
-    tenYOperatingCFGrowthPerShare = models.FloatField(blank=True, null=True)
-    fiveYOperatingCFGrowthPerShare = models.FloatField(blank=True, null=True)
-    threeYOperatingCFGrowthPerShare = models.FloatField(blank=True, null=True)
-    tenYNetIncomeGrowthPerShare = models.FloatField(blank=True, null=True)
-    fiveYNetIncomeGrowthPerShare = models.FloatField(blank=True, null=True)
-    threeYNetIncomeGrowthPerShare = models.FloatField(blank=True, null=True)
-    tenYShareholdersEquityGrowthPerShare = models.FloatField(blank=True, null=True)
-    fiveYShareholdersEquityGrowthPerShare = models.FloatField(blank=True, null=True)
-    threeYShareholdersEquityGrowthPerShare = models.FloatField(blank=True, null=True)
-    tenYDividendperShareGrowthPerShare = models.FloatField(blank=True, null=True)
-    fiveYDividendperShareGrowthPerShare = models.FloatField(blank=True, null=True)
-    threeYDividendperShareGrowthPerShare = models.FloatField(blank=True, null=True)
-    receivablesGrowth = models.FloatField(blank=True, null=True)
-    inventoryGrowth = models.FloatField(blank=True, null=True)
-    assetGrowth = models.FloatField(blank=True, null=True)
-    bookValueperShareGrowth = models.FloatField(blank=True, null=True)
-    debtGrowth = models.FloatField(blank=True, null=True)
-    rdexpenseGrowth = models.FloatField(blank=True, null=True)
-    sgaexpensesGrowth = models.FloatField(blank=True, null=True)
     
     #Discounted Cash Flow
     date = models.DateField(blank=True, null=True)
@@ -344,7 +301,6 @@ class ShortFinancial(models.Model):
     cashRatio = models.FloatField(blank=True, null=True)
     grossProfitMargin = models.FloatField(blank=True, null=True)
     operatingProfitMargin = models.FloatField(blank=True, null=True)
-    pretaxProfitMargin = models.FloatField(blank=True, null=True)
     netProfitMargin = models.FloatField(blank=True, null=True)
     debtRatio = models.FloatField(blank=True, null=True)
     assetTurnover = models.FloatField(blank=True, null=True)

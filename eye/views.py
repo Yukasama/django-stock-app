@@ -91,7 +91,7 @@ def symbol(request, symbol):
     #Extra Fields
     data["years"], data["mode"] = years, "dark"
     data["dividendYieldChecker"] = [i + i for i in data["dividendYield"]]
-    desc = data["description"].split(".")
+    desc = data["longBusinessSummary"].split(".")
     data["descShort"] = desc[0]+"." + desc[1]+"." + desc[2]+"."
     try: data["recommendationMean"] = round(1 - (data["recommendationMean"] - 1) / (5 - 1), 3)
     except: data["recommendationMean"] = "N/A"

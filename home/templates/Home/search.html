@@ -11,11 +11,11 @@
   {% for r in results %}
     <div class="search_result flex">
       <div class="search_img_c flex_box">
-        <img class="search_img" src="{{r.logo}}">
+        <img class="search_img" src="{{r.logo_url}}">
       </div>
       <div class="search_result_c flex">
         <a href="{% url 'symbol' r.symbol %}" class="search_ticker">{{r.ticker}}</a>
-        <p class="search_name">{{r.name}}</p>
+        <p class="search_name">{{r.longName}}</p>
       </div>
     </div>
   {% empty %}
