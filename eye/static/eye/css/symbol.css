@@ -234,9 +234,9 @@
 
 .stock_financials {
     flex-direction: column;
+    overflow-x: scroll;
 }
 .stock_financials_t {
-    overflow-x: scroll;
     transform: scale(0.95);
 }
 .stock_financials_t tr .row_header {
@@ -248,6 +248,8 @@
 .stock_financials_t tr th, .stock_financials_t tr td {
     width: 140px;
     text-align: center;
+    white-space: nowrap;
+    min-width: 120px !important;
 }
 .stock_financials_t tr td {
     color: var(--color-reverse-light);
@@ -257,18 +259,18 @@
 }
 .financial_chart {
     width: 100% !important;
+    min-width: 100px !important;
     height: 50px !important;
     margin: 1.5px 2.5px 3.5px 2.5px;
 }
 .row_header {
-    width: 220px !important;
+    width: 350px !important;
 }
 .row_divider {
     border-bottom: 1px solid var(--color-first);
     height: 50px;
     vertical-align: bottom;
 }
-
 
 .stock_profile_container {
     margin: 20px;
@@ -283,10 +285,24 @@
     color: var(--color-reverse-light);
 }
 
+
+
+.stock_view4 {
+    justify-content: center;
+    align-items: center;
+}
+
+
 @media screen and (max-width: 1100px) {
     .stock_view.active {
         display: flex;
         flex-direction: column;
+    }
+    .sidebar {
+
+    }
+    .stock_view4.active {
+        flex-direction: row;
     }
     .stock_charts {
         flex-direction: column;

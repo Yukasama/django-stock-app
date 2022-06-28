@@ -7,7 +7,7 @@ function eventHandler(eventElement, showElement, event="mouseover", action="show
         console.log("");
     }
 }
-
+var navbar = document.querySelector(".navbar");
 //Base Function for EventHandler
 function events(eventElement, showElement, event, action) {
     try {
@@ -28,6 +28,13 @@ function events(eventElement, showElement, event, action) {
             else if (action == "window") {
                 showElement.classList.toggle("scroll");
                 eventElement.classList.toggle("scroll");
+                if (showElement.classList.contains("scroll")) {
+                    document.body.style.overflow = "hidden";
+                    navbar.style.height = "100px";
+                } else { 
+                    document.body.style.overflow = "scroll";
+                    navbar.style.height = "90px";
+                }
             }
             else if (event == "click" || event == "mouseover") {
                 showElement.classList.toggle("show");

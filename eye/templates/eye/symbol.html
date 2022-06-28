@@ -206,71 +206,49 @@
           <tr>
             <th class="stock_subheader">Numbers in USD Millions</th>
             <th>Graph</th>
-            {% for year in years %}
-            <td>{{year}}</td>
-            {% endfor %}
+            {% for year in years %}<td>{{year}}</td>{% endfor %}
           </tr>
           <tr>
             <th class="row_header">Revenue</th>
             <td><canvas class="financial_chart chart_revenue"></canvas></td>
-            {% for r in revenue_M %}
-            <td>${{r|intcomma}} Mio.</td>
-            {% endfor %}
+            {% for r in revenue_M %}<td>${{r|intcomma}} Mio.</td>{% endfor %}
           </tr>
           <tr>
             <th class="row_header">Gross Profit</th>
             <td><canvas class="financial_chart chart_grossProfit"></canvas></td>
-            {% for r in grossProfit_M %}
-            <td>${{r|intcomma}} Mio.</td>
-            {% endfor %}
+            {% for r in grossProfit_M %}<td>${{r|intcomma}} Mio.</td>{% endfor %}
           </tr>
           <tr>
             <th class="row_header">Gross Margin</th>
             <td><canvas class="financial_chart chart_grossMargin"></canvas></td>
-            {% for r in grossProfitMargin %}
-            <td>{{r}}%</td>
-            {% endfor %}
+            {% for r in grossProfitMargin %}<td>{{r}}%</td>{% endfor %}
           </tr>
-          <tr>
-            <th class="row_divider" colspan="9">Costs</th>
-          </tr>
+          <tr><th class="row_divider" colspan="9">Costs</th></tr>
           <tr>
             <th class="row_header">Operating Expenses</th>
             <td><canvas class="financial_chart chart_operatingExpenses"></canvas></td>
-            {% for r in operatingExpenses_M %}
-            <td>${{r|intcomma}} Mio.</td>
-            {% endfor %}
+            {% for r in operatingExpenses_M %}<td>${{r|intcomma}} Mio.</td>{% endfor %}
           </tr>
           <tr>
             <th class="row_header">Operating Margin</th>
             <td><canvas class="financial_chart chart_operatingMargin"></canvas></td>
-            {% for r in operatingProfitMargin %}
-            <td>{{r}}%</td>
-            {% endfor %}
+            {% for r in operatingProfitMargin %}<td>{{r}}%</td>{% endfor %}
           </tr>
-          <tr>
-            <th class="row_divider" colspan="9">Bottom Line</th>
-          </tr>
+          <tr><th class="row_divider" colspan="9">Bottom Line</th></tr>
           <tr>
             <th class="row_header">Net Income</th>
             <td><canvas class="financial_chart chart_netIncome"></canvas></td>
-            {% for r in netIncome_M %}
-            <td>${{r|intcomma}} Mio.</td>
-            {% endfor %}
+            {% for r in netIncome_M %}<td>${{r|intcomma}} Mio.</td>{% endfor %}
           </tr>
           <tr>
             <th class="row_header">Profit Margin</th>
             <td><canvas class="financial_chart chart_profitMargin"></canvas></td>
-            {% for r in netProfitMargin %}
-            <td>{{r}}%</td>
-            {% endfor %}
+            {% for r in netProfitMargin %}<td>{{r}}%</td>{% endfor %}
           </tr>
           <tr>
             <th class="row_header">Earnings Per Share (EPS)</th>
             <td><canvas class="financial_chart chart_eps"></canvas></td>
-            {% for r in eps %}
-            <td>{{r|intcomma}}</td>
-            {% endfor %}
+            {% for r in eps %}<td>{{r|intcomma}}</td>{% endfor %}
           </tr>
         </table>
       </div>
@@ -337,116 +315,82 @@
     </div>
 
 
-    <div class="stock_view stock_view4 grid_system">
+    <div class="stock_view stock_view4 flex">
       <div class="stock_financials stock_view_item flex">
         <p class="stock_header">Financials</p>
         <table class="stock_financials_t">
           <tr>
             <th class="stock_subheader">Numbers in USD Millions</th>
             <th>Graph</th>
-            {% for year in years %}
-            <td>{{year}}</td>
-            {% endfor %}
+            {% for year in years %}<td>{{year}}</td>{% endfor %}
           </tr>
           <tr>
             <th class="row_header">Revenue</th>
             <td><canvas class="financial_chart chart_revenue2"></canvas></td>
-            {% for r in revenue_M %}
-            <td>${{r|intcomma}} Mio.</td>
-            {% endfor %}
+            {% for r in revenue_M %}<td>${{r|intcomma}} Mio.</td>{% endfor %}
           </tr>
           <tr>
             <th class="row_header">Gross Profit</th>
             <td><canvas class="financial_chart chart_grossProfit2"></canvas></td>
-            {% for r in grossProfit_M %}
-            <td>${{r|intcomma}} Mio.</td>
-            {% endfor %}
+            {% for r in grossProfit_M %}<td>${{r|intcomma}} Mio.</td>{% endfor %}
           </tr>
           <tr>
             <th class="row_header">Gross Margin</th>
             <td><canvas class="financial_chart chart_grossMargin2"></canvas></td>
-            {% for r in grossProfitMargin_M %}
-            <td>{{r|stringformat:"d%%"}}</td>
-            {% endfor %}
+            {% for r in grossProfitMargin %}<td>{{r}}%</td>{% endfor %}
           </tr>
-          <tr>
-            <th class="row_divider" colspan="9">Costs</th>
-          </tr>
+          <tr><th class="row_divider" colspan="9">Costs</th></tr>
           <tr>
             <th class="row_header">Research & Development</th>
             <td><canvas class="financial_chart chart_researchDevelopment2"></canvas></td>
-            {% for r in researchAndDevelopmentExpenses_M %}
-            <td>${{r|intcomma}} Mio.</td>
-            {% endfor %}
+            {% for r in researchAndDevelopmentExpenses_M %}<td>${{r|intcomma}} Mio.</td>{% endfor %}
           </tr>
           <tr>
             <th class="row_header">Selling General & Administrative</th>
             <td><canvas class="financial_chart chart_sga2"></canvas></td>
-            {% for r in sellingGeneralAndAdministrativeExpenses_M %}
-            <td>${{r|intcomma}} Mio.</td>
-            {% endfor %}
+            {% for r in sellingGeneralAndAdministrativeExpenses_M %}<td>${{r|intcomma}} Mio.</td>{% endfor %}
           </tr>
           <tr>
             <th class="row_header">Operating Expenses</th>
             <td><canvas class="financial_chart chart_operatingExpenses2"></canvas></td>
-            {% for r in operatingExpenses_M %}
-            <td>${{r|intcomma}} Mio.</td>
-            {% endfor %}
+            {% for r in operatingExpenses_M %}<td>${{r|intcomma}} Mio.</td>{% endfor %}
           </tr>
           <tr>
             <th class="row_header">Operating Margin</th>
             <td><canvas class="financial_chart chart_operatingMargin2"></canvas></td>
-            {% for r in operatingProfitMargin_M %}
-            <td>{{r|stringformat:"d%%"}}</td>
-            {% endfor %}
+            {% for r in operatingProfitMargin %}<td>{{r}}%</td>{% endfor %}
           </tr>
-          <tr>
-            <th class="row_divider" colspan="9">Taxes & Depreciation</th>
-          </tr>
+          <tr><th class="row_divider" colspan="9">Taxes & Depreciation</th></tr>
           <tr>
             <th class="row_header">EBITDA</th>
             <td><canvas class="financial_chart chart_ebitda2"></canvas></td>
-            {% for r in ebitda_M %}
-            <td>${{r|intcomma}} Mio.</td>
-            {% endfor %}
+            {% for r in ebitda_M %}<td>${{r|intcomma}} Mio.</td>{% endfor %}
           </tr>
           <tr>
             <th class="row_header">Income Before Tax</th>
             <td><canvas class="financial_chart chart_incomeBeforeTax2"></canvas></td>
-            {% for r in incomeBeforeTax_M %}
-            <td>${{r|intcomma}} Mio.</td>
-            {% endfor %}
+            {% for r in incomeBeforeTax_M %}<td>${{r|intcomma}} Mio.</td>{% endfor %}
           </tr>
-          <tr>
-            <th class="row_divider" colspan="9">Bottom Line</th>
-          </tr>
+          <tr><th class="row_divider" colspan="9">Bottom Line</th></tr>
           <tr>
             <th class="row_header">Net Income</th>
             <td><canvas class="financial_chart chart_netIncome2"></canvas></td>
-            {% for r in netIncome_M %}
-            <td>${{r|intcomma}} Mio.</td>
-            {% endfor %}
+            {% for r in netIncome_M %}<td>${{r|intcomma}} Mio.</td>{% endfor %}
           </tr>
           <tr>
             <th class="row_header">Profit Margin</th>
             <td><canvas class="financial_chart chart_profitMargin2"></canvas></td>
-            {% for r in netProfitMargin_M %}
-            <td>{{r|stringformat:"d%%"}}</td>
-            {% endfor %}
+            {% for r in netProfitMargin %}<td>{{r}}%</td>{% endfor %}
           </tr>
           <tr>
             <th class="row_header">Earnings Per Share (EPS)</th>
             <td><canvas class="financial_chart chart_eps2"></canvas></td>
-            {% for r in eps %}
-            <td>{{r|intcomma}}</td>
-            {% endfor %}
+            {% for r in eps %}<td>{{r|intcomma}}</td>{% endfor %}
           </tr>
           <tr>
             <th class="row_header">P/E Ratio</th>
             <td><canvas class="financial_chart chart_peRatio2"></canvas></td>
-            {% for r in peRatio %}
-            <td>{{r|intcomma}}</td>
-            {% endfor %}
+            {% for r in peRatio %}<td>{{r|intcomma}}</td>{% endfor %}
           </tr>
         </table>
       </div>
@@ -490,121 +434,85 @@
         }},
         indexAxis: chartType == "horizontalBar" ? "y" : "x",
         scales: {
-          x: {
-            grid: { display: false },
-            align: "end",
-            display: false,
-          },
+          x: { display: false },
           left: {
-            grid: { display: false },
             ticks: {
               beginAtZero: true,
               callback: function(value, index, values) {
                 if (args == "pct") return Math.round(value * 100) + '%';
                 else return value
-              },
-            font: 14,
-            },
-            type: 'linear',
+              },},
             position: 'left',
             display: false,
           }
       } }
       return config
     } 
-      
-
-    if (right == true) {
-      var config = {
-        plugins: { legend: { labels: {
-          fontColor: "rgb(255, 255, 255)",
-          font: { size: 14, } 
-          } } 
+    
+    var config = {
+      plugins: { legend: { labels: {
+        display: sole == true ? 
+        fontColor: "rgb(255, 255, 255)",
+        font: { size: 14, } 
+        } } 
+      },
+      plugins: [{
+        afterDraw: chart => {
+            if (chart.tooltip?._active?.length) {
+                let x = chart.tooltip._active[0].element.x;
+                let yAxis = chart.scales.y;
+                let ctx = chart.ctx;
+                ctx.save();
+                ctx.beginPath();
+                ctx.moveTo(x, yAxis.top);
+                ctx.lineTo(x, yAxis.bottom);
+                ctx.lineWidth = 1;
+                ctx.strokeStyle = '#ff0000';
+                ctx.stroke();
+                ctx.restore();
+            }
+        }
+      }],
+      options: {
+        indexAxis: chartType === "horizontalBar" ? "y" : "x",
+        interaction: {
+            intersect: false,
+            mode: 'index',
+        }
+      },
+      scales: {
+        x: {
+          grid: { display: false },
         },
-        plugins: [{
-          afterDraw: chart => {
-              if (chart.tooltip?._active?.length) {
-                  let x = chart.tooltip._active[0].element.x;
-                  let yAxis = chart.scales.y;
-                  let ctx = chart.ctx;
-                  ctx.save();
-                  ctx.beginPath();
-                  ctx.moveTo(x, yAxis.top);
-                  ctx.lineTo(x, yAxis.bottom);
-                  ctx.lineWidth = 1;
-                  ctx.strokeStyle = '#ff0000';
-                  ctx.stroke();
-                  ctx.restore();
-              }
-          }
-        }],
-        options: {
-          indexAxis: chartType === "horizontalBar" ? "y" : "x",
-          interaction: {
-              intersect: false,
-              mode: 'index',
-          }
+        left: {
+          grid: { display: false },
+          ticks: {
+            beginAtZero: true,
+            callback: function(value, index, values) {
+              if (args == "pct") return Math.round(value * 100) + '%';
+              else return value
+            },
+          font: 14,
+          },
+          type: 'linear',
+          position: 'left',
         },
-        scales: {
-          x: {
-            grid: { display: false },
-            align: "end",
-          },
-          left: {
-            grid: { display: false },
-            ticks: {
-              beginAtZero: true,
-              callback: function(value, index, values) {
-                if (args == "pct") return Math.round(value * 100) + '%';
-                else return value
-              },
-            font: 14,
+        right: {
+          grid: { display: false },
+          ticks: {
+            beginAtZero: true,
+            callback: function(value, index, values) {
+              if (args == "pct") return Math.round(value * 100) + '%';
+              else return value
             },
-            type: 'linear',
-            position: 'left',
+          font: 14,
+          color: rightColor,
           },
-          right: {
-            grid: { display: false },
-            ticks: {
-              beginAtZero: true,
-              callback: function(value, index, values) {
-                if (args == "pct") return Math.round(value * 100) + '%';
-                else return value
-              },
-            font: 14,
-            color: rightColor,
-            },
-            type: 'linear',
-            position: 'right',
-          }
-      } } }
-
-    else {
-      var config = {
-        plugins: { legend: { labels: {
-          fontColor: "rgb(255, 255, 255)",
-          font: { size: 14, } 
-          } } 
-        },
-        scales: {
-          x: {
-            grid: { display: false },
-            align: "end",
-          },
-          left: {
-            grid: { display: false },
-            ticks: {
-              beginAtZero: true,
-              callback: function(value, index, values) {
-                if (args == "pct") return Math.round(value * 100) + '%';
-                else return value
-              },
-            font: 14,
-            },
-            type: 'linear',
-            position: 'left',
-          }
-      } } }
+          type: 'linear',
+          position: 'right',
+          display: right == true ? true : false
+        }
+      } }
     return config
   }
 
@@ -666,8 +574,8 @@
       datasets: [{
         label: "Dividend in %",
         data: dividendYield,
-        backgroundColor: "rgb(255, 179, 0)",
-        borderColor: "rgb(255, 179, 0, 0.3)",
+        backgroundColor: "rgb(20, 150, 255)",
+        borderColor: "rgb(20, 150, 255, 0.3)",
         yAxisID: "right",
       }, {
         label: "Payout Ratio",
@@ -676,7 +584,7 @@
         borderColor: "rgb(144, 0, 255, 0.4)",
       }]
     },
-    options: chartConfig("pct", true, "rgb(255, 179, 0)"),
+    options: chartConfig("pct", true, "rgb(20, 150, 255)"),
   });
 
 

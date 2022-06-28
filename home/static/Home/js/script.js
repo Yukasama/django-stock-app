@@ -1,7 +1,7 @@
 
 
 //INDEX TEMPLATE
-const navbar = document.querySelector(".navbar");
+var navbar = document.querySelector(".navbar");
 eventHandler(window, navbar, "scroll", "show"); //SCROLL-STICKY NAVBAR
 
 const sidenavbar = document.querySelector(".sidenavbar");

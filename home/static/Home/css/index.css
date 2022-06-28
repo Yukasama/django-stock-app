@@ -3,6 +3,14 @@
 .content {
     transform: translate(0, calc(var(--height-navbar) + 10px));
 }
+::-webkit-scrollbar{
+    height: 6px;
+    width: 6px;
+    background: var(--color-theme-contrast);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color-first);
+}
 
 
 /* NAVBAR */
@@ -75,6 +83,9 @@
 }
 .search_navbar {
     margin: 30px;
+}
+.search_button {
+    margin-right: 15px;
 }
 .sign_up {
     font-size: 1em;
@@ -191,7 +202,7 @@
 
 /* SIDENAVBAR */
 .sidenavbar {
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 100%;
     top: 100px;

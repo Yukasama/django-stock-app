@@ -68,7 +68,7 @@ OVERVIEW OF EXISTING CLASSES
 
 /* BUTTONS */
 .normal_button, .normal_button, .smart_button, .smart_button_outline, 
-.icon_button, .create_button, .delete_button {
+.icon_button, .create_button, .delete_button, .search_button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -173,6 +173,13 @@ OVERVIEW OF EXISTING CLASSES
 .delete_button > i {
     color: rgb(255, 0, 0);
     font-size: 27px;
+}
+
+.search_button i {
+    font-size: 20px;
+}
+.search_button {
+    background: transparent;
 }
 
 

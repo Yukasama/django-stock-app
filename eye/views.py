@@ -73,7 +73,9 @@ def symbol(request, symbol):
             keyZero = f'{key}_M'
             if (key == "grossProfitMargin" or key == "operatingProfitMargin" or key == "netProfitMargin"): 
                 data[key].append(round(value * 100, 2)) if value != None else data[key].append(0)
-            else: data[key].append(value) if value != None else data[key].append(0)
+            else: 
+                try: data[key].append(round(value, 3)) if value != None else data[key].append(0)
+                except: data[key].append(value) if value != None else data[key].append(0)
             try: data[keyZero].append(int(value / 1000000))
             except: data[keyZero].append(value) if value != None else 0
 
