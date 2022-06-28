@@ -605,13 +605,13 @@ class Command(BaseCommand):
     
     def handle(sef, *args, **options):
         skip = False
-        single = False
+        single = True
         if (single == False):
             tickers = dt.tickers_sp500
             for ticker in tickers:
                 DataTransfer(ticker)
         else:
-            ticker = "A"
+            ticker = "CTXS"
             DataTransfer(ticker)
             
             
