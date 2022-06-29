@@ -4,19 +4,25 @@ from eye.stocks import datahandler as dt
 import pandas as pd
 import datetime
 import time
-from collections import defaultdict
 
 
 
-def DataTransfer(ticker, skip=False):
+def DataTransfer(ticker, skip=False, download=False):
     
     df = dt.dataGet(ticker, "all")
     dfi = dt.dataGet(ticker, 0, "info")
-    if df.empty: print(f'{ticker} Data not pushed yet => Skipped')
+    
+    #Download Data if no exist
+    if df.empty and download == True: 
+        dt.dataPush([ticker], 5, False)
+        df = dt.dataGet(ticker, "all")
+    elif df.empty: print(f'{ticker} Data not pushed yet => Skipped')
+    if (Financial.objects.filter(verification=f'{ticker}, 2021').exists() and skip == True): print(f"{ticker} Data already exists => Skipped")
     else:
         
+        #Execution Timer
         startTime = time.time()
-
+            
         #Duplicate Handling  
         try:
             Stock.objects.delete(symbol=ticker)
@@ -39,7 +45,7 @@ def DataTransfer(ticker, skip=False):
                 try: infodict[i] = dfi.loc[dfi["Unnamed: 0"] == i]["0"].tolist()[0]
                 except: 
                     infodict[i] = "N/A"
-                    print(i + " didnt work.")
+                    print("Push Error: " + i)
         
         #Financial Data
         finStrings = [f.name for f in Financial._meta.get_fields()]
@@ -321,15 +327,14 @@ class Command(BaseCommand):
         pass
     
     def handle(sef, *args, **options):
-        skip = False
         single = False
         if (single == False):
             tickers = dt.tickers_sp500
             for ticker in tickers:
-                DataTransfer(ticker, skip=False)
+                DataTransfer(ticker, False, False)
         else:
             ticker = "AAPL"
-            DataTransfer(ticker)
+            DataTransfer(ticker, True)
             
             
     

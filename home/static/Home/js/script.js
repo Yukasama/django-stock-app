@@ -34,6 +34,11 @@ eventHandler(info, 0, "mouseleave", "hide");
 eventHandler(info_icon, 0, "mouseover", "add");
 
 
+const sidebar = document.querySelector(".sidebar");
+const content = document.querySelector(".content");
+eventHandler(sidebar, content, "mouseover", "add");
+eventHandler(sidebar, content, "mouseleave", "hide");
+
 
 
 

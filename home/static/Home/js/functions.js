@@ -43,8 +43,8 @@ function events(eventElement, showElement, event, action) {
                 showElement.classList.toggle("scroll", window.scrollY > 50);
             }
         })
-    } catch {
-        console.log("Error: EventHandler '" + eventElement + "' (event=" + event + "), " + "(action=" + action + ")");
+    } catch(err) {
+        console.log("Error: " + err + eventElement + "' (event=" + event + "), " + "(action=" + action + ")");
     }
 }
 

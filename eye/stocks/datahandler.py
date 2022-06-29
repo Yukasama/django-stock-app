@@ -39,9 +39,7 @@ def fundamentalData(tickerAsArray, skipMode=True):
         blackList = ["BBWI", "BF-B", "CARR", "CEG", "CTXS"]
 
         #If File exists, skip Ticker
-        if ((os.path.exists(f"Data/StockData/{t}/income_statement")) and
-            (os.path.exists(f"Data/StockData/{t}/financial_statement_growth")) or 
-            t in blackList):
+        if ((os.path.exists(f"Data/StockData/{t}/income_statement")) or t in blackList):
             print(f"'{t}' Fundamental Data was skipped.")
             continue
         
@@ -53,14 +51,12 @@ def fundamentalData(tickerAsArray, skipMode=True):
             discounted_cash_flow = fa.discounted_cash_flow(t, api_key)
             financial_ratios = fa.financial_ratios(t, api_key)
             key_metrics = fa.key_metrics(t, api_key)
-            financial_statement_growth = fa.financial_statement_growth(t, api_key)
-            profile = fa.profile(t, api_key)
         
             #File Collection for For Loop
             csvFiles = [income_statement, balance_sheet, cash_flow, discounted_cash_flow,
-                        financial_ratios, key_metrics, financial_statement_growth, profile]
+                        financial_ratios, key_metrics]
             csvStrings = ["income_statement", "balance_sheet", "cash_flow", "discounted_cash_flow",
-                          "financial_ratios", "key_metrics", "financial_statement_growth", "profile"]
+                          "financial_ratios", "key_metrics"]
                 
             #Convert to CSV Files
             for c, s in zip(csvFiles, csvStrings):

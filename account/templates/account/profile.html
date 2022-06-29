@@ -4,54 +4,61 @@
 
 <link rel="stylesheet" href="{% static 'account/css/profile.css' %}">
 
+<div class="layout">
 
-{% if user.is_authenticated %}
-<div class="sidebar flex">
-  <div class="side_link flex active">
-    <i class="fa-solid fa-house side_icon"></i>
-    <p class="side_text">Profile</p>
+  {% if user.is_authenticated %}
+  <div class="sidebar flex">
+    <div class="side_link flex active">
+      <i class="fa-solid fa-house side_icon"></i>
+      <p class="side_text">Dashboard</p>
+    </div>
+    <div class="side_link flex">
+      <i class="fa-solid fa-chart-line side_icon"></i>
+      <p class="side_text">Chart</p>
+    </div>
+    <div class="side_link flex">
+      <i class="fa-solid fa-coins side_icon"></i>
+      <p class="side_text">Earnings</p>
+    </div>
+    <div class="side_link flex">
+      <i class="fa-solid fa-chart-simple side_icon"></i>
+      <p class="side_text">Financials</p>
+    </div>
+    <div class="side_link flex">
+      <i class="fa-solid fa-scale-balanced side_icon"></i>
+      <p class="side_text">Holdings</p>
+    </div>
+    <div class="side_link flex">
+      <i class="fa-solid fa-gear side_icon"></i>
+      <p class="side_text">Settings</p>
+    </div>
+    <div class="side_link flex">
+      <i class="fa-solid fa-newspaper side_icon"></i>
+      <p class="side_text">Sign Out</p>
+    </div>
   </div>
-  <div class="side_link flex">
-    <i class="fa-solid fa-chart-line side_icon"></i>
-    <p class="side_text">Chart</p>
+
+  <div class="profile_window window">
+    <div class="profile_view grid-system">
+      <div class="profile_name"></div>
+      <div class="profile_name"></div>
+    </div>
+    <div class="profile_view"></div>
+    <div class="profile_view"></div>
   </div>
-  <div class="side_link flex">
-    <i class="fa-solid fa-coins side_icon"></i>
-    <p class="side_text">Earnings</p>
+
+
+
+  {% else %}
+  <div class="portfolio_message_c flex">
+    <p class="portfolio_message">You need to Login to create Portfolios.</p>
+    <button class="icon_button portfolio_login transition">
+      <i class="fa-solid fa-arrow-right-to-bracket portfolio_icon"></i>
+      <a href="{% url 'login' %}">Login</a>
+    </button> 
   </div>
-  <div class="side_link flex">
-    <i class="fa-solid fa-chart-simple side_icon"></i>
-    <p class="side_text">Financials</p>
-  </div>
-  <div class="side_link flex">
-    <i class="fa-solid fa-scale-balanced side_icon"></i>
-    <p class="side_text">Holdings</p>
-  </div>
-  <div class="side_link flex">
-    <i class="fa-solid fa-gear side_icon"></i>
-    <p class="side_text">Settings</p>
-  </div>
-  <div class="side_link flex">
-    <i class="fa-solid fa-newspaper side_icon"></i>
-    <p class="side_text">Logout</p>
-  </div>
+  {% endif %}
 </div>
-
-<div class="profile_view"></div>
-<div class="profile_view"></div>
-<div class="profile_view"></div>
-
-{% else %}
-<div class="portfolio_message_c flex">
-  <p class="portfolio_message">You need to Login to create Portfolios.</p>
-  <button class="icon_button portfolio_login transition">
-    <i class="fa-solid fa-arrow-right-to-bracket portfolio_icon"></i>
-    <a href="{% url 'login' %}">Login</a>
-  </button> 
-</div>
-{% endif %}
-
-
 
 
 

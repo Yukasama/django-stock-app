@@ -5,7 +5,6 @@
 
 <!-- NAVBAR -->
 <div class="navbar flex">
-
   <div class="nav_container nav_container1 flex">
     <a href="{% url 'home' %}" class="favicon">
       <img class="favicon_img" src="{% static 'main/img/favicon.png' %}">
@@ -90,9 +89,12 @@
     {% if user.is_authenticated %}
     <div class="profile_wrapper flex">
       <div class="profile_container flex">
-        <div class="profile_link profile_link1 flex">
+        <div class="profile_link1 flex">
           <i class="material-icons profile_icon">account_circle</i>
-          <a href="{% url 'profile' %}" class="profile_text profile_username" href="">{{request.user}}</a>
+          <div class="profile_text_c">
+            <p class="profile_text profile_username" href="">{{request.user}}</a>
+            <a class="manage_profile" href="{% url 'profile' %}">Manage Account</a>
+          </div>
         </div>
 
         <div class="profile_separator"></div>
@@ -126,7 +128,6 @@
         <div class="hamburger_line"></div>
     </div>
   </div>
-
 </div>
 
 
@@ -250,6 +251,37 @@
   </div>
 
 </div>
+
+
+
+
+<div class="sidebar flex">
+  <div class="side_link flex active">
+    <i class="fa-solid fa-house side_icon"></i>
+    <p class="side_text">Dashboard</p>
+  </div>
+  <div class="side_link flex">
+    <i class="fa-solid fa-chart-line side_icon"></i>
+    <p class="side_text">Chart</p>
+  </div>
+  <div class="side_link flex">
+    <i class="fa-solid fa-coins side_icon"></i>
+    <p class="side_text">Earnings</p>
+  </div>
+  <div class="side_link flex">
+    <i class="fa-solid fa-chart-simple side_icon"></i>
+    <p class="side_text">Financials</p>
+  </div>
+  <div class="side_link flex">
+    <i class="fa-solid fa-scale-balanced side_icon"></i>
+    <p class="side_text">Holdings</p>
+  </div>
+  <div class="side_link flex">
+    <i class="fa-solid fa-newspaper side_icon"></i>
+    <p class="side_text">Articles</p>
+  </div>
+</div>
+
 
 
 

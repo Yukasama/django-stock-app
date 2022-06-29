@@ -1,1 +1,11 @@
 
+
+.profile_name {  grid-area: profile_name;  }
+.profile_view {
+  width: 100%;
+  grid-template-areas: "profile_name"
+             "profile_name";
+}
+.profile_name {
+  height: 100px;
+}

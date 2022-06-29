@@ -65,6 +65,7 @@ def screener(request):
 def symbol(request, symbol):
     symbol = Stock.objects.get(symbol=symbol)
     data, years = defaultdict(list), []
+    
     #Create Auto-Generated Dictionary from Financial Model
     for year in range(2015, 2022):
         financial = Financial.objects.filter(symbol=symbol, year=year).values()[0]

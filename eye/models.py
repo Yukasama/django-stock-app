@@ -309,7 +309,6 @@ class ShortFinancial(models.Model):
     debtGrowth = models.FloatField(blank=True, null=True)
     DCF = models.FloatField(blank=True, null=True)
     
-    
     def __str__(self):
         return self.verification
 
@@ -325,7 +324,6 @@ class History(models.Model):
     closePrice = models.FloatField(null=True, blank=True)
     closePct = models.FloatField(null=True, blank=True)
     
-    
     def __str__(self):
         return self.symbol
     
@@ -333,7 +331,6 @@ class History(models.Model):
  
     
     
-
 class Portfolio(models.Model):
     
     #User Based
@@ -346,7 +343,6 @@ class Portfolio(models.Model):
     #Additional
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
-    
     
     def __str__(self):
         return f'{self.user}-{self.name}'

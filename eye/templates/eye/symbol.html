@@ -7,65 +7,39 @@
 <link rel="stylesheet" href="{% static 'eye/css/symbol.css' %}">
 
 
-<div class="stocks flex">
 
-  <div class="sidebar flex">
-    <div class="side_link flex active">
-      <i class="fa-solid fa-house side_icon"></i>
-      <p class="side_text">Dashboard</p>
-    </div>
-    <div class="side_link flex">
-      <i class="fa-solid fa-chart-line side_icon"></i>
-      <p class="side_text">Chart</p>
-    </div>
-    <div class="side_link flex">
-      <i class="fa-solid fa-coins side_icon"></i>
-      <p class="side_text">Earnings</p>
-    </div>
-    <div class="side_link flex">
-      <i class="fa-solid fa-chart-simple side_icon"></i>
-      <p class="side_text">Financials</p>
-    </div>
-    <div class="side_link flex">
-      <i class="fa-solid fa-scale-balanced side_icon"></i>
-      <p class="side_text">Holdings</p>
-    </div>
-    <div class="side_link flex">
-      <i class="fa-solid fa-newspaper side_icon"></i>
-      <p class="side_text">Articles</p>
-    </div>
-  </div>
+<div class="stocks layout">
 
-  <div class="stock_window">
+  <div class="stock_window window">
     <div class="stock_view stock_view1 active grid_system">
       <div class="stock_title stock_view_item flex">
-        <div class="stock_logo smart_box">
-          <img class="stock_img" src={{logo_url}}>
-        </div>
         <div class="stock_title_c flex">
-          <div class="stock_title_data">
-            <a href="{{website}}" class="stock_title_text stock_name">{{longName}}</a>
-            <p class="stock_title_desc">Company</p>
+          <div class="stock_title_c2 flex">
+            <div class="stock_logo smart_box">
+              <img class="stock_img" src={{logo_url}}>
+            </div>
+            <div class="stock_title_data">
+              <a href="{{website}}" class="stock_title_text stock_name">{{longName}}</a>
+              <p class="stock_title_desc">{{ticker}}</p>
+            </div>
           </div>
-          <div class="stock_title_data">
-            <p class="stock_title_text">$149.34</p>
-            <p class="stock_title_desc">Price</p>
-          </div>
-          <div class="stock_title_data">
-            <p class="stock_title_text">+0.98%</p>
-            <p class="stock_title_desc">Percent</p>
-          </div>
-          <div class="stock_title_data">
-            <p class="stock_title_text">{{eps|last}}</p>
-            <p class="stock_title_desc">EPS</p>
-          </div>
-          <div class="stock_title_data">
-            <p class="stock_title_text">{{peRatio|last}}</p>
-            <p class="stock_title_desc">P/E Ratio</p>
-          </div>
-          <div class="stock_title_data">
-            <p class="stock_title_text">{{pegRatio}}</p>
-            <p class="stock_title_desc">PEG Ratio</p>
+          <div class="stock_title_c2 flex"> 
+            <div class="stock_title_data">
+              <p class="stock_title_text stock_title_price">$149.34</p>
+              <p class="stock_title_desc stock_title_percent">+0.98%</p>
+            </div>
+            <div class="stock_title_data">
+              <p class="stock_title_text">{{eps|last}}</p>
+              <p class="stock_title_desc">EPS</p>
+            </div>
+            <div class="stock_title_data">
+              <p class="stock_title_text">{{peRatio|last}}</p>
+              <p class="stock_title_desc">P/E Ratio</p>
+            </div>
+            <div class="stock_title_data">
+              <p class="stock_title_text">{{pegRatio}}</p>
+              <p class="stock_title_desc">PEG Ratio</p>
+            </div>
           </div>
         </div>
       </div>
@@ -265,7 +239,11 @@
         </div>
         <div class="stock_profile_container">
           <p class="stock_profile_header">Employees</p>
-          <p class="stock_profile_text">{{employees}}</p>
+          <p class="stock_profile_text">{{fullTimeEmployees}}</p>
+        </div>
+        <div class="stock_profile_container">
+          <p class="stock_profile_header">Discounted Cash Flow</p>
+          <p class="stock_profile_text">{{DCF|last}}</p>
         </div>
         <div class="stock_profile_container">
           <p class="stock_profile_header">Beta</p>
@@ -281,15 +259,15 @@
 
 
 
-    <div class="stock_view stock_view2 grid_system">
-      <div class="stock_chart stock_view_item flex">
+    <div class="stock_view stock_view2 border">
+      <div class="stock_chart stock_view_item border flex">
         <div class="tradingview-widget-container">
           <div id="tradingview_79edc"></div>
           <div class="tradingview-widget-copyright"><a href="https://de.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"><span class="blue-text">AAPL Chart</span></a> von TradingView</div>
           <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
           <script type="text/javascript">
           new TradingView.widget({
-          "width": 1650, "height": 800, 
+          "width": 1700, "height": 800, 
           "symbol": "{{ticker}}",
           "interval": "D",
           "timezone": "Etc/UTC",
@@ -315,7 +293,7 @@
     </div>
 
 
-    <div class="stock_view stock_view4 flex">
+    <div class="stock_view stock_view4">
       <div class="stock_financials stock_view_item flex">
         <p class="stock_header">Financials</p>
         <table class="stock_financials_t">

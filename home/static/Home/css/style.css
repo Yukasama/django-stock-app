@@ -24,7 +24,8 @@
     --color-first-light: rgba(19, 98, 218, 0.4);
     --color-rainbow: linear-gradient(red, yellow, green, blue, purple, pink);
 
-    --height-navbar: 100px;
+    --height-navbar: 90px;
+    --width-sidebar: 210px;
 
     --font-size-navbar: 1em;
     --font-size-text: 1em;

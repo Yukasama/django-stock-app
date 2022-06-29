@@ -40,6 +40,7 @@ OVERVIEW OF EXISTING CLASSES
 }
 .transition {  transition: 0.3s;  }
 .border {  border: 1px solid red !important;  }
+.border_b {  border: 1px solid rgb(0, 140, 255) !important;  }
 
 
 
@@ -62,6 +63,18 @@ OVERVIEW OF EXISTING CLASSES
 }
 .smart_list {
     flex-direction: column;
+}
+
+.layout {
+    display: flex;
+    width: 100%;
+}
+.layout .sidebar {
+    overflow: hidden;
+}
+.layout .window {
+    width: 100%;
+    overflow: auto;
 }
 
 
