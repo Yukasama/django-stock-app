@@ -69,12 +69,33 @@ OVERVIEW OF EXISTING CLASSES
     display: flex;
     width: 100%;
 }
-.layout .sidebar {
-    overflow: hidden;
-}
 .layout .window {
     width: 100%;
     overflow: auto;
+    margin: 0 15px 20px 20px;
+}
+.layout .window .view {
+    width: 100%;
+    display: none;
+    gap: 20px;
+}
+.layout .window .view.active {
+    width: 100%;
+    display: grid;
+}
+.layout .window .view_item {
+    border-radius: 15px;
+    background: var(--color-theme-contrast); 
+}
+.layout .window .view_item .view_item_header, .layout .window .view_item .view_item_sheader {
+    color: var(--color-text-theme);
+    margin: 10px;
+}
+.layout .window .view_item .view_item_header {
+    text-transform: uppercase;
+}
+.layout .window .view_item .view_item_sheader {
+    font-size: 0.9em;
 }
 
 

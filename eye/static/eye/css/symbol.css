@@ -1,7 +1,4 @@
 
-.stock_window {
-    margin: 0 15px 20px 20px;
-}
 .stock_title {  grid-area: stock_title;  }
 .stock_chart {  grid-area: stock_chart;  }
 .stock_ratings {  grid-area: stock_ratings;  }
@@ -10,14 +7,7 @@
 .stock_financials {  grid-area: stock_financials;  }
 .stock_profile {  grid-area: stock_profile;  }
 
-.stock_view {
-    display: none;
-}
-.stock_view.active {
-    display: grid;
-}
 .stock_view1 {
-    width: 100%;
     grid-template-areas: 
     "stock_title stock_title stock_ratings stock_ratings stock_ratings"
     "stock_chart stock_chart stock_ratings stock_ratings stock_ratings"
@@ -25,22 +15,6 @@
     "stock_chart stock_chart stock_suggestions stock_suggestions stock_suggestions"
     "stock_charts stock_charts stock_charts stock_charts stock_charts"
     "stock_financials stock_financials stock_financials stock_financials stock_profile";
-}
-.stock_view_item {
-    border-radius: 15px;
-    background: var(--color-theme-contrast);
-}
-
-
-.stock_header, .stock_subheader {
-    color: var(--color-text-theme);
-    margin: 10px;
-}
-.stock_header {
-    text-transform: uppercase;
-}
-.stock_subheader {
-    font-size: 0.9em;
 }
 
 .stock_title {
@@ -365,5 +339,17 @@
     }
     .stock_chart_item {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .stock_window {
+        margin: 20px 15px 20px 20px;
+    }
+    .stock_logo {
+        margin: 20px 0 0 0;
+    }
+    .stock_title_c2:first-child {
+        flex-direction: column;
     }
 }

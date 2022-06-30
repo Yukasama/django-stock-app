@@ -7,12 +7,11 @@
 <link rel="stylesheet" href="{% static 'eye/css/symbol.css' %}">
 
 
-
 <div class="stocks layout">
 
   <div class="stock_window window">
-    <div class="stock_view stock_view1 active grid_system">
-      <div class="stock_title stock_view_item flex">
+    <div class="stock_view stock_view1 view active">
+      <div class="stock_title stock_view_item view_item flex">
         <div class="stock_title_c flex">
           <div class="stock_title_c2 flex">
             <div class="stock_logo smart_box">
@@ -44,7 +43,7 @@
         </div>
       </div>
   
-      <div class="stock_chart stock_view_item flex">
+      <div class="stock_chart stock_view_item view_item flex">
         <div class="tradingview-widget-container">
           <div id="tradingview_96d90"></div>
           <div class="tradingview-widget-copyright">
@@ -68,13 +67,13 @@
         </div>
       </div>
 
-      <div class="stock_ratings stock_view_item">
+      <div class="stock_ratings stock_view_item view_item">
         <div class="info flex">
           <i class="fa-solid fa-question info_icon"></i>
           <div class="flex">Margins give an Overview of how efficient a company runs it's operations</div>
           <div></div>
         </div>
-        <p class="stock_header">Ratings</p>
+        <p class="view_item_header">Ratings</p>
         <div class="stock_ratings_c flex">
           <div class="eye_ratings flex">
             <div class="stock_rating">
@@ -110,13 +109,13 @@
         </div>
       </div>
 
-      <div class="stock_suggestions stock_view_item flex">
+      <div class="stock_suggestions stock_view_item view_item flex">
         <div class="info flex">
           <i class="fa-solid fa-question info_icon"></i>
           <div class="flex">Margins give an Overview of how efficient a company runs it's operations</div>
           <div></div>
         </div>
-        <p class="stock_header stock_suggest_header">Industry Competitors</p>
+        <p class="view_item_header">Industry Competitors</p>
         {% for c in competitors %}
         <div class="stock_suggest flex">
           <div class="stock_logo_s smart_box">
@@ -136,8 +135,8 @@
       </div>
 
       <div class="stock_charts flex">
-        <div class="stock_margins stock_chart_item stock_view_item">
-          <p class="stock_header">Margins</p>
+        <div class="stock_margins stock_chart_item stock_view_item view_item">
+          <p class="view_item_header">Margins</p>
           <div class="info flex">
             <i class="fa-solid fa-question info_icon"></i>
             <div class="flex">Margins give an Overview of how efficient a company runs it's operations</div>
@@ -146,8 +145,8 @@
           <canvas class="stock_margins_chart"></canvas>
         </div>
 
-        <div class="stock_metrics stock_chart_item stock_view_item">
-          <p class="stock_header">Key Metrics</p>
+        <div class="stock_metrics stock_chart_item stock_view_item view_item">
+          <p class="view_item_header">Key Metrics</p>
           <div class="info flex">
             <i class="fa-solid fa-question info_icon"></i>
             <div class="flex">Margins give an Overview of how efficient a company runs it's operations</div>
@@ -157,13 +156,13 @@
         </div>
 
         {% if dividendYieldChecker == 0 %}
-        <div class="stock_dividend stock_chart_item stock_view_item dividend_info flex">
-          <p class="stock_header">Dividend</p>
+        <div class="stock_dividend stock_chart_item stock_view_item view_item dividend_info flex">
+          <p class="view_item_header">Dividend</p>
           <div class="dividend_info_text">Symbol never paid a Dividend</div>
         </div>
         {% else %}
         <div class="stock_dividend stock_chart_item stock_view_item">
-          <p class="stock_header">Dividend</p>
+          <p class="view_item_header">Dividend</p>
           <div class="info flex">
             <i class="fa-solid fa-question info_icon"></i>
             <div class="flex">Margins give an Overview of how efficient a company runs it's operations</div>
@@ -174,11 +173,11 @@
         {% endif %}
       </div>
 
-      <div class="stock_financials stock_view_item flex">
-        <p class="stock_header">Financials</p>
+      <div class="stock_financials stock_view_item view_item flex">
+        <p class="view_item_header">Financials</p>
         <table class="stock_financials_t">
           <tr>
-            <th class="stock_subheader">Numbers in USD Millions</th>
+            <th class="view_item_header">Numbers in USD Millions</th>
             <th>Graph</th>
             {% for year in years %}<td>{{year}}</td>{% endfor %}
           </tr>
@@ -227,8 +226,8 @@
         </table>
       </div>
 
-      <div class="stock_profile stock_view_item">
-        <p class="stock_header">Details</p>
+      <div class="stock_profile stock_view_item view_item">
+        <p class="view_item_header">Details</p>
         <div class="stock_profile_container">
           <p class="stock_profile_header">Description</p>
           <p class="stock_profile_text">{{descShort}}</p>
@@ -259,7 +258,7 @@
 
 
 
-    <div class="stock_view stock_view2 border">
+    <div class="stock_view stock_view2 border view">
       <div class="stock_chart stock_view_item border flex">
         <div class="tradingview-widget-container">
           <div id="tradingview_79edc"></div>
@@ -288,13 +287,13 @@
 
 
 
-    <div class="stock_view stock_view3 grid_system">
+    <div class="stock_view stock_view view">
       <p>Stock view3</p>
     </div>
 
 
-    <div class="stock_view stock_view4">
-      <div class="stock_financials stock_view_item flex">
+    <div class="stock_view stock_view4 view">
+      <div class="stock_financials stock_view_item view_item flex">
         <p class="stock_header">Financials</p>
         <table class="stock_financials_t">
           <tr>

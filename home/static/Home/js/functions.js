@@ -30,10 +30,10 @@ function events(eventElement, showElement, event, action) {
                 eventElement.classList.toggle("scroll");
                 if (showElement.classList.contains("scroll")) {
                     document.body.style.overflow = "hidden";
-                    navbar.style.height = "100px";
+                    navbar.style.height = "90px";
                 } else { 
                     document.body.style.overflow = "scroll";
-                    navbar.style.height = "90px";
+                    navbar.style.height = "80px";
                 }
             }
             else if (event == "click" || event == "mouseover") {

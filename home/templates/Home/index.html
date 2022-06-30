@@ -255,37 +255,6 @@
 
 
 
-<div class="sidebar flex">
-  <div class="side_link flex active">
-    <i class="fa-solid fa-house side_icon"></i>
-    <p class="side_text">Dashboard</p>
-  </div>
-  <div class="side_link flex">
-    <i class="fa-solid fa-chart-line side_icon"></i>
-    <p class="side_text">Chart</p>
-  </div>
-  <div class="side_link flex">
-    <i class="fa-solid fa-coins side_icon"></i>
-    <p class="side_text">Earnings</p>
-  </div>
-  <div class="side_link flex">
-    <i class="fa-solid fa-chart-simple side_icon"></i>
-    <p class="side_text">Financials</p>
-  </div>
-  <div class="side_link flex">
-    <i class="fa-solid fa-scale-balanced side_icon"></i>
-    <p class="side_text">Holdings</p>
-  </div>
-  <div class="side_link flex">
-    <i class="fa-solid fa-newspaper side_icon"></i>
-    <p class="side_text">Articles</p>
-  </div>
-</div>
-
-
-
-
-
 <div class="contact flex">
 
   <div class="contact_container contact_container1 flex">
@@ -333,7 +302,61 @@
 
 
 <!-- BLOCKS -->
-{% block fixed %} {% endblock %}
+{% if page == "symbol" %}
+<div class="sidebar flex">
+  <div class="side_link flex active">
+    <i class="fa-solid fa-house side_icon"></i>
+    <p class="side_text">Dashboard</p>
+  </div>
+  <div class="side_link flex">
+    <i class="fa-solid fa-chart-line side_icon"></i>
+    <p class="side_text">Chart</p>
+  </div>
+  <div class="side_link flex">
+    <i class="fa-solid fa-coins side_icon"></i>
+    <p class="side_text">Earnings</p>
+  </div>
+  <div class="side_link flex">
+    <i class="fa-solid fa-chart-simple side_icon"></i>
+    <p class="side_text">Financials</p>
+  </div>
+  <div class="side_link flex">
+    <i class="fa-solid fa-scale-balanced side_icon"></i>
+    <p class="side_text">Holdings</p>
+  </div>
+  <div class="side_link flex">
+    <i class="fa-solid fa-newspaper side_icon"></i>
+    <p class="side_text">Articles</p>
+  </div>
+</div>
+{% elif page == "profile" %}
+<div class="sidebar flex">
+  <div class="side_link flex active">
+    <i class="fa-solid fa-user-pen side_icon"></i>
+    <p class="side_text">Account</p>
+  </div>
+  <div class="side_link flex">
+    <i class="fa-solid fa-palette side_icon"></i>
+    <p class="side_text">Appearance</p>
+  </div>
+  <div class="side_link flex">
+    <i class="fa-solid fa-bell side_icon"></i>
+    <p class="side_text">Notifications</p>
+  </div>
+  <div class="side_link flex">
+    <i class="fa-solid fa-newspaper side_icon"></i>
+    <p class="side_text">Publicity</p>
+  </div>
+  <div class="side_link flex">
+    <i class="fa-solid fa-cart-shopping  side_icon"></i>
+    <p class="side_text">Payments</p>
+  </div>
+  <div class="side_link flex">
+    <i class="fa-solid fa-gear side_icon"></i>
+    <p class="side_text">Settings</p>
+  </div>
+</div>
+{% endif %}
 
 <div class="content">
   {% block content %} {% endblock %}

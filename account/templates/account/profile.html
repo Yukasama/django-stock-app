@@ -7,44 +7,22 @@
 <div class="layout">
 
   {% if user.is_authenticated %}
-  <div class="sidebar flex">
-    <div class="side_link flex active">
-      <i class="fa-solid fa-house side_icon"></i>
-      <p class="side_text">Dashboard</p>
+  <div class="account_window window">
+    <div class="account_view view active">
+      <div class="account account_view_item view_item">
+        <p class="view_item_header">Profile</p>
+        <p class="account_user">{{request.user}}</p>
+        <div class="account_logo">
+          <img src="{{customer.image}}">
+        </div>
+      </div>
     </div>
-    <div class="side_link flex">
-      <i class="fa-solid fa-chart-line side_icon"></i>
-      <p class="side_text">Chart</p>
-    </div>
-    <div class="side_link flex">
-      <i class="fa-solid fa-coins side_icon"></i>
-      <p class="side_text">Earnings</p>
-    </div>
-    <div class="side_link flex">
-      <i class="fa-solid fa-chart-simple side_icon"></i>
-      <p class="side_text">Financials</p>
-    </div>
-    <div class="side_link flex">
-      <i class="fa-solid fa-scale-balanced side_icon"></i>
-      <p class="side_text">Holdings</p>
-    </div>
-    <div class="side_link flex">
-      <i class="fa-solid fa-gear side_icon"></i>
-      <p class="side_text">Settings</p>
-    </div>
-    <div class="side_link flex">
-      <i class="fa-solid fa-newspaper side_icon"></i>
-      <p class="side_text">Sign Out</p>
-    </div>
-  </div>
 
-  <div class="profile_window window">
-    <div class="profile_view grid-system">
-      <div class="profile_name"></div>
-      <div class="profile_name"></div>
-    </div>
-    <div class="profile_view"></div>
-    <div class="profile_view"></div>
+
+    <div class="account_view"></div>
+
+
+    <div class="account_view"></div>
   </div>
 
 

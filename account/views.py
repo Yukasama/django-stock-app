@@ -66,7 +66,12 @@ def logoutView(request):
 
 @login_required(login_url='login')
 def profile(request):
-    return render(request, 'account/profile.html')
+    page = "profile"
+    data = {
+        "page": page,
+    }
+    
+    return render(request, 'account/profile.html', data)
 
 
 

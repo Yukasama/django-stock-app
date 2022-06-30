@@ -1,7 +1,8 @@
 
-
 .content {
     transform: translate(0, var(--height-navbar));
+}
+.content.sidebar_active {
     margin-left: 90px;
     transition: margin 0.15s;
 }
@@ -23,6 +24,7 @@
 .navbar {
     position: fixed;
     width: 100%;
+    top: 0;
     height: var(--height-navbar);
     background: transparent;
     justify-content: space-around;
@@ -591,5 +593,49 @@
     }
     .contact_container2 {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .content {
+        transform: translate(0, 0);
+        margin: 0;
+    }
+    .content.show {
+        margin-left: 0;
+    }
+    .stock_view {
+        margin-top: 0;
+    }
+    .sidebar {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        position: relative;
+        width: 100%;
+        height: 70px;
+        border-top-right-radius: 0;
+        z-index: 0;
+    }
+    .sidebar:hover {
+        width: 100%;
+    }
+    .side_link {
+        width: 100%;
+        height: 70px;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding: 7px 0;
+        transition: border-top 0.2s;
+        border-top: transparent 3px solid;
+        border-left: none;
+    }
+    .side_link.active {
+        border-top: var(--color-first) 3px solid;
+        border-left: none;
+    }
+    .side_link:hover {
+        background: var(--color-light);
     }
 }

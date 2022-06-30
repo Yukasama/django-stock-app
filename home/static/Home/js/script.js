@@ -33,11 +33,15 @@ eventHandler(info, 0, "mouseover", "add");
 eventHandler(info, 0, "mouseleave", "hide");
 eventHandler(info_icon, 0, "mouseover", "add");
 
-
-const sidebar = document.querySelector(".sidebar");
-const content = document.querySelector(".content");
-eventHandler(sidebar, content, "mouseover", "add");
-eventHandler(sidebar, content, "mouseleave", "hide");
+try {
+    const sidebar = document.querySelector(".sidebar");
+    const content = document.querySelector(".content");
+    content.classList.add("sidebar_active");
+    eventHandler(sidebar, content, "mouseover", "add");
+    eventHandler(sidebar, content, "mouseleave", "hide");
+} catch {
+    print("No Sidebar detected.");
+}
 
 
 

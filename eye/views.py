@@ -14,6 +14,7 @@ from django.core.mail import send_mail
 
 
 def stocks(request):
+    page = "stocks"
     yearLabels = []
     data = defaultdict(list)
     
@@ -38,6 +39,7 @@ def stocks(request):
         except: print(f"Error: '{symbol}' failed to load.")
         
     data["yearLabels"] = yearLabels
+    data["page"] = page
     return render(request, 'eye/stocks.html')
 
 
@@ -63,6 +65,7 @@ def screener(request):
 
 
 def symbol(request, symbol):
+    page = "symbol"
     symbol = Stock.objects.get(symbol=symbol)
     data, years = defaultdict(list), []
     
@@ -97,11 +100,13 @@ def symbol(request, symbol):
     try: data["recommendationMean"] = round(1 - (data["recommendationMean"] - 1) / (5 - 1), 3)
     except: data["recommendationMean"] = "N/A"
     data["eye"] = 0.845
+    data["page"] = page
     return render(request, 'eye/symbol.html', data)
 
 
 
 def portfolio(request):
+    page = "portfolio"
     form = PortfolioForm()
     #Check for Create Form
     if (request.method == 'POST'):
@@ -117,6 +122,7 @@ def portfolio(request):
         'form': form,
         'portfolios': portfolios,
         'exists': exists,
+        'page': page,
     }
     for p in portfolios:
         pass
