@@ -87,14 +87,14 @@ OVERVIEW OF EXISTING CLASSES
     border-radius: 15px;
     background: var(--color-theme-contrast); 
 }
-.layout .window .view_item .view_item_header, .layout .window .view_item .view_item_sheader {
+.view_header, .view_item_sheader {
     color: var(--color-text-theme);
     margin: 10px;
 }
-.layout .window .view_item .view_item_header {
+.view_header {
     text-transform: uppercase;
 }
-.layout .window .view_item .view_item_sheader {
+.view_item_sheader {
     font-size: 0.9em;
 }
 
@@ -109,6 +109,7 @@ OVERVIEW OF EXISTING CLASSES
     font-size: 0.95em !important;
     cursor: pointer;
     border: none;
+    white-space: nowrap;
 }
 
 .normal_button {
@@ -158,10 +159,11 @@ OVERVIEW OF EXISTING CLASSES
 
 .icon_button {  /* NEEDS TO BE TOGGLED (CLASS) IN JAVASCRIPT */
     border: 1px transparent solid;
-    height: 40px;
-    width: 85px;
+    padding: 8px 15px;
+    min-width: 85px;
     transition: width 0.2s, height 0.2s;
     background: var(--color-first);
+    color: white;
 }
 .icon_button > i {
     color: var(--color-reverse);

@@ -33,6 +33,13 @@
     --font-weight: 500;
 
     --border-radius: 15px;
+
+
+    /* EXTRA COLORS */
+    --image-background: rgb(216, 216, 216);
+    --image-edit: rgba(182, 182, 182, 0.8);
+    --color-divider: rgb(212, 212, 212);
+
 }
 .dark {
     --color-first: rgb(19, 145, 218);
@@ -46,6 +53,12 @@
     --color-text-theme: rgb(112, 112, 112);
 
     --color-theme-contrast: rgb(25, 25, 25);
+
+
+    /* EXTRA COLORS */
+    --image-background: rgb(46, 46, 46);
+    --image-edit: rgb(20, 20, 20, 0.6);
+    --color-divider: rgb(61, 61, 61);
 }
 * {
     margin: 0;

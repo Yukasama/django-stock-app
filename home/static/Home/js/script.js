@@ -40,7 +40,7 @@ try {
     eventHandler(sidebar, content, "mouseover", "add");
     eventHandler(sidebar, content, "mouseleave", "hide");
 } catch {
-    print("No Sidebar detected.");
+    console.log("No Sidebar detected.");
 }
 
 

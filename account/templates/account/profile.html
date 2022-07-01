@@ -9,12 +9,81 @@
   {% if user.is_authenticated %}
   <div class="account_window window">
     <div class="account_view view active">
-      <div class="account account_view_item view_item">
-        <p class="view_item_header">Profile</p>
-        <p class="account_user">{{request.user}}</p>
-        <div class="account_logo">
-          <img src="{{customer.image}}">
-        </div>
+      <div class="account_profile account_view_item view_item flex">
+        <p class="view_header account_profile_header">Profile</p>
+        <form action="" method="POST" class="account_profile_form flex">
+          {% csrf_token %}
+          <div class="account_logo flex">
+            <img src="{% static 'main/img/favicon.jpg' %}">
+            <button type="submit" class="account_image_edit">Edit</button>
+          </div>
+          <div class="account_field">
+            <p class="account_sheader">Username</p>
+            <div class="account_c flex">
+              <div class="inputField">
+                <input class="input account_input" name="user" 
+                placeholder="{{request.user.username}}" disabled>
+              </div>
+              <button class="icon_button">Edit</button>
+            </div>
+          </div>
+          <div class="account_field">
+            <p class="account_sheader">E-Mail</p>
+            <div class="account_c flex">
+              <div class="inputField">
+                <input type="email" class="input account_input" 
+                name="email" placeholder="{{request.user.email}}" disabled>
+              </div>
+              <button class="icon_button account_email_button">Edit</button>
+            </div>
+          </div>
+          <div class="account_field">
+            <p class="account_sheader">Biography</p>
+            <div class="account_c flex">
+              <div class="inputField">
+                <textarea class="input account_input" name="biography" 
+                placeholder="This is my biography." disabled></textarea>
+              </div>
+              <button class="icon_button">Edit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="account_user_change account_name_change">
+
+      </div>
+
+      <div class="account_security account_view_item view_item">
+        <p class="view_header">Security</p>
+        <form action="" method="POST" class="account_profile_form flex">
+          {% csrf_token %}
+          <div class="account_field">
+            <p class="account_sheader">Password</p>
+            <div class="account_c flex">
+              <div class="inputField">
+                <input class="input account_input" name="password" 
+                placeholder="************" disabled>
+              </div>
+              <button class="icon_button" type="submit">Change Password</button>
+            </div>
+          </div>
+          <div class="account_divider"></div>
+          <p class="view_header">2-Factor-Authentication</p>
+          <div class="account_field">
+            <p class="account_sheader">2-Factor-Authentication</p>
+            <div class="account_c flex">
+              <div class="inputField">
+                <input class="input account_input" name="password" 
+                placeholder="************" disabled>
+              </div>
+              <button class="icon_button" type="submit">Change Password</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="account_statistics view_item">
+        <p class="view_header">Statistics</p>
       </div>
     </div>
 
