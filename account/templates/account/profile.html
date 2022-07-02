@@ -6,6 +6,8 @@
 
 <div class="layout">
 
+  <div class="layout_layer"></div>
+
   {% if user.is_authenticated %}
   <div class="account_window window">
     <div class="account_view view active">
@@ -49,9 +51,31 @@
           </div>
         </form>
       </div>
-      <div class="account_user_change account_name_change">
 
+      <div class="account_user_change view_item account_name_change flex">
+        <p class="view_header">Change Username</p>
+        <div class="account_field">
+          <p class="account_sheader">Username</p>
+          <div class="account_c flex">
+            <div class="inputField">
+              <input class="input account_input" name="biography" 
+              placeholder="New Username">
+            </div>
+          </div>
+        </div>
+        <div class="account_field">
+          <p class="account_sheader">Password</p>
+          <div class="account_c flex">
+            <div class="inputField">
+              <input class="input account_input" name="password" 
+              placeholder="Password">
+            </div>
+          </div>
+        </div>
+        <button class="icon_button">Change</button>
       </div>
+
+
 
       <div class="account_security account_view_item view_item">
         <p class="view_header">Security</p>
