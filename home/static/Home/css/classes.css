@@ -161,6 +161,7 @@ OVERVIEW OF EXISTING CLASSES
     border: 1px transparent solid;
     padding: 8px 15px;
     min-width: 85px;
+    min-height: 40px;
     transition: width 0.2s, height 0.2s;
     background: var(--color-first);
     color: white;
@@ -187,7 +188,8 @@ OVERVIEW OF EXISTING CLASSES
 .icon_button.show {
     background: var(--color-theme);
     border: 1px var(--color-reverse) solid;
-    width: 60px;
+    padding: 8px 15px;
+    min-width: 60px;
 }
 .icon_button.show > i {
     opacity: 1;

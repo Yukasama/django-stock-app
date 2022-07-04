@@ -1,13 +1,20 @@
 
 //EventHandler => Takes charge of adding and removing classes to and from elements
-function eventHandler(eventElement, showElement, event="mouseover", action="show") {
-    if (1 == 1) {
+function eventHandler(eventElement, showElement, event="mouseover", action="show", repeat="once") {
+    if (repeat == "multiple") {
+        eventElement.forEach(element => {
+            events(element, showElement, event, action);
+        })
+    }
+    else if (repeat == "once") {
         events(eventElement, showElement, event, action);
     } else {
         console.log("");
     }
 }
+
 var navbar = document.querySelector(".navbar");
+
 //Base Function for EventHandler
 function events(eventElement, showElement, event, action) {
     try {
@@ -51,7 +58,7 @@ function events(eventElement, showElement, event, action) {
 
 
 //Loops through Elements to determine Active Element
-function activeLooper(elements, loopType, views="") {
+function activeLooper(elements, loopType, views) {
 
     try {
         if (loopType == "list") {
