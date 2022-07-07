@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
-from . forms import Signup
+from . forms import Signup, ChangeUsername
 from django.core.mail import send_mail
 
     
@@ -18,7 +18,7 @@ def signupView(request):
             user.username = user.username.lower()
             user.save()
             send_mail(
-                "Aethega SignUp Notification",
+                "Aethega | Sign Up Notification",
                 "You just created an account on Aethega!",
                 "yukasamaa@gmail.com",
                 ["daszehntefragezeichen@gmail.com"],
@@ -66,6 +66,25 @@ def logoutView(request):
 
 @login_required(login_url='login')
 def profile(request):
+    if (request.method == "POST"):
+        form = ChangeUsername(request.POST)
+        if "edit_username" in request.POST:
+            username = request.POST["username"]
+            password = request.POST["password"]
+            print(request.user.username, username)
+            if not User.objects.filter(username=username).exists():   
+                user = authenticate(username=request.user.username, password=password)
+                print(user, request.user.username)
+                if user is not None and form.is_valid():
+                    x = form.save(commit=False)
+                    x.username = username
+                    x.save()
+                else: 
+                    messages.error(request, "Credentials do not match.")
+            else:
+                messages.error(request, "Username already exists.")
+                
+
     page = "profile"
     data = {
         "page": page,

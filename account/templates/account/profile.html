@@ -12,103 +12,130 @@
   <div class="account_window window">
     <div class="account_view view active">
       <div class="account_profile account_view_item view_item flex">
-        <p class="view_header account_profile_header">Profile</p>
-        <form action="" method="POST" class="account_profile_form flex">
-          {% csrf_token %}
-          <div class="account_logo flex">
-            <img src="{% static 'main/img/favicon.jpg' %}">
-            <button type="submit" class="account_image_edit">Edit</button>
-          </div>
-          <div class="account_field">
-            <p class="account_sheader">Username</p>
-            <div class="account_c flex">
-              <div class="inputField">
-                <input class="input account_input" name="user" 
-                placeholder="{{request.user.username}}" disabled>
-              </div>
-              <button class="icon_button">Edit</button>
-            </div>
-          </div>
-          <div class="account_field">
-            <p class="account_sheader">E-Mail</p>
-            <div class="account_c flex">
-              <div class="inputField">
-                <input type="email" class="input account_input" 
-                name="email" placeholder="{{request.user.email}}" disabled>
-              </div>
-              <button class="icon_button account_email_button">Edit</button>
-            </div>
-          </div>
-          <div class="account_field">
-            <p class="account_sheader">Biography</p>
-            <div class="account_c flex">
-              <div class="inputField">
-                <textarea class="input account_input" name="biography" 
-                placeholder="This is my biography." disabled></textarea>
-              </div>
-              <button class="icon_button">Edit</button>
-            </div>
-          </div>
-        </form>
-      </div>
-
-      <div class="account_user_change view_item account_name_change flex">
-        <p class="view_header">Change Username</p>
-        <div class="hamburger">
-          <div class="hamburger_line"></div>
-          <div class="hamburger_line"></div>
-          <div class="hamburger_line"></div>
+        <p class="view_header view_header_a">Profile</p>
+        <div class="account_logo flex">
+          <img src="{% static 'main/img/favicon.jpg' %}">
+          <button type="submit" class="account_image_edit">Edit</button>
         </div>
         <div class="account_field">
           <p class="account_sheader">Username</p>
           <div class="account_c flex">
             <div class="inputField">
-              <input class="input account_input" name="biography" 
-              placeholder="New Username">
+              <input class="input account_input" placeholder="{{request.user.username}}" disabled>
             </div>
+            <button class="normal_button account_name_edit">Edit</button>
           </div>
         </div>
         <div class="account_field">
-          <p class="account_sheader">Password</p>
+          <p class="account_sheader">E-Mail</p>
           <div class="account_c flex">
             <div class="inputField">
-              <input class="input account_input" name="password" 
-              placeholder="Password">
+              <input type="email" class="input account_input" placeholder="{{request.user.email}}" disabled>
             </div>
+            <button class="normal_button account_email_edit">Edit</button>
           </div>
         </div>
-        <button class="icon_button">Change</button>
+        <div class="account_field">
+          <p class="account_sheader">Biography</p>
+          <div class="account_c flex">
+            <div class="inputField">
+              <textarea class="input account_input" name="biography" 
+              placeholder="This is my biography." disabled></textarea>
+            </div>
+            <button class="normal_button">Edit</button>
+          </div>
+        </div>
       </div>
 
-
-
-      <div class="account_security account_view_item view_item">
-        <p class="view_header">Security</p>
-        <form action="" method="POST" class="account_profile_form flex">
+      <div class="account_user_change view_item account_name_change flex">
+        <p class="view_header">Change Username</p>
+        <div class="hamburger account_name_hide">
+          <div class="hamburger_line hamburger_line_active1"></div>
+          <div class="hamburger_line hamburger_line_active2"></div>
+          <div class="hamburger_line hamburger_line_active3"></div>
+        </div>
+        <form action="" method="POST">
           {% csrf_token %}
+          <div class="account_field">
+            <p class="account_sheader">Username</p>
+            <div class="account_c flex">
+              <div class="inputField">
+                <input class="input account_input" name="username" 
+                placeholder="New Username">
+              </div>
+            </div>
+          </div>
           <div class="account_field">
             <p class="account_sheader">Password</p>
             <div class="account_c flex">
               <div class="inputField">
-                <input class="input account_input" name="password" 
-                placeholder="************" disabled>
+                <input class="input account_input" type="password" name="password" 
+                placeholder="Password">
               </div>
-              <button class="icon_button" type="submit">Change Password</button>
             </div>
           </div>
-          <div class="account_divider"></div>
-          <p class="view_header">2-Factor-Authentication</p>
-          <div class="account_field">
-            <p class="account_sheader">2-Factor-Authentication</p>
-            <div class="account_c flex">
-              <div class="inputField">
-                <input class="input account_input" name="password" 
-                placeholder="************" disabled>
-              </div>
-              <button class="icon_button" type="submit">Change Password</button>
-            </div>
-          </div>
+          <button class="icon_button" name="edit_username" type="submit">
+            <i class="fa-solid fa-arrow-right-to-bracket portfolio_icon"></i>
+            <a>Change</a>
+          </button>
+          {% if messages %}
+          <ul class="messages">
+            {% for message in messages %}
+            <li>{{message}}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
         </form>
+      </div>
+
+
+
+      <div class="account_security account_view_item view_item flex">
+        <p class="view_header view_header_a">Security</p>
+        <div class="account_field password_field">
+          <p class="account_sheader">Password</p>
+          <div class="account_c flex">
+            <div class="inputField">
+              <input class="input account_input" name="password" 
+              placeholder="************" disabled>
+            </div>
+            <button class="normal_button" type="submit">Change Password</button>
+          </div>
+        </div>
+        <div class="account_divider"></div>
+        <div class="factor2_auth">
+          <p class="view_header factor2_title">2-Factor-Authentication</p>
+          <table>
+            <tr>
+              <td class="factor2_header">Option</td>
+              <td class="factor2_header">Verification</td>
+              <td class="factor2_header">Security</td>
+              <td class="factor2_header">Active</td>
+              <td class="factor2_header"></td>
+            </tr>
+            <tr>
+              <th>E-Mail</td>
+              <td><i class="fa-solid fa-check auth_check"></i></td>
+              <td><i class="fa-solid fa-shield-halved security_level security_level2"></i></td>
+              <td>{% if 1 == 1 %}<i class="fa-solid fa-check auth_check"></i>{% endif %}</td>
+              <td><button class="normal_button">Change</button></td>
+            </tr>
+            <tr>
+              <th>SMS</td>
+              <td><i class="fa-solid fa-check auth_check"></i></td>
+              <td><i class="fa-solid fa-shield-halved security_level security_level2"></i></td>
+              <td>{% if 2 == 1 %}<i class="fa-solid fa-check auth_check"></i>{% endif %}</td>
+              <td><button class="normal_button">Change</button></td>
+            </tr>
+            <tr>
+              <th>Google Authenticator</td>
+              <td><i class="fa-solid fa-check auth_check"></i></td>
+              <td><i class="fa-solid fa-shield-halved security_level security_level3"></i></td>
+              <td>{% if 3 == 1 %}<i class="fa-solid fa-check auth_check"></i>{% endif %}</td>
+              <td><button class="normal_button">Change</button></td>
+            </tr>
+          </table>
+        </div>
       </div>
 
       <div class="account_statistics view_item">

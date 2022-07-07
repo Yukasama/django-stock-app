@@ -18,7 +18,7 @@
               <img class="stock_img" src={{logo_url}}>
             </div>
             <div class="stock_title_data">
-              <a href="{{website}}" class="stock_title_text stock_name">{{longName}}</a>
+              <a href="{{website}}" target="_blank" class="stock_title_text stock_name">{{longName}}</a>
               <p class="stock_title_desc">{{ticker}}</p>
             </div>
           </div>
@@ -161,7 +161,7 @@
           <div class="dividend_info_text">Symbol never paid a Dividend</div>
         </div>
         {% else %}
-        <div class="stock_dividend stock_chart_item stock_view_item">
+        <div class="stock_dividend stock_chart_item stock_view_item view_item">
           <p class="view_header">Dividend</p>
           <div class="info flex">
             <i class="fa-solid fa-question info_icon"></i>

@@ -116,12 +116,18 @@ OVERVIEW OF EXISTING CLASSES
     padding: 8px 25px;
     background: var(--color-first);
     color: white;
+    border: 1px solid transparent;
 }
 .normal_button_outline {
     background: var(--color-theme);
     border: 2px solid var(--color-reverse);
     color: var(--color-reverse);
     padding: 7px 21px;
+}
+.normal_button:hover {
+    background: var(--color-theme);
+    color: var(--color-reverse);
+    border: var(--color-reverse) 1px solid;
 }
 
 .smart_button, .smart_button_outline {
@@ -317,7 +323,8 @@ OVERVIEW OF EXISTING CLASSES
 .input:-webkit-autofill:hover, 
 .input:-webkit-autofill:focus, 
 .input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px var(--color-theme) inset !important;
+    -webkit-box-shadow: 0 0 0 30px var(--color-theme-contrast) inset !important;
+    -webkit-text-fill-color: var(--color-reverse);
 }
 
 
