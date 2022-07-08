@@ -1,13 +1,17 @@
-
-
-.account_profile {  grid-area: profile;  }
-.account_security {  grid-area: security;  }
-.account_statistics {  grid-area: statistics;  }
-.account_view {
-  grid-template-areas: 
-  "profile profile security"
-  "profile profile security"
-  "statistics statistics security";
+.account_profile {
+  grid-area: profile;
+}
+.account_security {
+  grid-area: security;
+}
+.account_statistics {
+  grid-area: statistics;
+}
+.account_view:nth-child(1) {
+  grid-template-areas:
+    "profile profile security"
+    "profile profile security"
+    "statistics statistics security";
 }
 .account_profile {
   justify-content: space-evenly;
@@ -93,7 +97,6 @@
   right: 10px;
 }
 
-
 .account_security {
   justify-content: space-evenly;
   align-items: center;
@@ -125,7 +128,7 @@ table tr th {
   margin: auto;
 }
 .security_level2 {
-   color: yellow;
+  color: yellow;
 }
 .security_level3 {
   color: rgb(0, 255, 8);
@@ -138,4 +141,13 @@ table tr td button {
 }
 .auth_check {
   color: rgb(6, 250, 6);
+}
+
+@media screen and (max-width: 1400px) {
+  .account_view:nth-child(1) {
+    grid-template-areas:
+      "profile"
+      "security"
+      "statistics";
+  }
 }

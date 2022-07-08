@@ -47,7 +47,7 @@ function events(eventElement, showElement, event, action) {
                 showElement.classList.toggle("show");
             }
             else if (event == "scroll") {
-                showElement.classList.toggle("scroll", window.scrollY > 50);
+                showElement.classList.toggle("scroll", window.scrollY > 0);
             }
         })
     } catch(err) {

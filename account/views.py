@@ -83,6 +83,8 @@ def profile(request):
                     messages.error(request, "Credentials do not match.")
             else:
                 messages.error(request, "Username already exists.")
+        elif "edit_email" in request.POST:
+            pass
                 
 
     page = "profile"

@@ -11,7 +11,6 @@
     </a>
   </div>
 
-
   <div class="nav_container nav_container2 flex">
     <a href="{% url 'calendar' %}" class="nav_link effect_underline">Calendar</a>
     <a href="{% url 'news' %}" class="nav_link effect_underline">News</a>
@@ -148,11 +147,11 @@
       </div>
       <div class="sidenav_link flex">
         <i class="material-icons sidenav_icon">insert_chart</i>
-        <a href="{% url 'portfolio' %}" class="sidenav_text">My Portfolios</a>
+        <a href="{% url 'portfolio' %}" class="sidenav_text">Portfolios</a>
       </div>
       <div class="sidenav_link flex">
           <i class="material-icons sidenav_icon">insert_chart</i>
-          <a href="{% url 'portfolio' %}" class="sidenav_text">My Posts</a>
+          <a href="{% url 'portfolio' %}" class="sidenav_text">Posts</a>
       </div>
       <div class="sidenav_link flex">
         <i class="material-icons sidenav_icon">settings</i>
@@ -355,7 +354,12 @@
     <i class="fa-solid fa-gear side_icon"></i>
     <p class="side_text">Settings</p>
   </div>
+  <div class="side_link_a flex">
+    <i class="fa-solid fa-gear side_icon"></i>
+    <a href="{% url 'logout' %}" class="side_text">Logout</a>
+  </div>
 </div>
+
 {% endif %}
 
 <div class="content">

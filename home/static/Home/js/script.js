@@ -21,14 +21,13 @@ const hamburger2 = document.querySelector(".hamburger2");
 eventHandler(contact_link, contact, "click", "show"); //CONTACT WINDOW TOGGLE
 eventHandler(hamburger2, contact, "click", "hide"); //CONTACT WINDOW HIDE 
 
-
-try {
-    const sidebar = document.querySelector(".sidebar");
-    const content = document.querySelector(".content");
+if ($(document.querySelector(".sidebar")).is(":visible")) {
+    var sidebar = document.querySelector(".sidebar");
+    var content = document.querySelector(".content");
     content.classList.add("sidebar_active");
     eventHandler(sidebar, content, "mouseover", "add");
     eventHandler(sidebar, content, "mouseleave", "hide");
-} catch {
+} else {
     console.log("No Sidebar detected.");
 }
 
