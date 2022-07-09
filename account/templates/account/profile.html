@@ -6,11 +6,10 @@
 
 <div class="layout">
 
-  <div class="layout_layer"></div>
-
   {% if user.is_authenticated %}
   <div class="account_window window">
     <div class="account_view view active">
+      <div class="background_blur"></div>
       <div class="account_profile account_view_item view_item flex">
         <p class="view_header view_header_a">Profile</p>
         <div class="account_logo flex">
@@ -37,24 +36,28 @@
         </div>
         <div class="account_field">
           <p class="account_sheader">Biography</p>
-          <div class="account_c flex">
-            <div class="inputField">
-              <textarea class="input account_input" name="biography" 
-              placeholder="This is my biography." disabled></textarea>
+          <form action="" method="POST">
+            <div class="account_c flex">
+                {% csrf_token %}
+                <div class="inputField">
+                  <textarea class="input account_input account_biography_change" name="biography" 
+                  disabled required>{{request.user.profile.biography}}</textarea>
+                </div>
+                <div class="normal_button account_biography_edit">Edit</div>
             </div>
-            <button class="normal_button">Edit</button>
-          </div>
+            <button class="normal_button account_biography_save" type="submit" name="edit_biography">Save Changes</button>
+          </form>
         </div>
       </div>
 
       <div class="account_user_change view_item account_name_change flex">
         <p class="view_header">Change Username</p>
-        <div class="hamburger account_name_hide">
+        <div class="hamburger account_name_hide account_user_hide">
           <div class="hamburger_line hamburger_line_active1"></div>
           <div class="hamburger_line hamburger_line_active2"></div>
           <div class="hamburger_line hamburger_line_active3"></div>
         </div>
-        <form action="" method="POST">
+        <form action="" method="POST" class="account_user_form flex">
           {% csrf_token %}
           <div class="account_field">
             <p class="account_sheader">Username</p>
@@ -78,16 +81,53 @@
             <i class="fa-solid fa-arrow-right-to-bracket portfolio_icon"></i>
             <a>Change</a>
           </button>
-          {% if messages %}
-          <ul class="messages">
-            {% for message in messages %}
-            <li>{{message}}</li>
-            {% endfor %}
-          </ul>
-          {% endif %}
         </form>
+        {% if messages %}
+        <ul class="messages">
+          {% for message in messages %}
+          <li>{{message}}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
       </div>
-
+      <div class="account_user_change view_item account_email_change flex">
+        <p class="view_header">Change E-Mail</p>
+        <div class="hamburger account_email_hide account_user_hide">
+          <div class="hamburger_line hamburger_line_active1"></div>
+          <div class="hamburger_line hamburger_line_active2"></div>
+          <div class="hamburger_line hamburger_line_active3"></div>
+        </div>
+        <form action="" method="POST" class="flex account_user_form">
+          {% csrf_token %}
+          <div class="account_field">
+            <p class="account_sheader">E-Mail</p>
+            <div class="account_c flex">
+              <div class="inputField">
+                <input type="email" class="input account_input" name="email" placeholder="New E-Mail">
+              </div>
+            </div>
+          </div>
+          <div class="account_field">
+            <p class="account_sheader">Password</p>
+            <div class="account_c flex">
+              <div class="inputField">
+                <input class="input account_input" type="password" name="password" placeholder="Password">
+              </div>
+            </div>
+          </div>
+          <button class="icon_button" name="edit_email" type="submit">
+            <i class="fa-solid fa-arrow-right-to-bracket portfolio_icon"></i>
+            <a>Change</a>
+          </button>
+        </form>
+        {% if messages %}
+        <ul class="messages">
+          {% for message in messages %}
+          <li>{{message}}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
 
 
       <div class="account_security account_view_item view_item flex">

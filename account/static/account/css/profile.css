@@ -70,31 +70,58 @@
 
 .account_user_change {
   padding: 30px;
-  position: absolute;
-  align-self: center;
+  position: fixed;
+  margin-top: 125px;
   justify-self: center;
-  z-index: 2;
-  flex-direction: column;
+  z-index: 0;
   align-items: center;
+  flex-direction: column;
   display: none;
 }
-.account_user_change .view_header {
-  margin-bottom: 20px;
+.account_user_change.show {
+  display: flex;
+  z-index: 5;
 }
-.account_user_change .account_field {
+.account_user_form {
+  align-items: center;
+  flex-direction: column;
   margin-bottom: 30px;
 }
 .account_user_change button {
   width: 110px;
 }
-.account_name_change.show {
-  display: flex;
-}
-.account_name_hide {
+.account_user_hide {
   display: flex;
   position: absolute;
   top: 10px;
   right: 10px;
+}
+
+.account_biography_change:disabled {
+  color: var(--color-text-theme);
+}
+.account_biography_change:enabled {
+  animation: color_change 1.5s linear infinite;
+  color: var(--color-first);
+}
+@keyframes color_change {
+  100% {
+    color: var(--color-text-theme);
+  }
+  50% {
+    color: var(--color-first);
+  }
+  0% {
+    color: var(--color-text-theme);
+  }
+}
+
+.account_biography_save {
+  opacity: 0;
+  margin-top: 15px;
+}
+.account_biography_save.show {
+  opacity: 1;
 }
 
 .account_security {

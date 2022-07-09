@@ -1,83 +1,93 @@
-
 .login {
-    background: linear-gradient(to right bottom, var(--color-first), var(--color-third));
-    width: 100%;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
+  background: linear-gradient(
+    to right bottom,
+    var(--color-first),
+    var(--color-third)
+  );
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 .login_form {
-    flex-direction: column;
-    width: 500px;
-    height: 600px;
-    border-radius: 30px;
-    margin: 0 auto 0 auto;
-    justify-content: center;
-    background: var(--color-theme);
+  flex-direction: column;
+  width: 500px;
+  height: 600px;
+  border-radius: 30px;
+  margin: 0 auto 0 auto;
+  justify-content: center;
+  background: var(--color-theme-contrast);
 }
-.arrow_back, .home_back {
-    position: absolute;
-    top: 25px;
+.arrow_back,
+.home_back {
+  position: absolute;
+  top: 25px;
 }
 .arrow_back {
-    left: 25px;
+  left: 25px;
 }
 .home_back {
-    left: 430px;
+  left: 430px;
 }
 .home_back i {
-    font-size: 24px;
+  font-size: 24px;
 }
 .login_header {
-    font-size: 1.5em;
-    margin: 0 0 10px;
-    padding-left: 75px;
-    border-left: var(--color-first) 4px solid;
-    color: var(--color-first);
+  font-size: 1.5em;
+  margin: 0 0 10px;
+  padding-left: 75px;
+  border-left: var(--color-first) 4px solid;
+  color: var(--color-first);
 }
 .inputField {
-    margin: 20px 75px;
-    width: 350px;
+  margin: 20px 75px;
+  width: 350px;
 }
 .input:focus::placeholder {
-    color: var(--color-first);
+  color: var(--color-first);
 }
 
-.forgot_password, .password_requirements li {
-    font-size: 0.85em;
-    color: var(--color-text-theme);
+.forgot_password,
+.password_requirements li {
+  font-size: 0.85em;
+  color: var(--color-text-theme);
 }
 .forgot_password {
-    font-size: 0.9em;
-    margin: -10px 0 0 85px;
-    cursor: pointer;
-    transition: color 0.15s;
+  font-size: 0.9em;
+  margin: -10px 0 0 85px;
+  cursor: pointer;
+  transition: color 0.15s;
 }
 .forgot_password:hover {
-    color: var(--color-first);
+  color: var(--color-first);
 }
 .password_requirements li {
-    list-style: square;
+  list-style: square;
 }
 
 .login_button {
-    margin: 30px 75px;
+  margin: 30px 75px;
 }
 .login_redirect {
-    color: var(--color-text-theme);
-    margin-left: 75px;
+  color: var(--color-text-theme);
+  margin-left: 75px;
 }
 .login_link {
-    color: var(--color-first);
+  color: var(--color-first);
 }
 
 .message_field {
-    margin-top: var(--height-navbar);
+  margin-top: var(--height-navbar);
+}
+
+.messages {
+  margin-top: 20px;
 }
 .messages li {
-    color: red;
+  color: red;
+  text-align: center;
 }
 
 .password_requirements {
-    margin: -10px 0 0 105px;
+  margin: -10px 0 0 105px;
 }

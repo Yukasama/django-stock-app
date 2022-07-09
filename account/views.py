@@ -3,14 +3,14 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
-from . forms import Signup, ChangeUsername
+from . forms import Signup
 from django.core.mail import send_mail
+from account.forms import Profile
 
     
 
 def signupView(request):
     form = Signup()
-    icons = ["user", "key", "key"]
     if request.method == "POST":
         form = Signup(request.POST)
         if form.is_valid():
@@ -28,7 +28,7 @@ def signupView(request):
             return redirect('home')
         else:
             messages.error(request, "Error during registration.")
-    return render(request, 'account/signup.html', {'form': form, "icons": icons})
+    return render(request, 'account/signup.html', {'form': form})
 
 
 
@@ -40,13 +40,16 @@ def loginView(request):
     
     #Validate Login Data
     if request.method == "POST":
-        username = request.POST.get("username").lower()
+        userauth = request.POST.get("userauth").lower()
         password = request.POST.get("password")
         
-        #Check if User exists
-        try: user = User.objects.get(username=username)
-        except: messages.error(request, "User doesn't exist.")
-        user = authenticate(request, username=username, password=password)
+        #Check for Email or Username Login
+        emailLogin = True
+        if User.objects.get(username=userauth).exists(): emailLogin = False
+        elif User.objects.get(email=userauth).exists(): pass
+        else: messages.error(request, "User doesn't exist.")
+        
+        user = authenticate(email=userauth, password=password) if emailLogin == True else authenticate(username=userauth, password=password)
         if user is not None:
             login(request, user) #Logging in User
             return redirect("home")
@@ -67,24 +70,34 @@ def logoutView(request):
 @login_required(login_url='login')
 def profile(request):
     if (request.method == "POST"):
-        form = ChangeUsername(request.POST)
         if "edit_username" in request.POST:
-            username = request.POST["username"]
+            newUsername = request.POST["username"]
             password = request.POST["password"]
-            print(request.user.username, username)
-            if not User.objects.filter(username=username).exists():   
+            if not User.objects.filter(username=newUsername).exists():   
                 user = authenticate(username=request.user.username, password=password)
-                print(user, request.user.username)
-                if user is not None and form.is_valid():
-                    x = form.save(commit=False)
-                    x.username = username
-                    x.save()
+                if user is not None:
+                    user.username = newUsername
+                    user.save()
+                    return redirect("profile")
                 else: 
                     messages.error(request, "Credentials do not match.")
             else:
                 messages.error(request, "Username already exists.")
         elif "edit_email" in request.POST:
-            pass
+            email = request.POST["email"]
+            password = request.POST["password"]
+            user = authenticate(username=request.user.username, password=password)
+            if user is not None:
+                user.email = email
+                user.save()
+                return redirect("profile")
+            else: 
+                messages.error(request, "Credentials do not match.")
+        elif "edit_biography" in request.POST:
+            user = User.objects.get(pk=request.user.id)
+            biography = request.POST["biography"]
+            user.profile.biography = biography
+            user.save()
                 
 
     page = "profile"

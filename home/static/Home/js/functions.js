@@ -1,22 +1,23 @@
 
 //EventHandler => Takes charge of adding and removing classes to and from elements
-function eventHandler(eventElement, showElement, event="mouseover", action="show", repeat="once") {
+function eventHandler(eventElement, showElement, event="mouseover", action="show", repeat="once", background="none") {
     if (repeat == "multiple") {
         eventElement.forEach(element => {
-            events(element, showElement, event, action);
+            events(element, showElement, event, action, background);
         })
     }
     else if (repeat == "once") {
-        events(eventElement, showElement, event, action);
+        events(eventElement, showElement, event, action, background);
     } else {
         console.log("");
     }
 }
 
 var navbar = document.querySelector(".navbar");
+var background_blur = document.querySelector(".background_blur");
 
 //Base Function for EventHandler
-function events(eventElement, showElement, event, action) {
+function events(eventElement, showElement, event, action, background) {
     try {
         eventElement.addEventListener(event, () => {
 
@@ -26,11 +27,19 @@ function events(eventElement, showElement, event, action) {
             else if (event == "mouseleave" && showElement == 0) {
                 eventElement.classList.remove("show"); 
             }
-            else if (action == "hide") {
-                showElement.classList.remove("show");
-            }
             else if (action == "add") {
                 showElement.classList.add("show");
+                if (background == "blur") {
+                    background_blur.classList.add("show");
+                    document.body.style.overflow = "hidden";
+                }
+            }
+            else if (action == "hide") {
+                showElement.classList.remove("show");
+                if (background == "blur") {
+                    background_blur.classList.remove("show");
+                    document.body.style.overflow = "scroll";
+                }
             }
             else if (action == "window") {
                 showElement.classList.toggle("scroll");
@@ -38,9 +47,11 @@ function events(eventElement, showElement, event, action) {
                 if (showElement.classList.contains("scroll")) {
                     document.body.style.overflow = "hidden";
                     navbar.style.height = "90px";
-                } else { 
-                    document.body.style.overflow = "scroll";
-                    navbar.style.height = "80px";
+                } else {
+                    if (!background_blur.classList.contains("show")) {
+                        document.body.style.overflow = "scroll";
+                        navbar.style.height = "80px";
+                    }
                 }
             }
             else if (event == "click" || event == "mouseover") {
