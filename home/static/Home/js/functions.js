@@ -48,6 +48,7 @@ function events(eventElement, showElement, event, action, background) {
                     document.body.style.overflow = "hidden";
                     navbar.style.height = "90px";
                 } else {
+                    document.body.style.overflow = "scroll";
                     if (!background_blur.classList.contains("show")) {
                         document.body.style.overflow = "scroll";
                         navbar.style.height = "80px";

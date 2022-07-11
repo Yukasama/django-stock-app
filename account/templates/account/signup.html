@@ -29,12 +29,12 @@
     <h1 class="login_header">Sign Up</h1>
     <div class="inputField">
       <i class="fa-solid fa-user"></i>
-      {{form.username}}
+      <input type="email" class="input" name="email" placeholder="E-Mail">
       <i class="fa-solid fa-check"></i>
     </div>
     <div class="inputField">
       <i class="fa-solid fa-unlock"></i>
-      {{form.password1}}
+      <input type="password" class="input" name="password1" placeholder="Password">
       <i class="fa-solid fa-check"></i>
     </div>
     <ul class="password_requirements">
@@ -45,14 +45,14 @@
     
     <div class="inputField">
       <i class="fa-solid fa-lock"></i>
-      {{form.password2}}
+      <input type="password" class="input" name="password2" placeholder="Repeat Password">
       <i class="fa-solid fa-check"></i>
     </div>
     <button type="submit" class="icon_button login_button">
       <i class="fa-solid fa-arrow-right-to-bracket portfolio_icon"></i>
       <a>Sign Up</a>
     </button>
-    <p class="login_redirect">Already signed up? <a class="login_link" href="{% url 'login' %}">Login</a></p>
+    <p class="login_redirect">Already signed up? <a class="login_link" href="{% url 'signin' %}">Login</a></p>
   
     {% if messages %}
     <ul class="messages">

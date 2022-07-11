@@ -109,7 +109,8 @@ OVERVIEW OF EXISTING CLASSES
 .icon_button,
 .create_button,
 .delete_button,
-.search_button {
+.search_button,
+.symbol_button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -241,6 +242,23 @@ OVERVIEW OF EXISTING CLASSES
 }
 .search_button {
   background: transparent;
+}
+
+.symbol_button {
+  height: 50px;
+  width: 50px;
+  border: 1px solid transparent;
+}
+.symbol_button i {
+  font-size: 27px;
+  color: white;
+}
+.symbol_button:hover {
+  background: var(--color-theme-contrast);
+  border: 1px solid var(--color-reverse);
+}
+.symbol_button:hover i {
+  color: var(--color-reverse);
 }
 
 .arrow_back {

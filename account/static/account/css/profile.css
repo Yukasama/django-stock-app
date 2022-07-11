@@ -116,12 +116,16 @@
   }
 }
 
-.account_biography_save {
+.account_biography_buttons {
   opacity: 0;
   margin-top: 15px;
+  gap: 15px;
 }
-.account_biography_save.show {
+.account_biography_buttons.show {
   opacity: 1;
+}
+.account_biography_discard {
+  background-color: red;
 }
 
 .account_security {

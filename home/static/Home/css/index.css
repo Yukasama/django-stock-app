@@ -248,16 +248,18 @@
   opacity: 0;
   z-index: 0;
   transform: translate(100%, 0);
-  background: var(--color-theme);
+  background: var(--color-blur2);
   backdrop-filter: blur(5px);
   transition: all 0.5s;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 .sidenavbar.scroll {
   opacity: 1;
   z-index: 6;
   transform: translate(0, 0);
-  height: 110%;
   transition: all 0.5s;
+  height: calc(100% - var(--height-navbar));
 }
 .sidenav_container {
   flex-direction: column;
@@ -314,7 +316,7 @@
   transition: color 0.3s, transform 0.2s;
 }
 .sidenav_link:hover {
-  background: var(--color-light);
+  background: var(--color-theme-contrast);
 }
 .sidenav_link:hover > .sidenav_icon {
   color: var(--color-first) !important;

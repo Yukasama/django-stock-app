@@ -1,0 +1,13 @@
+#RoadMap
+
+Django Email Login System
+Email Verification
+Two Factor Authentication
+Sending E-Mails
+Portfolio Creation with individual Stocks
+Password Change
+Password Reset
+All Stocks in Database
+Dynamic Stock Chart
+Social Media Account
+

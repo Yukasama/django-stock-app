@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User
+from account.models import Account
 
 
 
@@ -334,7 +334,7 @@ class History(models.Model):
 class Portfolio(models.Model):
     
     #User Based
-    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    user = models.ForeignKey(Account, on_delete=models.CASCADE, null=True)
     name = models.CharField(max_length=100)
     
     #Stocks

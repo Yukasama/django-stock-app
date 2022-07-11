@@ -15,10 +15,14 @@ eventHandler(account_email_hide, account_email_change, "click", "hide", "once", 
 
 const account_biography_change = document.querySelector(".account_biography_change");
 const account_biography_edit = document.querySelector(".account_biography_edit");
-const account_biography_save = document.querySelector(".account_biography_save");
+const account_biography_buttons = document.querySelector(".account_biography_buttons");
 account_biography_edit.addEventListener("click", () => {
     account_biography_change.disabled = false;
-    account_biography_save.classList.add("show");
+    account_biography_buttons.classList.add("show");
+})
+account_biography_discard.addEventListener("click", () => {
+    account_biography_change.disabled = true;
+    account_biography_buttons.classList.remove("show");
 })
 
 const account_verification = document.querySelectorAll(".account_verification");

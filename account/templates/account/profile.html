@@ -13,7 +13,7 @@
       <div class="account_profile account_view_item view_item flex">
         <p class="view_header view_header_a">Profile</p>
         <div class="account_logo flex">
-          <img src="{% static 'main/img/favicon.jpg' %}">
+          <img src="{{request.user.profile_image}}">
           <button type="submit" class="account_image_edit">Edit</button>
         </div>
         <div class="account_field">
@@ -40,12 +40,17 @@
             <div class="account_c flex">
                 {% csrf_token %}
                 <div class="inputField">
-                  <textarea class="input account_input account_biography_change" name="biography" 
-                  disabled required>{{request.user.profile.biography}}</textarea>
+                  <textarea class="input account_input account_biography_change" name="biography"
+                  disabled required>{{request.user.biography}}</textarea>
                 </div>
                 <div class="normal_button account_biography_edit">Edit</div>
             </div>
-            <button class="normal_button account_biography_save" type="submit" name="edit_biography">Save Changes</button>
+            <div class="account_biography_buttons flex">
+              <button class="normal_button account_biography_save" type="submit" name="edit_biography">Save Changes</button>
+              <button class="symbol_button account_biography_discard">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
           </form>
         </div>
       </div>

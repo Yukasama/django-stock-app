@@ -1,34 +1,37 @@
 from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.models import User
-from . forms import Signup
+from account.backends import EmailBackend as auth
+from account.models import AccountManager
+from django.contrib.auth import login
 from django.core.mail import send_mail
-from account.forms import Profile
+from account.models import Account
 
     
 
 def signupView(request):
-    form = Signup()
     if request.method == "POST":
-        form = Signup(request.POST)
-        if form.is_valid():
-            user = form.save(commit=False)
-            user.username = user.username.lower()
-            user.save()
-            send_mail(
-                "Aethega | Sign Up Notification",
-                "You just created an account on Aethega!",
-                "yukasamaa@gmail.com",
-                ["daszehntefragezeichen@gmail.com"],
-                fail_silently=False,
-            )
-            login(request, user)
-            return redirect('home')
+        email = request.POST["email"]
+        password = request.POST["password1"]
+        confpassword = request.POST["password2"]
+        if password == confpassword:
+            if not Account.objects.filter(email=email).exists():
+                user = Account.objects.create_user(email=email, password=password)
+                user.save()
+                # send_mail(
+                #     "Aethega | Sign Up Notification",
+                #     "You just created an account on Aethega!",
+                #     "yukasamaa@gmail.com",
+                #     ["daszehntefragezeichen@gmail.com"],
+                #     fail_silently=False,
+                # )
+                login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+                return redirect('home')
+            else:
+                messages.error(request, "E-Mail is already registered.")
         else:
-            messages.error(request, "Error during registration.")
-    return render(request, 'account/signup.html', {'form': form})
+            messages.error(request, "Passwords don't match.")
+    return render(request, 'account/signup.html')
 
 
 
@@ -40,41 +43,37 @@ def loginView(request):
     
     #Validate Login Data
     if request.method == "POST":
-        userauth = request.POST.get("userauth").lower()
-        password = request.POST.get("password")
-        
-        #Check for Email or Username Login
-        emailLogin = True
-        if User.objects.get(username=userauth).exists(): emailLogin = False
-        elif User.objects.get(email=userauth).exists(): pass
-        else: messages.error(request, "User doesn't exist.")
-        
-        user = authenticate(email=userauth, password=password) if emailLogin == True else authenticate(username=userauth, password=password)
+        email = request.POST["email"]
+        password = request.POST["password"]
+           
+        #Check if User exists
+        user = auth.authenticate(email=email, password=password)
+            
         if user is not None:
-            login(request, user) #Logging in User
+            login(request, user, backend='django.contrib.auth.backends.ModelBackend')
             return redirect("home")
         else:
-            messages.error(request, "Credentials doesn't match.")
+            messages.error(request, "Credentials do not match.")
             
-    return render(request, 'registration/login.html')
+    return render(request, 'account/login.html')
 
 
 
-@login_required(login_url='login')
+@login_required(login_url='signin')
 def logoutView(request):
     logout(request)
     return redirect('home')
 
 
 
-@login_required(login_url='login')
+@login_required(login_url='signin')
 def profile(request):
     if (request.method == "POST"):
         if "edit_username" in request.POST:
             newUsername = request.POST["username"]
             password = request.POST["password"]
-            if not User.objects.filter(username=newUsername).exists():   
-                user = authenticate(username=request.user.username, password=password)
+            if not Account.objects.filter(username=newUsername).exists():   
+                user = auth.authenticate(email=request.user.email, password=password)
                 if user is not None:
                     user.username = newUsername
                     user.save()
@@ -84,20 +83,21 @@ def profile(request):
             else:
                 messages.error(request, "Username already exists.")
         elif "edit_email" in request.POST:
-            email = request.POST["email"]
+            newEmail = request.POST["email"].lower()
             password = request.POST["password"]
-            user = authenticate(username=request.user.username, password=password)
+            user = auth.authenticate(email=request.user.email, password=password)
             if user is not None:
-                user.email = email
+                user.email = newEmail
                 user.save()
                 return redirect("profile")
             else: 
                 messages.error(request, "Credentials do not match.")
         elif "edit_biography" in request.POST:
-            user = User.objects.get(pk=request.user.id)
+            user = Account.objects.get(pk=request.user.id)
             biography = request.POST["biography"]
-            user.profile.biography = biography
+            user.biography = biography
             user.save()
+            return redirect("profile")
                 
 
     page = "profile"
@@ -109,7 +109,7 @@ def profile(request):
 
 
 
-@login_required(login_url='login')
+@login_required(login_url='signin')
 def settings(request):
     return render(request, 'account/settings.html')
 

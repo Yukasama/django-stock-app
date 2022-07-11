@@ -77,7 +77,7 @@
         <i class="material-icons user_icon">account_circle</i>
       </div>
     {% else %}
-      <a href="{% url 'login' %}" class="nav_link sign_up">Login</a>
+      <a href="{% url 'signin' %}" class="nav_link sign_up">Login</a>
       <a href="{% url 'signup' %}" class="nav_link sign_up smart_button">Sign Up</a>
     {% endif %}
 
@@ -169,7 +169,7 @@
       {% else %}
       <div class="sidenav_link flex">
         <i class="material-icons sidenav_icon">flag</i>
-        <a href="{% url 'login' %}" class="sidenav_text">Login</a>
+        <a href="{% url 'signin' %}" class="sidenav_text">Login</a>
       </div>
       <div class="sidenav_link flex">
         <i class="material-icons sidenav_icon">flag</i>
