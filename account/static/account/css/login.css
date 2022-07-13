@@ -2,12 +2,32 @@
   background: linear-gradient(
     to right bottom,
     var(--color-first),
-    var(--color-third)
+    var(--color-third) 70%
   );
   width: 100%;
   height: 100vh;
   justify-content: center;
   align-items: center;
+  transition: background 1s;
+  animation: fadein linear 0.5s;
+}
+@keyframes fadein {
+  100% {
+    opacity: 1;
+    background: linear-gradient(
+      to right bottom,
+      var(--color-first),
+      var(--color-third) 70%
+    );
+  }
+  0% {
+    opacity: 0;
+    background: linear-gradient(
+      to right bottom,
+      var(--color-first),
+      var(--color-third) 40%
+    );
+  }
 }
 .login_form {
   flex-direction: column;

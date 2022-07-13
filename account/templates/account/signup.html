@@ -5,16 +5,6 @@
 
 <link rel="stylesheet" href="{% static 'account/css/login.css' %}">
 
-{% if user.is_authenticated %}
-<div class="message_field flex">
-  <p class="message_text">You are logged in already.</p>
-  <button class="icon_button transition">
-    <i class="fa-solid fa-arrow-right-to-bracket portfolio_icon"></i>
-    <a href="{% url 'home' %}">Back</a>
-  </button> 
-</div>
-
-{% else %}
 <div class="signup login flex">
   <form method="POST" class="login_form flex">
     {% csrf_token %}
@@ -38,7 +28,7 @@
       <i class="fa-solid fa-check"></i>
     </div>
     <ul class="password_requirements">
-      <li>8 Characters Minimum</li>
+      <li>Minimum 8 Characters</li>
       <li>Atleast 1 Symbol, 1 Number & 1 Capital Letter</li>
       <li>Not related to your E-Mail</li>
     </ul>
@@ -63,8 +53,6 @@
     {% endif %}
   </form>
 </div>
-{% endif %}
-
 
 
 {% endblock %}

@@ -13,15 +13,6 @@
 
   <div class="nav_container nav_container2 flex">
     <a href="{% url 'calendar' %}" class="nav_link effect_underline">Calendar</a>
-    <a href="{% url 'news' %}" class="nav_link effect_underline">News</a>
-    <form action="{% url 'search' %}">
-      <div class="inputField search_navbar">
-        <button class="search_button" type="submit">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-        <input type="text" placeholder="Search.." class="input input_theme" name="q">
-      </div>
-    </form>
     <div class="nav_link effect_underline nav_link_ex flex">Markets
       <div class="nav_sub_element">
         <div class="nav_link_sub smart_list">
@@ -45,6 +36,14 @@
       </div>
     </div>
     <i class="material-icons nav_link_icon invisible">expand_more</i>
+    <form action="{% url 'search' %}">
+      <div class="inputField search_navbar">
+        <button class="search_button" type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <input type="text" placeholder="Search.." class="input input_theme" name="q">
+      </div>
+    </form>
     <div class="nav_link effect_underline nav_link_ex flex">Education
       <div class="nav_sub_element">
         <div class="nav_link_sub smart_list">
@@ -68,6 +67,7 @@
       </div>
     </div>
     <i class="material-icons nav_link_icon invisible">expand_more</i>
+    <a href="{% url 'news' %}" class="nav_link effect_underline">News</a>
   </div>
 
 
@@ -105,10 +105,6 @@
         <div class="profile_link flex">
           <i class="material-icons profile_icon">dashboard</i>
           <a href="{% url 'profile' %}" class="profile_text">Posts</a>
-        </div>
-        <div class="profile_link flex">
-          <i class="material-icons profile_icon">settings</i>
-          <a href="{% url 'settings' %}" class="profile_text">Settings</a>
         </div>
         <div class="profile_link flex">
           <i class="material-icons profile_icon">flag</i>
@@ -152,10 +148,6 @@
       <div class="sidenav_link flex">
           <i class="material-icons sidenav_icon">insert_chart</i>
           <a href="{% url 'portfolio' %}" class="sidenav_text">Posts</a>
-      </div>
-      <div class="sidenav_link flex">
-        <i class="material-icons sidenav_icon">settings</i>
-        <a href="{% url 'settings' %}" class="sidenav_text">Settings</a>
       </div>
       <div class="sidenav_link flex">
         <i class="material-icons sidenav_icon">flag</i>

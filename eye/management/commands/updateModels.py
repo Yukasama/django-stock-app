@@ -55,7 +55,7 @@ def DataTransfer(ticker, skip=False, download=False):
                 if (f == "symbol" or f == "year" or f == "verification" or f == "stockPrice"): continue
                 try: findict[f] = df.loc[df["Unnamed: 0"] == f][str(year)].tolist()[0]
                 except: 
-                    print(f + " didnt work.")
+                    print("Push Error: " + f)
                 
             Financial(
                 #Symbol Data

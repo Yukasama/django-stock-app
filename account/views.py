@@ -8,8 +8,13 @@ from django.core.mail import send_mail
 from account.models import Account
 
     
-
+    
 def signupView(request):
+    
+    #Check if User is logged in => Send him back
+    if request.user.is_authenticated:
+        return redirect('home')
+    
     if request.method == "POST":
         email = request.POST["email"]
         password = request.POST["password1"]
@@ -123,7 +128,19 @@ def profile(request):
 
 
 @login_required(login_url='signin')
-def settings(request):
-    return render(request, 'account/settings.html')
+def passwordChange(request):
+    return render(request, 'account/password_change.html')
+
+
+
+@login_required(login_url='signin')
+def passwordReset(request):
+    return render(request, 'account/password_reset.html')
+
+
+
+@login_required(login_url='signin')
+def factor2Auth(request):
+    return render(request, 'account/factor2_auth.html')
 
 
