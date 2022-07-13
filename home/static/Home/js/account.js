@@ -33,3 +33,15 @@ account_verification.forEach(element => {
         element.style.backgroundColor = "red";
     }
 })
+
+
+const email_input = document.querySelector("#email_input");
+email_input.addEventListener("input", () => {
+    let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (email_input.contains("@gmail.com")) {
+        console.log("funny");
+        return true;
+    } else {
+        return false; 
+    }
+})

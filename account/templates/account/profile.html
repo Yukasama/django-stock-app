@@ -12,10 +12,11 @@
       <div class="background_blur"></div>
       <div class="account_profile account_view_item view_item flex">
         <p class="view_header view_header_a">Profile</p>
-        <div class="account_logo flex">
-          <img src="{{request.user.profile_image}}">
-          <button type="submit" class="account_image_edit">Edit</button>
-        </div>
+        <form class="account_logo flex" method="POST">
+          {% csrf_token %}
+          <img src="{{request.user.profile_image.url}}">
+          <button type="submit" class="account_image_edit" name="edit_profile_image">Edit</button>
+        </form>
         <div class="account_field">
           <p class="account_sheader">Username</p>
           <div class="account_c flex">

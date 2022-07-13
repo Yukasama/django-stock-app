@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User, AbstractBaseUser, BaseUserManager
+import os
 
 class AccountManager(BaseUserManager):
     
@@ -26,16 +27,20 @@ class AccountManager(BaseUserManager):
     
 
 
+
 def get_profile_image_filepath(self, filename):
-    return f'profile_images/{self.pk}/{"profile_image.png"}'
+    if not os.path.exists(f"static/account/img/profile_images/{self.pk}"):
+        os.mkdir(f"static/account/img/profile_images/{self.pk}")
+    return f'static/account/img/profile_images/{self.pk}/profile_image.png'
 
 def get_profile_image_default():
-    return "main/img/favicon.png"
+    return "static/account/img/favicon.png"
+
 
 class Account(AbstractBaseUser):
     
     #Individual User Fields
-    username = models.CharField(max_length=50, default="Anonymous User")
+    username = models.CharField(max_length=50, default="Guest")
     email = models.EmailField(max_length=100, unique=True)
     
     #Custom User Fields
