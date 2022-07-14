@@ -10,6 +10,8 @@ urlpatterns = [
     path('profile', views.profile, name='profile'),
     
     path('password-change', views.passwordChange, name="password-change"),
-    path('password-reset', views.passwordReset, name="password_reset"),
-    path('factor2-auth', views.factor2Auth, name="factor2_auth"),
+    path('password-reset', views.passwordReset, name="password-reset"),
+    path('two-factor', views.twoFactor, name="two-factor"),
+    path('two-factor-auth', views.twoFactorAuth, name="two-factor-auth"),
+
 ]

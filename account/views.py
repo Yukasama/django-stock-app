@@ -129,18 +129,37 @@ def profile(request):
 
 @login_required(login_url='signin')
 def passwordChange(request):
+    if request.method == "POST":
+        #Check if User has 2 Factor Authentification enabled
+        email = request.user.email
+        user = Account.objects.get(email=email)
+        if user.two_factor_key == True or user.two_factor_auth == None:
+            old_password = request.POST["oldpassword"]
+            new_password = request.POST["newpassword"]
+            repeat_password = request.POST["repeatpassword"]
+            
+            if auth.authenticate(email=email, password=password) is not None:
+                pass
+        else:
+            redirect("two-factor-conf")
+                
+    
     return render(request, 'account/password_change.html')
 
 
 
-@login_required(login_url='signin')
 def passwordReset(request):
     return render(request, 'account/password_reset.html')
 
 
 
+def twoFactorAuth(request):
+    return render(request, 'account/factor2_auth.html')
+
+
+
 @login_required(login_url='signin')
-def factor2Auth(request):
+def twoFactor(request):
     return render(request, 'account/factor2_auth.html')
 
 

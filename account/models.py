@@ -54,7 +54,8 @@ class Account(AbstractBaseUser):
         ("SMS", "SMS"),
         ("Google Auth", "Google Authenticator"),
     )
-    two_factor_auth = models.CharField(choices=AUTH_CHOICES, max_length=20, null=True, blank=True)
+    two_factor_auth = models.CharField(choices=AUTH_CHOICES, max_length=20, null=True, blank=True, default=None)
+    two_factor_key = models.IntegerField(default=False)
     
     #Custom User Permissions
     hide_email = models.BooleanField(default=True)

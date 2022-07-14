@@ -8,9 +8,12 @@ company_name = 'Aethega'
 
 #Navbar
 def home(request):
-    return render(request, 'home/home.html', 
-        {'company_name': company_name, }
-    )
+    page = "home"
+    data = {
+        "page": page,
+        "company_name": company_name,
+    }
+    return render(request, 'home/home.html', data)
 
 
 

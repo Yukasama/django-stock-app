@@ -364,6 +364,15 @@ OVERVIEW OF EXISTING CLASSES
   -webkit-text-fill-color: var(--color-reverse);
 }
 
+/* EXTENDED INPUT FIELD => ACCOUNT FIELD */
+.account_field {
+  max-width: 500px;
+}
+.account_field p {
+  color: var(--color-text-theme);
+  margin: 0 0 3px 10px;
+}
+
 /* LAYOUT FOR MESSAGE */
 .message_field {
   height: 800px;

@@ -1,14 +1,27 @@
-
-.stock_title {  grid-area: stock_title;  }
-.stock_chart {  grid-area: stock_chart;  }
-.stock_ratings {  grid-area: stock_ratings;  }
-.stock_suggestions {  grid-area: stock_suggestions;  }
-.stock_charts {  grid-area: stock_charts;  }
-.stock_financials {  grid-area: stock_financials;  }
-.stock_profile {  grid-area: stock_profile;  }
+.stock_title {
+  grid-area: stock_title;
+}
+.stock_chart {
+  grid-area: stock_chart;
+}
+.stock_ratings {
+  grid-area: stock_ratings;
+}
+.stock_suggestions {
+  grid-area: stock_suggestions;
+}
+.stock_charts {
+  grid-area: stock_charts;
+}
+.stock_financials {
+  grid-area: stock_financials;
+}
+.stock_profile {
+  grid-area: stock_profile;
+}
 
 .stock_view1 {
-    grid-template-areas: 
+  grid-template-areas:
     "stock_title stock_title stock_ratings stock_ratings stock_ratings"
     "stock_chart stock_chart stock_ratings stock_ratings stock_ratings"
     "stock_chart stock_chart stock_suggestions stock_suggestions stock_suggestions"
@@ -18,338 +31,334 @@
 }
 
 .stock_title {
-    align-items: center;
+  align-items: center;
 }
-.stock_title_c, .stock_title_c2 {
-    height: 100%;
-    width: 100%;
+.stock_title_c,
+.stock_title_c2 {
+  height: 100%;
+  width: 100%;
 }
 .stock_title_c2 {
-    align-items: center;
+  align-items: center;
 }
 .stock_logo {
-    height: 80px;
-    width: 85px;
-    justify-content: center;
-    align-items: center;
-    background: white;
-    overflow: hidden;
-    margin: 20px 0 20px 30px;
+  height: 80px;
+  width: 85px;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  overflow: hidden;
+  margin: 20px 0 20px 30px;
 }
 .stock_img {
-    transform: scale(0.55);
+  transform: scale(0.55);
 }
 .stock_title_data {
-    align-items: center;
-    margin: 10px 40px;
+  align-items: center;
+  margin: 10px 50px;
 }
 .stock_name {
-    color: var(--color-first);
-    white-space: nowrap;
+  color: var(--color-first);
+  white-space: nowrap;
 }
 .stock_title_text {
-    font-size: 1.2em;
-    white-space: nowrap;
+  font-size: 1.2em;
+  white-space: nowrap;
 }
 .stock_title_desc {
-    font-size: 0.95em;
-    color: var(--color-reverse-light);
-    white-space: nowrap;
+  font-size: 0.95em;
+  color: var(--color-reverse-light);
+  white-space: nowrap;
 }
 .stock_title_percent {
-    color: rgb(0, 248, 0);
+  color: rgb(0, 248, 0);
 }
-
 
 .stock_chart {
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 .tradingview-widget-container {
-    margin: 20px 0 10px 0;
+  margin: 20px 0 10px 0;
 }
-
 
 .stock_ratings_c {
-    flex-direction: column;
-    align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 .eye_ratings {
-    width: 100%;
-    justify-content: space-evenly;
-    align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
 }
 .stock_rating {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .stock_rating_header {
-    color: var(--color-reverse-light);
-    font-size: 0.9em;
+  color: var(--color-reverse-light);
+  font-size: 0.9em;
 }
 .stock_rating_text {
-    font-size: 1.1em;
+  font-size: 1.1em;
 }
 .eye_rating {
-    margin: 10px;
+  margin: 10px;
 }
 .stock_eye_text {
-    font-size: 1.3em;
+  font-size: 1.3em;
 }
 .stock_eye_header {
-    color: var(--color-first);
+  color: var(--color-first);
 }
 .progress {
-    width: 90%;
-    height: 40px;
-    align-items: center;
-    flex-direction: column;
+  width: 90%;
+  height: 40px;
+  align-items: center;
+  flex-direction: column;
 }
 .progress_bar {
-    height: 25px;
-    width: 71%;
-    background: var(--color-light);
-    margin: 5px 0;
+  height: 25px;
+  width: 71%;
+  background: var(--color-light);
+  margin: 5px 0;
 }
 .progressed {
-    background: var(--color-first);
-    width: attr(eye);
-    height: 100%;
+  background: var(--color-first);
+  width: attr(eye);
+  height: 100%;
 }
 .progress_nums {
-    justify-content: space-between;
-    width: 71%;
+  justify-content: space-between;
+  width: 71%;
 }
 .progress_num {
-    color: var(--color-reverse-light);
-    font-size: 0.8em;
+  color: var(--color-reverse-light);
+  font-size: 0.8em;
 }
-
 
 .stock_suggestions {
-    flex-direction: column;
-    gap: 5px;
-    padding-bottom: 10px;
+  flex-direction: column;
+  gap: 5px;
+  padding-bottom: 10px;
 }
 .stock_suggest {
-    height: 75px;
-    cursor: pointer;
+  height: 75px;
+  cursor: pointer;
 }
 .stock_logo_s {
-    height: 55px;
-    width: 55px;
-    border-radius: 5px;
-    margin: 10px 10px 10px 15px;
-    box-shadow: none;
-    background-color: white;
+  height: 55px;
+  width: 55px;
+  border-radius: 5px;
+  margin: 10px 10px 10px 15px;
+  box-shadow: none;
+  background-color: white;
 }
 .stock_img_s {
-    transform: scale(0.35);
+  transform: scale(0.35);
 }
 .stock_suggest_info {
-    flex-direction: column;
-    position: absolute;
-    height: 100%;
-    width: 100%;
+  flex-direction: column;
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
-.stock_name_s, .stock_price_s, .stock_percent {
-    font-size: 0.95em;
+.stock_name_s,
+.stock_price_s,
+.stock_percent {
+  font-size: 0.95em;
 }
 .stock_name_s {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    padding-left: 85px;
-    line-height: 45px;
-    cursor: pointer;
-    white-space: nowrap;
-    z-index: 5;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding-left: 85px;
+  line-height: 45px;
+  cursor: pointer;
+  white-space: nowrap;
+  z-index: 5;
 }
 .stock_suggest_data {
-    padding-left: 85px;
-    line-height: 80px;
-    margin: 10px 0;
-    gap: 20px;
+  padding-left: 85px;
+  line-height: 80px;
+  margin: 10px 0;
+  gap: 20px;
 }
 .stock_suggest:hover {
-    background: var(--color-light);
+  background: var(--color-light);
 }
-
 
 .stock_charts {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 .stock_chart_item {
-    width: 32.5%;
+  width: 32.5%;
 }
-.stock_margins_chart, .stock_metrics_chart, .stock_dividend_chart {
-    transform: scale(0.95);
+.stock_margins_chart,
+.stock_metrics_chart,
+.stock_dividend_chart {
+  transform: scale(0.95);
 }
 .info {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 .dividend_info_text {
-    position: absolute;
-    color: var(--color-text-theme);
-    font-size: 1.3em;
-    align-self: center;
-    text-align: center;
-    width: 100%;
+  position: absolute;
+  color: var(--color-text-theme);
+  font-size: 1.3em;
+  align-self: center;
+  text-align: center;
+  width: 100%;
 }
-
 
 .stock_financials {
-    flex-direction: column;
-    overflow-x: scroll;
+  flex-direction: column;
+  overflow-x: scroll;
 }
 .stock_financials_t {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
 .stock_financials_t tr .row_header {
-    transition: color 0.2s;
+  transition: color 0.2s;
 }
 .stock_financials_t tr:hover .row_header {
-    color: var(--color-first);
+  color: var(--color-first);
 }
-.stock_financials_t tr th, .stock_financials_t tr td {
-    width: 140px;
-    text-align: center;
-    white-space: nowrap;
-    min-width: 120px !important;
+.stock_financials_t tr th,
+.stock_financials_t tr td {
+  width: 140px;
+  text-align: center;
+  white-space: nowrap;
+  min-width: 120px !important;
 }
 .stock_financials_t tr td {
-    color: var(--color-reverse-light);
+  color: var(--color-reverse-light);
 }
 .stock_financials_t tr:nth-child(even) {
-    background-color: var(--color-light);
+  background-color: var(--color-light);
 }
 .financial_chart {
-    width: 100% !important;
-    min-width: 100px !important;
-    height: 50px !important;
-    margin: 1.5px 2.5px 3.5px 2.5px;
+  width: 100% !important;
+  min-width: 100px !important;
+  height: 50px !important;
+  margin: 1.5px 2.5px 3.5px 2.5px;
 }
 .row_header {
-    width: 350px !important;
+  width: 350px !important;
 }
 .row_divider {
-    border-bottom: 1px solid var(--color-first);
-    height: 50px;
-    vertical-align: bottom;
+  border-bottom: 1px solid var(--color-first);
+  height: 50px;
+  vertical-align: bottom;
 }
 
 .stock_profile_container {
-    margin: 20px;
+  margin: 20px;
 }
 .stock_profile_header {
-    color: var(--color-text-theme);
-    font-size: 1.05em;
-    margin: 10px 0 3px 0;
+  color: var(--color-text-theme);
+  font-size: 1.05em;
+  margin: 10px 0 3px 0;
 }
 .stock_profile_text {
-    font-size: 0.9em;
-    color: var(--color-reverse-light);
+  font-size: 0.9em;
+  color: var(--color-reverse-light);
 }
-
-
 
 .stock_view2 .stock_chart {
-    width: 100%;
-    margin: 0;
+  width: 100%;
+  margin: 0;
 }
 .stock_view2 .stock_chart .tradingview-widget-container {
-    width: 100%;
+  width: 100%;
 }
-
 
 .stock_view4 .stock_financials {
-    width: 100%;
-    margin: 0;
+  width: 100%;
+  margin: 0;
 }
 .stock_view4 .stock_financials table tr td {
-    width: 220px;
+  width: 220px;
 }
 
-
-
-
 @media screen and (max-width: 1500px) {
-    .stock_view1 {
-        grid-template-areas: 
-        "stock_title stock_title stock_ratings stock_ratings stock_ratings"
-        "stock_chart stock_chart stock_chart stock_chart stock_chart"
-        "stock_charts stock_charts stock_profile stock_profile stock_profile"
-        "stock_suggestions stock_suggestions stock_suggestions stock_suggestions stock_suggestions"
-        "stock_financials stock_financials stock_financials stock_financials stock_financials";
-    }
-    .stock_title_c {
-        flex-direction: column;
-    }
-    .stock_charts {
-        gap: 20px;
-        flex-direction: column;
-    }
-    .stock_chart_item {
-        width: 100%;
-    }
+  .stock_view1 {
+    grid-template-areas:
+      "stock_title stock_title stock_ratings stock_ratings stock_ratings"
+      "stock_chart stock_chart stock_chart stock_chart stock_chart"
+      "stock_charts stock_charts stock_profile stock_profile stock_profile"
+      "stock_suggestions stock_suggestions stock_suggestions stock_suggestions stock_suggestions"
+      "stock_financials stock_financials stock_financials stock_financials stock_financials";
+  }
+  .stock_title_c {
+    flex-direction: column;
+  }
+  .stock_charts {
+    gap: 20px;
+    flex-direction: column;
+  }
+  .stock_chart_item {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1200px) {
-    .stock_view.active {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-    .stock_view4.active {
-        flex-direction: row;
-    }
-    .stock_charts {
-        gap: 20px;
-        flex-direction: row;
-    }
-    .stock_chart_item {
-        width: 32%;
-    }
+  .stock_view.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .stock_view4.active {
+    flex-direction: row;
+  }
+  .stock_charts {
+    gap: 20px;
+    flex-direction: row;
+  }
+  .stock_chart_item {
+    width: 32%;
+  }
 }
 
 @media screen and (max-width: 1100px) {
-    .stock_view.active {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-    .stock_view4.active {
-        flex-direction: row;
-    }
-    .stock_title_c2 {
-        justify-content: space-evenly;
-    }
-    .stock_title_data {
-        margin: 10px 0;
-    }
-    .stock_title_text, .stock_title_desc {
-        text-align: center;
-    }
-    .stock_charts {
-        gap: 20px;
-        flex-direction: column;
-    }
-    .stock_chart_item {
-        width: 100%;
-    }
+  .stock_view.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .stock_view4.active {
+    flex-direction: row;
+  }
+  .stock_title_c2 {
+    justify-content: space-evenly;
+  }
+  .stock_title_data {
+    margin: 10px 0;
+  }
+  .stock_title_text,
+  .stock_title_desc {
+    text-align: center;
+  }
+  .stock_charts {
+    gap: 20px;
+    flex-direction: column;
+  }
+  .stock_chart_item {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 800px) {
-    .stock_window {
-        margin: 20px 15px 20px 20px;
-    }
-    .stock_logo {
-        margin: 20px 0 0 0;
-    }
-    .stock_title_c2:first-child {
-        flex-direction: column;
-    }
+  .stock_window {
+    margin: 20px 15px 20px 20px;
+  }
+  .stock_logo {
+    margin: 20px 0 0 0;
+  }
+  .stock_title_c2:first-child {
+    flex-direction: column;
+  }
 }

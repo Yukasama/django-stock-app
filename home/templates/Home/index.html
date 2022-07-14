@@ -10,64 +10,15 @@
       <img class="favicon_img" src="{% static 'main/img/favicon.png' %}">
     </a>
   </div>
-
   <div class="nav_container nav_container2 flex">
-    <a href="{% url 'calendar' %}" class="nav_link effect_underline">Calendar</a>
-    <div class="nav_link effect_underline nav_link_ex flex">Markets
-      <div class="nav_sub_element">
-        <div class="nav_link_sub smart_list">
-          <div class="nav_sub flex">
-            <i class="material-icons nav_sub_icon">school</i>
-            <a href="{% url 'stocks' %}" class="nav_link_text effect_underline">Stocks</a>
-          </div>
-          <div class="nav_sub flex">
-            <i class="material-icons nav_sub_icon">school</i>
-            <a class="nav_link_text effect_underline">Commodities</a>
-          </div>
-          <div class="nav_sub flex">
-            <i class="material-icons nav_sub_icon">school</i>
-            <a class="nav_link_text effect_underline">Forex</a>
-          </div>
-          <div class="nav_sub flex">
-            <i class="material-icons nav_sub_icon">school</i>
-            <a class="nav_link_text effect_underline">Crypto</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <i class="material-icons nav_link_icon invisible">expand_more</i>
-    <form action="{% url 'search' %}">
+    <form action="{% url 'search' %}" class="flex_box">
       <div class="inputField search_navbar">
         <button class="search_button" type="submit">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
-        <input type="text" placeholder="Search.." class="input input_theme" name="q">
+        <input type="text" placeholder="Search.." class="input" name="q">
       </div>
     </form>
-    <div class="nav_link effect_underline nav_link_ex flex">Education
-      <div class="nav_sub_element">
-        <div class="nav_link_sub smart_list">
-          <div class="nav_sub flex">
-            <i class="material-icons nav_sub_icon">school</i>
-            <a class="nav_link_text effect_underline">Markets</a>
-          </div>
-          <div class="nav_sub flex">
-            <i class="material-icons nav_sub_icon">school</i>
-            <a class="nav_link_text effect_underline">Technicals</a>
-          </div>
-          <div class="nav_sub flex">
-            <i class="material-icons nav_sub_icon">school</i>
-            <a class="nav_link_text effect_underline">Fundamentals</a>
-          </div>
-          <div class="nav_sub flex">
-            <i class="material-icons nav_sub_icon">school</i>
-            <a class="nav_link_text effect_underline">Automation</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <i class="material-icons nav_link_icon invisible">expand_more</i>
-    <a href="{% url 'news' %}" class="nav_link effect_underline">News</a>
   </div>
 
 
@@ -292,12 +243,39 @@
 
 
 
-<!-- BLOCKS -->
+<!-- DIFFERENT SIDEBARS -->
 {% if page == "symbol" %}
 <div class="sidebar flex">
   <div class="side_link flex active">
     <i class="fa-solid fa-house side_icon"></i>
     <p class="side_text">Dashboard</p>
+  </div>
+  <div class="side_link flex">
+    <i class="fa-solid fa-chart-line side_icon"></i>
+    <p class="side_text">Chart</p>
+  </div>
+  <div class="side_link flex">
+    <i class="fa-solid fa-coins side_icon"></i>
+    <p class="side_text">Earnings</p>
+  </div>
+  <div class="side_link flex">
+    <i class="fa-solid fa-chart-simple side_icon"></i>
+    <p class="side_text">Financials</p>
+  </div>
+  <div class="side_link flex">
+    <i class="fa-solid fa-scale-balanced side_icon"></i>
+    <p class="side_text">Holdings</p>
+  </div>
+  <div class="side_link flex">
+    <i class="fa-solid fa-newspaper side_icon"></i>
+    <p class="side_text">Articles</p>
+  </div>
+</div>
+{% elif page == "home" %}
+<div class="sidebar flex">
+  <div class="side_link flex active">
+    <i class="fa-solid fa-house side_icon"></i>
+    <p class="side_text">Calendar</p>
   </div>
   <div class="side_link flex">
     <i class="fa-solid fa-chart-line side_icon"></i>

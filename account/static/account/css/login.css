@@ -1,17 +1,27 @@
-.login {
+.login,
+.password_change {
   background: linear-gradient(
     to right bottom,
     var(--color-first),
-    var(--color-third) 70%
+    var(--color-third) 100%
   );
   width: 100%;
   height: 100vh;
   justify-content: center;
   align-items: center;
   transition: background 1s;
-  animation: fadein linear 0.5s;
+  animation: fadein_var1 linear 0.5s;
 }
-@keyframes fadein {
+.password_change {
+  background: linear-gradient(
+    to right bottom,
+    var(--color-first),
+    var(--color-second) 70%
+  );
+  animation: fadein_var2 linear 0.5s;
+}
+
+@keyframes fadein_var1 {
   100% {
     opacity: 1;
     background: linear-gradient(
@@ -29,9 +39,28 @@
     );
   }
 }
+@keyframes fadein_var2 {
+  100% {
+    opacity: 1;
+    background: linear-gradient(
+      to right bottom,
+      var(--color-first),
+      var(--color-second) 100%
+    );
+  }
+  0% {
+    opacity: 0;
+    background: linear-gradient(
+      to right bottom,
+      var(--color-first),
+      var(--color-second) 40%
+    );
+  }
+}
+
 .login_form {
   flex-direction: column;
-  width: 500px;
+  width: 520px;
   height: 650px;
   border-radius: 30px;
   margin: 0 auto 0 auto;
@@ -47,7 +76,7 @@
   left: 25px;
 }
 .home_back {
-  left: 430px;
+  left: 449px;
 }
 .home_back i {
   font-size: 24px;
@@ -59,7 +88,7 @@
   border-left: var(--color-first) 4px solid;
   color: var(--color-first);
 }
-.inputField {
+.account_field {
   margin: 20px 75px;
   width: 350px;
 }

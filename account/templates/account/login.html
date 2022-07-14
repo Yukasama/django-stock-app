@@ -5,16 +5,6 @@
 
 <link rel="stylesheet" href="{% static 'account/css/login.css' %}">
 
-{% if user.is_authenticated %}
-<div class="message_field flex">
-  <p class="message_text">You are logged in already.</p>
-  <button class="icon_button transition">
-    <i class="fa-solid fa-arrow-right-to-bracket portfolio_icon"></i>
-    <a href="{% url 'home' %}">Back</a>
-  </button> 
-</div>
-
-{% else %}
 <div class="login flex">
   <form method="POST" class="login_form flex">
     {% csrf_token %}
@@ -27,15 +17,21 @@
       <a href="{% url 'home' %}"></a>
     </div>
     <h1 class="login_header">Login</h1>
-    <div class="inputField">
-      <i class="fa-solid fa-user"></i>
-      <input type="email" name="email" class="input username_input" placeholder="E-Mail" required>
+    <div class="account_field">
+      <p>E-Mail</p>
+      <div class="inputField">
+        <i class="fa-solid fa-user"></i>
+        <input type="email" name="email" class="input username_input" placeholder="E-Mail" required>
+      </div>
     </div>
-    <div class="inputField">
-      <i class="fa-solid fa-key"></i>
-      <input type="password" name="password" class="input password_input" placeholder="Password" required>
+    <div class="account_field">
+      <p>Password</p>
+      <div class="inputField">
+        <i class="fa-solid fa-key"></i>
+        <input type="password" name="password" class="input password_input" placeholder="Password" required>
+      </div>
     </div>
-    <p class="forgot_password">Forgot Password?</p>
+    <a href="{% url 'password-reset' %}" class="forgot_password">Forgot Password?</a>
     <button type="submit" class="icon_button login_button">
       <i class="fa-solid fa-arrow-right-to-bracket portfolio_icon"></i>
       <a>Login</a>
@@ -51,7 +47,6 @@
     {% endif %}
   </form>
 </div>
-{% endif %}
 
 
 {% endblock %}

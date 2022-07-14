@@ -51,6 +51,7 @@
   align-items: center;
   justify-content: center;
   transition: flex 0.2s;
+  height: 100%;
 }
 .nav_container1 {
   flex: 0.3;
@@ -103,12 +104,23 @@
 .nav_link_icon {
   transform: translate(-15px, 0);
 }
-.search_navbar {
-  margin: 30px;
+
+.nav_container2 form {
+  width: 100%;
+  height: 100%;
 }
-.search_button {
+.search_navbar {
+  min-width: 50%;
+  max-width: 80%;
+  border: none;
+  background: var(--color-theme-contrast);
+  border-radius: 5px;
+  height: 55%;
+}
+.search_navbar .search_button {
   margin-right: 15px;
 }
+
 .sign_up {
   font-size: 1em;
   white-space: nowrap;
@@ -216,7 +228,7 @@
 }
 .webmode {
   font-size: 30px !important;
-  margin: 0 35px;
+  margin: 0 10px 0 35px;
   z-index: 2;
   color: var(--color-reverse);
   transition: transform 0.3s;
