@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from account.backends import EmailBackend as auth
 from account.models import AccountManager
-from django.contrib.auth import login
+from django.contrib.auth import login, logout
 from django.core.mail import send_mail
 from account.models import Account
 
@@ -133,15 +133,19 @@ def passwordChange(request):
         #Check if User has 2 Factor Authentification enabled
         email = request.user.email
         user = Account.objects.get(email=email)
-        if user.two_factor_key == True or user.two_factor_auth == None:
-            old_password = request.POST["oldpassword"]
-            new_password = request.POST["newpassword"]
-            repeat_password = request.POST["repeatpassword"]
-            
-            if auth.authenticate(email=email, password=password) is not None:
-                pass
-        else:
-            redirect("two-factor-conf")
+        password = request.POST["oldpassword"]
+        new_password = request.POST["newpassword"]
+        repeat_password = request.POST["repeatpassword"]
+        
+        if auth.authenticate(email=email, password=password) is not None:
+            password_validation = auth.password_validator(email, new_password)
+            if password_validation != new_password:
+                messages.error(request, password_validation)
+            else:    
+                user.set_password(new_password)
+                user.two_factor_key = False
+                user.save()
+                redirect("account/profile")
                 
     
     return render(request, 'account/password_change.html')
@@ -154,12 +158,14 @@ def passwordReset(request):
 
 
 def twoFactorAuth(request):
-    return render(request, 'account/factor2_auth.html')
+    
+    
+    return render(request, 'account/two_factor_auth.html')
 
 
 
 @login_required(login_url='signin')
 def twoFactor(request):
-    return render(request, 'account/factor2_auth.html')
+    return render(request, 'account/two_factor.html')
 
 

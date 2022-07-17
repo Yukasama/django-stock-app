@@ -1,0 +1,22 @@
+{% extends "home/base.html" %}
+{% block head %}
+{% load static %}
+
+<form action="">
+  <div class="account_field">
+    <p>E-Mail</p>
+    <div class="inputField">
+      <i class="fa-solid fa-mail"></i>
+      <input type="email" class="email_auth input" required>
+    </div>
+  </div>
+  <div class="account_field">
+    <p>Verification Code</p>
+    <div class="inputField">
+      <i class="fa-solid fa-mail"></i>
+      <input type="email" class="email_auth input" required>
+    </div>
+  </div>
+  <p>We sent you a Verification Code.<a> Resend Code.</a></p>
+</form>
+{% endblock %}

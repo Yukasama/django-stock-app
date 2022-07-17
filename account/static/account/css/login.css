@@ -9,7 +9,7 @@
   height: 100vh;
   justify-content: center;
   align-items: center;
-  transition: background 1s;
+  transition: background 0.5s, opacity 0.5s;
   animation: fadein_var1 linear 0.5s;
 }
 .password_change {
@@ -27,7 +27,7 @@
     background: linear-gradient(
       to right bottom,
       var(--color-first),
-      var(--color-third) 70%
+      var(--color-third) 100%
     );
   }
   0% {
@@ -45,7 +45,7 @@
     background: linear-gradient(
       to right bottom,
       var(--color-first),
-      var(--color-second) 100%
+      var(--color-second) 70%
     );
   }
   0% {

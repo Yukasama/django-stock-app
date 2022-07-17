@@ -2,6 +2,7 @@ django
 django-debug-toolbar
 django-extensions
 django-import-export
+djangorestframework
 
 fontawesomefree
 
