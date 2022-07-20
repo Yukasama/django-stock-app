@@ -1,0 +1,40 @@
+{% extends "home/base.html" %}
+{% block head %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'account/css/authorize.css' %}">
+
+<div class="navigation_system flex">
+  <div class="arrow_back flex">
+    <i class="fa-solid fa-arrow-left-long"></i>
+    <a href="{{request.META.HTTP_REFERER}}"></a>
+  </div>
+  <div class="arrow_back home_back flex">
+    <i class="fa-solid fa-home"></i>
+    <a href="{% url 'home' %}"></a>
+  </div>
+</div>
+
+<form class="flex_form" method="POST">
+  {% csrf_token %}
+  <p>We sent you an E-Mail with a Verification Code!</p>
+  <div class="inputField">
+    <i class="fa-solid fa-key"></i>
+    <input type="text" class="verification_auth input input_theme" name="verification" placeholder="Verification Code" required>
+  </div>
+  {% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+    <li>{{message}}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  <button class="button_animated">
+    <div class="button_arrow">
+      <div class="button_arrow_line button_arrow_line1"></div>
+      <div class="button_arrow_line button_arrow_line2"></div>
+      <div class="button_arrow_line button_arrow_line3"></div>
+    </div>
+  </button>
+</form>
+{% endblock %}

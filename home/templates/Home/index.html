@@ -13,7 +13,7 @@
   <div class="nav_container nav_container2 flex">
     <form action="{% url 'search' %}" class="flex_box">
       <div class="inputField search_navbar">
-        <button class="search_button" type="submit">
+        <button class="search_button button" type="submit">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
         <input type="text" placeholder="Search.." class="input" name="q">
@@ -24,9 +24,9 @@
 
   <div class="nav_container nav_container3 flex">
     {% if user.is_authenticated %}
-      <div class="profile smart_box">
-        <i class="material-icons user_icon">account_circle</i>
-      </div>
+    <div class="profile">
+      <img src="{{request.user.profile_image.url}}" alt="Profile Image">
+    </div>
     {% else %}
       <a href="{% url 'signin' %}" class="nav_link sign_up">Login</a>
       <a href="{% url 'signup' %}" class="nav_link sign_up smart_button">Sign Up</a>
@@ -40,10 +40,12 @@
     <div class="profile_wrapper flex">
       <div class="profile_container flex">
         <div class="profile_link1 flex">
-          <i class="material-icons profile_icon">account_circle</i>
+          <div class="profile_img">
+            <img src="{{request.user.profile_image.url}}">
+          </div>
           <div class="profile_text_c">
             <p class="profile_text profile_username" href="">{{request.user}}</a> <br>
-            <a class="manage_profile" href="{% url 'profile' %}">Manage Account</a>
+            <a class="manage_profile" href="{% url 'account' %}">Manage Account</a>
           </div>
         </div>
 
@@ -55,7 +57,7 @@
         </div>
         <div class="profile_link flex">
           <i class="material-icons profile_icon">dashboard</i>
-          <a href="{% url 'profile' %}" class="profile_text">Posts</a>
+          <a href="{% url 'account' %}" class="profile_text">Posts</a>
         </div>
         <div class="profile_link flex">
           <i class="material-icons profile_icon">flag</i>
@@ -90,7 +92,7 @@
       {% if user.is_authenticated %}
       <div class="sidenav_link flex">
         <i class="material-icons sidenav_icon">dashboard</i>
-        <a href="{% url 'profile' %}" class="sidenav_text">Profile</a>
+        <a href="{% url 'account' %}" class="sidenav_text">Profile</a>
       </div>
       <div class="sidenav_link flex">
         <i class="material-icons sidenav_icon">insert_chart</i>
@@ -153,15 +155,15 @@
       </div>
       <div class="sidenav_link flex">
         <i class="material-icons sidenav_icon">school</i>
-        <a href="{% url 'profile' %}" class="sidenav_text">Commodities</a>
+        <a href="{% url 'account' %}" class="sidenav_text">Commodities</a>
       </div>
       <div class="sidenav_link flex">
         <i class="material-icons sidenav_icon">school</i>
-        <a href="{% url 'profile' %}" class="sidenav_text">Forex</a>
+        <a href="{% url 'account' %}" class="sidenav_text">Forex</a>
       </div>
       <div class="sidenav_link flex">
         <i class="material-icons sidenav_icon">school</i>
-        <a href="{% url 'profile' %}" class="sidenav_text">Crypto</a>
+        <a href="{% url 'account' %}" class="sidenav_text">Crypto</a>
       </div>
     </div>
   </div>
@@ -175,19 +177,19 @@
     <div class="sidenav_wrapper flex">
       <div class="sidenav_link flex">
         <i class="material-icons sidenav_icon">school</i>
-        <a href="{% url 'profile' %}" class="sidenav_text">Markets</a>
+        <a href="{% url 'account' %}" class="sidenav_text">Markets</a>
       </div>
       <div class="sidenav_link flex">
         <i class="material-icons sidenav_icon">school</i>
-        <a href="{% url 'profile' %}" class="sidenav_text">Technicals</a>
+        <a href="{% url 'account' %}" class="sidenav_text">Technicals</a>
       </div>
       <div class="sidenav_link flex">
         <i class="material-icons sidenav_icon">school</i>
-        <a href="{% url 'profile' %}" class="sidenav_text">Fundamentals</a>
+        <a href="{% url 'account' %}" class="sidenav_text">Fundamentals</a>
       </div>
       <div class="sidenav_link flex">
         <i class="material-icons sidenav_icon">school</i>
-        <a href="{% url 'profile' %}" class="sidenav_text">Automation</a>
+        <a href="{% url 'account' %}" class="sidenav_text">Automation</a>
       </div>
     </div>
   </div>
@@ -298,7 +300,7 @@
     <p class="side_text">Articles</p>
   </div>
 </div>
-{% elif page == "profile" %}
+{% elif page == "account" %}
 <div class="sidebar flex">
   <div class="side_link flex active">
     <i class="fa-solid fa-user-pen side_icon"></i>

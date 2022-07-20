@@ -9,7 +9,6 @@ Password Change
 Password Reset
 All Stocks in Database
 Dynamic Stock Chart
-Social Media Account
 
 
 
@@ -20,4 +19,5 @@ E-Mail Service
 Social Media Presence
 Easy-To-Use Interface
 Mobile Application
+Social Media Account
 

@@ -55,7 +55,7 @@ class Account(AbstractBaseUser):
         ("Google Auth", "Google Authenticator"),
     )
     two_factor_auth = models.CharField(choices=AUTH_CHOICES, max_length=20, null=True, blank=True, default=None)
-    two_factor_key = models.IntegerField(default=False)
+    two_factor_key = models.CharField(blank=True, null=True, max_length=10)
     
     #Custom User Permissions
     hide_email = models.BooleanField(default=True)

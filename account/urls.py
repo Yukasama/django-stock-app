@@ -7,11 +7,11 @@ urlpatterns = [
     path('login', views.loginView, name='signin'),
     path('logout', views.logoutView, name='logout'),
     
-    path('profile', views.profile, name='profile'),
+    path('', views.account, name='account'),
     
-    path('password-change', views.passwordChange, name="password-change"),
     path('password-reset', views.passwordReset, name="password-reset"),
     path('two-factor', views.twoFactor, name="two-factor"),
-    path('two-factor-auth', views.twoFactorAuth, name="two-factor-auth"),
+    path('authorize', views.authorize, name="authorize"),
+    path('verify', views.verify, name="verify"),
 
 ]

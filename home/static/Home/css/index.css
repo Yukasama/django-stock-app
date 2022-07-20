@@ -119,6 +119,10 @@
 }
 .search_navbar .search_button {
   margin-right: 15px;
+  background: transparent;
+}
+.search_navbar .search_button i {
+  font-size: 20px;
 }
 
 .sign_up {
@@ -143,9 +147,9 @@
   border-radius: 50%;
   cursor: pointer;
 }
-.user_icon {
-  font-size: 40px !important;
-  z-index: 1;
+.profile img {
+  height: 100%;
+  width: 100%;
 }
 .profile_wrapper {
   position: fixed;
@@ -171,12 +175,18 @@
   z-index: 2;
 }
 
-.profile_icon {
-  font-size: 30px !important;
+.profile_img {
+  height: 40px;
+  width: 400px;
+  margin-left: 16px;
+  border-radius: 50%;
+}
+.profile_img img {
+  height: 100%;
+  width: 40px;
 }
 .profile_username {
   font-size: 1.1em;
-  font-weight: 600;
   white-space: nowrap;
 }
 

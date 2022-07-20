@@ -14,7 +14,7 @@ def signupView(request):
     #Check if User is logged in => Send him back
     if request.user.is_authenticated:
         return redirect('home')
-    
+     
     if request.method == "POST":
         email = request.POST["email"]
         password = request.POST["password1"]
@@ -82,7 +82,7 @@ def logoutView(request):
 
 
 @login_required(login_url='signin')
-def profile(request):
+def account(request):
     if (request.method == "POST"):
         if "edit_username" in request.POST:
             new_username = request.POST["username"]
@@ -91,7 +91,7 @@ def profile(request):
             if user is not None:
                 user.username = new_username
                 user.save()
-                return redirect("profile")
+                return redirect("")
             else: 
                 messages.error(request, "Credentials do not match.")
         elif "edit_email" in request.POST:
@@ -101,7 +101,7 @@ def profile(request):
             if user is not None:
                 user.email = new_email
                 user.save()
-                return redirect("profile")
+                return redirect("")
             else: 
                 messages.error(request, "Credentials do not match.")
         elif "edit_biography" in request.POST:
@@ -109,26 +109,28 @@ def profile(request):
             biography = request.POST["biography"]
             user.biography = biography
             user.save()
-            return redirect("profile")
+            return redirect("")
         elif "edit_profile_image" in request.POST:
             user = Account.objects.get(pk=request.user.id)
             new_profile_image = request.POST["profile_image"]
             user.profile_image = new_profile_image
             user.save()
+    elif "change_password" in request.GET:
+        return redirect("authorize")
             
                 
 
-    page = "profile"
+    page = "account"
     data = {
         "page": page,
     }
     
-    return render(request, 'account/profile.html', data)
+    return render(request, 'account/account.html', data)
 
 
 
 @login_required(login_url='signin')
-def passwordChange(request):
+def passwordReset(request):
     if request.method == "POST":
         #Check if User has 2 Factor Authentification enabled
         email = request.user.email
@@ -143,24 +145,49 @@ def passwordChange(request):
                 messages.error(request, password_validation)
             else:    
                 user.set_password(new_password)
-                user.two_factor_key = False
                 user.save()
-                redirect("account/profile")
-                
+                redirect("account")
+    else:
+        return redirect("authorize")                
     
-    return render(request, 'account/password_change.html')
-
-
-
-def passwordReset(request):
     return render(request, 'account/password_reset.html')
 
 
 
-def twoFactorAuth(request):
+def authorize(request):    
+    referer = request.META.get('HTTP_REFERER')
+    print(referer)
+    if request.method == "POST":
+        email = request.POST["email"]
+        if Account.objects.filter(email=email).exists():
+            user = Account.objects.get(email=email)
+            user.two_factor_key = "083959"
+            #sendmail
+            return render(request, 'account/verify.html', {"email": email})
+        else:
+            messages.error(request, "Account with this E-Mail does not exist.")        
+            
+    return render(request, 'account/authorize.html')
+
+
+
+def verify(request):
+    referer = request.META['HTTP_REFERER']
+    print(referer)
+    if referer == "http://127.0.0.1:8000/account/authorize" or referer == "http://127.0.0.1:8000/account/verify":
+        if request.method == "POST":
+            verification = request.POST["verification"]
+            user = Account.objects.get(email=email)
+            print(user.two_factor_key)
+            if verification == user.two_factor_key:
+                return redirect("password-reset")
+            else:
+                messages.error(request, "Verification Code does not match.")
+    else:
+        return redirect("home")
+            
     
-    
-    return render(request, 'account/two_factor_auth.html')
+    return render(request, 'account/verify.html')
 
 
 

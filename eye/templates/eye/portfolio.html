@@ -70,24 +70,6 @@
       </button>
     </div>
   </div>
-  <!-- <form action="" method="POST">
-      {% csrf_token %}
-      {{form}}
-      <button type="submit" class="create_button">
-          <i class="fa-solid fa-plus create_icon"></i>
-      </button>
-  </form> -->
-
-  {% else %}
-  <div class="message_field flex">
-    <p class="message_text">You need to Login to create Portfolios.</p>
-    <button class="icon_button">
-      <i class="fa-solid fa-arrow-right-to-bracket portfolio_icon"></i>
-      <a href="{% url 'login' %}">Login</a>
-    </button> 
-  </div>
-  {% endif %}
-
 </div>
 
 

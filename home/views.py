@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from eye.models import Info
+from django.shortcuts import render, redirect
+from eye.models import Info, Stock
 from django.db.models import Q
 
 #Company Info
@@ -75,16 +75,21 @@ def search(request):
     q = request.GET["q"]
     if q != "":
         results = 0
-        if (q == ":all"):
-            results = Info.objects.all().order_by("ticker")[:100]
-        elif (":ticker" in q):
-            q = q.replace(":ticker", "")
-            results = Info.objects.filter(ticker__startswith=q).order_by("ticker")
-            q = q + " [filter: ticker]"
-        else:       
-            results = Info.objects.filter(Q(ticker__startswith=q) |
-                                        Q(longName__startswith=q) |
-                                        Q(sector=q)).order_by("ticker")
+        try:
+            qUp = str(q).upper()
+            Stock.objects.get(symbol=qUp)
+            return redirect(f"stocks/{qUp}")
+        except:
+            if (q == ":all"):
+                results = Info.objects.all().order_by("ticker")[:100]
+            elif (":ticker" in q):
+                q = q.replace(":ticker", "")
+                results = Info.objects.filter(ticker__startswith=q).order_by("ticker")
+                q = q + " [filter: ticker]"
+            else:       
+                results = Info.objects.filter(Q(ticker__startswith=q) |
+                                            Q(longName__startswith=q) |
+                                            Q(sector=q)).order_by("ticker")
         length = len(results)
         data = {
             'q': q, 
