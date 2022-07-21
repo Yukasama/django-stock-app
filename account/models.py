@@ -29,8 +29,8 @@ class AccountManager(BaseUserManager):
 
 
 def get_profile_image_filepath(self, filename):
-    if not os.path.exists(f"static/account/img/profile_images/{self.pk}"):
-        os.mkdir(f"static/account/img/profile_images/{self.pk}")
+    if not os.path.exists(f"account/static/account/img/profile_images/{self.pk}"):
+        os.mkdir(f"account/static/account/img/profile_images/{self.pk}")
     return f'static/account/img/profile_images/{self.pk}/profile_image.png'
 
 def get_profile_image_default():

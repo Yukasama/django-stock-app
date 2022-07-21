@@ -225,6 +225,12 @@ OVERVIEW OF EXISTING CLASSES
   transition: width 0.2s, height 0.2s;
   background: var(--color-first);
   color: white;
+  background: linear-gradient(to right bottom, 
+    var(--color-first), var(--color-first-hover), 
+    var(--color-first), var(--color-first-hover),
+    var(--color-first));
+  transition: background 0.5s, animation 0.5s;
+  background-size: 500% 500%;
 }
 .icon_button > i {
   color: var(--color-reverse);
@@ -246,7 +252,7 @@ OVERVIEW OF EXISTING CLASSES
   align-items: center;
 }
 .icon_button.show {
-  background: var(--color-theme);
+  animation: background_flow 5s linear infinite reverse;
   border: 1px var(--color-reverse) solid;
   padding: 8px 15px;
   min-width: 60px;
@@ -317,6 +323,7 @@ OVERVIEW OF EXISTING CLASSES
     var(--color-first), var(--color-first-hover), 
     var(--color-first), var(--color-first-hover),
     var(--color-first));
+  transition: background 0.5s, animation 0.5s;
   padding: 32px;
   border: none;
   outline: none;
@@ -324,7 +331,6 @@ OVERVIEW OF EXISTING CLASSES
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: background 0.5s, animation 0.5s;
   animation: background_flow 15s linear infinite;
   background-size: 500% 500%;
 }

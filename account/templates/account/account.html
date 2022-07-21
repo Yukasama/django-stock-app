@@ -11,12 +11,11 @@
       <div class="background_blur"></div>
       <div class="account_profile account_view_item view_item flex">
         <p class="view_header view_header_a">Profile</p>
-        <form class="account_logo flex" method="POST">
-          {% csrf_token %}
+        <div class="account_logo flex">
           <img src="{{request.user.profile_image.url}}">
-          <button type="submit" class="account_image_edit" name="edit_profile_image">Edit</button>
-        </form>
-        <div class="account_field">
+          <button class="account_image_edit" name="edit_profile_image">Edit</button>
+        </div>
+          <div class="account_field">
           <p class="account_sheader">Username</p>
           <div class="account_c flex">
             <div class="inputField">
@@ -121,6 +120,44 @@
             </div>
           </div>
           <button class="icon_button" name="edit_email" type="submit">
+            <i class="fa-solid fa-arrow-right-to-bracket portfolio_icon"></i>
+            <a>Change</a>
+          </button>
+        </form>
+        {% if messages %}
+        <ul class="messages">
+          {% for message in messages %}
+          <li>{{message}}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+      <div class="account_user_change view_item account_image_change flex">
+        <p class="view_header">Change Profile Image</p>
+        <div class="hamburger account_image_hide account_user_hide">
+          <div class="hamburger_line hamburger_line_active1"></div>
+          <div class="hamburger_line hamburger_line_active2"></div>
+          <div class="hamburger_line hamburger_line_active3"></div>
+        </div>
+        <form action="" method="POST" class="flex account_user_form" enctype="multipart/form-data"> 
+          {% csrf_token %}
+          <div class="account_field">
+            <p class="account_sheader">Profile Image</p>
+            <div class="account_c flex">
+              <div class="inputField">
+                <input type="file" class="input account_input" name="profile_image">
+              </div>
+            </div>
+          </div>
+          <div class="account_field">
+            <p class="account_sheader">Password</p>
+            <div class="account_c flex">
+              <div class="inputField">
+                <input class="input account_input" type="password" name="password" placeholder="Password">
+              </div>
+            </div>
+          </div>
+          <button class="icon_button" name="edit_profile_image" type="submit">
             <i class="fa-solid fa-arrow-right-to-bracket portfolio_icon"></i>
             <a>Change</a>
           </button>

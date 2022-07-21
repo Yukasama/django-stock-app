@@ -12,6 +12,13 @@ const account_email_hide = document.querySelector(".account_email_hide");
 eventHandler(account_email_edit, account_email_change, "click", "add", "once", "blur");
 eventHandler(account_email_hide, account_email_change, "click", "hide", "once", "blur");
 
+const account_image_edit = document.querySelector(".account_image_edit");
+const account_image_change = document.querySelector(".account_image_change");
+const account_image_hide = document.querySelector(".account_image_hide");
+eventHandler(account_image_edit, account_image_change, "click", "add", "once", "blur");
+eventHandler(account_image_hide, account_image_change, "click", "hide", "once", "blur");
+
+
 
 const account_biography_change = document.querySelector(".account_biography_change");
 const account_biography_edit = document.querySelector(".account_biography_edit");

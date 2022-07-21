@@ -49,6 +49,7 @@
   background: white;
   overflow: hidden;
   margin: 20px 0 20px 30px;
+  border-radius: 10px;
 }
 .stock_img {
   transform: scale(0.55);
