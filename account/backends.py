@@ -20,6 +20,7 @@ class EmailBackend(ModelBackend):
         except UserModel.DoesNotExist:
             return None
         
+        
     def password_validator(email=None, password=None):
         password = str(password)
         commonPasswords = pd.read_csv('account/static/account/commonpasswords.csv')["password"]

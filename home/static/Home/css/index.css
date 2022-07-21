@@ -178,7 +178,7 @@
 .profile_img {
   height: 40px;
   width: 400px;
-  margin-left: 16px;
+  margin: 0 -2px 0 18px;
   border-radius: 50%;
 }
 .profile_img img {

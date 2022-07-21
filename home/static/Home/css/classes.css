@@ -6,6 +6,7 @@ Enter pre-defined classes as an additional class in your HTML element.
     -->  <div class="div smart_button"></div>
 
 
+    
 OVERVIEW OF EXISTING CLASSES
 
     - flex:                   sets "display: flex" to an element, mainly for space efficiency.
@@ -24,7 +25,13 @@ OVERVIEW OF EXISTING CLASSES
 
 */
 
+
+
+
+
+
 /* BASICS */
+
 .flex {
   display: flex;
 }
