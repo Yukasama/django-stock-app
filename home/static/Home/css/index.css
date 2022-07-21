@@ -40,7 +40,7 @@
   justify-content: space-around;
   align-items: center;
   z-index: 10;
-  transition: height 0.3s;
+  transition: height 0.2s;
 }
 .navbar.scroll {
   height: calc(var(--height-navbar) - 10px);
@@ -72,37 +72,6 @@
 .favicon_img.dark,
 .favicon_img_footer.dark {
   filter: none;
-}
-.nav_link {
-  margin: 15px;
-  cursor: pointer;
-  font-size: 1.1em;
-}
-
-.nav_sub_element {
-  padding: 50px 0;
-  display: none;
-  position: absolute;
-}
-.nav_link_sub {
-  flex-direction: column;
-  width: 250px;
-  padding: 10px 0;
-  transform: translate(-50px, 0);
-}
-.nav_sub {
-  align-items: center;
-  padding: 10px;
-}
-.nav_link_ex:hover > .nav_sub_element,
-.nav_sub_element:hover {
-  display: flex;
-}
-.nav_sub_icon {
-  margin: 0 10px;
-}
-.nav_link_icon {
-  transform: translate(-15px, 0);
 }
 
 .nav_container2 form {
@@ -144,12 +113,12 @@
 .profile {
   height: 40px;
   width: 40px;
-  border-radius: 50%;
   cursor: pointer;
 }
 .profile img {
   height: 100%;
   width: 100%;
+  border-radius: 50%;
 }
 .profile_wrapper {
   position: fixed;
@@ -175,15 +144,15 @@
   z-index: 2;
 }
 
-.profile_img {
+.profile_img_c {
   height: 40px;
   width: 400px;
   margin: 0 -2px 0 18px;
-  border-radius: 50%;
 }
-.profile_img img {
+.profile_img_c img {
   height: 100%;
   width: 40px;
+  border-radius: 50%;
 }
 .profile_username {
   font-size: 1.1em;
@@ -610,8 +579,6 @@
   .content.show {
     margin-left: 90px;
   }
-  .nav_link,
-  .nav_link_icon,
   .profile,
   .profile_container,
   .webmode_container {

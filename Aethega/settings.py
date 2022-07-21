@@ -170,7 +170,7 @@ ACCOUNT_EMAIL_VERIFICATION = "none"
 
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, "static/images")
+MEDIA_ROOT = os.path.join(BASE_DIR, "")
 
 if DEBUG:
     STATICFILES_DIRS = [

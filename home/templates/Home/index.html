@@ -24,8 +24,8 @@
 
   <div class="nav_container nav_container3 flex">
     {% if user.is_authenticated %}
-    <div class="profile">
-      <img src="{{request.user.profile_image.url}}" alt="Profile Image">
+    <div class="profile flex_box">
+      <img class="profile_img1" src="{{request.user.profile_image.url}}" alt="Profile Image">
     </div>
     {% else %}
       <a href="{% url 'signin' %}" class="nav_link sign_up">Login</a>
@@ -40,10 +40,10 @@
     <div class="profile_wrapper flex">
       <div class="profile_container flex">
         <div class="profile_link1 flex">
-          <div class="profile_img">
-            <img src="{{request.user.profile_image.url}}">
+          <div class="profile_img_c">
+            <img class="profile_img2" src="{{request.user.profile_image.url}}">
           </div>
-          <div class="profile_text_c">
+          <div class="profile_text_c flex_box">
             <p class="profile_text profile_username" href="">{{request.user}}</a> <br>
             <a class="manage_profile" href="{% url 'account' %}">Manage Account</a>
           </div>

@@ -30,14 +30,13 @@ class AccountManager(BaseUserManager):
 
 
 def get_profile_image_filepath(self, filename):
-    BASE_DIR = settings.BASE_DIR
-    if not os.path.exists(os.path.join(BASE_DIR, f"account/static/account/img/profile_images/{self.pk}")):
-        os.mkdir(os.path.join(BASE_DIR, f"account/static/account/img/profile_images/{self.pk}"))
-    return os.path.join(BASE_DIR, f'account/static/account/img/profile_images/{self.pk}/profile_image.png')
+    if not os.path.exists(f"static/account/img/profile_images/{self.pk}"):
+        os.makedirs(f"static/account/img/profile_images/{self.pk}")
+    return f'static/account/img/profile_images/{self.pk}/profile_image.png'
 
 def get_profile_image_default():
-    BASE_DIR = settings.BASE_DIR
-    return os.path.join(BASE_DIR, "account/static/account/img/profile_images/default/favicon.jpg")
+    return "static/account/img/profile_images/DefaultUser.png"
+
 
 
 class Account(AbstractBaseUser):

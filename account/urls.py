@@ -13,5 +13,4 @@ urlpatterns = [
     path('two-factor', views.twoFactor, name="two-factor"),
     path('authorize', views.authorize, name="authorize"),
     path('verify', views.verify, name="verify"),
-
 ]

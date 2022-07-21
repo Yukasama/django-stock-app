@@ -91,7 +91,7 @@ def account(request):
             if user is not None:
                 user.username = new_username
                 user.save()
-                return redirect("")
+                return redirect("account")
             else: 
                 messages.error(request, "Credentials do not match.")
         elif "edit_email" in request.POST:
@@ -101,7 +101,7 @@ def account(request):
             if user is not None:
                 user.email = new_email
                 user.save()
-                return redirect("")
+                return redirect("account")
             else: 
                 messages.error(request, "Credentials do not match.")
         elif "edit_biography" in request.POST:
@@ -109,12 +109,13 @@ def account(request):
             biography = request.POST["biography"]
             user.biography = biography
             user.save()
-            return redirect("")
+            return redirect("account")
         elif "edit_profile_image" in request.POST:
             user = Account.objects.get(pk=request.user.id)
             new_profile_image = request.FILES["profile_image"]
             user.profile_image = new_profile_image
             user.save()
+            return redirect("account")
     elif "change_password" in request.GET:
         return redirect("authorize")
             
