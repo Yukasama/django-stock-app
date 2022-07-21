@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User, AbstractBaseUser, BaseUserManager
+from Aethega import settings
 import os
 
 class AccountManager(BaseUserManager):
@@ -29,12 +30,14 @@ class AccountManager(BaseUserManager):
 
 
 def get_profile_image_filepath(self, filename):
-    if not os.path.exists(f"account/static/account/img/profile_images/{self.pk}"):
-        os.mkdir(f"account/static/account/img/profile_images/{self.pk}")
-    return f'static/account/img/profile_images/{self.pk}/profile_image.png'
+    BASE_DIR = settings.BASE_DIR
+    if not os.path.exists(os.path.join(BASE_DIR, f"account/static/account/img/profile_images/{self.pk}")):
+        os.mkdir(os.path.join(BASE_DIR, f"account/static/account/img/profile_images/{self.pk}"))
+    return os.path.join(BASE_DIR, f'account/static/account/img/profile_images/{self.pk}/profile_image.png')
 
 def get_profile_image_default():
-    return "static/account/img/favicon.png"
+    BASE_DIR = settings.BASE_DIR
+    return os.path.join(BASE_DIR, "account/static/account/img/profile_images/default/favicon.jpg")
 
 
 class Account(AbstractBaseUser):

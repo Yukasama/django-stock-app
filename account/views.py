@@ -113,7 +113,6 @@ def account(request):
         elif "edit_profile_image" in request.POST:
             user = Account.objects.get(pk=request.user.id)
             new_profile_image = request.FILES["profile_image"]
-            new_profile_image = user.profile_img_file(new_profile_image)
             user.profile_image = new_profile_image
             user.save()
     elif "change_password" in request.GET:
