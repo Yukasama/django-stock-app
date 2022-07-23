@@ -286,7 +286,9 @@ def dataConstruct(data, construct):
 def dataGetTemp(tickerAsArray, value, fileName=0, year=str(acYear - 1)):
     
     t = tickerAsArray
-    if (value == 0 and fileName != 0): return pd.read_csv(f'Data/StockData/{t}/{fileName}')
+    if (value == 0 and fileName != 0):
+        result = pd.read_csv(f'Data/StockData/{t}/{fileName}')
+        return result
     elif (value != 0):
         
         if(fileName == 0):
