@@ -7,6 +7,6 @@ import matplotlib.pyplot as plt
 # data.fundamentalData(data.tickers_sp500)
 # data.dataPush(data.tickers_sp500, pushRate=0, skipMode=False, single="history")
 
-df = pd.read_csv("Data/ComparisonData/TAR")
-tec =tech.TARresearch(df, "sectormean")
-print(tec)
+tar = tech.TAR(data.tickers_sp500, progress=True)
+print(tar)
+

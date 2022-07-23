@@ -329,6 +329,12 @@ class History(models.Model):
     
  
  
+ 
+class EconomicData(models.Model):
+    interestRate = models.FloatField(null=True, blank=True)
+    spread10Y2Y = models.FloatField(null=True, blank=True)
+    
+ 
     
     
 class Portfolio(models.Model):

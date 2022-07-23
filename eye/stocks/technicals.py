@@ -6,6 +6,11 @@ import pandas as pd
 
 #-------------------------------------------------------------------------------------------------------------------
 
+class Stock:
+    
+    def __init__(self, symbol):
+        pass
+    
 
 def Indicator(ticker, indicator, period=14, shift=0, char="sma"):
     
@@ -56,7 +61,7 @@ def Indicator(ticker, indicator, period=14, shift=0, char="sma"):
         
       
     
-def singleTAR(tickerAsArray, progress=False):
+def singleTAR(tickerAsArray, progress):
     
     #Function Globals
     try: 
@@ -67,8 +72,7 @@ def singleTAR(tickerAsArray, progress=False):
         high = history["High"]
         low = history["Low"]
     except: 
-        if (progress == True): print(f"'{tickerAsArray}' Ticker doesn't exist")
-        exit()
+        print(f"'{tickerAsArray}' Ticker doesn't exist")
     rMonth, rYear, rYear3 = 23, 261, 783
     
     #Technical Factors
@@ -134,10 +138,11 @@ def singleTAR(tickerAsArray, progress=False):
 def TAR(tickerAsArray, operator=False, progress=False, addition=0):
     
     if(operator == True):
-        return singleTAR(tickerAsArray)
+        return singleTAR(tickerAsArray, progress)
     
     elif(operator == False):
         tar_array, ticker_array, sector_array, addition_array = [], [], [], []
+        additionValue = 0
         for t in tickerAsArray:
             tar = singleTAR(t, progress)
             sector = data.dataGet(t, "sector", "info")
