@@ -30,7 +30,7 @@
   border-radius: 50%;
   overflow: hidden;
   background: var(--image-background);
-  margin: 30px 0;
+  margin: 60px 0 25px 0;
 }
 .account_logo img {
   height: 100%;
