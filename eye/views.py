@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth.models import User
 from eye.models import Stock, Info, Financial, Portfolio, ShortFinancial
-from eye.stocks import datahandler as dt
+from eye.aethega.data import datahandler as dt
 from eye.forms import PortfolioForm
 from django.core import serializers
 import pandas as pd

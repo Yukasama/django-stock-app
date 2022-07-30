@@ -68,7 +68,6 @@ def sectorAverage(tickerAsArray, value, attribute, progress=False):
 def valueRegister():
             
     #Income Statement
-    
     eps = { lower: 1, higher: 5, path: "higher"}
     peRatio = { lower: -10, best: 15, higher: 50, path: "best"}
     revenue = {path: "relative"}

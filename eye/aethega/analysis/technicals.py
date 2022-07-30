@@ -6,10 +6,7 @@ import pandas as pd
 
 #-------------------------------------------------------------------------------------------------------------------
 
-class Stock:
-    
-    def __init__(self, symbol):
-        pass
+
     
 
 def Indicator(ticker, indicator, period=14, shift=0, char="sma"):

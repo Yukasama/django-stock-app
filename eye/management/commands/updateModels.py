@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand
 from eye.models import Stock, Info, Financial, ShortFinancial
-from eye.stocks import datahandler as dt
+from eye.aethega.data import datahandler as dt
 import pandas as pd
 import datetime
 import time
@@ -9,26 +9,39 @@ import time
 
 def DataTransfer(ticker, skip=False, download=False):
     
+    #Function Globals
     df = dt.dataGet(ticker, "all")
     dfi = dt.dataGet(ticker, 0, "info")
+    yearList = list(df)
+    pushFails = 0
     
-    #Download Data if no exist
+    
+    #Download Data if it does not yet exist
     if df.empty and download == True: 
         dt.dataPush([ticker], 5, False)
         df = dt.dataGet(ticker, "all")
-    elif df.empty: print(f'{ticker} Data not pushed yet => Skipped')
-    if (Financial.objects.filter(verification=f'{ticker}, 2021').exists() and skip == True): print(f"{ticker} Data already exists => Skipped")
-    else:
+        print(f'{ticker} Data being pushed..')
         
+    #Skip Data if it does not exist
+    elif df.empty:
+        print(f'{ticker} Data not pushed yet => Skipped')
+        return 0
+    
+    #Skip Data if it already exists
+    elif Financial.objects.filter(verification=f'{ticker}, 2021').exists() and skip == True:
+        print(f"{ticker} Data already exists => Skipped")
+        return 0      
+    
+    
+    #Continue with Loop
+    try:
+  
         #Execution Timer
         startTime = time.time()
             
         #Duplicate Handling  
-        try:
-            Stock.objects.delete(symbol=ticker)
-            symbol = Stock.objects.create(symbol=ticker)
-        except:
-            symbol = Stock.objects.create(symbol=ticker)
+        try: symbol = Stock.objects.get(symbol=ticker)
+        except: symbol = Stock.objects.create(symbol=ticker)
             
         for stock in Stock.objects.all():
             if Stock.objects.filter(symbol=stock.symbol).count() > 1:
@@ -41,6 +54,8 @@ def DataTransfer(ticker, skip=False, download=False):
             if (i == "period" or i == "cik" or i == "link" or i == "finalLink"):
                 try: infodict[i] = df.loc[df["Unnamed: 0"] == i]["2021"].tolist()[0]
                 except: infodict[i] = "N/A"
+            elif i == "ticker":
+                continue
             else:
                 try: infodict[i] = dfi.loc[dfi["Unnamed: 0"] == i]["0"].tolist()[0]
                 except: 
@@ -51,12 +66,16 @@ def DataTransfer(ticker, skip=False, download=False):
         finStrings = [f.name for f in Financial._meta.get_fields()]
         findict = {}
         for year in range(2015, 2022):
+            try:
+                if str(year) not in yearList: continue
+            except:
+                continue
             for f in finStrings:
-                if (f == "symbol" or f == "year" or f == "verification" or f == "stockPrice"): continue
+                if (f == "symbol" or f == "year" or f == "verification" or f == "stockPrice" or f == "cik"): continue
                 try: findict[f] = df.loc[df["Unnamed: 0"] == f][str(year)].tolist()[0]
                 except: 
                     print("Push Error: " + f)
-                
+                                
             Financial(
                 #Symbol Data
                 symbol = symbol,
@@ -281,7 +300,6 @@ def DataTransfer(ticker, skip=False, download=False):
             ).save()
             print(f"'{ticker}' Financial Model for {year} saved.")
             
-        #Info Model
         Info(
             symbol=symbol,
             ticker=ticker,
@@ -318,6 +336,10 @@ def DataTransfer(ticker, skip=False, download=False):
         executionTime = round(time.time() - startTime, 5)
         print(f'Executed in: {executionTime}s')
 
+    except:
+        print(f"Error: '{ticker}' Financial Model for {year} failed to save.")
+        pushFails += 1
+        
 
 
 
@@ -329,11 +351,11 @@ class Command(BaseCommand):
     def handle(sef, *args, **options):
         single = False
         if (single == False):
-            tickers = dt.tickers_sp500
+            tickers = dt.T_SP500
             for ticker in tickers:
                 DataTransfer(ticker, False, False)
         else:
-            ticker = "AAPL"
+            ticker = "CTVA"
             DataTransfer(ticker, True)
             
             

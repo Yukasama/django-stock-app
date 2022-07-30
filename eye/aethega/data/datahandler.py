@@ -1,32 +1,34 @@
-
-#Libraries
+#region LIBRARIES
+import time, os, math
+from datetime import datetime as dt
 import yfinance as yf
-import time
 import pandas as pd
 import pandas_datareader.data as web
-import pandas_datareader.nasdaq_trader as nas
-from pandas_datareader import wb
-import yahoo_fin.stock_info as si
-# import FundamentalAnalysis as fa
-import os
 import numpy as np
-from datetime import datetime as dt
 import matplotlib.pyplot as plt
+#import pandas_datareader.nasdaq_trader as nas
+#from pandas_datareader import wb
+#import yahoo_fin.stock_info as si
+#import FundamentalAnalysis as fa
+#endregion
 
-import ast
+#GLOBALS
+API_KEY = "1451443e6ac73f65840c60adab375261" #ApiKey for FundamentalAnalysis
+T_SP500 = pd.read_csv("Data/SymbolData/S&P500")["0"] #S&P 500 Ticker List
+T_DAX40 = pd.read_csv("Data/SymbolData/DAX40")["0"] #DAX Ticker List
+TICKERS = pd.concat([T_SP500, T_DAX40], axis=0)
+REQUEST_COOLER = 181
+TODAY = dt.today()
 
-#Globals
-api_key = "1451443e6ac73f65840c60adab375261" #ApiKey for FundamentalAnalysis
-tickers_sp500 = pd.read_csv("Data/SymbolData/S&P500")["0"] #S&P 500 Ticker List
-tickers_dax40 = pd.read_csv("Data/SymbolData/DAX40")["0"] #DAX Ticker List
-tickers = pd.concat([tickers_sp500, tickers_dax40], axis=0)
-request_cooler = 181
-messageSign, commandSign, errorSign = "=>", "//", "[!]"
-acYear = dt.today().year
-acMonth = dt.today().month
 
-# class RequestError(RequestError):
-#     pass
+#-------------------------------------------------------------------------------------------------------------------
+
+def isNull(element):
+    return True if(element == None or element == "" or element == 0) else False
+        
+
+#def dataRoutine():
+#    fundamentalData(T_SP500)
 
 
 #-------------------------------------------------------------------------------------------------------------------
@@ -34,45 +36,39 @@ acMonth = dt.today().month
 
 def fundamentalData(tickerAsArray, skipMode=True):
     
+    blackList = ["BBWI", "BF-B", "CARR", "CEG", "CTXS"]
+
     for t in tickerAsArray:
-        
-        blackList = ["BBWI", "BF-B", "CARR", "CEG", "CTXS"]
 
         #If File exists, skip Ticker
         if ((os.path.exists(f"Data/StockData/{t}/income_statement")) or t in blackList):
             print(f"'{t}' Fundamental Data was skipped.")
             continue
         
-        #Fundamental Data
         try:
-            income_statement = fa.income_statement(t, api_key)
-            balance_sheet = fa.balance_sheet_statement(t, api_key)
-            cash_flow = fa.cash_flow_statement(t, api_key)
-            discounted_cash_flow = fa.discounted_cash_flow(t, api_key)
-            financial_ratios = fa.financial_ratios(t, api_key)
-            key_metrics = fa.key_metrics(t, api_key)
-        
             #File Collection for For Loop
-            csvFiles = [income_statement, balance_sheet, cash_flow, discounted_cash_flow,
-                        financial_ratios, key_metrics]
-            csvStrings = ["income_statement", "balance_sheet", "cash_flow", "discounted_cash_flow",
-                          "financial_ratios", "key_metrics"]
+            csvDict = {
+                "income_statement": fa.income_statement(t, API_KEY),
+                "balance_sheet": fa.balance_sheet_statement(t, API_KEY),
+                "cash_flow": fa.cash_flow_statement(t, API_KEY),
+                "discounted_cash_flow": fa.discounted_cash_flow(t, API_KEY),
+                "financial_ratios": fa.financial_ratios(t, API_KEY),
+                "key_metrics": fa.key_metrics(t, API_KEY),    
+            }
                 
             #Convert to CSV Files
-            for c, s in zip(csvFiles, csvStrings):
-                c.to_csv(f"Data/StockData/{t}/{s}")
+            for key, value in csvDict: 
+                value.to_csv(f"Data/StockData/{t}/{key}")
             
-            print(f"{messageSign} '{t}' Fundamental Data was pushed successfully!")
+            print(f"'{t}' Fundamental Data was pushed successfully!")
             
         except:
-            print(f"{commandSign} Cooling down requests for 5 minutes..")
-            time.sleep(request_cooler + 120)
+            print(f"Cooling down requests for 5 minutes..")
+            time.sleep(REQUEST_COOLER + 120)
             continue
                 
-        if (len(tickerAsArray) > 1):
-            time.sleep(request_cooler)
-        elif (len(tickerAsArray) == 1):
-            exit()
+        #If multiple Tickers get pushed, execute Sleep Timer
+        time.sleep(REQUEST_COOLER) if (len(tickerAsArray) > 1) else exit()
         
          
 #-------------------------------------------------------------------------------------------------------------------
@@ -83,15 +79,14 @@ def economicData():
     startDate = "1900/01/01"
     
     #Get Economic Data
-    interestRate = web.DataReader("DFF", "fred", startDate, dt.today())
-    spread10Y2Y = web.DataReader("T10Y2Y", "fred", startDate, dt.today())
-    
-    csvFiles = [interestRate, spread10Y2Y]
-    csvStrings = ["interestRate", "spread10Y2Y"]
+    csvDict = {
+        "interestRate": web.DataReader("DFF", "fred", startDate, TODAY),
+        "spread10Y2Y": web.DataReader("T10Y2Y", "fred", startDate, TODAY),
+    }
 
     #Convert to CSV Files
-    for c, s in zip(csvFiles, csvStrings):
-        c.to_csv(f"Data/EconomicData/{s}")
+    for key, value in csvDict:
+        value.to_csv(f"Data/EconomicData/{key}")
 
     print(f"Economic Data was pushed successfully!")
 
@@ -112,7 +107,7 @@ def dataPush(tickerAsArray, pushRate=5, skipMode=True, single=0):
         if (skipMode == True):
             if (os.path.exists(f"Data/StockData/{t}/info") and 
             os.path.exists(f"Data/StockData/{t}/major_holders")):
-                print(f"{messageSign} '{t}' was skipped.")
+                print(f"'{t}' was skipped.")
                 continue
                           
         #Get Data from Yahoo Finance
@@ -157,21 +152,22 @@ def dataPush(tickerAsArray, pushRate=5, skipMode=True, single=0):
         
         #Data Push
         for c, s in zip(csvFiles, csvStrings):
-            try: c.to_csv(f"Data/StockData/{t}/{s}")
+            try: 
+                c.to_csv(f"Data/StockData/{t}/{s}")
+                print(f"'{t}' Data was pushed successfully!")
             except: 
-                print(f"{messageSign} '{t}' {s.capitalize()} File was skipped")
+                print(f"'{t}' {s.capitalize()} File was skipped")
                 pass
         
-        print(f"{messageSign} '{t}' Data was pushed successfully!")
         
         #Check if requests get rejected
         if(request_error >= 10):
-            print(f"{messageSign} Cooling down requests for 3 minutes..")
-            time.sleep(request_cooler)
+            print(f"Cooling down requests for 3 minutes..")
+            time.sleep(REQUEST_COOLER)
             request_error = 0
             pass
         if(request_error >= 15):
-            print(f"{messageSign} Ending Loop due to RequestErrorOverflow.")
+            print(f"Ending Loop due to RequestErrorOverflow.")
             exit()         
         time.sleep(pushRate)
         
@@ -206,22 +202,14 @@ def copyRows(action="models", output=False):
                financial_ratios, financial_statement_growth, discounted_cash_flow])
     names = names.drop_duplicates(keep='first')
     blackList = ["reportedCurrency", "acceptedDate", "calendarYear", "priceEarningsRatio", "priceBookValueRatio",
-                     "priceToBookRatio", "ptbRatio", "priceToFreeCashFlowsRatio",
-                     "priceCashFlowRatio", "returnOnEquity", "grossProfitRatio", "operatingIncomeRatio",
-                     "incomeBeforeTaxRatio", "netIncomeRatio", "priceSalesRatio", "dividendPayoutRatio",
-                     "priceToOperatingCashFlowsRatio", "period", "cik", "link", "finalLink", "roe"]
+                "priceToBookRatio", "ptbRatio", "priceToFreeCashFlowsRatio",
+                "priceCashFlowRatio", "returnOnEquity", "grossProfitRatio", "operatingIncomeRatio",
+                "incomeBeforeTaxRatio", "netIncomeRatio", "priceSalesRatio", "dividendPayoutRatio",
+                "priceToOperatingCashFlowsRatio", "period", "cik", "link", "finalLink", "roe"]
     
     if(action == "models"):
         for name in names:
             print(f'{name} = models.IntegerField(blank=True, null=True)')
-            
-    elif(action == "dataGet"):
-        array = []
-        for name in names:
-            if name in blackList: continue
-            array.append(name)
-            print(f'{name} = df.loc[df["Unnamed: 0"] == "{name}"][str(year)].tolist()[0]')
-        print(len(array))  
             
     elif(action == "modelInsert"):
         array = []
@@ -283,65 +271,71 @@ def dataConstruct(data, construct):
 
 
 
-def dataGetTemp(tickerAsArray, value, fileName=0, year=str(acYear - 1)):
+def dataGetTemp(ticker, value, fileName=0, year=str(TODAY.year - 1)):
     
-    t = tickerAsArray
+    t = ticker
+    
+    #Error Checking
+    if (isNull(t)):
+        raise ValueError("Ticker Element is Null")
+    elif not type(ticker) == str:
+        raise ValueError("Ticker has to be <str>")
+    
     if (value == 0 and fileName != 0):
         result = pd.read_csv(f'Data/StockData/{t}/{fileName}')
         return result
-    elif (value != 0):
+    
+    #Return single value from File
+    elif (value != 0 and fileName != 0):
+        df = pd.read_csv(f'Data/StockData/{t}/{fileName}')
+        #Data Getting for Info, Calendar, Sustainability & History
+        if (fileName == "info" or fileName == "calendar"):
+            try: df_new = df.loc[df["Unnamed: 0"] == value]["0"]
+            except: df_new = df.loc[df["Unnamed: 0"] == value]["Value"]
+        elif (fileName == "sustainability"):
+            df_new = df.loc[df["2022-2"] == value]["0"]           
+        elif (fileName == "history"):
+            return df[value]
+        else: 
+            print("There's no such file/value.")
+        result = dataConstruct(df_new, "normal")
+        return result
+    
+    elif (fileName == 0):
+        files = ["income_statement", "balance_sheet", "cash_flow", "financial_ratios",
+                    "key_metrics", "discounted_cash_flow"]
+        tickerFrame = pd.DataFrame()
         
-        if(fileName == 0):
-            files = ["income_statement", "balance_sheet", "cash_flow", "financial_ratios",
-                     "key_metrics", "discounted_cash_flow"]
-            tickerFrame = pd.DataFrame()
-            
-            if (value == "all"):
-                if not os.path.exists(f'Data/StockData/{t}/income_statement'):
-                    return pd.DataFrame()
-                else: 
-                    for f in files:
-                        df = pd.read_csv(f'Data/StockData/{t}/{f}')
-                        tickerFrame = pd.concat([tickerFrame, df])
-                    tickerFrame = tickerFrame.drop_duplicates(keep="first")
-                    return tickerFrame
-            else:
+        if (value == "all"):#
+            if not os.path.exists(f'Data/StockData/{t}/income_statement'):
+                return pd.DataFrame()
+            else: 
                 for f in files:
-                    try:
-                        df = pd.read_csv(f'Data/StockData/{t}/{f}')
-                        if (year == "ALL"): 
-                            df_new = df.loc[df["Unnamed: 0"] == value]
-                            result = dataConstruct(df_new, "floatArray")
-                        elif (year == str(acYear - 1)):
-                            try: df_new = df.loc[df["Unnamed: 0"] == value][str(acYear)]
-                            except: df_new = df.loc[df["Unnamed: 0"] == value][str(acYear - 1)]
-                            result = dataConstruct(df_new, "normal")
-                        else:
-                            df_new = df.loc[df["Unnamed: 0"] == value][str(year)]
-                            result = dataConstruct(df_new, "normal")
-                        return result
-                    except: continue
-
-                
-        elif(fileName != 0):
-            df = pd.read_csv(f'Data/StockData/{t}/{fileName}')
-            #Data Getting for Info, Calendar, Sustainability & History
-            if (fileName == "info" or fileName == "calendar"):
-                try: df_new = df.loc[df["Unnamed: 0"] == value]["0"]
-                except: df_new = df.loc[df["Unnamed: 0"] == value]["Value"]
-            elif (fileName == "sustainability"):
-                df_new = df.loc[df["2022-2"] == value]["0"]           
-            elif (fileName == "history"):
-                return df
-                
-            #If no file exists
-            else: print("There's no such file/value.")
-            result = dataConstruct(df_new, "normal")
-            return result
+                    df = pd.read_csv(f'Data/StockData/{t}/{f}')
+                    tickerFrame = pd.concat([tickerFrame, df])
+                tickerFrame = tickerFrame.drop_duplicates(keep="first")
+                return tickerFrame
+        else:
+            for f in files:
+                try:
+                    df = pd.read_csv(f'Data/StockData/{t}/{f}')
+                    if (year == "ALL"): 
+                        df_new = df.loc[df["Unnamed: 0"] == value]
+                        result = dataConstruct(df_new, "floatArray")
+                    elif (year == str(TODAY.year - 1)):
+                        try: df_new = df.loc[df["Unnamed: 0"] == value][str(TODAY.year)]
+                        except: df_new = df.loc[df["Unnamed: 0"] == value][str(TODAY.year - 1)]
+                        result = dataConstruct(df_new, "normal")
+                    else:
+                        df_new = df.loc[df["Unnamed: 0"] == value][str(year)]
+                        result = dataConstruct(df_new, "normal")
+                    return result
+                except: continue
 
 
 
-def dataGet(tickerAsArray, value, fileName=0, year=str(dt.today().year - 1), operator=True, output=False):
+
+def dataGet(tickerAsArray, value, fileName=0, year=str(TODAY.year - 1), operator=True, output=False):
 
     if (operator == True):
         try: 
