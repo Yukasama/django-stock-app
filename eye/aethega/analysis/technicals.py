@@ -2,61 +2,8 @@
 #Dependencies
 import datahandler as data
 import pandas as pd
-
-
-#-------------------------------------------------------------------------------------------------------------------
-
-
-    
-
-def Indicator(ticker, indicator, period=14, shift=0, char="sma"):
-    
-    #Function Globals
-    history = data.dataGet(ticker, 0, fileName="history")
-    close = history["Close"]
-    lenClose = len(close)
-    
-    
-    #Relative Strength Index (RSI)
-    if(indicator == "rsi"):
-        averageGain, averageLoss, day = 0, 0, -1 - shift
-        while(day >= period - period * 2):
-            closeDiff = close[lenClose + day] - close[lenClose + day - 1]
-            if (closeDiff >= 0): averageGain += closeDiff
-            elif (closeDiff < 0): averageLoss -= closeDiff
-            day -= 1
-        RSI = 100 - 100 / (1 + averageGain / averageLoss)
-        return RSI
-    
-    
-    #Williams %R (WPR)
-    high = history["High"]
-    low = history["Low"]
-    
-    if(indicator == "wpr"):
-        close = close[-1:].squeeze()
-        highestHigh = max(high[-20:])
-        lowestLow = min(low[-20:])
-        WPR = round((highestHigh - close) / (highestHigh - lowestLow) * -100, 3)
-        return WPR
-    
-    
-    #Moving Average (MA)
-    if (indicator == "ma"):
         
-        closePrice = close[-1:].squeeze()
-        SMA = round(close.rolling(period).mean()[-1:].squeeze(), 3)
         
-        if (char == "sma"):
-            return SMA
-        
-        elif (char == "ema"):
-            #Exponential Moving Average
-            smoothingConstant = 2 / (period + 1)
-            EMA = (closePrice - SMA) * smoothingConstant + SMA
-            return EMA
-        
-      
     
 def singleTAR(tickerAsArray, progress):
     
@@ -132,12 +79,12 @@ def singleTAR(tickerAsArray, progress):
 
 
 
-def TAR(tickerAsArray, operator=False, progress=False, addition=0):
+def TAR(tickerAsArray, progress=False, addition=0):
     
-    if(operator == True):
+    if(type(tickerAsArray) == str):
         return singleTAR(tickerAsArray, progress)
     
-    elif(operator == False):
+    elif(len(tickerAsArray) > 1):
         tar_array, ticker_array, sector_array, addition_array = [], [], [], []
         additionValue = 0
         for t in tickerAsArray:
