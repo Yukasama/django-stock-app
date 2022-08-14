@@ -2,13 +2,21 @@ from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth.models import User
-from eye.models import Stock, Info, Financial, Portfolio, ShortFinancial
+from eye.models import Stock, Info, Financial, Portfolio, ShortFinancial, History
 from eye.aethega.data import datahandler as dt
 from eye.forms import PortfolioForm
 from django.core import serializers
 import pandas as pd
 from collections import defaultdict
 from django.core.mail import send_mail
+
+import sys
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+sys.path.append(BASE_DIR)
+
+from eye.aethega.algorithm import indicators as ic
 
 
 
@@ -129,3 +137,20 @@ def portfolio(request):
         
     
     return render(request, 'eye/portfolio.html', data)
+
+
+
+def algorithm(request):
+    
+    rsi = ic.RSI("MSFT").history(1, 1)
+    wpr = ic.WPR("MSFT").history(1, 1)
+    history = History.objects.get(symbol="AAP")
+    print(history)
+    
+    data = {
+        "history": history,
+        "RSI": rsi,
+        "WPR": wpr,
+    }
+    
+    return render(request, "eye/algorithm.html", data)

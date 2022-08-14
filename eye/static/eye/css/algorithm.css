@@ -1,0 +1,19 @@
+.algorithm_buttons {
+  grid-area: algorithm_buttons;
+}
+.algorithm_graph {
+  grid-area: algorithm_graph;
+}
+.algorithm_list {
+  grid-area: algorithm_list;
+}
+
+.algorithm {
+  grid-template-areas:
+    "algorithm_buttons algorithm_buttons algorithm_buttons"
+    "algorithm_graph algorithm_graph algorithm_list";
+}
+.algorithm_graph {
+  height: 300px;
+  width: 40%;
+}

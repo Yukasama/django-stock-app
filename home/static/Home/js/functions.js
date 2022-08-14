@@ -13,6 +13,9 @@ function eventHandler(eventElement, showElement, event="mouseover", action="show
     }
 }
 
+let hello = "hello"
+console.log("${hello}")
+
 var navbar = document.querySelector(".navbar");
 var background_blur = document.querySelector(".background_blur");
 
@@ -22,7 +25,7 @@ function events(eventElement, showElement, event, action, background) {
         eventElement.addEventListener(event, () => {
 
             if (event == "mouseover" && showElement == 0) {
-                eventElement.classList.add("show"); 
+                eventElement.classList.add("show");
             }
             else if (event == "mouseleave" && showElement == 0) {
                 eventElement.classList.remove("show"); 

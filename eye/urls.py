@@ -12,4 +12,5 @@ urlpatterns = [
     path('portfolio', views.portfolio, name='portfolio'),
     
     path('stocks/<str:symbol>', views.symbol, name='symbol'),
+    path('algorithm', views.algorithm, name="algorithm"),
 ]

@@ -273,7 +273,7 @@ def dataConstruct(data, construct):
 
 def dataGetTemp(ticker, value, fileName=0, year=str(TODAY.year - 1)):
     
-    t = ticker
+    t = ticker.upper()
     
     #Error Checking
     if (isNull(t)):
@@ -306,7 +306,7 @@ def dataGetTemp(ticker, value, fileName=0, year=str(TODAY.year - 1)):
                     "key_metrics", "discounted_cash_flow"]
         tickerFrame = pd.DataFrame()
         
-        if (value == "all"):#
+        if (value == "all"):
             if not os.path.exists(f'Data/StockData/{t}/income_statement'):
                 return pd.DataFrame()
             else: 
@@ -359,3 +359,11 @@ def dataGet(tickerAsArray, value, fileName=0, year=str(TODAY.year - 1), operator
         if (len(tickerAsArray) == 1): return result
         elif (len(tickerAsArray) > 1): return dataArray
 
+
+
+
+#Returns Open, High, Low, Close, Volume Array
+def getHistory(symbol):
+    history = dataGet(symbol, 0, "history")
+    return (history["Date"], history["Open"], history["High"],
+            history["Low"], history["Close"], history["Volume"])

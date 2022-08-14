@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from eye.models import Stock, Info, Financial, ShortFinancial
+from eye.models import Stock, Info, Financial, ShortFinancial, History
 from eye.aethega.data import datahandler as dt
 import pandas as pd
 import datetime
@@ -343,20 +343,51 @@ def DataTransfer(ticker, skip=False, download=False):
 
 
 
+def pushHistory(tickers):
+    if len(tickers) > 1:
+        for ticker in tickers:
+            
+            try: symbol = Stock.objects.get(symbol=ticker)
+            except: symbol = Stock.objects.create(symbol=ticker)
+                
+            for stock in Stock.objects.all():
+                if Stock.objects.filter(symbol=stock.symbol).count() > 1:
+                    stock.delete()
+                    
+                    
+            date, openPrice, high, low, close, volume = dt.getHistory(ticker)
+            print(date)
+
+            
+            for d, o, h, l, c, v in zip(date, openPrice, high, low, close, volume):
+                History(
+                    symbol=symbol,
+                    date=d,
+                    openPrice=o,
+                    high=h,
+                    low=l,
+                    close=c,
+                    volume=v,
+                ).save()
+
+
+
 class Command(BaseCommand):
     
     def add_arguments(self, parser):
         pass
     
-    def handle(sef, *args, **options):
+    def handle(self, *args, **options):
         single = False
         if (single == False):
             tickers = dt.T_SP500
             for ticker in tickers:
-                DataTransfer(ticker, False, False)
+                #DataTransfer(ticker, False, False)
+                pushHistory(tickers)
         else:
             ticker = "CTVA"
             DataTransfer(ticker, True)
+            pushHistory(ticker)
             
             
     
