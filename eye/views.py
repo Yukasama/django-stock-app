@@ -4,11 +4,14 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from eye.models import Stock, Info, Financial, Portfolio, ShortFinancial, History
 from eye.aethega.data import datahandler as dt
+from eye.aethega.analysis.calculations import Calculator as ca
 from eye.forms import PortfolioForm
 from django.core import serializers
 import pandas as pd
 from collections import defaultdict
 from django.core.mail import send_mail
+import json
+import dateutil.parser as parser
 
 import sys
 from pathlib import Path
@@ -107,8 +110,8 @@ def symbol(request, symbol):
     data["descShort"] = desc[0]+"." + desc[1]+"." + desc[2]+"."
     try: data["recommendationMean"] = round(1 - (data["recommendationMean"] - 1) / (5 - 1), 3)
     except: data["recommendationMean"] = "N/A"
-    data["eye"] = 0.845
     data["page"] = page
+    data["TAR"] = ca(data["ticker"]).TAR()
     return render(request, 'eye/symbol.html', data)
 
 
@@ -141,16 +144,14 @@ def portfolio(request):
 
 
 def algorithm(request):
-    
     rsi = ic.RSI("MSFT").history(1, 1)
     wpr = ic.WPR("MSFT").history(1, 1)
-    history = History.objects.get(symbol="AAP")
-    print(history)
-    
+    date, close = ic.Indicator("MSFT").graph()
+    date = [json.loads(json.dumps(d)) for d in date]
+        
     data = {
-        "history": history,
-        "RSI": rsi,
-        "WPR": wpr,
+        "date": date,
+        "close": close,
     }
     
     return render(request, "eye/algorithm.html", data)

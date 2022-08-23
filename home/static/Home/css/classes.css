@@ -25,11 +25,6 @@ OVERVIEW OF EXISTING CLASSES
 
 */
 
-
-
-
-
-
 /* BASICS */
 
 .flex {
@@ -52,11 +47,6 @@ OVERVIEW OF EXISTING CLASSES
   border: 1px solid rgb(0, 140, 255) !important;
 }
 
-
-
-
-
-
 /* FLEX OBJECTS */
 
 .flex_box,
@@ -71,11 +61,6 @@ OVERVIEW OF EXISTING CLASSES
   align-items: center;
   flex-direction: column;
 }
-
-
-
-
-
 
 /* BASIC WEB LAYOUT */
 
@@ -98,21 +83,21 @@ OVERVIEW OF EXISTING CLASSES
   display: flex;
   width: 100%;
 }
-.layout .window {
+.window {
   width: 100%;
   overflow: auto;
   margin: 0 15px 20px 20px;
 }
-.layout .window .view {
+.view {
   width: 100%;
   display: none;
   gap: 20px;
 }
-.layout .window .view.active {
+.view.active {
   width: 100%;
   display: grid;
 }
-.layout .window .view_item {
+.view_item {
   border-radius: 15px;
   background: var(--color-theme-contrast);
 }
@@ -127,11 +112,6 @@ OVERVIEW OF EXISTING CLASSES
 .view_item_sheader {
   font-size: 0.9em;
 }
-
-
-
-
-
 
 /* BUTTONS */
 .button,
@@ -152,12 +132,15 @@ OVERVIEW OF EXISTING CLASSES
   white-space: nowrap;
 }
 
-
 .normal_button {
   padding: 8px 25px;
   background: var(--color-first);
   color: white;
   transition: background 0.2s;
+}
+.normal_button i,
+.normal_button a {
+  color: white;
 }
 .normal_button_outline {
   background: var(--color-theme);
@@ -168,7 +151,6 @@ OVERVIEW OF EXISTING CLASSES
 .normal_button:hover {
   background: var(--color-first-hover);
 }
-
 
 .smart_button,
 .smart_button_outline {
@@ -210,10 +192,6 @@ OVERVIEW OF EXISTING CLASSES
   padding: 10px 25.5px;
 }
 
-
-
-
-
 /* ICON BUTTON */
 
 /*
@@ -232,10 +210,14 @@ OVERVIEW OF EXISTING CLASSES
   transition: width 0.2s, height 0.2s;
   background: var(--color-first);
   color: white;
-  background: linear-gradient(to right bottom, 
-    var(--color-first), var(--color-first-hover), 
-    var(--color-first), var(--color-first-hover),
-    var(--color-first));
+  background: linear-gradient(
+    to right bottom,
+    var(--color-first),
+    var(--color-first-hover),
+    var(--color-first),
+    var(--color-first-hover),
+    var(--color-first)
+  );
   transition: background 0.5s, animation 0.5s;
   background-size: 500% 500%;
 }
@@ -272,7 +254,6 @@ OVERVIEW OF EXISTING CLASSES
   opacity: 0;
 }
 
-
 .create_button,
 .delete_button {
   background: transparent;
@@ -288,7 +269,6 @@ OVERVIEW OF EXISTING CLASSES
   color: rgb(255, 0, 0);
   font-size: 27px;
 }
-
 
 .symbol_button {
   height: 50px;
@@ -307,11 +287,6 @@ OVERVIEW OF EXISTING CLASSES
   color: var(--color-reverse);
 }
 
-
-
-
-
-
 /* ANIMATED ARROW BUTTON */
 
 /*
@@ -326,10 +301,14 @@ OVERVIEW OF EXISTING CLASSES
 
 .button_animated {
   border-radius: 10px;
-  background: linear-gradient(to right bottom, 
-    var(--color-first), var(--color-first-hover), 
-    var(--color-first), var(--color-first-hover),
-    var(--color-first));
+  background: linear-gradient(
+    to right bottom,
+    var(--color-first),
+    var(--color-first-hover),
+    var(--color-first),
+    var(--color-first-hover),
+    var(--color-first)
+  );
   transition: background 0.5s, animation 0.5s;
   padding: 32px;
   border: none;
@@ -346,7 +325,7 @@ OVERVIEW OF EXISTING CLASSES
     background-position: 250% 250%;
   }
   100% {
-      background-position: 0% 0%;
+    background-position: 0% 0%;
   }
 }
 .button_animated .button_arrow {
@@ -391,13 +370,9 @@ OVERVIEW OF EXISTING CLASSES
   transform: rotate(-45deg) translate(5px, 5px);
 }
 
-
-
-
-
 /* DJANGO FLASH MESSAGES */
 
- /*
+/*
 {% if messages %}
 <ul class="messages">
   {% for message in messages %}
@@ -412,11 +387,6 @@ OVERVIEW OF EXISTING CLASSES
   text-align: center;
   font-size: 0.8em;
 }
-
-
-
-
-
 
 /* ARROW BACK */
 
@@ -453,11 +423,6 @@ OVERVIEW OF EXISTING CLASSES
   color: white;
 }
 
-
-
-
-
-
 /* EFFECTS */
 
 .effect::before {
@@ -488,11 +453,6 @@ OVERVIEW OF EXISTING CLASSES
   transform-origin: 0% 50%;
   transform: scaleX(1);
 }
-
-
-
-
-
 
 /* INPUTFIELDS */
 
@@ -553,11 +513,6 @@ OVERVIEW OF EXISTING CLASSES
   -webkit-text-fill-color: var(--color-reverse);
 }
 
-
-
-
-
-
 /* EXTENDED INPUT FIELD => ACCOUNT FIELD */
 
 /*
@@ -578,11 +533,6 @@ OVERVIEW OF EXISTING CLASSES
   color: var(--color-text-theme);
   margin: 0 0 3px 10px;
 }
-
-
-
-
-
 
 /* LAYOUT FOR MESSAGE */
 
@@ -611,12 +561,6 @@ OVERVIEW OF EXISTING CLASSES
 .message_field button {
   margin: 20px;
 }
-
-
-
-
-
-
 
 /* INFO HOVER FIELD */
 
@@ -666,11 +610,6 @@ OVERVIEW OF EXISTING CLASSES
   display: flex;
 }
 
-
-
-
-
-
 /* OBJECTS */
 
 .circle {
@@ -680,11 +619,6 @@ OVERVIEW OF EXISTING CLASSES
   border-radius: 50%;
   background: var(--color-first);
 }
-
-
-
-
-
 
 /* HAMBURGER */
 
@@ -719,11 +653,6 @@ OVERVIEW OF EXISTING CLASSES
 .hamburger_line_active3 {
   transform: rotate(-45deg) translate(6.2px, -6.2px);
 }
-
-
-
-
-
 
 /* COLOR GRADIENTS */
 .red-gradient,
@@ -800,11 +729,6 @@ OVERVIEW OF EXISTING CLASSES
   );
   box-shadow: 0 10px 20px rgba(140, 0, 255, 0.4);
 }
-
-
-
-
-
 
 /* PAGE LOADING ANIMATION */
 

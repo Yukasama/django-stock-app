@@ -13,9 +13,6 @@ function eventHandler(eventElement, showElement, event="mouseover", action="show
     }
 }
 
-let hello = "hello"
-console.log("${hello}")
-
 var navbar = document.querySelector(".navbar");
 var background_blur = document.querySelector(".background_blur");
 

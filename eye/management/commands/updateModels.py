@@ -343,7 +343,7 @@ def DataTransfer(ticker, skip=False, download=False):
 
 
 
-def pushHistory(tickers):
+def PushHistory(tickers):
     if len(tickers) > 1:
         for ticker in tickers:
             
@@ -363,10 +363,11 @@ def pushHistory(tickers):
                 History(
                     symbol=symbol,
                     date=d,
+                    ticker=ticker,
                     openPrice=o,
-                    high=h,
-                    low=l,
-                    close=c,
+                    highPrice=h,
+                    lowPrice=l,
+                    closePrice=c,
                     volume=v,
                 ).save()
 
@@ -382,8 +383,8 @@ class Command(BaseCommand):
         if (single == False):
             tickers = dt.T_SP500
             for ticker in tickers:
-                #DataTransfer(ticker, False, False)
-                pushHistory(tickers)
+                DataTransfer(ticker, False, False)
+                #PushHistory(tickers)
         else:
             ticker = "CTVA"
             DataTransfer(ticker, True)

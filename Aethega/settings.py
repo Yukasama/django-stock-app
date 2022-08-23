@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'eye.apps.EyeConfig',
     'home.apps.HomeConfig',
     'support.apps.SupportConfig',
+    'frontend.apps.FrontendConfig',
     
     'django_extensions',
     'import_export',
@@ -56,7 +57,7 @@ MIDDLEWARE = [
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, '../frontend')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -85,6 +86,7 @@ ROOT_URLCONF = 'Aethega.urls'
 
 WSGI_APPLICATION = 'Aethega.wsgi.application'
 
+DJANGO_SETTINGS_MODULE = "Aethega/settings.py"
 
 
 # Database
@@ -169,6 +171,10 @@ ACCOUNT_EMAIL_VERIFICATION = "none"
 #STATIC CONFIGURATION
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, '../design/build/static'),
+]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "")
 

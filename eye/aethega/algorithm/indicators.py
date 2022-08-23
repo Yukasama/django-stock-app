@@ -30,15 +30,14 @@ class Indicator():
         date = pd.DataFrame(self.date)
         close = pd.DataFrame(self.close)
         result = date.join(close)
-        return result
+        return result["Close"]
     
     def graph(self):
         date = pd.DataFrame(self.date)
         close = pd.DataFrame(self.close)
         result = date.join(close)
-        print(result)
-        offshore = result.iloc[start, end]
-        return result["Date"], result["Close"]
+        #offshore = result.iloc[start, end]
+        return pd.Series(result["Date"]).to_list(), pd.Series(result["Close"]).to_list()
     
     
 class RSI(Indicator):

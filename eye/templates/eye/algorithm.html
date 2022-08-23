@@ -4,45 +4,79 @@
 
 <link rel="stylesheet" href="{% static 'eye/css/algorithm.css' %}">
 
-<div class="algorithm view grid_system">
-  <div class="algorithm_buttons view_item"></div>
-  <div class="algorithm_graph view_item">
-    <canvas class="algorithm_canvas"></canvas>
+<div class="algorithm view active flex">
+  <div class="algorithm_control flex view_item">
+    <div class="algorithm_buttons flex">
+      <div class="algorithm_button normal_button start_button flex">
+        <i class="fa-solid fa-play"></i>
+        <a>Start</a>
+      </div>
+      <div class="algorithm_button normal_button pause_button flex">
+        <i class="fa-solid fa-pause"></i>
+        <a>Pause</a>
+      </div>
+      <div class="algorithm_button normal_button end_button flex">
+        <i class="fa-solid fa-stop"></i>
+        <a>Stop</a>
+      </div>
+    </div>
+    <div class="algorithm_buttons flex">
+      <div class="algorithm_button normal_button flex">
+        <i class="fa-solid fa-plus"></i>
+        <a>Indicators</a>
+      </div>
+      <div class="algorithm_button normal_button flex">
+        <i class="fa-solid fa-plus"></i>
+        <a>Financials</a>
+      </div>
+      <div class="algorithm_button normal_button flex">
+        <i class="fa-solid fa-plus"></i>
+        <a>Orders</a>
+      </div>
+    </div>
   </div>
-  <div class="algorithm_list view_item"></div>
+
+  <div class="algorithm_graph_container flex border">
+    <div class="algorithm_graph view_item">
+      <canvas class="algorithm_canvas"></canvas>
+    </div>
+    <div class="algorithm_list view_item">
+      <div class="algorithm_list_item flex">
+        <div class="algorithm_list_container">
+          <p class="algorithm_list_text">RSI</p>
+          <p class="algorithm_list_desc">Relative Strength Index</p>
+        </div>
+        <p class="algorithm_list_text">70.12</p>
+      </div>
+      <div class="algorithm_list_item"></div>
+      <div class="algorithm_list_item"></div>
+    </div>
+  </div>
+
   <div class="algorithm_performance view_item"></div>
-  <div class="algorithm_control view_item"></div>
 </div>
 
 
 <script>
-  const rsi = JSON.parse("{{RSI|safe}}");
-  const wpr = JSON.parse("{{WPR|safe}}");
-  const history = JSON.parse("{{history|safe}}");
+  //333
+  const closePrice = JSON.parse("{{close|safe}}")
+  const date = "{{date|safe}}"
 
   const algorithm_canvas = document.querySelector(".algorithm_canvas").getContext("2d");
   const algorithm_canvas1 = new Chart(algorithm_canvas, {
     type: "line",
     data: {
+      labels: date,
       datasets: [{
-        label: "RSI",
-        data: rsi,
-        backgroundColor: "rgb(0, 110, 255)",
-        borderColor: "rgb(0, 110, 255)",
-      }, {
-        label: "WPR",
-        data: wpr,
-        backgroundColor: "red",
-        borderColor: "red",
-      }, {
         label: "Price",
-        data: history,
-        backgroundColor: "yellow",
-        borderColor: "yellow",
+        data: closePrice,
+        backgroundColor: "cyan",
+        borderColor: "cyan",
       }
     ],},
     options: chartConfig(),
   });
+
 </script>
 
 {% endblock %}

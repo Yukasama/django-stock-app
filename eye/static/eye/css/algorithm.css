@@ -1,19 +1,64 @@
-.algorithm_buttons {
-  grid-area: algorithm_buttons;
-}
-.algorithm_graph {
-  grid-area: algorithm_graph;
-}
-.algorithm_list {
-  grid-area: algorithm_list;
+.algorithm {
+  width: 100%;
+  flex-direction: column;
 }
 
-.algorithm {
-  grid-template-areas:
-    "algorithm_buttons algorithm_buttons algorithm_buttons"
-    "algorithm_graph algorithm_graph algorithm_list";
+.algorithm_control {
+  justify-content: space-between;
 }
+.algorithm_buttons:first-of-type {
+  margin-left: 30px;
+}
+.algorithm_buttons:nth-of-type(2) {
+  margin-right: 30px;
+}
+.algorithm_button {
+  height: 50px;
+  gap: 10px;
+  margin: 30px;
+}
+.algorithm_button i {
+  font-size: 22px;
+}
+.algorithm_button a {
+  font-size: 15px;
+}
+.start_button {
+  background: rgb(40, 177, 40);
+}
+.start_button:hover {
+  background: rgb(2, 107, 2);
+}
+.pause_button {
+  background: rgb(219, 190, 0);
+}
+.pause_button:hover {
+  background: rgb(125, 123, 0);
+}
+.end_button {
+  background: rgb(221, 19, 19);
+}
+.end_button:hover {
+  background: rgb(122, 10, 10);
+}
+
 .algorithm_graph {
-  height: 300px;
-  width: 40%;
+  flex: 1;
+}
+.algorithm_canvas {
+  transform: scale(0.95);
+}
+
+.algorithm_list {
+  flex: 0.3;
+}
+.algorithm_list_container {
+  margin-right: 20px;
+}
+.algorithm_list_text {
+  font-size: 1.1em;
+}
+.algorithm_list_desc {
+  font-size: 0.9em;
+  color: var(--color-text-theme);
 }

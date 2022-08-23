@@ -1,6 +1,7 @@
 from django.db import models
-from django.contrib.auth.models import User, AbstractBaseUser, BaseUserManager
 from Aethega import settings
+
+from django.contrib.auth.models import User, AbstractBaseUser, BaseUserManager
 import os
 
 class AccountManager(BaseUserManager):

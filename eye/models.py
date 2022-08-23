@@ -317,7 +317,7 @@ class ShortFinancial(models.Model):
 class History(models.Model):
     
     symbol = models.ForeignKey(Stock, on_delete=models.CASCADE)
-    ticker = models.CharField(max_length=10, primary_key=True)
+    ticker = models.CharField(max_length=10, null=True, blank=True)
     updated = models.DateTimeField(auto_now=True)
     
     date = models.DateField(null=True, blank=True)
@@ -326,6 +326,7 @@ class History(models.Model):
     lowPrice = models.FloatField(null=True, blank=True)
     closePrice = models.FloatField(null=True, blank=True)
     closePct = models.FloatField(null=True, blank=True)
+    volume = models.FloatField(null=True, blank=True)
     
     def __str__(self):
         return self.ticker
