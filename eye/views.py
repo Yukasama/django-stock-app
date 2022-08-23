@@ -111,7 +111,7 @@ def symbol(request, symbol):
     try: data["recommendationMean"] = round(1 - (data["recommendationMean"] - 1) / (5 - 1), 3)
     except: data["recommendationMean"] = "N/A"
     data["page"] = page
-    data["TAR"] = ca(data["ticker"]).TAR()
+    data["TAR"] = json.dumps(ca(data["ticker"]).TAR())
     return render(request, 'eye/symbol.html', data)
 
 

@@ -6,7 +6,7 @@ sys.path.append(MODULE_DIR)
 from data.datahandler import *
 from algorithm.indicators import *
 import pandas as pd, numpy as np
-from .models import Financial
+# from .models import Financial
 import statistics as stat
 
 
@@ -114,8 +114,17 @@ class Calculator():
             return result
         
         
-    def FAR(weightedAverage=True, sectorBalancing=False):
-        pass
-    
+    def FAR(weightedAverage=True, sectorBalancing=False, timeFluence=True, averageDeviation=False, allowForecast=False):
+        def valueFunction(value):
+            
+            #Value Register
+            #Returns: Value => [Worst, Best, Limit]
+            values = {
+                "peRatio": [-20, 15, 50]
+            }
+            
+            return values[value]
 
-print(Calculator("MSFT").TAR())
+        return valueFunction("peRatio")
+
+print(Calculator("AAL").FAR()[0])

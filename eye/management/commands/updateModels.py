@@ -30,10 +30,9 @@ def DataTransfer(ticker, skip=False, download=False):
     #Skip Data if it already exists
     elif Financial.objects.filter(verification=f'{ticker}, 2021').exists() and skip == True:
         print(f"{ticker} Data already exists => Skipped")
-        return 0      
+        return 0     
     
-    
-    #Continue with Loop
+    #Insert Data into Database
     try:
   
         #Execution Timer

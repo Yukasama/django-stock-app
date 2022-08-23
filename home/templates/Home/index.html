@@ -23,6 +23,11 @@
 
 
   <div class="nav_container nav_container3 flex">
+    <div class="webmode_container flex">
+      <i class="material-icons webmode webmode_dark">brightness_2</i>
+      <i class="material-icons webmode webmode_light">brightness_7</i>
+    </div>
+
     {% if user.is_authenticated %}
     <div class="profile flex_box">
       <img class="profile_img1" src="{{request.user.profile_image.url}}" alt="Profile Image">
@@ -32,16 +37,12 @@
       <a href="{% url 'signup' %}" class="nav_link sign_up smart_button">Sign Up</a>
     {% endif %}
 
-    <div class="webmode_container flex">
-      <i class="material-icons webmode webmode_dark">brightness_2</i>
-      <i class="material-icons webmode webmode_light">brightness_7</i>
-    </div>
     {% if user.is_authenticated %}
     <div class="profile_wrapper flex">
       <div class="profile_container flex">
         <div class="profile_link1 flex">
           <div class="profile_img_c">
-            <img class="profile_img2" src="{{request.user.profile_image.url}}">
+            <img class="profile_img1" src="{{request.user.profile_image.url}}">
           </div>
           <div class="profile_text_c flex_box">
             <p class="profile_text profile_username" href="">{{request.user}}</a> <br>
@@ -50,22 +51,42 @@
         </div>
 
         <div class="profile_separator"></div>
+        
+        <div class="profile_link_container">
+          <div class="profile_link flex">
+            <i class="material-icons profile_icon">insert_chart</i>
+            <a href="{% url 'portfolio' %}" class="profile_text">Portfolios</a>
+          </div>
+        </div>
+        <div class="profile_link_container">
+          <div class="profile_link flex">
+            <i class="material-icons profile_icon">dashboard</i>
+            <a href="{% url 'account' %}" class="profile_text">Posts</a>
+          </div>
+        </div>
+        <div class="profile_link_container">
+          <div class="profile_link flex">
+            <i class="material-icons profile_icon">flag</i>
+            <a href="{% url 'help' %}" class="profile_text">Help</a>
+          </div>
+        </div>
 
-        <div class="profile_link flex">
-          <i class="material-icons profile_icon">insert_chart</i>
-          <a href="{% url 'portfolio' %}" class="profile_text">Portfolios</a>
+        <div class="profile_separator"></div>
+
+        <div class="profile_link_container">
+          <div class="profile_link webmode_container2 flex">
+            <div class="webmode_profile">
+              <i class="material-icons profile_icon webmode_dark_profile">brightness_2</i>
+              <i class="material-icons profile_icon webmode_light_profile">brightness_7</i>
+            </div>
+            <a class="profile_text">Dark&nbspMode</a>
+          </div>
         </div>
-        <div class="profile_link flex">
-          <i class="material-icons profile_icon">dashboard</i>
-          <a href="{% url 'account' %}" class="profile_text">Posts</a>
-        </div>
-        <div class="profile_link flex">
-          <i class="material-icons profile_icon">flag</i>
-          <a href="{% url 'help' %}" class="profile_text">Help</a>
-        </div>
-        <div class="profile_link flex">
-          <i class="material-icons profile_icon">exit_to_app</i>
-          <a href="{% url 'logout' %}" class="profile_text">Logout</a>
+        <div class="profile_link_container">
+          <div class="profile_link flex">
+            <i class="material-icons profile_icon">exit_to_app</i>
+            <a href="{% url 'logout' %}" class="profile_text">Logout</a>
+          </div>
         </div>
       </div>
     </div>

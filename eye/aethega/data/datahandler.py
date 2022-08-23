@@ -94,12 +94,12 @@ def economicData():
 #-------------------------------------------------------------------------------------------------------------------
 
 
-def dataPush(tickerAsArray, pushRate=5, skipMode=True, single=0):
+def dataPush(ticker, single=0, pushRate=5, skipMode=True):
         
     #Count Errors => End Loop if Limit Reach
     request_error = 0
     
-    for t in tickerAsArray:
+    for t in ticker:
         
         #Defining Variables
         ticker = yf.Ticker(t)

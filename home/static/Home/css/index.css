@@ -119,12 +119,13 @@
 .profile img {
   height: 100%;
   width: 100%;
+  transform: scale(0.8);
   border-radius: 50%;
 }
 .profile_wrapper {
   position: fixed;
   top: 30px;
-  right: 4%;
+  right: 2%;
   width: 250px;
   display: none;
   height: 400px;
@@ -135,10 +136,10 @@
   width: 250px;
   box-shadow: 0 10px 20px var(--color-block-shadow);
   border-radius: 10px;
-  padding: 5px 0 10px 0;
   overflow: hidden;
   flex-direction: column;
   background: var(--color-theme);
+  padding: 5px;
 }
 .profile_wrapper.show {
   display: flex;
@@ -153,6 +154,7 @@
 .profile_img_c img {
   height: 100%;
   width: 40px;
+  transform: scale(0.8);
   border-radius: 50%;
 }
 .profile_username {
@@ -162,14 +164,23 @@
 
 .profile_separator {
   height: 1px;
-  background: gray;
+  background: var(--color-theme-contrast);
   margin: 5px 0;
 }
 
-.profile_link {
-  cursor: pointer;
+.profile_link_container {
+  height: 41px;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  cursor: pointer;
   width: 100%;
+}
+.profile_link {
+  width: 95%;
+  align-items: center;
+  border-radius: 5px;
+  height: 40px;
 }
 .profile_link:hover {
   background: var(--color-light);
@@ -213,15 +224,20 @@
   color: var(--color-reverse);
   transition: transform 0.3s;
 }
+
 .webmode_container:hover > .webmode {
   color: var(--color-first);
 }
 .webmode_dark,
-.webmode_light {
+.webmode_light, 
+.webmode_dark_profile,
+.webmode_light_profile {
   opacity: 0;
 }
 .webmode_dark.hide_dark,
-.webmode_light.hide_dark {
+.webmode_light.hide_dark,
+.webmode_dark_profile.hide_dark,
+.webmode_light_profile.hide_dark {
   opacity: 1;
 }
 .webmode_dark.hide_dark {
@@ -229,6 +245,15 @@
 }
 .webmode_light.hide_dark {
   transform: translate(0, -15px);
+}
+.webmode_dark_profile.hide_dark {
+  transform: translate(0, 22px);
+}
+.webmode_light_profile.hide_dark {
+  transform: translate(0, -22px);
+}
+.profile_link:hover .webmode_profile i {
+  color: var(--color-first);
 }
 
 /* SIDENAVBAR */

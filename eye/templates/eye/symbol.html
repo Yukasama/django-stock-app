@@ -392,9 +392,9 @@
   const dividendYield = JSON.parse("{{dividendYield|safe}}");
   const payoutRatio = JSON.parse("{{payoutRatio|safe}}");
 
-  const eye_amount = JSON.parse("{{eye|safe}}");
+  const tar = "{{TAR|safe}}"
   const progressed = document.querySelector(".progressed");
-  progressed.style.width = eye_amount * 100 + "%";
+  progressed.style.width = tar * 100 + "%";
 
 
 

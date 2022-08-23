@@ -10,7 +10,7 @@
   --color-reverse-light: rgb(95, 95, 95);
   --color-blur: rgba(255, 255, 255, 0.6);
   --color-blur2: rgba(255, 255, 255, 0.9);
-  --color-block-shadow: rgba(17, 17, 17, 0.2);
+  --color-block-shadow: rgba(240, 240, 240, 0.2);
   --color-hover: rgb(236, 236, 236);
   --color-text-theme: rgb(160, 160, 160);
 
@@ -47,7 +47,7 @@
   --color-reverse-light: rgb(209, 209, 209);
   --color-blur: rgba(0, 0, 0, 0.6);
   --color-blur2: rgba(0, 0, 0, 0.9);
-  --color-block-shadow: rgba(255, 255, 255, 0.1);
+  --color-block-shadow: rgba(20, 20, 20, 0.1);
   --color-text-theme: rgb(112, 112, 112);
 
   --color-first-hover: rgb(10, 71, 161);
