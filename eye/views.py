@@ -7,18 +7,10 @@ from eye.aethega.data import datahandler as dt
 from eye.aethega.analysis.calculations import Calculator as ca
 from eye.forms import PortfolioForm
 from django.core import serializers
-import pandas as pd
+import pandas as pd, numpy as np
 from collections import defaultdict
 from django.core.mail import send_mail
 import json
-import dateutil.parser as parser
-
-import sys
-from pathlib import Path
-
-BASE_DIR = Path(__file__).resolve().parent.parent
-sys.path.append(BASE_DIR)
-
 from eye.aethega.algorithm import indicators as ic
 
 
@@ -112,6 +104,8 @@ def symbol(request, symbol):
     except: data["recommendationMean"] = "N/A"
     data["page"] = page
     data["TAR"] = json.dumps(ca(data["ticker"]).TAR())
+    data["FAR"] = json.dumps(ca(data["ticker"]).FAR())
+    data["EYE"] = json.dumps(round((float(data["TAR"]) + float(data["FAR"])) / 2, 3))
     return render(request, 'eye/symbol.html', data)
 
 

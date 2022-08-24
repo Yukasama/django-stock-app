@@ -1,13 +1,8 @@
-import sys
-from pathlib import Path
-MODULE_DIR = str(Path(__file__).resolve().parent.parent)
-sys.path.append(MODULE_DIR)
-
-from data.datahandler import *
 from algorithm.indicators import *
 import pandas as pd, numpy as np
 # from .models import Financial
 import statistics as stat
+from data.datahandler import *
 
 
 """
@@ -125,6 +120,7 @@ class Calculator():
             
             return values[value]
 
-        return valueFunction("peRatio")
+        print(valueFunction("peRatio"))
+        return 0.8
 
-print(Calculator("AAL").FAR()[0])
+print(Calculator("AAL").FAR())

@@ -225,8 +225,11 @@
 .stock_financials_t tr .row_header {
   transition: color 0.2s;
 }
-.stock_financials_t tr:hover .row_header {
-  color: var(--color-first);
+.stock_financials_t tr {
+  border: 1px solid red;
+}
+.stock_financials_t tr:hover {
+  border-bottom: var(--color-first) 1px solid;
 }
 .stock_financials_t tr th,
 .stock_financials_t tr td {

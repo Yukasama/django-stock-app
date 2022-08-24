@@ -35,7 +35,7 @@ OVERVIEW OF EXISTING CLASSES
 }
 .grid_system {
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 15px;
 }
 .transition {
   transition: 0.3s;

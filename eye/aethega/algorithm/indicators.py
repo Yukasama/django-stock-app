@@ -1,12 +1,8 @@
 #region Libraries
-import sys
 import pandas as pd, numpy as np
 import matplotlib.pyplot as plt
-from pathlib import Path
-BASE_DIR = str(Path(__file__).resolve().parent.parent)
-sys.path.append(BASE_DIR)
-from data.datahandler import *
 import talib as ta
+from data.datahandler import *
 #endregion
 
 class Indicator():
