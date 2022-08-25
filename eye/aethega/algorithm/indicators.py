@@ -12,7 +12,7 @@ class Indicator():
         self.period = period
         self.timeFrame = timeFrame
         self.shift = shift
-        self.date, self.open, self.high, self.low, self.close, self.volume = getHistory(self.symbol)
+        self.date, self.open, self.high, self.low, self.close, self.volume = DataHandler(self.symbol).getHistory()
         
     def calc(self):
         result = pd.Series(self.close)

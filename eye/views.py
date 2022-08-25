@@ -3,14 +3,19 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth.models import User
 from eye.models import Stock, Info, Financial, Portfolio, ShortFinancial, History
-from eye.aethega.data import datahandler as dt
+from eye.aethega.data.datahandler import *
 from eye.aethega.analysis.calculations import Calculator as ca
 from eye.forms import PortfolioForm
 from django.core import serializers
-import pandas as pd, numpy as np
-from collections import defaultdict
+import pandas as pd
 from django.core.mail import send_mail
 import json
+
+import sys
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent.parent
+sys.path.append(BASE_DIR)
+
 from eye.aethega.algorithm import indicators as ic
 
 
@@ -69,43 +74,15 @@ def screener(request):
 
 def symbol(request, symbol):
     page = "symbol"
-    symbol = Stock.objects.get(symbol=symbol)
-    data, years = defaultdict(list), []
-    
-    #Create Auto-Generated Dictionary from Financial Model
-    for year in range(2015, 2022):
-        financial = Financial.objects.filter(symbol=symbol, year=year).values()[0]
-        years.append(year)
-        for key, value in financial.items():
-            keyZero = f'{key}_M'
-            if (key == "grossProfitMargin" or key == "operatingProfitMargin" or key == "netProfitMargin"): 
-                data[key].append(round(value * 100, 2)) if value != None else data[key].append(0)
-            else: 
-                try: data[key].append(round(value, 3)) if value != None else data[key].append(0)
-                except: data[key].append(value) if value != None else data[key].append(0)
-            try: data[keyZero].append(int(value / 1000000))
-            except: data[keyZero].append(value) if value != None else 0
+    data = DataHandler(symbol).stockData()
 
-    #Create Auto-Generated Dict from Info Data Model
-    info = Info.objects.filter(symbol=symbol).values()[0]
-    for key, value in info.items(): data[key] = value
-    
-    #Competitors
-    competitors = Info.objects.filter(sector=data["sector"])\
-    .order_by("marketCap").exclude(symbol=symbol)[:5]
-    data["competitors"] = competitors
-    
     #Extra Fields
-    data["years"], data["mode"] = years, "dark"
-    data["dividendYieldChecker"] = [i + i for i in data["dividendYield"]]
-    desc = data["longBusinessSummary"].split(".")
-    data["descShort"] = desc[0]+"." + desc[1]+"." + desc[2]+"."
-    try: data["recommendationMean"] = round(1 - (data["recommendationMean"] - 1) / (5 - 1), 3)
-    except: data["recommendationMean"] = "N/A"
+    data["mode"] = "dark"
     data["page"] = page
     data["TAR"] = json.dumps(ca(data["ticker"]).TAR())
     data["FAR"] = json.dumps(ca(data["ticker"]).FAR())
-    data["EYE"] = json.dumps(round((float(data["TAR"]) + float(data["FAR"])) / 2, 3))
+    data["EYE"] = round((float(data["FAR"]) + float(data["TAR"])) / 2, 3)
+    
     return render(request, 'eye/symbol.html', data)
 
 

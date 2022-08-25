@@ -61,7 +61,7 @@ class Info(models.Model):
 
     
 class Financial(models.Model):
-    
+            
     #Symbol Data
     symbol = models.ForeignKey(Stock, on_delete=models.CASCADE)
     year = models.IntegerField(db_index=True)
