@@ -2,9 +2,8 @@
 import time, os, math
 from datetime import datetime as dt
 import yfinance as yf
-import pandas as pd
+import pandas as pd, numpy as np
 import pandas_datareader.data as web
-import numpy as np
 import matplotlib.pyplot as plt
 from collections import defaultdict
 import json
@@ -21,6 +20,9 @@ T_DAX40 = pd.read_csv("Data/SymbolData/DAX40")["0"] #DAX Ticker List
 TICKERS = pd.concat([T_SP500, T_DAX40], axis=0)
 TODAY = dt.today()
 
+"""
+
+"""
 class Formatter():
     
     def isNull(self, element):
@@ -57,7 +59,6 @@ class DataHandler():
     API_KEY = "1451443e6ac73f65840c60adab375261" #ApiKey for FundamentalAnalysis
     REQUEST_COOLER = 181
     blackList = ["BBWI", "BF-B", "CARR", "CEG", "CTXS"]
-    
     
     def __init__(self, symbol):
         self.symbol = symbol
@@ -381,4 +382,18 @@ class DataHandler():
         except: data["recommendationMean"] = "N/A"
                 
         return data
+    
+    
+    
+    
+class DataModels():
+        
+    #Calculates the Sector Average of all Values
+    def sectorAverage(self):
+        
+        #Get Data Dictionary of every Stock
+        for symbol in T_SP500:
+                data = DataHandler(symbol).stockData()
+                print(symbol, data["revenue"])
+
 

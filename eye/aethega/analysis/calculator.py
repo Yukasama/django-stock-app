@@ -102,12 +102,6 @@ class Calculator():
                     "TAR": tar_array,
                 })
             return result
-        
-    
-    def stockAverage(self, filter={}):
-        
-        for ticker in T_SP500:
-            self.dataStore(ticker)
             
             
     def FAR(self, weightedAverage=True, sectorBalancing=False, timeFluence=True, averageDeviation=False, allowForecast=False):

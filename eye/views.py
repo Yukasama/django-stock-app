@@ -4,7 +4,8 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from eye.models import Stock, Info, Financial, Portfolio, ShortFinancial, History
 from eye.aethega.data.datahandler import *
-from eye.aethega.analysis.calculations import Calculator as ca
+from eye.aethega.analysis.calculator import Calculator
+from eye.aethega.algorithm import indicators as ic
 from eye.forms import PortfolioForm
 from django.core import serializers
 import pandas as pd
@@ -16,7 +17,6 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 sys.path.append(BASE_DIR)
 
-from eye.aethega.algorithm import indicators as ic
 
 
 
@@ -75,14 +75,17 @@ def screener(request):
 def symbol(request, symbol):
     page = "symbol"
     data = DataHandler(symbol).stockData()
+    sectorAvg = DataModels().sectorAverage()
 
     #Extra Fields
     data["mode"] = "dark"
     data["page"] = page
-    data["TAR"] = json.dumps(ca(data["ticker"]).TAR())
-    data["FAR"] = json.dumps(ca(data["ticker"]).FAR())
-    data["EYE"] = round((float(data["FAR"]) + float(data["TAR"])) / 2, 3)
     
+    #EYE Ratings
+    data["TAR"] = json.dumps(Calculator(data["ticker"]).TAR())
+    data["FAR"] = json.dumps(Calculator(data["ticker"]).FAR())
+    data["EYE"] = round((float(data["FAR"]) + float(data["TAR"])) / 2, 3)
+        
     return render(request, 'eye/symbol.html', data)
 
 
