@@ -75,7 +75,6 @@ def screener(request):
 def symbol(request, symbol):
     page = "symbol"
     data = DataHandler(symbol).stockData()
-    sectorAvg = DataModels().sectorAverage()
 
     #Extra Fields
     data["mode"] = "dark"

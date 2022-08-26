@@ -14,7 +14,6 @@ from eye.models import Stock, Info, Financial
 #import FundamentalAnalysis as fa
 #endregion
 
-
 T_SP500 = pd.read_csv("Data/SymbolData/S&P500")["0"] #S&P 500 Ticker List
 T_DAX40 = pd.read_csv("Data/SymbolData/DAX40")["0"] #DAX Ticker List
 TICKERS = pd.concat([T_SP500, T_DAX40], axis=0)
@@ -254,10 +253,10 @@ class DataHandler():
                 print(len(newData))
                 
 
-    def dataGet(self, symbol, value, fileName=0, year=str(TODAY.year - 1), output=False):
+    def dataGet(self, value, fileName=0, year=str(TODAY.year - 1), output=False):
         
-        def calc(symbol, value, fileName, year, output):
-            t = symbol.upper()
+        def calc(value, fileName, year, output):
+            t = self.symbol.upper()
             
             #Error Checking
             if (Formatter().isNull(t)):
@@ -315,16 +314,16 @@ class DataHandler():
                             return result
                         except: continue
 
-        if len(symbol) == 1 or type(symbol) == str:
+        if len(self.symbol) == 1 or type(self.symbol) == str:
             try: 
-                result = calc(symbol, value, fileName, year, output)
+                result = calc(value, fileName, year, output)
                 return result
             except Exception as e: print("Error: " + str(e))
         
-        elif len(symbol) > 1:
+        elif len(self.symbol) > 1:
             dataArray, tickerArray = [], []
             for t in ticker: 
-                result = calc(symbol, value, fileName, year, output)
+                result = calc(value, fileName, year, output)
                 dataArray.append(result)
                 tickerArray.append(t)    
             
@@ -339,7 +338,7 @@ class DataHandler():
 
     #Returns Open, High, Low, Close, Volume Array
     def getHistory(self):
-        history = self.dataGet(self.symbol, 0, "history")
+        history = self.dataGet(0, "history")
         return (history["Date"], history["Open"], history["High"],
                 history["Low"], history["Close"], history["Volume"])
         
@@ -389,11 +388,20 @@ class DataHandler():
 class DataModels():
         
     #Calculates the Sector Average of all Values
-    def sectorAverage(self):
+    def stockAverage(self, filter="country"):
         
-        #Get Data Dictionary of every Stock
+        #Dictionary => Filter: [Stocks]
+        stockDict = {}
         for symbol in T_SP500:
-                data = DataHandler(symbol).stockData()
-                print(symbol, data["revenue"])
+            try:
+                info = DataHandler(symbol).dataGet(filter, "info")
+                stockDict[info].append(symbol)
+            except:
+                stockDict[info] = [symbol]
+                
+        #Dictionary => Filter_Metric_Year: Value
+        
 
+        print(stockDict)
 
+DataModels().stockAverage()
