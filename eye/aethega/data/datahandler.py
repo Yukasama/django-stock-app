@@ -6,6 +6,7 @@ import pandas as pd, numpy as np
 import pandas_datareader.data as web
 import matplotlib.pyplot as plt
 from collections import defaultdict
+from statistics import mean
 import json
 from eye.models import Stock, Info, Financial
 #import pandas_datareader.nasdaq_trader as nas
@@ -391,7 +392,19 @@ class DataModels():
   def stockAverage(self, filter="sector"):
     
     def listAverage(listOfLists):
-      pass
+      result = []
+
+      #Check if Lists have the same length
+      listLength, firstListLen = [], listOfLists[0]
+      for li in listOfLists:
+        listLength.append(len(li))
+      if not mean(listLength) == len(firstListLen):
+        return None
+      
+      for li, i in zip(listOfLists, range(0, firstListLen + 1)):
+        li[i]
+      
+      
       
     #Dictionary => Filter: [Stocks]
     StocksFiltered = {}
@@ -420,7 +433,5 @@ class DataModels():
       except:
         pass
           
-    print(len(AveragesFiltered["Technology_revenue"]))
-    print(len(StocksFiltered["Technology"]))
 
 DataModels().stockAverage()
