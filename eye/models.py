@@ -311,6 +311,14 @@ class ShortFinancial(models.Model):
     
     def __str__(self):
         return self.verification
+    
+    
+    
+    
+    
+class Averages(models.Model):
+    pass
+    
 
 
 

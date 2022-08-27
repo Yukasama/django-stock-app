@@ -434,6 +434,7 @@
   flex-direction: column;
   align-items: space-around;
   justify-content: space-around;
+  transition: height 0.3s;
 }
 .footer_wrapper {
   height: 80%;

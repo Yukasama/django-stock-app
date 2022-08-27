@@ -194,7 +194,7 @@
   justify-content: space-between;
 }
 .stock_chart_item {
-  width: 32.5%;
+  width: 32.7%;
 }
 .stock_margins_chart,
 .stock_metrics_chart,
@@ -301,7 +301,7 @@
     flex-direction: column;
   }
   .stock_charts {
-    gap: 20px;
+    gap: 12px;
     flex-direction: column;
   }
   .stock_chart_item {

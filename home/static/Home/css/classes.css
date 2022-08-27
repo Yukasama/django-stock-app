@@ -35,7 +35,7 @@ OVERVIEW OF EXISTING CLASSES
 }
 .grid_system {
   display: grid;
-  grid-gap: 15px;
+  grid-gap: var(--gap);
 }
 .transition {
   transition: 0.3s;
@@ -86,25 +86,25 @@ OVERVIEW OF EXISTING CLASSES
 .window {
   width: 100%;
   overflow: auto;
-  margin: 0 15px 20px 20px;
+  margin: 0 var(--gap) var(--gap) var(--gap);
 }
 .view {
   width: 100%;
   display: none;
-  gap: 20px;
+  gap: var(--gap);
 }
 .view.active {
   width: 100%;
   display: grid;
 }
 .view_item {
-  border-radius: 15px;
+  border-radius: var(--border-radius);
   background: var(--color-theme-contrast);
 }
 .view_header,
 .view_item_sheader {
   color: var(--color-text-theme);
-  margin: 10px;
+  margin: 12px;
 }
 .view_header {
   text-transform: uppercase;

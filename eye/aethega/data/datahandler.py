@@ -387,21 +387,40 @@ class DataHandler():
     
 class DataModels():
         
-    #Calculates the Sector Average of all Values
-    def stockAverage(self, filter="country"):
-        
-        #Dictionary => Filter: [Stocks]
-        stockDict = {}
-        for symbol in T_SP500:
-            try:
-                info = DataHandler(symbol).dataGet(filter, "info")
-                stockDict[info].append(symbol)
-            except:
-                stockDict[info] = [symbol]
-                
-        #Dictionary => Filter_Metric_Year: Value
-        
-
-        print(stockDict)
+  #Calculates the Sector Average of all Values
+  def stockAverage(self, filter="sector"):
+    
+    def listAverage(listOfLists):
+      pass
+      
+    #Dictionary => Filter: [Stocks]
+    StocksFiltered = {}
+    for symbol in T_SP500:
+      try:
+        info = DataHandler(symbol).dataGet(filter, "info")
+        StocksFiltered[info].append(symbol)
+      except:
+        StocksFiltered[info] = [symbol]
+          
+    #Dictionary => Filter_Metric: ValueArray
+    AveragesFiltered = {}
+    for key, symbolList in StocksFiltered.items():
+      try:
+        for symbol in symbolList:
+          try:
+            stockData = DataHandler(symbol).stockData()
+            for metric, value in stockData.items():
+              if "_M" in metric: continue
+              try:
+                AveragesFiltered[f"{key}_{metric}"].append(value)
+              except:
+                AveragesFiltered[f"{key}_{metric}"] = [value]
+          except:
+            pass   
+      except:
+        pass
+          
+    print(len(AveragesFiltered["Technology_revenue"]))
+    print(len(StocksFiltered["Technology"]))
 
 DataModels().stockAverage()
