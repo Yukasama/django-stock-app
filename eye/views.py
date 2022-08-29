@@ -128,3 +128,9 @@ def algorithm(request):
     }
     
     return render(request, "eye/algorithm.html", data)
+
+
+
+def neuralNetwork(request):
+    
+    return render(request, "eye/neuralnetwork.html")

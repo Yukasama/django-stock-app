@@ -1,0 +1,28 @@
+{% extends "home/index.html" %}
+
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'eye/css/neuralnetwork.css' %}">
+
+
+<div class="canvasContainer">
+  <canvas id="carCanvas"></canvas>
+  <div class="verticalButtons flex">
+    <button class="normal_button" onclick="save()">Save</button>
+    <button class="normal_button" onclick="discard()">Discard</button>
+  </div>
+  <canvas id="networkCanvas"></canvas>
+</div>
+
+
+<script src="{% static 'eye/js/selfdrivingcar/neuralnetwork.js' %}"></script>
+<script src="{% static 'eye/js/selfdrivingcar/visualizer.js' %}"></script>
+<script src="{% static 'eye/js/selfdrivingcar/utils.js' %}"></script>
+<script src="{% static 'eye/js/selfdrivingcar/sensor.js' %}"></script>
+<script src="{% static 'eye/js/selfdrivingcar/road.js' %}"></script>
+<script src="{% static 'eye/js/selfdrivingcar/controls.js' %}"></script>
+<script src="{% static 'eye/js/selfdrivingcar/car.js' %}"></script>
+<script src="{% static 'eye/js/selfdrivingcar/main.js' %}"></script>
+
+{% endblock %}
