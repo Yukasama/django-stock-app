@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Spectral&display=swap");
+
+/* This file includes all settings, classes and styles of pre-edited elements */
+
+/* SETTINGS */
+:root {
+  --color-theme: white;
+  --color-reverse: black;
+  --color-light: rgb(236, 236, 236);
+  --color-reverse-light: rgb(95, 95, 95);
+  --color-blur: rgba(255, 255, 255, 0.6);
+  --color-blur2: rgba(255, 255, 255, 0.9);
+  --color-block-shadow: rgba(240, 240, 240, 0.2);
+  --color-hover: rgb(236, 236, 236);
+  --color-text-theme: rgb(160, 160, 160);
+
+  --color-theme-contrast: rgb(243, 243, 243);
+
+  --color-first: rgb(19, 98, 218);
+  --color-first-hover: rgb(10, 71, 161);
+  --color-second: rgb(2, 184, 93);
+  --color-third: rgb(156, 14, 221);
+  --color-first-light: rgba(19, 98, 218, 0.4);
+  --color-rainbow: linear-gradient(red, yellow, green, blue, purple, pink);
+
+  --height-navbar: 90px;
+  --width-sidebar: 210px;
+
+  --font-size-navbar: 1em;
+  --font-size-text: 1em;
+  --font-size-header: 1.5em;
+  --font-weight: 400;
+
+  --border-radius: 15px;
+  --gap: 12px;
+
+  /* EXTRA COLORS */
+  --image-background: rgb(216, 216, 216);
+  --image-edit: rgba(182, 182, 182, 0.8);
+  --color-divider: rgb(212, 212, 212);
+}
+.dark {
+  --color-first: rgb(19, 145, 218);
+  --color-first-hover: rgb(13, 95, 218);
+  --color-theme: rgb(20, 20, 20);
+  --color-reverse: white;
+  --color-light: rgb(35, 35, 35);
+  --color-reverse-light: rgb(209, 209, 209);
+  --color-blur: rgba(0, 0, 0, 0.6);
+  --color-blur2: rgba(0, 0, 0, 0.9);
+  --color-block-shadow: rgba(20, 20, 20, 0.1);
+  --color-text-theme: rgb(112, 112, 112);
+
+  --color-first-hover: rgb(10, 71, 161);
+
+  --color-theme-contrast: rgb(25, 25, 25);
+
+  /* EXTRA COLORS */
+  --image-background: rgb(46, 46, 46);
+  --image-edit: rgb(20, 20, 20, 0.6);
+  --color-divider: rgb(61, 61, 61);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  list-style: none;
+  text-decoration: none;
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight);
+  font-family: "Poppins", sans-serif;
+  transition: 0;
+  scroll-behavior: smooth;
+
+  color: var(--color-reverse);
+}
+body {
+  min-height: 0;
+  overflow-x: hidden;
+  background: var(--color-theme);
+}

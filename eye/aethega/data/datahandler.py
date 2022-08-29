@@ -6,9 +6,10 @@ import pandas as pd, numpy as np
 import pandas_datareader.data as web
 import matplotlib.pyplot as plt
 from collections import defaultdict
-from statistics import mean
+from statistics import mean, median
 import json
 from eye.models import Stock, Info, Financial
+from core.utils import listAverage
 #import pandas_datareader.nasdaq_trader as nas
 #from pandas_datareader import wb
 #import yahoo_fin.stock_info as si
@@ -382,42 +383,25 @@ class DataHandler():
         except: data["recommendationMean"] = "N/A"
                 
         return data
-    
-    
-    
-    
+      
+      
 class DataModels():
         
-  #Calculates the Sector Average of all Values
+  #Calculates the Sector Average of all Values with 3 Steps (Dictionaries)
   def stockAverage(self, filter="sector"):
     
-    def listAverage(listOfLists):
-      result = []
-
-      #Check if Lists have the same length
-      listLength, firstListLen = [], listOfLists[0]
-      for li in listOfLists:
-        listLength.append(len(li))
-      if not mean(listLength) == len(firstListLen):
-        return None
-      
-      for li, i in zip(listOfLists, range(0, firstListLen + 1)):
-        li[i]
-      
-      
-      
     #Dictionary => Filter: [Stocks]
-    StocksFiltered = {}
+    stocksFiltered = {}
     for symbol in T_SP500:
       try:
         info = DataHandler(symbol).dataGet(filter, "info")
-        StocksFiltered[info].append(symbol)
+        stocksFiltered[info].append(symbol)
       except:
-        StocksFiltered[info] = [symbol]
+        stocksFiltered[info] = [symbol]
           
-    #Dictionary => Filter_Metric: ValueArray
-    AveragesFiltered = {}
-    for key, symbolList in StocksFiltered.items():
+    #Dictionary => Filter_Metric: List of Lists
+    averagesFiltered = {}
+    for key, symbolList in stocksFiltered.items():
       try:
         for symbol in symbolList:
           try:
@@ -425,13 +409,20 @@ class DataModels():
             for metric, value in stockData.items():
               if "_M" in metric: continue
               try:
-                AveragesFiltered[f"{key}_{metric}"].append(value)
+                averagesFiltered[f"{key}_{metric}"].append(value)
               except:
-                AveragesFiltered[f"{key}_{metric}"] = [value]
+                averagesFiltered[f"{key}_{metric}"] = [value]
           except:
             pass   
       except:
         pass
-          
+    
+    #Final Dictionary => Filter_Metric: Value Array
+    results = {}
+    for key, listOfLists in averagesFiltered.items():
+        try:
+            results[key] = listAverage(listOfLists)
+        except:
+            pass
+    return results     
 
-DataModels().stockAverage()

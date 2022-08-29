@@ -7,10 +7,10 @@
 
     <!-- IMPLEMENTING CSS, STATIC FILES -->
     {% load static %}
-    <link rel="stylesheet" href="{% static 'home/css/classes.css' %}"/>
-    <link rel="stylesheet" href="{% static 'home/css/style.css' %}"/>
+    <link rel="stylesheet" href="{% static 'main/css/classes.css' %}"/>
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}"/>
     <link rel="stylesheet" href="{% static 'home/css/index.css' %}"/>
-    <link rel="stylesheet" href="{% static 'home/fonts/material-icons.css' %}"/>
+    <link rel="stylesheet" href="{% static 'main/fonts/material-icons.css' %}"/>
 
 
     <!-- IMPLEMENTATIONS OF FORMATS, ICONS -->
@@ -19,22 +19,18 @@
     <meta http-equiv="refresh" content="5000"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <!-- <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script> -->
     <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css"/>
     <!-- Example: <i class="fa-regular fa-square"></i> -->
 
+    <!-- CHART.JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css"/>
-    <script src="{% static 'home/js/charts.js' %}"></script>
-    <!-- Charts.css -->
+    <script src="{% static 'main/js/web/charts.js' %}"></script>
 
-    <!-- <script src="{% static 'home/js/live.js' %}"></script> -->
-
+    <!-- <script src="{% static 'main/js/extensions/live.js' %}"></script> -->
 
   </head>
   <body>
-
-    <!-- CHART.JS -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- BLOCK -->
     {% block head %} {% endblock %}
@@ -46,14 +42,17 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
     <!-- TILT ANIMATION ON ELEMENTS -->
-    <script src="{% static 'home/js/vanilla-tilt.js' %}"></script>
+    <script src="{% static 'main/js/extensions/vanilla-tilt.js' %}"></script>
 
     <!-- MAIN SCRIPT FILES -->
-    <script src="{% static 'home/js/functions.js' %}"></script>
-    <script src="{% static 'home/js/script.js' %}"></script>
-    <script src="{% static 'home/js/darkmode.js' %}"></script>
-    <script src="{% static 'home/js/eye.js' %}"></script>
-    <script src="{% static 'home/js/account.js' %}"></script>
+    <script src="{% static 'main/js/web/event.js' %}"></script>
+    <script src="{% static 'main/js/web/looper.js' %}"></script>
+    <script src="{% static 'main/js/web/darkmode.js' %}"></script>
+
+    <script src="{% static 'home/js/contact.js' %}"></script>
+    <script src="{% static 'main/js/project/navbar.js' %}"></script>
+    <script src="{% static 'main/js/project/sidebar.js' %}"></script>
+    <script src="{% static 'main/js/project/components/button.js' %}"></script>
 
   </body>
 </html>

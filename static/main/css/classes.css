@@ -1,0 +1,744 @@
+/*
+
+HOW TO USE CLASSES?
+Enter pre-defined classes as an additional class in your HTML element.
+
+    -->  <div class="div smart_button"></div>
+
+
+    
+OVERVIEW OF EXISTING CLASSES
+
+    - flex:                   sets "display: flex" to an element, mainly for space efficiency.
+
+    - smart_button:           contains many useful properties of a fancy, hoverable button.
+
+    - smart_button_outline:   same as smart_button, but with a outline design.
+
+    - effect:                 add pseudo element in css-file (eg. element::before), then define color.
+
+    - effect_underline:       same as effect, but with a underline hover-animation.
+
+    - circle:                 predefined circle, mainly for space efficiency.
+
+    - border:                 adds a border around the object.
+
+*/
+
+/* BASICS */
+
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+}
+.grid_system {
+  display: grid;
+  grid-gap: var(--gap);
+}
+.transition {
+  transition: 0.3s;
+}
+.border {
+  border: 1px solid red !important;
+}
+.border_b {
+  border: 1px solid rgb(0, 140, 255) !important;
+}
+
+/* FLEX OBJECTS */
+
+.flex_box,
+.flex_form {
+  display: flex;
+}
+.flex_box {
+  align-items: center;
+  justify-content: center;
+}
+.flex_form {
+  align-items: center;
+  flex-direction: column;
+}
+
+/* BASIC WEB LAYOUT */
+
+/*
+<div class="layout">
+  <div class="window">
+    <div class="view">
+      <div class="view_item"></div>
+      <div class="view_item"></div>
+    </div>
+    <div class="view">
+      <div class="view_item"></div>
+      <div class="view_item"></div>
+    </div>
+  </div>
+</div>
+*/
+
+.layout {
+  display: flex;
+  width: 100%;
+}
+.window {
+  width: 100%;
+  overflow: auto;
+  margin: 0 var(--gap) var(--gap) var(--gap);
+}
+.view {
+  width: 100%;
+  display: none;
+  gap: var(--gap);
+}
+.view.active {
+  width: 100%;
+  display: grid;
+}
+.view_item {
+  border-radius: var(--border-radius);
+  background: var(--color-theme-contrast);
+}
+.view_header,
+.view_item_sheader {
+  color: var(--color-text-theme);
+  margin: 12px;
+}
+.view_header {
+  text-transform: uppercase;
+}
+.view_item_sheader {
+  font-size: 0.9em;
+}
+
+/* BUTTONS */
+.button,
+.normal_button,
+.normal_button_outline,
+.smart_button,
+.smart_button_outline,
+.icon_button,
+.create_button,
+.delete_button,
+.symbol_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.95em !important;
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+}
+
+.normal_button {
+  padding: 8px 25px;
+  background: var(--color-first);
+  color: white;
+  transition: background 0.2s;
+}
+.normal_button i,
+.normal_button a {
+  color: white;
+}
+.normal_button_outline {
+  background: var(--color-theme);
+  border: 2px solid var(--color-reverse);
+  color: var(--color-reverse);
+  padding: 7px 21px;
+}
+.normal_button:hover {
+  background: var(--color-first-hover);
+}
+
+.smart_button,
+.smart_button_outline {
+  padding: 10px 25.5px;
+  border-radius: var(--border-radius);
+
+  color: white;
+  font-size: var(--font-size-navbar);
+  background: linear-gradient(
+    to right,
+    var(--color-first),
+    var(--color-third),
+    var(--color-first)
+  );
+  background-size: 250%;
+  box-shadow: 0 10px 20px var(--color-block-shadow);
+
+  transition: 0.8s, padding 0s, border 0s;
+}
+.smart_button_outline {
+  background: linear-gradient(
+    to right,
+    var(--color-theme) 50%,
+    var(--color-third),
+    var(--color-first)
+  );
+  padding: 7.5px 23px;
+  background-size: 400%;
+  color: var(--color-reverse) !important;
+  border: 2.5px solid var(--color-reverse);
+}
+.smart_button:hover,
+.smart_button_outline:hover {
+  background-position: right;
+}
+.smart_button_outline:hover {
+  border: transparent;
+  color: white !important;
+  padding: 10px 25.5px;
+}
+
+/* ICON BUTTON */
+
+/*
+<button class="icon_button" name="edit_username" type="submit">
+  <i class="fa-solid fa-arrow-right-to-bracket portfolio_icon"></i>
+  <a>Change</a>
+</button>
+*/
+
+.icon_button {
+  /* NEEDS TO BE TOGGLED (CLASS) IN JAVASCRIPT */
+  border: 1px transparent solid;
+  padding: 8px 15px;
+  min-width: 85px;
+  min-height: 40px;
+  transition: width 0.2s, height 0.2s;
+  background: var(--color-first);
+  color: white;
+  background: linear-gradient(
+    to right bottom,
+    var(--color-first),
+    var(--color-first-hover),
+    var(--color-first),
+    var(--color-first-hover),
+    var(--color-first)
+  );
+  transition: background 0.5s, animation 0.5s;
+  background-size: 500% 500%;
+}
+.icon_button > i {
+  color: var(--color-reverse);
+  font-size: 25px;
+  position: absolute;
+  opacity: 0;
+  transition: transform 0.15s ease, opacity 0.2s;
+  transform: translate(-30px, 0);
+}
+.icon_button > a {
+  position: absolute;
+  display: flex;
+  opacity: 1;
+  transition: opacity 0.3s;
+  color: white;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.icon_button.show {
+  animation: background_flow 5s linear infinite reverse;
+  border: 1px var(--color-reverse) solid;
+  padding: 8px 15px;
+  min-width: 60px;
+}
+.icon_button.show > i {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.icon_button.show > a {
+  opacity: 0;
+}
+
+.create_button,
+.delete_button {
+  background: transparent;
+  height: 40px;
+  width: 40px;
+}
+.create_button > i,
+.delete_button > i {
+  font-size: 25px;
+  color: rgb(0, 255, 0);
+}
+.delete_button > i {
+  color: rgb(255, 0, 0);
+  font-size: 27px;
+}
+
+.symbol_button {
+  height: 50px;
+  width: 50px;
+  border: 1px solid transparent;
+}
+.symbol_button i {
+  font-size: 27px;
+  color: white;
+}
+.symbol_button:hover {
+  background: var(--color-theme-contrast);
+  border: 1px solid var(--color-reverse);
+}
+.symbol_button:hover i {
+  color: var(--color-reverse);
+}
+
+/* ANIMATED ARROW BUTTON */
+
+/*
+<button class="button_animated">
+  <div class="button_arrow">
+    <div class="button_arrow_line button_arrow_line1"></div>
+    <div class="button_arrow_line button_arrow_line2"></div>
+    <div class="button_arrow_line button_arrow_line3"></div>
+  </div>
+</button>
+*/
+
+.button_animated {
+  border-radius: 10px;
+  background: linear-gradient(
+    to right bottom,
+    var(--color-first),
+    var(--color-first-hover),
+    var(--color-first),
+    var(--color-first-hover),
+    var(--color-first)
+  );
+  transition: background 0.5s, animation 0.5s;
+  padding: 32px;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  animation: background_flow 15s linear infinite;
+  background-size: 500% 500%;
+}
+@keyframes background_flow {
+  0% {
+    background-position: 250% 250%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+.button_animated .button_arrow {
+  position: absolute;
+  font-size: 25px;
+  transform: translate(2px, 0);
+  transition: transform 0.3s;
+}
+.button_animated .button_arrow .button_arrow_line {
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+  transition: transform 0.3s, width 0.3s;
+}
+.button_animated .button_arrow .button_arrow_line1 {
+  width: 15px;
+  transform: rotate(45deg) translate(8px, -8px);
+}
+.button_animated .button_arrow .button_arrow_line2 {
+  transform: translate(-4px, 0);
+  width: 21px;
+  padding-right: 4px;
+}
+.button_animated .button_arrow .button_arrow_line3 {
+  width: 15px;
+  transform: rotate(-45deg) translate(8px, 8px);
+}
+
+.button_animated:hover {
+  animation: background_flow 5s linear infinite reverse;
+}
+.button_animated:hover .button_arrow {
+  transform: translate(1px, 0);
+}
+.button_animated:hover .button_arrow .button_arrow_line1 {
+  transform: rotate(45deg) translate(5px, -5px);
+}
+.button_animated:hover .button_arrow .button_arrow_line2 {
+  padding-right: 0;
+}
+.button_animated:hover .button_arrow .button_arrow_line3 {
+  transform: rotate(-45deg) translate(5px, 5px);
+}
+
+/* DJANGO FLASH MESSAGES */
+
+/*
+{% if messages %}
+<ul class="messages">
+  {% for message in messages %}
+  <li>{{message}}</li>
+  {% endfor %}
+</ul>
+{% endif %}
+*/
+
+.messages li {
+  color: red;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+/* ARROW BACK */
+
+/*
+<div class="arrow_back flex">
+  <i class="fa-solid fa-arrow-left-long"></i>
+  <a href="{{request.META.HTTP_REFERER}}"></a>
+</div>
+*/
+
+.arrow_back {
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 45px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.4s;
+}
+.arrow_back i {
+  font-size: 27px;
+  color: var(--color-text-theme);
+  transition: color 0.3s;
+}
+.arrow_back a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.arrow_back:hover {
+  background: var(--color-first);
+}
+.arrow_back:hover i {
+  color: white;
+}
+
+/* EFFECTS */
+
+.effect::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.4s;
+  background: var(--color-first);
+}
+.effect_underline::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: 100% 50%;
+  transition: transform 0.4s;
+  background: var(--color-first);
+}
+.effect:hover::before,
+.effect_underline:hover::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+
+/* INPUTFIELDS */
+
+/*
+<div class="inputField">
+  <i class="fa-solid fa-key"></i>
+  <input type="email" class="input" name="email" placeholder="E-Mail" required>
+</div>
+*/
+
+.inputField {
+  display: flex;
+  padding: 14px 20px;
+  align-items: center;
+  border: 0.5px var(--color-light) solid;
+  border-radius: 10px;
+}
+.inputField > i:first-child {
+  margin-right: 20px;
+  font-size: 20px;
+}
+.input {
+  outline: none;
+  resize: none;
+  border: none;
+  color: var(--color-reverse);
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+.input + i {
+  opacity: 0;
+}
+.input::placeholder {
+  font-weight: 400;
+}
+.input_valid + i {
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 20px;
+}
+.input_valid:valid + i {
+  color: rgb(0, 255, 0);
+  opacity: 1;
+}
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--color-theme-contrast) inset !important;
+  -webkit-text-fill-color: var(--color-reverse);
+}
+.input_theme:-webkit-autofill,
+.input_theme:-webkit-autofill:hover,
+.input_theme:-webkit-autofill:focus,
+.input_theme:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--color-theme) inset !important;
+  -webkit-text-fill-color: var(--color-reverse);
+}
+
+/* EXTENDED INPUT FIELD => ACCOUNT FIELD */
+
+/*
+<div class="account_field">
+  <p class="account_sheader">E-Mail</p>
+  <div class="account_c flex">
+    <div class="inputField">
+      <input type="email" class="input account_input" name="email" placeholder="New E-Mail">
+    </div>
+  </div>
+</div>
+*/
+
+.account_field {
+  max-width: 500px;
+}
+.account_field p {
+  color: var(--color-text-theme);
+  margin: 0 0 3px 10px;
+}
+
+/* LAYOUT FOR MESSAGE */
+
+/*
+<div class="message_field flex">
+  <p class="message_text">You have no Portfolios yet.</p>
+  <button class="icon_button portfolio_createone">
+    <i class="fa-solid fa-arrow-right-to-bracket portfolio_icon"></i>
+    <a>Create One</a>
+  </button>
+</div>
+*/
+
+.message_field {
+  height: 800px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.message_text {
+  color: var(--color-text-theme);
+  font-size: 2em;
+  font-weight: 300;
+}
+.message_field button {
+  margin: 20px;
+}
+
+/* INFO HOVER FIELD */
+
+/*
+<div class="info flex">
+  <i class="fa-solid fa-question info_icon"></i>
+  <div class="flex">Margins give an Overview of how efficient a company runs it's operations</div>
+  <div></div>
+</div>
+*/
+
+.info {
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.info_icon {
+  color: var(--color-text-theme);
+  font-size: 18px;
+  transition: color 0.2s;
+}
+.info div {
+  display: none;
+  position: absolute;
+  margin-left: 300px;
+  width: 200px;
+  height: 120px;
+  background: var(--color-light);
+  text-align: center;
+  align-items: center;
+}
+.info div:last-child {
+  height: 30px;
+  width: 30px;
+  margin-right: 198px;
+  transform: rotate(45deg);
+  background: var(--color-light);
+}
+.info.show i {
+  color: var(--color-reverse);
+}
+.info.show div,
+.info.show div:last-child {
+  display: flex;
+}
+
+/* OBJECTS */
+
+.circle {
+  position: absolute;
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  background: var(--color-first);
+}
+
+/* HAMBURGER */
+
+/*
+<div class="hamburger">
+  <div class="hamburger_line hamburger_line_active1"></div>
+  <div class="hamburger_line hamburger_line_active2"></div>
+  <div class="hamburger_line hamburger_line_active3"></div>
+</div>
+*/
+
+.hamburger {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+.hamburger_line {
+  height: 2px;
+  width: 25px;
+  background: var(--color-reverse);
+}
+.hamburger_line_active1 {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+.hamburger_line_active2 {
+  opacity: 0;
+}
+.hamburger_line_active3 {
+  transform: rotate(-45deg) translate(6.2px, -6.2px);
+}
+
+/* COLOR GRADIENTS */
+.red-gradient,
+.yellow-gradient,
+.green-gradient,
+.cyan-gradient,
+.blue-gradient,
+.purple-gradient {
+  background-size: 400%;
+}
+.red-gradient {
+  background: linear-gradient(
+    to left bottom,
+    rgb(255, 150, 150),
+    rgb(255, 100, 100),
+    rgb(255, 99, 99),
+    rgb(255, 100, 100),
+    rgb(255, 150, 150)
+  );
+  box-shadow: 0 10px 20px rgba(255, 0, 0, 0.4);
+}
+.yellow-gradient {
+  background: linear-gradient(
+    to left bottom,
+    rgb(255, 231, 95),
+    rgb(255, 201, 66),
+    rgb(255, 188, 63),
+    rgb(255, 201, 66),
+    rgb(255, 231, 95)
+  );
+  box-shadow: 0 10px 20px rgba(255, 242, 0, 0.4);
+}
+.green-gradient {
+  background: linear-gradient(
+    to left bottom,
+    rgb(124, 255, 94),
+    rgb(79, 255, 85),
+    rgb(0, 230, 4),
+    rgb(79, 255, 85),
+    rgb(124, 255, 94)
+  );
+  box-shadow: 0 10px 20px rgba(0, 255, 8, 0.4);
+}
+.cyan-gradient {
+  background: linear-gradient(
+    to left bottom,
+    rgb(94, 212, 255),
+    rgb(79, 190, 255),
+    rgb(8, 177, 255),
+    rgb(79, 190, 255),
+    rgb(94, 212, 255)
+  );
+  box-shadow: 0 10px 20px rgba(0, 153, 255, 0.4);
+}
+.blue-gradient {
+  background: linear-gradient(
+    to left bottom,
+    rgb(78, 78, 255),
+    rgb(50, 43, 255),
+    rgb(8, 16, 255),
+    rgb(50, 43, 255),
+    rgb(78, 78, 255)
+  );
+  box-shadow: 0 10px 20px rgba(0, 4, 255, 0.4);
+}
+.purple-gradient {
+  background: linear-gradient(
+    to left bottom,
+    rgb(155, 78, 255),
+    rgb(160, 43, 255),
+    rgb(143, 0, 238),
+    rgb(160, 43, 255),
+    rgb(155, 78, 255)
+  );
+  box-shadow: 0 10px 20px rgba(140, 0, 255, 0.4);
+}
+
+/* PAGE LOADING ANIMATION */
+
+.loading_animation {
+  animation: loading;
+}
+.loading_animation * {
+  opacity: 0;
+}
+@keyframes loading {
+  0% {
+  }
+}

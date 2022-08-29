@@ -58,25 +58,10 @@
 
 
 <script>
-  //333
   const closePrice = JSON.parse("{{close|safe}}")
-  const date = "{{date|safe}}"
-
-  const algorithm_canvas = document.querySelector(".algorithm_canvas").getContext("2d");
-  const algorithm_canvas1 = new Chart(algorithm_canvas, {
-    type: "line",
-    data: {
-      labels: date,
-      datasets: [{
-        label: "Price",
-        data: closePrice,
-        backgroundColor: "cyan",
-        borderColor: "cyan",
-      }
-    ],},
-    options: chartConfig(),
-  });
-
+  let date = "{{date|safe}}"
 </script>
+<script src="{% static 'eye/js/algorithm/main.js' %}"></script>
+
 
 {% endblock %}
