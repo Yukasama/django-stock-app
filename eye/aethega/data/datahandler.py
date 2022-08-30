@@ -424,5 +424,6 @@ class DataModels():
             results[key] = listAverage(listOfLists)
         except:
             pass
+        
     return results     
 

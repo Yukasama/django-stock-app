@@ -107,13 +107,30 @@ class Calculator():
     def FAR(self, weightedAverage=True, sectorBalancing=False, timeFluence=True, averageDeviation=False, allowForecast=False):
         def valueFunction(value):
             
+            #Stock Category Classes 
+            #Structure: Category => [Type, Value, Deviation, Growth, Forecast, Weight]
+            categorys = {
+                "Profitability": 
+                    [("revenue", "best", 0.1), 
+                     ("grossProfitMargin", (-0.07, )), 
+                     "pretaxProfitMargin", 
+                     "netProfitMargin", 
+                     "peRatio", 
+                     "eps", 
+                     "returnOnAssets"],
+                "Liquidity": 
+                    ["cashAndCashEquivalents",
+                     ""],
+            }
+            
             #Value Register
             #Returns: Value => [Worst, Best, Limit]
             values = {
                 "revenue": ("best"),
+
                 "peRatio": (-20, 15, 50),
             }
             
             return 0.8
 
-        return (valueFunction("peRatio"))
+        return valueFunction("peRatio")

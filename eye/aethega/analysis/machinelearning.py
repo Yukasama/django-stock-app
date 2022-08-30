@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 import sklearn as sk
 from sklearn import linear_model
+import tensorflow as tf
 
 
 #-------------------------------------------------------------------------------------------------------------------
