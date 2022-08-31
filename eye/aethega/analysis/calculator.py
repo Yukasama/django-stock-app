@@ -108,19 +108,22 @@ class Calculator():
         def valueFunction(value):
             
             #Stock Category Classes 
-            #Structure: Category => [Type, Value, Deviation, Growth, Forecast, Weight]
+            #Structure: Category => [Type, Value (Worst, Best, Limit), Weight]
             categorys = {
                 "Profitability": 
                     [("revenue", "best", 0.1), 
-                     ("grossProfitMargin", (-0.07, )), 
-                     "pretaxProfitMargin", 
-                     "netProfitMargin", 
-                     "peRatio", 
-                     "eps", 
-                     "returnOnAssets"],
+                     ("grossProfitMargin", (0.05, 0.3), 0.15), 
+                     ("pretaxProfitMargin", (-0.1, 0.25), 0.1), 
+                     ("netProfitMargin"), 
+                     ("peRatio"), 
+                     ("eps"), 
+                     ("returnOnAssets")],
                 "Liquidity": 
-                    ["cashAndCashEquivalents",
+                    [("cashAndCashEquivalents"),
                      ""],
+                "Solvency": 
+                    ["",
+                     ]
             }
             
             #Value Register
