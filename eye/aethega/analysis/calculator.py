@@ -112,10 +112,10 @@ class Calculator():
             categorys = {
                 "Profitability": 
                     [("revenue", "best", 0.1), 
-                     ("grossProfitMargin", (0.05, 0.3), 0.15), 
-                     ("pretaxProfitMargin", (-0.1, 0.25), 0.1), 
-                     ("netProfitMargin"), 
-                     ("peRatio"), 
+                     ("grossProfitMargin", (0, 0.5), 0.15), 
+                     ("pretaxProfitMargin", (-0.05, 0.3), 0.1), 
+                     ("netProfitMargin", (-0.1, 0.2), 0.15), 
+                     ("peRatio", (-10, 20)), 
                      ("eps"), 
                      ("returnOnAssets")],
                 "Liquidity": 
