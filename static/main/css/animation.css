@@ -1,0 +1,12 @@
+/* PAGE LOADING ANIMATION */
+
+.loading_animation {
+  animation: loading;
+}
+.loading_animation * {
+  opacity: 0;
+}
+@keyframes loading {
+  0% {
+  }
+}

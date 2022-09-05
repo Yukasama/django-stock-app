@@ -1,0 +1,79 @@
+/* INPUTFIELDS */
+
+/*
+<div class="inputField">
+  <i class="fa-solid fa-key"></i>
+  <input type="email" class="input" name="email" placeholder="E-Mail" required>
+</div>
+*/
+
+.inputField {
+  display: flex;
+  padding: 14px 20px;
+  align-items: center;
+  border: 0.5px var(--color-light) solid;
+  border-radius: 10px;
+}
+.inputField > i:first-child {
+  margin-right: 20px;
+  font-size: 20px;
+}
+.input {
+  outline: none;
+  resize: none;
+  border: none;
+  color: var(--color-reverse);
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+.input + i {
+  opacity: 0;
+}
+.input::placeholder {
+  font-weight: 400;
+}
+.input_valid + i {
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 20px;
+}
+.input_valid:valid + i {
+  color: rgb(0, 255, 0);
+  opacity: 1;
+}
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--color-theme-contrast) inset !important;
+  -webkit-text-fill-color: var(--color-reverse);
+}
+.input_theme:-webkit-autofill,
+.input_theme:-webkit-autofill:hover,
+.input_theme:-webkit-autofill:focus,
+.input_theme:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--color-theme) inset !important;
+  -webkit-text-fill-color: var(--color-reverse);
+}
+
+/* EXTENDED INPUT FIELD => ACCOUNT FIELD */
+
+/*
+<div class="account_field">
+  <p class="account_sheader">E-Mail</p>
+  <div class="account_c flex">
+    <div class="inputField">
+      <input type="email" class="input account_input" name="email" placeholder="New E-Mail">
+    </div>
+  </div>
+</div>
+*/
+
+.account_field {
+  max-width: 500px;
+}
+.account_field p {
+  color: var(--color-text-theme);
+  margin: 0 0 3px 10px;
+}

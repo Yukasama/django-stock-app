@@ -1,0 +1,47 @@
+/* INFO HOVER FIELD */
+
+/*
+<div class="info flex">
+  <i class="fa-solid fa-question info_icon"></i>
+  <div class="flex">Margins give an Overview of how efficient a company runs it's operations</div>
+  <div></div>
+</div>
+*/
+
+.info {
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.info_icon {
+  color: var(--color-text-theme);
+  font-size: 18px;
+  transition: color 0.2s;
+}
+.info div {
+  display: none;
+  position: absolute;
+  margin-left: 300px;
+  width: 200px;
+  height: 120px;
+  background: var(--color-light);
+  text-align: center;
+  align-items: center;
+}
+.info div:last-child {
+  height: 30px;
+  width: 30px;
+  margin-right: 198px;
+  transform: rotate(45deg);
+  background: var(--color-light);
+}
+.info.show i {
+  color: var(--color-reverse);
+}
+.info.show div,
+.info.show div:last-child {
+  display: flex;
+}
