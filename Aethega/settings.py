@@ -34,7 +34,6 @@ INSTALLED_APPS = [
     'eye.apps.EyeConfig',
     'home.apps.HomeConfig',
     'support.apps.SupportConfig',
-    'frontend.apps.FrontendConfig',
     
     'django_extensions',
     'import_export',
