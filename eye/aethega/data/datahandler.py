@@ -1,19 +1,11 @@
 #region LIBRARIES
-import time, os, math
+import time, os
 from datetime import datetime as dt
-import yfinance as yf
-import pandas as pd, numpy as np
-import pandas_datareader.data as web
-import matplotlib.pyplot as plt
+import pandas as pd
+#import pandas_datareader.data as web
 from collections import defaultdict
-from statistics import mean, median
-import json
 from eye.models import Stock, Info, Financial
 from core.utils import listAverage
-#import pandas_datareader.nasdaq_trader as nas
-#from pandas_datareader import wb
-#import yahoo_fin.stock_info as si
-#import FundamentalAnalysis as fa
 #endregion
 
 T_SP500 = pd.read_csv("Data/SymbolData/S&P500")["0"] #S&P 500 Ticker List
@@ -122,7 +114,7 @@ class DataHandler():
         for t in self.symbol:
             
             #Defining Variables
-            ticker = yf.Ticker(t)
+            #ticker = yf.Ticker(t)
             
             if (skipMode == True):
                 if (os.path.exists(f"Data/StockData/{t}/info") and 

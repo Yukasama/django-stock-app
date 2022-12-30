@@ -1,10 +1,9 @@
 #region Libraries
 import pandas as pd, numpy as np
-import matplotlib.pyplot as plt
-import talib as ta
+#import talib as ta
 from data.datahandler import *
 #endregion
-
+'''
 class Indicator():
         
     def __init__(self, symbol, period=14, timeFrame="daily", shift=0):
@@ -115,4 +114,4 @@ class ADOSC(Indicator):
     def calc(self):
         result = pd.Series(ta.ADOSC(self.high, self.low, self.close, self.volume, self.period, self.slowperiod))
         return result
-
+'''

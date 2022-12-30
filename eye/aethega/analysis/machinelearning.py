@@ -1,5 +1,6 @@
 
 #Dependencies
+'''
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -48,3 +49,4 @@ result = linear_est.evaluate(eval_input_fn)
 
 clear_output()
 print(result)
+'''
