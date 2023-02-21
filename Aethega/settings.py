@@ -1,6 +1,9 @@
 from pathlib import Path
 import os
 import sqlite3 as lite
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -10,7 +13,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-0t*xl+s*ms@)zn#3f7jux6&$f9*9%su$xk%0gkab_l%c0g+@-o'
+SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
+FMP_API_KEY = os.getenv("FMP_API_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -35,7 +39,6 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'support.apps.SupportConfig',
     
-    'rest_framework',
     'debug_toolbar',
     'fontawesomefree',
 ]

@@ -6,6 +6,7 @@ import pandas as pd
 from collections import defaultdict
 from eye.models import Stock, Info, Financial
 from core.utils import listAverage
+from Aethega.settings import FMP_API_KEY
 #endregion
 
 T_SP500 = pd.read_csv("Data/SymbolData/S&P500")["0"] #S&P 500 Ticker List
@@ -49,7 +50,7 @@ class Formatter():
 class DataHandler():
     
     #GLOBALS
-    API_KEY = "1451443e6ac73f65840c60adab375261" #ApiKey for FundamentalAnalysis
+    API_KEY = FMP_API_KEY  #ApiKey for FundamentalAnalysis
     REQUEST_COOLER = 181
     blackList = ["BBWI", "BF-B", "CARR", "CEG", "CTXS"]
     
